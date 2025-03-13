@@ -50,3 +50,17 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+
+
+
+# Otros archivos que genera PSoC Creator (añadido manualmente)
+# Archivos de configuración de PSoC Creator
+*.log
+*.bak
+
+# Archivos temporales de código
+/codegentemp/
+
+# Archivos de compilación
+/cytool/    # Si usas la carpeta de herramientas de PSoC
