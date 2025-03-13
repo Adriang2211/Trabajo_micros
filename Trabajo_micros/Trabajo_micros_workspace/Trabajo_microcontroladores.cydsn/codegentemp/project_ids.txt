@@ -1,0 +1,6 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|14f4137c-0d3d-4ce2-88c5-88383a68dab9
+C:\Users\adris\OneDrive\Documentos\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|e447108b-e4e5-4e25-8c0a-16c2ba78089a
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|add6a481-de89-4a03-889a-dcc16ccb0a6d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|cd689df0-0861-41bc-a3f1-4476160bff02
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|617d5d11-590d-4610-875d-b3877847f218
+C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_microcontroladores.cydsn\Trabajo_microcontroladores.cyprj|4d3ab1d5-1533-4a13-92f1-2b27931a1012
