@@ -1,0 +1,8 @@
+C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_microcontroladores.cydsn\Trabajo_microcontroladores.cyprj|79652123-164d-4f03-afb0-441dd431f005
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|3d1751d0-43f7-4e8a-9ee5-22de278e3005
+C:\Users\adris\OneDrive\Documentos\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|51fc99c0-0a09-4495-bdf3-5e9df296fc60
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|1fafd484-16ed-499b-b9eb-189aec997da7
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|b59dea95-2b55-4a40-8132-66f3f88507fc
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|4d5f89f8-1f03-4572-b3e1-84e7934fff47
+C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Prueba_01_LEDs.cydsn\Prueba_01_LEDs.cyprj|9439282b-80fc-4f32-84ef-1422ae25dba6
+C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Prueba_02_LEDs_No_bloqueante.cydsn\Prueba_02_LEDs_No_bloqueante.cyprj|a013cb8f-57bc-4a3e-bc4b-a3b02743b092
