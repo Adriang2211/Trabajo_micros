@@ -1,11 +1,12 @@
-C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_microcontroladores.cydsn\Trabajo_microcontroladores.cyprj|79652123-164d-4f03-afb0-441dd431f005
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|3d1751d0-43f7-4e8a-9ee5-22de278e3005
-C:\Users\adris\OneDrive\Documentos\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|51fc99c0-0a09-4495-bdf3-5e9df296fc60
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|1fafd484-16ed-499b-b9eb-189aec997da7
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|b59dea95-2b55-4a40-8132-66f3f88507fc
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|4d5f89f8-1f03-4572-b3e1-84e7934fff47
-C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Prueba_01_LEDs.cydsn\Prueba_01_LEDs.cyprj|9439282b-80fc-4f32-84ef-1422ae25dba6
-C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Prueba_02_LEDs_No_bloqueante.cydsn\Prueba_02_LEDs_No_bloqueante.cyprj|a013cb8f-57bc-4a3e-bc4b-a3b02743b092
-C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Prueba_03_Interrupciones.cydsn\Prueba_03_Interrupciones.cyprj|e0437e54-5c3b-4add-aea9-9ec7cad97044
-C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Test_pulsador.cydsn\Test_pulsador.cyprj|98ed35ad-4926-497d-8db5-519265e2313b
-C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_test_control_fase.cydsn\Trabajo_test_control_fase.cyprj|5988749e-f776-4ea6-95f5-dc6fc2ac001c
+C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_microcontroladores.cydsn\Trabajo_microcontroladores.cyprj|3e43c743-34f0-4718-a0af-d0e98c6b72fd
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|4bc39592-7a03-4af2-84ac-fcb0978ca184
+C:\Users\adris\OneDrive\Documentos\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|91489145-9aa3-4c3c-bc6b-b5cd18020bd4
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|de7be476-3f83-464f-81e0-792c08c2d972
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|c42b8f27-be3f-4e4b-8273-ca5bc5d16166
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|f83081ac-7aea-48c5-9f4d-dc6b70cbfe49
+C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Prueba_01_LEDs.cydsn\Prueba_01_LEDs.cyprj|0cac136e-aefa-45c0-af67-efe1ef18e08b
+C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Prueba_02_LEDs_No_bloqueante.cydsn\Prueba_02_LEDs_No_bloqueante.cyprj|5deae55e-9ca2-4e41-ba11-dcf45eec928b
+C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Prueba_03_Interrupciones.cydsn\Prueba_03_Interrupciones.cyprj|e641bd7a-4ca8-47ef-82cb-a2637ae9b40c
+C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Test_pulsador.cydsn\Test_pulsador.cyprj|c59eef7e-c346-4005-ae8d-ecb8d11a0a92
+C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_test_control_fase.cydsn\Trabajo_test_control_fase.cyprj|ec75c34e-c584-4303-8eda-77a869428473
+C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_test_control_fase_v2.cydsn\Trabajo_test_control_fase_v2.cyprj|bfb693c6-3a57-46d2-8198-a8bdcd91acc1

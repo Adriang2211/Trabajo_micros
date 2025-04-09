@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
   29:Generated_Source\PSoC6/cyfitter_cfg.c **** #define CY_NEED_CYCLOCKSTARTUPERROR 1
   30:Generated_Source\PSoC6/cyfitter_cfg.c **** #include "syspm/cy_syspm.h"
   31:Generated_Source\PSoC6/cyfitter_cfg.c **** 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 2
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 2
 
 
   32:Generated_Source\PSoC6/cyfitter_cfg.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
   86:Generated_Source\PSoC6/cyfitter_cfg.c **** CY_CFG_UNUSED
   87:Generated_Source\PSoC6/cyfitter_cfg.c **** static void CYCONFIGCPY(void *dest, const void *src, size_t n)
   88:Generated_Source\PSoC6/cyfitter_cfg.c **** {
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 3
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 3
 
 
   89:Generated_Source\PSoC6/cyfitter_cfg.c **** 	(void)memcpy(dest, src, n);
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
   38              		.size	CyClockStartupError, .-CyClockStartupError
   39 0002 C046     		.section	.text.CYMEMZERO,"ax",%progbits
   40              		.align	2
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 4
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 4
 
 
   41              		.code	16
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
   88              		@ sp needed
   89 0006 10BD     		pop	{r4, pc}
   90              		.cfi_endproc
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 5
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 5
 
 
   91              	.LFE186:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
   12:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * the software package with which this file was provided.
   13:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *******************************************************************************/
   14:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 6
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 6
 
 
   15:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** /**
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
   69:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *   <tr>
   70:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *     <td>10.3</td>
   71:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *     <td>R</td>
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 7
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 7
 
 
   72:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *     <td>A composite expression of the "essentially unsigned" type is being
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  126:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *     <td>Removed the following functions:
  127:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *         - Cy_SysClk_FllLostLock
  128:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *         - Cy_SysClk_WcoConfigureCsv
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 8
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 8
 
 
  129:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *         - Cy_SysClk_ClkHfConfigureCsv
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  183:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * </table>
  184:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *
  185:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * \defgroup group_sysclk_macros           Macros
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 9
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 9
 
 
  186:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * \{
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  240:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *   higher frequency clock from a reference clock. The output clock exhibits
  241:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *   some characteristics of the reference clock such as the accuracy of the
  242:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *   source. However other attributes such as the clock phase are not preserved.
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 10
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 10
 
 
  243:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *   The FLL is similar in purpose to a (Phase locked loop) PLL but they are
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  297:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *   The ILO operates with no external components and outputs a stable clock at
  298:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *   32.768 kHz nominal. The ILO is relatively low power and low accuracy. It is 
  299:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *   available in all power modes and can be used as a source for the Backup domain clock.
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 11
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 11
 
 
  300:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *   ![](sysclk_backup.png)
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  354:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *   These functions perform a single trim operation on the ILO or PILO. Each
  355:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *   function's parameter is the actual frequency of the clock. To measure the
  356:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *   frequency, use the functions described in the \ref group_sysclk_calclk API.
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 12
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 12
 
 
  357:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  411:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * \{
  412:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *   Multiple high frequency clocks (CLK_HF) are available in the device. For example,
  413:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *   PSoC 63 series has five high-frequency root clocks. Each CLK_HF has a particular
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 13
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 13
 
 
  414:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *   connection and chip-specific destination on the device.
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  468:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * \}
  469:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * \defgroup group_sysclk_clk_peripheral  Peripherals Clock Dividers
  470:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * \{
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 14
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 14
 
 
  471:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *   There are multiple peripheral clock dividers that, in effect, create 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  525:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *   \ref group_sysclk_ilo "ILO", \ref group_sysclk_pilo "PILO", and
  526:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *   \ref group_sysclk_wco "WCO".
  527:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 15
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 15
 
 
  528:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *   ![](sysclk_lf.png)
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  582:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** extern "C" {
  583:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** #endif /* __cplusplus */
  584:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 16
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 16
 
 
  585:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** /**
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  639:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** /** \} group_sysclk_macros */
  640:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** 
  641:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 17
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 17
 
 
  642:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** /**
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  696:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * \{
  697:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** */
  698:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** /**
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 18
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 18
 
 
  699:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *   Input multiplexer clock sources
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  753:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** */
  754:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** typedef enum
  755:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** {
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 19
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 19
 
 
  756:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     CY_SYSCLK_FLL_CCO_RANGE0, /**< Target frequency is in range  48 -  64 MHz. */
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  810:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *
  811:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * \funcusage
  812:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * \snippet sysclk/2.0/snippet/main.c snippet_Cy_SysClk_FllLocked
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 20
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 20
 
 
  813:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  867:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** 
  868:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** /** Structure containing information for manual configuration of a PLL.
  869:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** */
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 21
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 21
 
 
  870:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** typedef struct
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  924:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * \return 
  925:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * false = did not lose lock<br>
  926:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * true = lost lock
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 22
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 22
 
 
  927:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  981:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****         SRSS_CLK_PLL_CONFIG[clkPath] &= ~SRSS_CLK_PLL_CONFIG_ENABLE_Msk;
  982:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****         retVal = CY_SYSCLK_SUCCESS;
  983:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     }
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 23
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 23
 
 
  984:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     return (retVal);
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1038:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     if (!_FLD2BOOL(SRSS_WDT_CTL_WDT_EN, SRSS_WDT_CTL)) /* if disabled */
 1039:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     {
 1040:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****         SRSS_CLK_ILO_CONFIG &= ~SRSS_CLK_ILO_CONFIG_ENABLE_Msk;
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 24
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 24
 
 
 1041:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****         retVal = CY_SYSCLK_SUCCESS;
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1095:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** __STATIC_INLINE void Cy_SysClk_PiloEnable(void)
 1096:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** {
 1097:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     SRSS_CLK_PILO_CONFIG |= _VAL2FLD(SRSS_CLK_PILO_CONFIG_PILO_EN, 1U); /* 1 = enable */
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 25
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 25
 
 
 1098:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     Cy_SysLib_Delay(1U/*msec*/);
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1152:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** }
 1153:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** /** \} group_sysclk_pilo_funcs */
 1154:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 26
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 26
 
 
 1155:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** 
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1209:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     CY_SYSCLK_MEAS_CLK_CLKHF12 =       0x60CU,
 1210:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     CY_SYSCLK_MEAS_CLK_CLKHF13 =       0x60DU,
 1211:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     CY_SYSCLK_MEAS_CLK_CLKHF14 =       0x60EU,
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 27
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 27
 
 
 1212:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     CY_SYSCLK_MEAS_CLK_CLKHF15 =       0x60FU,
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1266:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** cy_en_syspm_status_t Cy_SysClk_DeepSleepCallback(cy_stc_syspm_callback_params_t *callbackParams, cy
 1267:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** /** \} group_sysclk_pm_funcs */
 1268:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 28
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 28
 
 
 1269:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** 
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1323:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * \{
 1324:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** */
 1325:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** /**
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 29
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 29
 
 
 1326:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * This structure is used to configure the clock supervisor for the WCO.
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1380:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     }
 1381:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** 
 1382:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     return (rtnval);
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 30
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 30
 
 
 1383:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** }
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1437:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** 
 1438:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** 
 1439:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** /* ========================================================================== */
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 31
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 31
 
 
 1440:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** /* =========================    clkHf[n] SECTION    ========================= */
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1494:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** 
 1495:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** /**
 1496:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * \addtogroup group_sysclk_clk_hf_structs
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 32
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 32
 
 
 1497:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * \{SupervisingWindow
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1551:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** }
 1552:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** 
 1553:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** /*******************************************************************************
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 33
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 33
 
 
 1554:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * Function Name: Cy_SysClk_ClkHfDisable
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1608:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *******************************************************************************/
 1609:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** __STATIC_INLINE cy_en_sysclk_status_t Cy_SysClk_ClkHfSetSource(uint32_t clkHf, cy_en_clkhf_in_sourc
 1610:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** {
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 34
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 34
 
 
 1611:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     cy_en_sysclk_status_t retVal = CY_SYSCLK_BAD_PARAM;
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1665:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *
 1666:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * \funcusage
 1667:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * \snippet sysclk/2.0/snippet/main.c snippet_Cy_SysClk_ClkHfSetDivider
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 35
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 35
 
 
 1668:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1722:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *
 1723:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * \note 
 1724:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * Call \ref SystemCoreClockUpdate after this function calling.
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 36
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 36
 
 
 1725:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1779:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * sourced from this clock. The source of this divider is clkHf[0]
 1780:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *
 1781:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * \param divider divider value between 0 and 255
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 37
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 37
 
 
 1782:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * Causes integer division of (divider value + 1), or division by 1 to 256.
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1836:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** */
 1837:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** __STATIC_INLINE cy_en_sysclk_status_t Cy_SysClk_PeriphSetDivider(cy_en_divider_types_t dividerType,
 1838:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** __STATIC_INLINE uint32_t Cy_SysClk_PeriphGetDivider(cy_en_divider_types_t dividerType, uint32_t div
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 38
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 38
 
 
 1839:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** __STATIC_INLINE cy_en_sysclk_status_t Cy_SysClk_PeriphSetFracDivider(cy_en_divider_types_t dividerT
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1893:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****             retVal = CY_SYSCLK_SUCCESS;
 1894:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****         }
 1895:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     }
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 39
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 39
 
 
 1896:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     else
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1950:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *
 1951:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * \param dividerType specifies which type of divider to use; \ref cy_en_divider_types_t
 1952:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 40
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 40
 
 
 1953:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * \param dividerNum specifies which divider of the selected type to configure
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 2007:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * Reports the integer and fractional parts of the divider
 2008:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *
 2009:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * \param dividerType specifies which type of divider to use; \ref cy_en_divider_types_t
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 41
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 41
 
 
 2010:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 2064:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** {
 2065:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     cy_en_sysclk_status_t retVal = CY_SYSCLK_BAD_PARAM;
 2066:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     if ((CY_PERI_CLOCK_NR > (uint32_t)ipBlock) && (CY_SYSCLK_DIV_24_5_BIT >= dividerType))
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 42
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 42
 
 
 2067:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     {
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 2121:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****                 Cy_SysClk_PeriphEnableDivider(cy_en_divider_types_t dividerType, uint32_t dividerNu
 2122:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** {
 2123:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     cy_en_sysclk_status_t retVal = CY_SYSCLK_BAD_PARAM;
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 43
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 43
 
 
 2124:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     if (dividerType <= CY_SYSCLK_DIV_24_5_BIT)
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 2178:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** 
 2179:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** /*******************************************************************************
 2180:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * Function Name: Cy_SysClk_PeriphEnablePhaseAlignDivider
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 44
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 44
 
 
 2181:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** ****************************************************************************//**
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 2235:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * Function Name: Cy_SysClk_PeriphGetDividerEnabled
 2236:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** ****************************************************************************//**
 2237:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 45
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 45
 
 
 2238:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * Reports the enabled/disabled atate of the selected divider.
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 2292:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** 
 2293:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** /*******************************************************************************
 2294:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * Function Name: Cy_SysClk_ClkSlowSetDivider
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 46
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 46
 
 
 2295:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** ****************************************************************************//**
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 2349:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     CY_SYSCLK_CLKLF_IN_WCO   = 1U, /**< clkLf is sourced by the watch crystal oscillator (WCO) */
 2350:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     CY_SYSCLK_CLKLF_IN_ALTLF = 2U, /**< clkLf is sourced by the Alternate Low Frequency Clock (ALTL
 2351:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     CY_SYSCLK_CLKLF_IN_PILO  = 3U  /**< clkLf is sourced by the precision low speed oscillator (PIL
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 47
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 47
 
 
 2352:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** } cy_en_clklf_in_sources_t;
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  141              	.LBE113:
  142              	.LBE112:
  143              	.LBB114:
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 48
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 48
 
 
  144              	.LBB115:
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  194              	.LBB120:
  195              	.LBB121:
 1673:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     {
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 49
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 49
 
 
  196              		.loc 2 1673 0
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  164:Generated_Source\PSoC6/cyfitter_cfg.c **** 
  165:Generated_Source\PSoC6/cyfitter_cfg.c **** 	/* Configure Path Clocks */
  166:Generated_Source\PSoC6/cyfitter_cfg.c **** 	Cy_SysClk_ClkPathSetSource(1, CY_SYSCLK_CLKPATH_IN_IMO);
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 50
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 50
 
 
  233              		.loc 1 166 0
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  268              		.loc 1 185 0
  269 00ca FFF7FEFF 		bl	Cy_SysClk_FllManualConfigure
  270              	.LVL19:
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 51
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 51
 
 
  186:Generated_Source\PSoC6/cyfitter_cfg.c **** 		if (CY_RET_SUCCESS != status)
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 2390:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * \funcusage
 2391:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * \snippet sysclk/2.0/snippet/main.c snippet_Cy_SysClk_ClkLfSetSource
 2392:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 52
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 52
 
 
 2393:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *******************************************************************************/
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 2447:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * \param source \ref cy_en_clktimer_in_sources_t
 2448:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *
 2449:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * \funcusage
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 53
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 53
 
 
 2450:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * \snippet sysclk/2.0/snippet/main.c snippet_Cy_SysClk_ClkTimerSetSource
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 2492:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *
 2493:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *******************************************************************************/
 2494:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** __STATIC_INLINE void Cy_SysClk_ClkTimerSetDivider(uint8_t divider)
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 54
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 54
 
 
 2495:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** {
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  336              	.LBB131:
  337              	.LBB132:
 2530:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** }
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 55
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 55
 
 
 2531:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** 
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 2585:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** */
 2586:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** typedef enum
 2587:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** {
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 56
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 56
 
 
 2588:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     CY_SYSCLK_PUMP_NO_DIV = 0U, /**< No division on pump clock */
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  345              	.LBE132:
  346              	.LBE131:
  347              	.LBB133:
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 57
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 57
 
 
  348              	.LBB134:
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 2675:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** /*******************************************************************************
 2676:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** * Function Name: Cy_SysClk_ClkPumpGetDivider
 2677:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** ****************************************************************************//**
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 58
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 58
 
 
 2678:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** *
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 2721:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** }
 2722:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** /** \} group_sysclk_clk_pump_funcs */
 2723:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 59
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 59
 
 
 2724:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h **** 
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  379 0140 4900     		lsls	r1, r1, #1
  380 0142 0B43     		orrs	r3, r1
  381 0144 1360     		str	r3, [r2]
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 60
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 60
 
 
  382              	.LVL32:
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 2066:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****     {
  418              		.loc 2 2066 0
  419 0166 564B     		ldr	r3, .L15+4
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 61
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 61
 
 
  420 0168 1B68     		ldr	r3, [r3]
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  469              		.loc 2 2134 0
  470 01ac 7021     		movs	r1, #112
  471 01ae 585C     		ldrb	r0, [r3, r1]
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 62
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 62
 
 
  472 01b0 0231     		adds	r1, r1, #2
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  518 01f2 1000     		movs	r0, r2
 2074:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****             retVal = CY_SYSCLK_SUCCESS;
  519              		.loc 2 2074 0
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 63
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 63
 
 
  520 01f4 7022     		movs	r2, #112
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  568              		.loc 2 2133 0
  569 0234 0543     		orrs	r5, r0
 2135:Generated_Source\PSoC6\pdl\drivers/peripheral/sysclk/cy_sysclk.h ****                            _VAL2FLD(CY_PERI_DIV_CMD_DIV_SEL,  dividerNum);
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 64
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 64
 
 
  570              		.loc 2 2135 0
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  616              		.loc 2 2074 0
  617 0278 7022     		movs	r2, #112
  618 027a 995C     		ldrb	r1, [r3, r2]
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 65
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 65
 
 
  619 027c 6F3A     		subs	r2, r2, #111
@@ -3896,9 +3896,9 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  215:Generated_Source\PSoC6/cyfitter_cfg.c **** 	Cy_SysClk_PeriphSetDivider(CY_SYSCLK_DIV_16_BIT, 0u, 433u);
  216:Generated_Source\PSoC6/cyfitter_cfg.c **** 	Cy_SysClk_PeriphEnableDivider(CY_SYSCLK_DIV_16_BIT, 0u);
  217:Generated_Source\PSoC6/cyfitter_cfg.c **** 	Cy_SysClk_PeriphAssignDivider(PCLK_TCPWM0_CLOCKS0, CY_SYSCLK_DIV_16_BIT, 1u);
- 218:Generated_Source\PSoC6/cyfitter_cfg.c **** 	Cy_SysClk_PeriphSetDivider(CY_SYSCLK_DIV_16_BIT, 1u, 4999u);
+ 218:Generated_Source\PSoC6/cyfitter_cfg.c **** 	Cy_SysClk_PeriphSetDivider(CY_SYSCLK_DIV_16_BIT, 1u, 499u);
  219:Generated_Source\PSoC6/cyfitter_cfg.c **** 	Cy_SysClk_PeriphEnableDivider(CY_SYSCLK_DIV_16_BIT, 1u);
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 66
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 66
 
 
  220:Generated_Source\PSoC6/cyfitter_cfg.c **** 	Cy_SysClk_PeriphAssignDivider(PCLK_TCPWM0_CLOCKS1, CY_SYSCLK_DIV_16_BIT, 1u);
@@ -3929,7 +3929,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  685 02f8 FF0000FF 		.word	-16776961
  686 02fc 00B10100 		.word	110848
  687 0300 4C0C0000 		.word	3148
- 688 0304 00871300 		.word	1279744
+ 688 0304 00F30100 		.word	127744
  689 0308 540C0000 		.word	3156
  690              		.cfi_endproc
  691              	.LFE188:
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  236:Generated_Source\PSoC6/cyfitter_cfg.c **** * Parameters:
  237:Generated_Source\PSoC6/cyfitter_cfg.c **** *  void
  238:Generated_Source\PSoC6/cyfitter_cfg.c **** *
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 67
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 67
 
 
  239:Generated_Source\PSoC6/cyfitter_cfg.c **** * Return:
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  720              	.LVL47:
  721 0010 0028     		cmp	r0, #0
  722 0012 14D1     		bne	.L18
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 68
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 68
 
 
  274:Generated_Source\PSoC6/cyfitter_cfg.c **** 	{
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
    1:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** /***************************************************************************//**
    2:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * \file cy_syspm.h
    3:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * \version 4.0
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 69
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 69
 
 
    4:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
   58:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *
   59:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * \section group_syspm_section_configuration Configuration Considerations
   60:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * \subsection group_syspm_power_modes Power Modes
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 70
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 70
 
 
   61:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * PSoC 6 MCUs support four system and three CPU power modes. These power modes
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  115:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *   \endcode
  116:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * * If active core regulator is the Buck, call:
  117:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *   \code{.c}
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 71
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 71
 
 
  118:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *   Cy_SysPm_BuckSetVoltage1(CY_SYSPM_BUCK_OUT1_VOLTAGE_LP)
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  172:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * \warning * - Numbers shown are approximate and real limit values may be
  173:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * different because they are device specific. You should refer to the device 
  174:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * datasheet for exact values of maximum frequency and current in system
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 72
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 72
 
 
  175:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * ULP mode.
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  229:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * sources:
  230:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * - Wakeup pin
  231:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * - LP Comparator
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 73
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 73
 
 
  232:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * - RTC alarm
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  286:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *
  287:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * The SysPm driver also provides an API to configure the internal power 
  288:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * management integrated circuit (PMIC) controller for an external PMIC that 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 74
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 74
 
 
  289:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * supplies Vddd. Use the API to enable the internal PMIC controller output that
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  343:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * Refer to the \ref group_syspm_functions_backup functions for more detail.
  344:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *
  345:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * \subsection group_syspm_cb SysPm Callbacks
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 75
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 75
 
 
  346:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * The SysPm driver handles low power callbacks declared in the application. 
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  400:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * CY_SYSPM_CHECK_FAIL mode parameter. This allows each callback to know that 
  401:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * entering the low power mode has failed. The callback can then undo whatever it
  402:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * did to prepare for low power mode, if required. For example, if the driver X 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 76
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 76
 
 
  403:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * callback shut down the analog part, it can re-enable the analog part.
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  457:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * \snippet syspm/4.0/snippet/main.c snippet_Cy_SysPm_Callback_Structure_Declaration
  458:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *
  459:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * Note that in each case the last two fields are NULL. These are fields used by 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 77
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 77
 
 
  460:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * the SysPm driver to set up the linked list of callback functions.
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  514:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * The <b>base</b> and <b>context</b> fields are optional and can be NULL. 
  515:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * Some drivers require a base hardware address and context to store information 
  516:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * about the mode transition. If your callback routine requires access to the 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 78
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 78
 
 
  517:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * driver registers or context, provide those values 
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  571:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * The intent of CY_SYSPM_CHECK_READY is to only signal if the resources is ready
  572:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * to transition. Ideally, no transition changes should be made at this time. 
  573:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * In some cases a small change may be required. For example a communication 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 79
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 79
 
 
  574:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * resource callback may set a flag telling firmware not to start any new 
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  628:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *   <tr>
  629:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *     <td>LDO</td>
  630:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *     <td>Low dropout linear regulator. The functions that manage this 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 80
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 80
 
 
  631:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *         block are grouped as \ref group_syspm_functions_ldo under 
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  685:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *     <td>Driver library directory-structure simplification.</td>
  686:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *   </tr>
  687:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *   <tr>
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 81
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 81
 
 
  688:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *     <td>
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  742:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *     <td>Makes register access device-independent, so that the PDL does 
  743:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *         not need to be recompiled for each supported part number.</td>
  744:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *   </tr>
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 82
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 82
 
 
  745:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *   <tr>
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  799:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *            is prohibited when the protection context is other than zero.
  800:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *
  801:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *          * Updated the following functions. They now have a 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 83
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 83
 
 
  802:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *            \ref cy_en_syspm_status_t return value and use a syscall:
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  856:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *         * Added functions to control:
  857:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *           * Power supply for the Vddbackup
  858:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *           * Supercapacitor charge
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 84
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 84
 
 
  859:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *           * Vddbackup measurement by ADC
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  913:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *   </tr>
  914:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *   <tr>
  915:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *     <td>Cy_SysPm_IsLowPower</td>
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 85
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 85
 
 
  916:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *     <td>\ref Cy_SysPm_IsSystemUlp</td>
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  970:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *         and abbreviations</td>
  971:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *   </tr>
  972:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * </table>
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 86
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 86
 
 
  973:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1027:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *    cy_en_syspm_status_t Func1(cy_stc_syspm_callback_params_t *callbackParams, cy_en_syspm_callbac
 1028:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *    {
 1029:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *        cy_en_syspm_status_t retVal = CY_SYSPM_FAIL;
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 87
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 87
 
 
 1030:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1084:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * \addtogroup group_syspm_macros
 1085:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * \{
 1086:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** */
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 88
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 88
 
 
 1087:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** 
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1141:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** /* Macro to validate parameters in Cy_SysPm_ExecuteCallback() function */
 1142:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** #define CY_SYSPM_IS_CALLBACK_MODE_VALID(mode)           (((mode) == CY_SYSPM_CHECK_READY) || \
 1143:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h ****                                                          ((mode) == CY_SYSPM_CHECK_FAIL) || \
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 89
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 89
 
 
 1144:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h ****                                                          ((mode) == CY_SYSPM_BEFORE_TRANSITION) || 
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1198:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** 
 1199:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** /**
 1200:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * The internal define of the second LPComparator value 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 90
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 90
 
 
 1201:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * used in the Cy_SysPm_SetHibernateWakeupSource() function
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1255:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** /**
 1256:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * \defgroup group_syspm_return_status The Power Mode Status Defines
 1257:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * \{
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 91
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 91
 
 
 1258:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * Defines for the CPU and system power modes status.
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1312:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * an interrupt or an event. Refer to the CMSIS for WFE and WFI instruction explanations.
 1313:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** */
 1314:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** typedef enum
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 92
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 92
 
 
 1315:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** {
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1369:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** {
 1370:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h ****     CY_SYSPM_LDO_MODE_DISABLED = 0U,    /**< Disables the LDO. */
 1371:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h ****     CY_SYSPM_LDO_MODE_NORMAL   = 1U,    /**< Sets normal current mode. See device datasheet for 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 93
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 93
 
 
 1372:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h ****                                              specific maximum current limit. */
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1426:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h ****     CY_SYSPM_PMIC_POLARITY_HIGH  = 1U     /**< Set active high logic level for the PMIC input. */
 1427:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** } cy_en_syspm_pmic_wakeup_polarity_t;
 1428:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 94
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 94
 
 
 1429:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** /** This enumeration selects Vbackup or Vddd to supply Vddbackup. */
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1483:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** } cy_en_syspm_callback_mode_t;
 1484:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** 
 1485:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** /** \} group_syspm_data_enumerates */
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 95
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 95
 
 
 1486:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** 
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1540:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h ****     struct cy_stc_syspm_callback *prevItm;             /**< The previous list item. This element sh
 1541:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h ****                                                             defined, or defined as NULL. It is for 
 1542:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h ****                                                             usage to link this structure to the nex
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 96
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 96
 
 
 1543:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h ****                                                             structure. It will be updated during ca
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1597:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** __STATIC_INLINE bool Cy_SysPm_IsSystemLp(void);
 1598:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** __STATIC_INLINE bool Cy_SysPm_IsSystemUlp(void);
 1599:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 97
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 97
 
 
 1600:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** uint32_t Cy_SysPm_ReadStatus(void);
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1654:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** __STATIC_INLINE void Cy_SysPm_PmicDisableOutput(void); 
 1655:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** __STATIC_INLINE bool Cy_SysPm_PmicIsOutputEnabled(void);
 1656:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** __STATIC_INLINE void Cy_SysPm_PmicLock(void);
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 98
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 98
 
 
 1657:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** __STATIC_INLINE void Cy_SysPm_PmicUnlock(void);
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1711:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * - False if the CM4 is not in CPU Active mode.
 1712:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *
 1713:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * \funcusage
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 99
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 99
 
 
 1714:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * \snippet syspm/4.0/snippet/main.c snippet_Cy_SysPm_Cm4IsActive
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1768:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *
 1769:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * \return
 1770:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * - True if the CM0+ is in CPU Sleep mode.
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 100
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 100
 
 
 1771:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * - False if the CM0+ is not in CPU Sleep mode.
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1825:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** ****************************************************************************//**
 1826:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *
 1827:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * Checks if the system is in LP mode.
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 101
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 101
 
 
 1828:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1882:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** 
 1883:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** 
 1884:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** /*******************************************************************************
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 102
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 102
 
 
 1885:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * Function Name: Cy_SysPm_SystemIsMinRegulatorCurrentSet
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1939:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * including load current.
 1940:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *
 1941:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * \return
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 103
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 103
 
 
 1942:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * The nominal output voltage 1 (Vccbuck1) of the Buck regulator.
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 1996:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * Function Name: Cy_SysPm_BuckDisableVoltage2
 1997:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** ****************************************************************************//**
 1998:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 104
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 104
 
 
 1999:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * Disables the output 2 voltage (Vbuckrf) of the SIMO Buck regulator. The 
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 2053:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** {
 2054:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h ****     bool isBuckEnabled = Cy_SysPm_BuckIsEnabled();
 2055:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h ****     
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 105
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 105
 
 
 2056:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h ****     if ((0U != cy_device->sysPmSimoPresent) && isBuckEnabled)
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 2110:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** */
 2111:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** /*******************************************************************************
 2112:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * Function Name: Cy_SysPm_LdoGetVoltage
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 106
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 106
 
 
 2113:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** ****************************************************************************//**
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 2167:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * Checks whether IOs are frozen.
 2168:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *
 2169:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * \return 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 107
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 107
 
 
 2170:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * - True if IOs are frozen.
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 2224:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * enable the external PMIC using different input polarities. The PMIC controller
 2225:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * is automatically enabled when the input pin polarity and configured polarity 
 2226:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * match. This function is not effective when the active level of PMIC controller
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 108
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 108
 
 
 2227:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * input pin is equal to the configured PMIC controller polarity.
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 2281:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * be disabled or polarity changed until a next device reset.
 2282:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * 
 2283:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * For information about the PMIC controller input and output pins and their 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 109
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 109
 
 
 2284:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * assignment in the specific devices, refer to the appropriate device TRM.
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 2338:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * After the PMIC controller output is disabled, the PMIC output pin returns to 
 2339:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * its GPIO configured state. 
 2340:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 110
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 110
 
 
 2341:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * \warning
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
 2395:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * disabled, the PMIC must remain unlocked.
 2396:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** *
 2397:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * \funcusage
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 111
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 111
 
 
 2398:Generated_Source\PSoC6\pdl\drivers/peripheral/syspm/cy_syspm.h **** * \snippet syspm/4.0/snippet/main.c snippet_Cy_SysPm_PmicEnable
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  290:Generated_Source\PSoC6/cyfitter_cfg.c **** 
  291:Generated_Source\PSoC6/cyfitter_cfg.c **** 		CYPACKED typedef struct {
  292:Generated_Source\PSoC6/cyfitter_cfg.c **** 			void *address;
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 112
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 112
 
 
  293:Generated_Source\PSoC6/cyfitter_cfg.c **** 			uint16 size;
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  347:Generated_Source\PSoC6/cyfitter_cfg.c **** 			0xFFu, 0x00u, 0x00u, 0x00u, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu
  348:Generated_Source\PSoC6/cyfitter_cfg.c **** 			0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u
  349:Generated_Source\PSoC6/cyfitter_cfg.c **** 			0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 113
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 113
 
 
  350:Generated_Source\PSoC6/cyfitter_cfg.c **** 			0x00u, 0x00u, 0x00u, 0x00u, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  404:Generated_Source\PSoC6/cyfitter_cfg.c **** 			0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x1Fu, 0x1Fu, 0x1Fu, 0x1Fu, 0x1Fu, 0x1Fu
  405:Generated_Source\PSoC6/cyfitter_cfg.c **** 			0x1Fu, 0x1Fu, 0x1Fu, 0x1Fu, 0x1Fu, 0x1Fu, 0x1Fu, 0x1Fu, 0x1Fu, 0x1Fu, 0x1Fu, 0x1Fu, 0x1Fu, 0x1Fu
  406:Generated_Source\PSoC6/cyfitter_cfg.c **** 			0x1Fu, 0x1Fu, 0x1Fu, 0x1Fu, 0x1Fu, 0x1Fu, 0x1Fu, 0x1Fu, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 114
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 114
 
 
  407:Generated_Source\PSoC6/cyfitter_cfg.c **** 			0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  461:Generated_Source\PSoC6/cyfitter_cfg.c **** 			0x1Fu, 0x1Fu, 0x1Fu, 0x1Fu, 0x1Fu, 0x1Fu, 0x1Fu, 0x1Fu, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u
  462:Generated_Source\PSoC6/cyfitter_cfg.c **** 			0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u, 0x00u
  463:Generated_Source\PSoC6/cyfitter_cfg.c **** 			0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0x11u, 0x11u
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 115
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 115
 
 
  464:Generated_Source\PSoC6/cyfitter_cfg.c **** 			0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  518:Generated_Source\PSoC6/cyfitter_cfg.c **** 			0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFFu, 0xFEu, 0x11u, 0x11u
  519:Generated_Source\PSoC6/cyfitter_cfg.c **** 			0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u
  520:Generated_Source\PSoC6/cyfitter_cfg.c **** 			0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u, 0x11u
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 116
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 116
 
 
  521:Generated_Source\PSoC6/cyfitter_cfg.c **** 			0x11u, 0x1Fu, 0x11u, 0x11u, 0x11u, 0x1Du, 0x11u, 0x11u, 0x11u, 0x91u, 0x11u, 0x1Du};
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  823 008e 0004     		lsls	r0, r0, #16
  824 0090 1043     		orrs	r0, r2
  825 0092 FFF7FEFF 		bl	CYMEMZERO
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 117
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 117
 
 
  826              	.LVL54:
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  864              		.loc 1 566 0
  865 00c0 224A     		ldr	r2, .L25+36
  866 00c2 1360     		str	r3, [r2]
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 118
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 118
 
 
  567:Generated_Source\PSoC6/cyfitter_cfg.c **** 
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  896              		.loc 1 591 0
  897 00ee 2A00     		movs	r2, r5
  898 00f0 2300     		movs	r3, r4
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 119
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 119
 
 
  899 00f2 5833     		adds	r3, r3, #88
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  924 011a 2900     		movs	r1, r5
  925 011c 1048     		ldr	r0, .L25+56
  926 011e FFF7FEFF 		bl	Cy_GPIO_Port_Init
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 120
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 120
 
 
  927              	.LVL63:
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  974 0014 00203440 		.word	1077157888
  975 0018 7400     		.short	116
  976 001a 80203440 		.4byte	1077158016
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 121
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 121
 
 
  977 001e 7400     		.short	116
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  1031 00d4 00623440 		.word	1077174784
  1032 00d8 F0060000 		.word	BS_UDB_DSI4_VAL.11344
  1033 00dc 7C000000 		.word	124
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 122
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 122
 
 
  1034 00e0 80623440 		.word	1077174912
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  1088 01a0 00       		.byte	0
  1089 01a1 00       		.byte	0
  1090 01a2 00       		.byte	0
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 123
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 123
 
 
  1091 01a3 00       		.byte	0
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  1145 01d9 00       		.byte	0
  1146 01da 00       		.byte	0
  1147 01db 00       		.byte	0
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 124
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 124
 
 
  1148 01dc 00       		.byte	0
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  1202 0212 11       		.byte	17
  1203 0213 11       		.byte	17
  1204 0214 11       		.byte	17
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 125
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 125
 
 
  1205 0215 11       		.byte	17
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  1259 0248 FF       		.byte	-1
  1260 0249 FF       		.byte	-1
  1261 024a FF       		.byte	-1
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 126
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 126
 
 
  1262 024b FF       		.byte	-1
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  1316 0281 00       		.byte	0
  1317 0282 00       		.byte	0
  1318 0283 00       		.byte	0
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 127
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 127
 
 
  1319 0284 FF       		.byte	-1
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  1373 02ba 11       		.byte	17
  1374 02bb 11       		.byte	17
  1375 02bc 11       		.byte	17
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 128
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 128
 
 
  1376 02bd 11       		.byte	17
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  1430 02f0 FF       		.byte	-1
  1431 02f1 FF       		.byte	-1
  1432 02f2 FF       		.byte	-1
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 129
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 129
 
 
  1433 02f3 FF       		.byte	-1
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  1487 0329 11       		.byte	17
  1488 032a 11       		.byte	17
  1489 032b 11       		.byte	17
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 130
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 130
 
 
  1490 032c 11       		.byte	17
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  1544 035f FF       		.byte	-1
  1545 0360 FF       		.byte	-1
  1546 0361 FF       		.byte	-1
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 131
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 131
 
 
  1547 0362 FF       		.byte	-1
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  1601 0398 0F       		.byte	15
  1602 0399 07       		.byte	7
  1603 039a 00       		.byte	0
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 132
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 132
 
 
  1604 039b 1F       		.byte	31
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  1658 03d1 11       		.byte	17
  1659 03d2 11       		.byte	17
  1660 03d3 11       		.byte	17
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 133
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 133
 
 
  1661 03d4 11       		.byte	17
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  1715 0407 FF       		.byte	-1
  1716 0408 FF       		.byte	-1
  1717 0409 FF       		.byte	-1
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 134
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 134
 
 
  1718 040a FF       		.byte	-1
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  1772 0440 11       		.byte	17
  1773 0441 11       		.byte	17
  1774 0442 11       		.byte	17
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 135
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 135
 
 
  1775 0443 11       		.byte	17
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  1829 0476 00       		.byte	0
  1830 0477 00       		.byte	0
  1831 0478 00       		.byte	0
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 136
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 136
 
 
  1832 0479 00       		.byte	0
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  1886 04af 00       		.byte	0
  1887 04b0 1F       		.byte	31
  1888 04b1 00       		.byte	0
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 137
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 137
 
 
  1889 04b2 00       		.byte	0
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  1943 04e8 11       		.byte	17
  1944 04e9 41       		.byte	65
  1945 04ea 1E       		.byte	30
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 138
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 138
 
 
  1946 04eb 11       		.byte	17
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  2000 051e 1F       		.byte	31
  2001 051f 1F       		.byte	31
  2002 0520 1F       		.byte	31
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 139
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 139
 
 
  2003 0521 1F       		.byte	31
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  2057 0557 11       		.byte	17
  2058 0558 11       		.byte	17
  2059 0559 11       		.byte	17
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 140
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 140
 
 
  2060 055a 11       		.byte	17
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  2114 058d 1F       		.byte	31
  2115 058e 1F       		.byte	31
  2116 058f 1F       		.byte	31
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 141
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 141
 
 
  2117 0590 1F       		.byte	31
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  2171 05c6 FF       		.byte	-1
  2172 05c7 FF       		.byte	-1
  2173 05c8 11       		.byte	17
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 142
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 142
 
 
  2174 05c9 11       		.byte	17
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  2228 05fc 00       		.byte	0
  2229 05fd 00       		.byte	0
  2230 05fe 00       		.byte	0
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 143
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 143
 
 
  2231 05ff 00       		.byte	0
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  2285 0635 00       		.byte	0
  2286 0636 00       		.byte	0
  2287 0637 00       		.byte	0
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 144
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 144
 
 
  2288 0638 FF       		.byte	-1
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  2342 066e 11       		.byte	17
  2343 066f 11       		.byte	17
  2344 0670 11       		.byte	17
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 145
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 145
 
 
  2345 0671 11       		.byte	17
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  2399 06a4 00       		.byte	0
  2400 06a5 00       		.byte	0
  2401 06a6 00       		.byte	0
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 146
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 146
 
 
  2402 06a7 00       		.byte	0
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  2456 06dd 11       		.byte	17
  2457 06de 11       		.byte	17
  2458 06df 11       		.byte	17
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 147
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 147
 
 
  2459 06e0 11       		.byte	17
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  2513 0713 1F       		.byte	31
  2514 0714 1F       		.byte	31
  2515 0715 1F       		.byte	31
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 148
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 148
 
 
  2516 0716 1F       		.byte	31
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  2570 074c 11       		.byte	17
  2571 074d 11       		.byte	17
  2572 074e 11       		.byte	17
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 149
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 149
 
 
  2573 074f 11       		.byte	17
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  2627 0782 1F       		.byte	31
  2628 0783 1F       		.byte	31
  2629 0784 10       		.byte	16
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 150
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 150
 
 
  2630 0785 1F       		.byte	31
@@ -8998,7 +8998,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  2684 07bb 11       		.byte	17
  2685 07bc D1       		.byte	-47
  2686 07bd 11       		.byte	17
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 151
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 151
 
 
  2687 07be 11       		.byte	17
@@ -9058,7 +9058,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  2741 07f1 1F       		.byte	31
  2742 07f2 1F       		.byte	31
  2743 07f3 1F       		.byte	31
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 152
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 152
 
 
  2744 07f4 1F       		.byte	31
@@ -9118,7 +9118,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  2798 082a FF       		.byte	-1
  2799 082b FF       		.byte	-1
  2800 082c FF       		.byte	-1
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 153
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 153
 
 
  2801 082d FF       		.byte	-1
@@ -9178,7 +9178,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  2855 0863 11       		.byte	17
  2856              		.type	BS_UDB_DSI7_VAL.11347, %object
  2857              		.size	BS_UDB_DSI7_VAL.11347, 124
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 154
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 154
 
 
  2858              	BS_UDB_DSI7_VAL.11347:
@@ -9238,7 +9238,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  2912 0899 00       		.byte	0
  2913 089a 00       		.byte	0
  2914 089b 00       		.byte	0
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 155
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 155
 
 
  2915 089c 00       		.byte	0
@@ -9298,7 +9298,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  2969 08d2 11       		.byte	17
  2970 08d3 11       		.byte	17
  2971 08d4 11       		.byte	17
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 156
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 156
 
 
  2972 08d5 11       		.byte	17
@@ -9358,7 +9358,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  3026 0908 00       		.byte	0
  3027 0909 00       		.byte	0
  3028 090a 00       		.byte	0
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 157
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 157
 
 
  3029 090b 00       		.byte	0
@@ -9418,7 +9418,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  3083 0941 11       		.byte	17
  3084 0942 11       		.byte	17
  3085 0943 11       		.byte	17
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 158
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 158
 
 
  3086 0944 11       		.byte	17
@@ -9478,7 +9478,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  3140 0977 1F       		.byte	31
  3141 0978 1F       		.byte	31
  3142 0979 1F       		.byte	31
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 159
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 159
 
 
  3143 097a 1F       		.byte	31
@@ -9538,7 +9538,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  3197 09b0 11       		.byte	17
  3198 09b1 11       		.byte	17
  3199 09b2 11       		.byte	17
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 160
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 160
 
 
  3200 09b3 11       		.byte	17
@@ -9598,7 +9598,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  3254 09e6 1F       		.byte	31
  3255 09e7 1F       		.byte	31
  3256 09e8 1F       		.byte	31
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 161
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 161
 
 
  3257 09e9 1F       		.byte	31
@@ -9658,7 +9658,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  3311 0a1f FF       		.byte	-1
  3312 0a20 FF       		.byte	-1
  3313 0a21 FF       		.byte	-1
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 162
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 162
 
 
  3314 0a22 FF       		.byte	-1
@@ -9718,7 +9718,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  3368 0a55 00       		.byte	0
  3369 0a56 00       		.byte	0
  3370 0a57 04       		.byte	4
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 163
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 163
 
 
  3371 0a58 00       		.byte	0
@@ -9778,7 +9778,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  3425 0a8e 00       		.byte	0
  3426 0a8f 60       		.byte	96
  3427 0a90 00       		.byte	0
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 164
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 164
 
 
  3428 0a91 00       		.byte	0
@@ -9838,7 +9838,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  3482 0ac7 11       		.byte	17
  3483 0ac8 11       		.byte	17
  3484 0ac9 1D       		.byte	29
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 165
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 165
 
 
  3485 0aca 11       		.byte	17
@@ -9898,7 +9898,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  3539 0048 D6160000 		.4byte	.LASF2
  3540 004c 04       		.uleb128 0x4
  3541 004d 01       		.byte	0x1
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 166
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 166
 
 
  3542 004e 06       		.byte	0x6
@@ -9958,7 +9958,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  3596 00b4 08       		.byte	0x8
  3597 00b5 A10B0000 		.4byte	.LASF16
  3598 00b9 03       		.uleb128 0x3
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 167
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 167
 
 
  3599 00ba EB060000 		.4byte	.LASF17
@@ -10018,7 +10018,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  3653 012c 4C040000 		.4byte	.LASF29
  3654 0130 08       		.byte	0x8
  3655 0131 09       		.uleb128 0x9
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 168
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 168
 
 
  3656 0132 63120000 		.4byte	.LASF30
@@ -10078,7 +10078,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  3710 019e 1D170000 		.4byte	.LASF48
  3711 01a2 1B       		.byte	0x1b
  3712 01a3 09       		.uleb128 0x9
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 169
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 169
 
 
  3713 01a4 31170000 		.4byte	.LASF49
@@ -10138,7 +10138,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  3767 0210 E00D0000 		.4byte	.LASF67
  3768 0214 2E       		.byte	0x2e
  3769 0215 09       		.uleb128 0x9
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 170
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 170
 
 
  3770 0216 230D0000 		.4byte	.LASF68
@@ -10198,7 +10198,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  3824 0288 00       		.byte	0
  3825 0289 0A       		.uleb128 0xa
  3826 028a E5000000 		.4byte	0xe5
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 171
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 171
 
 
  3827 028e 99020000 		.4byte	0x299
@@ -10258,7 +10258,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  3881 0300 24       		.byte	0x24
  3882 0301 0D       		.uleb128 0xd
  3883 0302 45080000 		.4byte	.LASF85
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 172
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 172
 
 
  3884 0306 08       		.byte	0x8
@@ -10318,7 +10318,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  3938 0376 00       		.byte	0
  3939 0377 0D       		.uleb128 0xd
  3940 0378 B7150000 		.4byte	.LASF90
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 173
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 173
 
 
  3941 037c 08       		.byte	0x8
@@ -10378,7 +10378,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  3995 03e8 B7150000 		.4byte	.LASF90
  3996 03ec 08       		.byte	0x8
  3997 03ed 47       		.byte	0x47
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 174
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 174
 
 
  3998 03ee E5000000 		.4byte	0xe5
@@ -10438,7 +10438,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  4052 045d 6B       		.byte	0x6b
  4053 045e E5000000 		.4byte	0xe5
  4054 0462 0004     		.2byte	0x400
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 175
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 175
 
 
  4055 0464 10       		.uleb128 0x10
@@ -10498,7 +10498,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  4109 04d9 10       		.uleb128 0x10
  4110 04da 59080000 		.4byte	.LASF102
  4111 04de 08       		.byte	0x8
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 176
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 176
 
 
  4112 04df 75       		.byte	0x75
@@ -10558,7 +10558,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  4166 0556 45050000 		.4byte	0x545
  4167 055a 06       		.uleb128 0x6
  4168 055b 45050000 		.4byte	0x545
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 177
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 177
 
 
  4169 055f 06       		.uleb128 0x6
@@ -10618,7 +10618,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  4223 05e1 FF01     		.2byte	0x1ff
  4224 05e3 00       		.byte	0
  4225 05e4 06       		.uleb128 0x6
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 178
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 178
 
 
  4226 05e5 D3050000 		.4byte	0x5d3
@@ -10678,7 +10678,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  4280 065d 0D       		.uleb128 0xd
  4281 065e D51E0000 		.4byte	.LASF108
  4282 0662 09       		.byte	0x9
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 179
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 179
 
 
  4283 0663 24       		.byte	0x24
@@ -10738,7 +10738,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  4337 06cf 2D       		.byte	0x2d
  4338 06d0 E5000000 		.4byte	0xe5
  4339 06d4 28       		.byte	0x28
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 180
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 180
 
 
  4340 06d5 0D       		.uleb128 0xd
@@ -10798,7 +10798,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  4394 0742 3A       		.byte	0x3a
  4395 0743 E5000000 		.4byte	0xe5
  4396 0747 18       		.byte	0x18
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 181
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 181
 
 
  4397 0748 0D       		.uleb128 0xd
@@ -10858,7 +10858,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  4451 07b9 10       		.uleb128 0x10
  4452 07ba 0E170000 		.4byte	.LASF130
  4453 07be 09       		.byte	0x9
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 182
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 182
 
 
  4454 07bf 44       		.byte	0x44
@@ -10918,7 +10918,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  4508 0834 4D       		.byte	0x4d
  4509 0835 E5000000 		.4byte	0xe5
  4510 0839 1405     		.2byte	0x514
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 183
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 183
 
 
  4511 083b 10       		.uleb128 0x10
@@ -10978,7 +10978,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  4565 08b0 10       		.uleb128 0x10
  4566 08b1 11080000 		.4byte	.LASF148
  4567 08b5 09       		.byte	0x9
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 184
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 184
 
 
  4568 08b6 57       		.byte	0x57
@@ -11038,7 +11038,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  4622 092b 60       		.byte	0x60
  4623 092c 380B0000 		.4byte	0xb38
  4624 0930 7C06     		.2byte	0x67c
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 185
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 185
 
 
  4625 0932 10       		.uleb128 0x10
@@ -11098,7 +11098,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  4679 09a7 10       		.uleb128 0x10
  4680 09a8 A61A0000 		.4byte	.LASF167
  4681 09ac 09       		.byte	0x9
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 186
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 186
 
 
  4682 09ad 6A       		.byte	0x6a
@@ -11158,7 +11158,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  4736 0a22 73       		.byte	0x73
  4737 0a23 E5000000 		.4byte	0xe5
  4738 0a27 18FF     		.2byte	0xff18
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 187
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 187
 
 
  4739 0a29 10       		.uleb128 0x10
@@ -11218,7 +11218,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  4793 0aa3 07       		.uleb128 0x7
  4794 0aa4 9E0A0000 		.4byte	0xa9e
  4795 0aa8 0A       		.uleb128 0xa
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 188
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 188
 
 
  4796 0aa9 EC060000 		.4byte	0x6ec
@@ -11278,7 +11278,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  4850 0b2d A9000000 		.4byte	0xa9
  4851 0b31 20       		.byte	0x20
  4852 0b32 00       		.byte	0
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 189
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 189
 
 
  4853 0b33 06       		.uleb128 0x6
@@ -11338,7 +11338,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  4907 0bb1 22       		.byte	0x22
  4908 0bb2 E5000000 		.4byte	0xe5
  4909 0bb6 00       		.byte	0
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 190
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 190
 
 
  4910 0bb7 0D       		.uleb128 0xd
@@ -11398,7 +11398,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  4964 0c23 0D       		.uleb128 0xd
  4965 0c24 05210000 		.4byte	.LASF191
  4966 0c28 0A       		.byte	0xa
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 191
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 191
 
 
  4967 0c29 2C       		.byte	0x2c
@@ -11458,7 +11458,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  5021 0c95 35       		.byte	0x35
  5022 0c96 D90C0000 		.4byte	0xcd9
  5023 0c9a 4C       		.byte	0x4c
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 192
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 192
 
 
  5024 0c9b 10       		.uleb128 0x10
@@ -11518,7 +11518,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  5078 0d12 4F555400 		.ascii	"OUT\000"
  5079 0d16 0B       		.byte	0xb
  5080 0d17 23       		.byte	0x23
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 193
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 193
 
 
  5081 0d18 E5000000 		.4byte	0xe5
@@ -11578,7 +11578,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  5135 0d83 E5000000 		.4byte	0xe5
  5136 0d87 24       		.byte	0x24
  5137 0d88 0F       		.uleb128 0xf
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 194
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 194
 
 
  5138 0d89 43464700 		.ascii	"CFG\000"
@@ -11638,7 +11638,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  5192 0df6 39       		.byte	0x39
  5193 0df7 7D0E0000 		.4byte	0xe7d
  5194 0dfb 0F       		.uleb128 0xf
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 195
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 195
 
 
  5195 0dfc 50525400 		.ascii	"PRT\000"
@@ -11698,7 +11698,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  5249 0e70 B71A0000 		.4byte	.LASF220
  5250 0e74 0B       		.byte	0xb
  5251 0e75 43       		.byte	0x43
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 196
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 196
 
 
  5252 0e76 E5000000 		.4byte	0xe5
@@ -11758,7 +11758,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  5306 0eed 0C       		.byte	0xc
  5307 0eee 39       		.byte	0x39
  5308 0eef DA000000 		.4byte	0xda
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 197
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 197
 
 
  5309 0ef3 08       		.byte	0x8
@@ -11818,7 +11818,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  5363 0f5f 29       		.byte	0x29
  5364 0f60 0D       		.uleb128 0xd
  5365 0f61 FB1B0000 		.4byte	.LASF238
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 198
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 198
 
 
  5366 0f65 0C       		.byte	0xc
@@ -11878,7 +11878,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  5420 0fd1 0C       		.byte	0xc
  5421 0fd2 50       		.byte	0x50
  5422 0fd3 B9000000 		.4byte	0xb9
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 199
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 199
 
 
  5423 0fd7 33       		.byte	0x33
@@ -11938,7 +11938,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  5477 1043 40       		.byte	0x40
  5478 1044 0D       		.uleb128 0xd
  5479 1045 45120000 		.4byte	.LASF257
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 200
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 200
 
 
  5480 1049 0C       		.byte	0xc
@@ -11998,7 +11998,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  5534 10b5 0C       		.byte	0xc
  5535 10b6 63       		.byte	0x63
  5536 10b7 B9000000 		.4byte	0xb9
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 201
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 201
 
 
  5537 10bb 53       		.byte	0x53
@@ -12058,7 +12058,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  5591 1127 5E       		.byte	0x5e
  5592 1128 0D       		.uleb128 0xd
  5593 1129 24210000 		.4byte	.LASF276
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 202
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 202
 
 
  5594 112d 0C       		.byte	0xc
@@ -12118,7 +12118,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  5648 1199 0C       		.byte	0xc
  5649 119a 7D       		.byte	0x7d
  5650 119b B9000000 		.4byte	0xb9
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 203
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 203
 
 
  5651 119f 72       		.byte	0x72
@@ -12178,7 +12178,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  5705 120b 7F       		.byte	0x7f
  5706 120c 0D       		.uleb128 0xd
  5707 120d 3E1F0000 		.4byte	.LASF295
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 204
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 204
 
 
  5708 1211 0C       		.byte	0xc
@@ -12238,7 +12238,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  5762 127d 0C       		.byte	0xc
  5763 127e 95       		.byte	0x95
  5764 127f CF000000 		.4byte	0xcf
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 205
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 205
 
 
  5765 1283 A4       		.byte	0xa4
@@ -12298,7 +12298,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  5819 12f0 04       		.uleb128 0x4
  5820 12f1 04       		.byte	0x4
  5821 12f2 04       		.byte	0x4
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 206
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 206
 
 
  5822 12f3 3B140000 		.4byte	.LASF314
@@ -12358,7 +12358,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  5876 1361 DA000000 		.4byte	0xda
  5877 1365 14       		.byte	0x14
  5878 1366 0D       		.uleb128 0xd
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 207
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 207
 
 
  5879 1367 B2010000 		.4byte	.LASF322
@@ -12418,7 +12418,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  5933 13d8 14       		.uleb128 0x14
  5934 13d9 6D0F0000 		.4byte	.LASF332
  5935 13dd 02004A00 		.4byte	0x4a0002
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 208
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 208
 
 
  5936 13e1 14       		.uleb128 0x14
@@ -12478,7 +12478,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  5990 1458 00       		.byte	0
  5991 1459 09       		.uleb128 0x9
  5992 145a CB0C0000 		.4byte	.LASF346
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 209
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 209
 
 
  5993 145e 01       		.byte	0x1
@@ -12538,7 +12538,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  6047 14cc 0503     		.2byte	0x305
  6048 14ce CF000000 		.4byte	0xcf
  6049 14d2 04       		.byte	0x4
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 210
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 210
 
 
  6050 14d3 17       		.uleb128 0x17
@@ -12598,7 +12598,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  6104 1544 431E0000 		.4byte	.LASF367
  6105 1548 02       		.byte	0x2
  6106 1549 0E03     		.2byte	0x30e
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 211
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 211
 
 
  6107 154b B0140000 		.4byte	0x14b0
@@ -12658,7 +12658,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  6161 15bb 0F       		.byte	0xf
  6162 15bc 00       		.byte	0
  6163 15bd 12       		.uleb128 0x12
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 212
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 212
 
 
  6164 15be 341B0000 		.4byte	.LASF384
@@ -12718,7 +12718,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  6218 162f 5E000000 		.4byte	0x5e
  6219 1633 02       		.byte	0x2
  6220 1634 2B09     		.2byte	0x92b
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 213
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 213
 
 
  6221 1636 53160000 		.4byte	0x1653
@@ -12778,7 +12778,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  6275 16ac 00       		.byte	0
  6276 16ad 09       		.uleb128 0x9
  6277 16ae 86210000 		.4byte	.LASF407
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 214
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 214
 
 
  6278 16b2 01       		.byte	0x1
@@ -12838,7 +12838,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  6332 171d 40170000 		.4byte	0x1740
  6333 1721 09       		.uleb128 0x9
  6334 1722 66040000 		.4byte	.LASF423
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 215
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 215
 
 
  6335 1726 00       		.byte	0
@@ -12898,7 +12898,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  6389 1795 03       		.byte	0x3
  6390 1796 09       		.uleb128 0x9
  6391 1797 181C0000 		.4byte	.LASF436
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 216
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 216
 
 
  6392 179b 04       		.byte	0x4
@@ -12958,7 +12958,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  6446 1816 DA000000 		.4byte	0xda
  6447 181a 19       		.uleb128 0x19
  6448 181b 7F0C0000 		.4byte	.LASF443
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 217
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 217
 
 
  6449 181f 02       		.byte	0x2
@@ -13018,7 +13018,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  6503 1894 4809     		.2byte	0x948
  6504 1896 53160000 		.4byte	0x1653
  6505 189a 00       		.byte	0
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 218
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 218
 
 
  6506 189b 18       		.uleb128 0x18
@@ -13078,7 +13078,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  6560 191a EB130000 		.4byte	0x13eb
  6561 191e 00       		.byte	0
  6562 191f 1B       		.uleb128 0x1b
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 219
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 219
 
 
  6563 1920 2C190000 		.4byte	.LASF454
@@ -13138,7 +13138,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  6617 1991 470A     		.2byte	0xa47
  6618 1993 08170000 		.4byte	0x1708
  6619 1997 00       		.byte	0
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 220
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 220
 
 
  6620 1998 1D       		.uleb128 0x1d
@@ -13198,7 +13198,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  6674 1a0a 01       		.byte	0x1
  6675 1a0b 82       		.byte	0x82
  6676 1a0c 00000000 		.4byte	.LFB187
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 221
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 221
 
 
  6677 1a10 02000000 		.4byte	.LFE187-.LFB187
@@ -13258,7 +13258,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  6731 1a72 51       		.byte	0x51
  6732 1a73 00       		.byte	0
  6733 1a74 00       		.byte	0
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 222
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 222
 
 
  6734 1a75 20       		.uleb128 0x20
@@ -13318,7 +13318,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  6788 1ad6 04       		.byte	0x4
  6789 1ad7 DB1A0000 		.4byte	0x1adb
  6790 1adb 26       		.uleb128 0x26
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 223
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 223
 
 
  6791 1adc 18       		.uleb128 0x18
@@ -13378,7 +13378,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  6845 1b61 9C       		.byte	0x9c
  6846 1b62 701B0000 		.4byte	0x1b70
  6847 1b66 29       		.uleb128 0x29
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 224
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 224
 
 
  6848 1b67 74180000 		.4byte	0x1874
@@ -13438,7 +13438,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  6902 1bf7 E4170000 		.4byte	0x17e4
  6903 1bfb 60010000 		.4byte	.LLST13
  6904 1bff 29       		.uleb128 0x29
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 225
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 225
 
 
  6905 1c00 D8170000 		.4byte	0x17d8
@@ -13498,7 +13498,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  6959 1c84 23       		.uleb128 0x23
  6960 1c85 01       		.uleb128 0x1
  6961 1c86 50       		.byte	0x50
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 226
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 226
 
 
  6962 1c87 01       		.uleb128 0x1
@@ -13558,7 +13558,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  7016 1d0e 2F       		.uleb128 0x2f
  7017 1d0f 5B190000 		.4byte	0x195b
  7018 1d13 2C010000 		.4byte	.LBB135
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 227
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 227
 
 
  7019 1d17 0A000000 		.4byte	.LBE135-.LBB135
@@ -13618,7 +13618,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  7073 1da7 00       		.byte	0
  7074 1da8 28       		.uleb128 0x28
  7075 1da9 DD180000 		.4byte	0x18dd
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 228
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 228
 
 
  7076 1dad 88010000 		.4byte	.LBB145
@@ -13678,7 +13678,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  7130 1e40 B8180000 		.4byte	0x18b8
  7131 1e44 1A030000 		.4byte	.LLST35
  7132 1e48 29       		.uleb128 0x29
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 229
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 229
 
 
  7133 1e49 AC180000 		.4byte	0x18ac
@@ -13738,7 +13738,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  7187 1edf 00       		.byte	0
  7188 1ee0 28       		.uleb128 0x28
  7189 1ee1 9B180000 		.4byte	0x189b
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 230
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 230
 
 
  7190 1ee5 5E020000 		.4byte	.LBB155
@@ -13798,7 +13798,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  7244 1f75 31       		.byte	0x31
  7245 1f76 23       		.uleb128 0x23
  7246 1f77 01       		.uleb128 0x1
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 231
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 231
 
 
  7247 1f78 51       		.byte	0x51
@@ -13858,7 +13858,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  7301 1fd2 01       		.uleb128 0x1
  7302 1fd3 50       		.byte	0x50
  7303 1fd4 01       		.uleb128 0x1
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 232
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 232
 
 
  7304 1fd5 30       		.byte	0x30
@@ -13918,7 +13918,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  7358 202f 07       		.uleb128 0x7
  7359 2030 43150000 		.4byte	0x1543
  7360 2034 30       		.uleb128 0x30
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 233
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 233
 
 
  7361 2035 930B0000 		.4byte	.LASF516
@@ -13978,7 +13978,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  7415 20c0 B0000000 		.4byte	0xb0
  7416 20c4 00       		.byte	0
  7417 20c5 17       		.uleb128 0x17
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 234
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 234
 
 
  7418 20c6 3A180000 		.4byte	.LASF475
@@ -14038,7 +14038,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  7472 213d 05       		.uleb128 0x5
  7473 213e 03       		.byte	0x3
  7474 213f 14000000 		.4byte	cfg_memset_list.11333
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 235
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 235
 
 
  7475 2143 07       		.uleb128 0x7
@@ -14098,7 +14098,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  7529 21bc 9F240000 		.4byte	0x249f
  7530 21c0 05       		.uleb128 0x5
  7531 21c1 03       		.byte	0x3
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 236
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 236
 
 
  7532 21c2 00050000 		.4byte	BS_UDB_DSI0_VAL.11340
@@ -14158,7 +14158,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  7586 223e 05       		.uleb128 0x5
  7587 223f 03       		.byte	0x3
  7588 2240 64080000 		.4byte	BS_UDB_DSI7_VAL.11347
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 237
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 237
 
 
  7589 2244 34       		.uleb128 0x34
@@ -14218,7 +14218,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  7643 22bc 2102     		.2byte	0x221
  7644 22be 2C000000 		.4byte	0x2c
  7645 22c2 60040000 		.4byte	.LLST55
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 238
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 238
 
 
  7646 22c6 2C       		.uleb128 0x2c
@@ -14278,7 +14278,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  7700 2333 23       		.uleb128 0x23
  7701 2334 01       		.uleb128 0x1
  7702 2335 50       		.byte	0x50
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 239
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 239
 
 
  7703 2336 10       		.uleb128 0x10
@@ -14338,7 +14338,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  7757 237b A8230000 		.4byte	0x23a8
  7758 237f 34       		.uleb128 0x34
  7759 2380 B7060000 		.4byte	.LASF498
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 240
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 240
 
 
  7760 2384 01       		.byte	0x1
@@ -14398,7 +14398,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  7814 23e3 1A000000 		.4byte	.LBE172-.LBB172
  7815 23e7 14240000 		.4byte	0x2414
  7816 23eb 34       		.uleb128 0x34
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 241
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 241
 
 
  7817 23ec E9030000 		.4byte	.LASF500
@@ -14458,7 +14458,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  7871 2450 31       		.byte	0x31
  7872 2451 00       		.byte	0
  7873 2452 36       		.uleb128 0x36
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 242
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 242
 
 
  7874 2453 74000000 		.4byte	.LVL51
@@ -14518,7 +14518,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  7928 24d7 8F240000 		.4byte	0x248f
  7929 24db 07       		.uleb128 0x7
  7930 24dc 8B130000 		.4byte	0x138b
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 243
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 243
 
 
  7931 24e0 37       		.uleb128 0x37
@@ -14578,7 +14578,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  7985 2564 0D       		.byte	0xd
  7986 2565 9503     		.2byte	0x395
  7987 2567 39       		.uleb128 0x39
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 244
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 244
 
 
  7988 2568 FB210000 		.4byte	.LASF511
@@ -14638,7 +14638,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  8042 002f 0B       		.uleb128 0xb
  8043 0030 3E       		.uleb128 0x3e
  8044 0031 0B       		.uleb128 0xb
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 245
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 245
 
 
  8045 0032 03       		.uleb128 0x3
@@ -14698,7 +14698,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  8099 0068 01       		.uleb128 0x1
  8100 0069 13       		.uleb128 0x13
  8101 006a 00       		.byte	0
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 246
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 246
 
 
  8102 006b 00       		.byte	0
@@ -14758,7 +14758,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  8156 00a1 03       		.uleb128 0x3
  8157 00a2 08       		.uleb128 0x8
  8158 00a3 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 247
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 247
 
 
  8159 00a4 0B       		.uleb128 0xb
@@ -14818,7 +14818,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  8213 00da 0B       		.uleb128 0xb
  8214 00db 3B       		.uleb128 0x3b
  8215 00dc 05       		.uleb128 0x5
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 248
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 248
 
 
  8216 00dd 01       		.uleb128 0x1
@@ -14878,7 +14878,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  8270 0113 0E       		.uleb128 0xe
  8271 0114 3A       		.uleb128 0x3a
  8272 0115 0B       		.uleb128 0xb
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 249
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 249
 
 
  8273 0116 3B       		.uleb128 0x3b
@@ -14938,7 +14938,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  8327 014c 00       		.byte	0
  8328 014d 1C       		.uleb128 0x1c
  8329 014e 05       		.uleb128 0x5
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 250
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 250
 
 
  8330 014f 00       		.byte	0
@@ -14998,7 +14998,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  8384 0187 03       		.uleb128 0x3
  8385 0188 0E       		.uleb128 0xe
  8386 0189 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 251
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 251
 
 
  8387 018a 0B       		.uleb128 0xb
@@ -15058,7 +15058,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  8441 01c3 00       		.byte	0
  8442 01c4 00       		.byte	0
  8443 01c5 23       		.uleb128 0x23
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 252
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 252
 
 
  8444 01c6 8A8201   		.uleb128 0x410a
@@ -15118,7 +15118,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  8498 01ff 01       		.byte	0x1
  8499 0200 31       		.uleb128 0x31
  8500 0201 13       		.uleb128 0x13
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 253
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 253
 
 
  8501 0202 11       		.uleb128 0x11
@@ -15178,7 +15178,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  8555 0238 0E       		.uleb128 0xe
  8556 0239 3A       		.uleb128 0x3a
  8557 023a 0B       		.uleb128 0xb
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 254
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 254
 
 
  8558 023b 3B       		.uleb128 0x3b
@@ -15238,7 +15238,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  8612 0274 19       		.uleb128 0x19
  8613 0275 01       		.uleb128 0x1
  8614 0276 13       		.uleb128 0x13
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 255
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 255
 
 
  8615 0277 00       		.byte	0
@@ -15298,7 +15298,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  8669 02ad 3A       		.uleb128 0x3a
  8670 02ae 0B       		.uleb128 0xb
  8671 02af 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 256
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 256
 
 
  8672 02b0 05       		.uleb128 0x5
@@ -15358,7 +15358,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  8726 02e8 19       		.uleb128 0x19
  8727 02e9 6E       		.uleb128 0x6e
  8728 02ea 0E       		.uleb128 0xe
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 257
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 257
 
 
  8729 02eb 03       		.uleb128 0x3
@@ -15418,7 +15418,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  8783 001d 00000000 		.4byte	0
  8784              	.LLST1:
  8785 0021 00000000 		.4byte	.LVL1
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 258
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 258
 
 
  8786 0025 06000000 		.4byte	.LVL2
@@ -15478,7 +15478,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  8840 00a6 52       		.byte	0x52
  8841 00a7 9F       		.byte	0x9f
  8842 00a8 00000000 		.4byte	0
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 259
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 259
 
 
  8843 00ac 00000000 		.4byte	0
@@ -15538,7 +15538,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  8897 0138 64000000 		.4byte	.LVL11
  8898 013c 0200     		.2byte	0x2
  8899 013e 30       		.byte	0x30
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 260
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 260
 
 
  8900 013f 9F       		.byte	0x9f
@@ -15598,7 +15598,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  8954              	.LLST19:
  8955 01cc 02010000 		.4byte	.LVL26
  8956 01d0 0A010000 		.4byte	.LVL27
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 261
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 261
 
 
  8957 01d4 0200     		.2byte	0x2
@@ -15658,7 +15658,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9011 0258 66010000 		.4byte	.LVL37
  9012 025c 88010000 		.4byte	.LVL38
  9013 0260 0200     		.2byte	0x2
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 262
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 262
 
 
  9014 0262 35       		.byte	0x35
@@ -15718,7 +15718,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9068 02ea 00000000 		.4byte	0
  9069              	.LLST33:
  9070 02ee 9C010000 		.4byte	.LVL39
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 263
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 263
 
 
  9071 02f2 DA010000 		.4byte	.LVL40
@@ -15766,7 +15766,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9113 035e 1A020000 		.4byte	.LVL42
  9114 0362 0400     		.2byte	0x4
  9115 0364 0A       		.byte	0xa
- 9116 0365 8713     		.2byte	0x1387
+ 9116 0365 F301     		.2byte	0x1f3
  9117 0367 9F       		.byte	0x9f
  9118 0368 00000000 		.4byte	0
  9119 036c 00000000 		.4byte	0
@@ -15778,7 +15778,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9125 037b 9F       		.byte	0x9f
  9126 037c 00000000 		.4byte	0
  9127 0380 00000000 		.4byte	0
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 264
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 264
 
 
  9128              	.LLST42:
@@ -15838,7 +15838,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9182 0410 0200     		.2byte	0x2
  9183 0412 31       		.byte	0x31
  9184 0413 9F       		.byte	0x9f
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 265
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 265
 
 
  9185 0414 00000000 		.4byte	0
@@ -15898,7 +15898,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9239 049d 22       		.byte	0x22
  9240 049e 9F       		.byte	0x9f
  9241 049f 00000000 		.4byte	0
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 266
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 266
 
 
  9242 04a3 00000000 		.4byte	0
@@ -15958,7 +15958,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9293      FB0E0D00 
  9293      01010101 
  9294              	.LASF38:
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 267
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 267
 
 
  9295 0000 50434C4B 		.ascii	"PCLK_SMARTIO8_CLOCK\000"
@@ -16018,7 +16018,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9315      5953434C 
  9315      4B5F434C 
  9315      4B54494D 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 268
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 268
 
 
  9315      45525F49 
@@ -16078,7 +16078,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9335      6500
  9336              	.LASF325:
  9337 01d7 63795F73 		.ascii	"cy_stc_gpio_prt_config_t\000"
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 269
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 269
 
 
  9337      74635F67 
@@ -16138,7 +16138,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9357 02a0 494E5452 		.ascii	"INTR_MASKED\000"
  9357      5F4D4153 
  9357      4B454400 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 270
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 270
 
 
  9358              	.LASF28:
@@ -16198,7 +16198,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9379      434B5F50 
  9380              	.LASF331:
  9381 0365 43595F53 		.ascii	"CY_SYSCLK_BAD_PARAM\000"
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 271
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 271
 
 
  9381      5953434C 
@@ -16258,7 +16258,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9401 0420 43595F53 		.ascii	"CY_SYSPM_LDO_VOLTAGE_0_9V\000"
  9401      5953504D 
  9401      5F4C444F 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 272
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 272
 
 
  9401      5F564F4C 
@@ -16318,7 +16318,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9422              	.LASF429:
  9423 04ef 43595F53 		.ascii	"CY_SYSCLK_BAK_IN_WCO\000"
  9423      5953434C 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 273
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 273
 
 
  9423      4B5F4241 
@@ -16378,7 +16378,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9446              	.LASF158:
  9447 05a5 53525353 		.ascii	"SRSS_INTR\000"
  9447      5F494E54 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 274
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 274
 
 
  9447      5200
@@ -16438,7 +16438,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9465      525F5345 
  9465      5400
  9466              	.LASF498:
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 275
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 275
 
 
  9467 06b7 706F7274 		.ascii	"port5_cfg\000"
@@ -16498,7 +16498,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9489 0769 50434C4B 		.ascii	"PCLK_TCPWM1_CLOCKS15\000"
  9489      5F544350 
  9489      574D315F 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 276
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 276
 
 
  9489      434C4F43 
@@ -16558,7 +16558,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9510              	.LASF227:
  9511 083a 666C6173 		.ascii	"flashcBase\000"
  9511      68634261 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 277
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 277
 
 
  9511      736500
@@ -16618,7 +16618,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9537      59535449 
  9537      434B5F43 
  9537      4C4F434B 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 278
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 278
 
 
  9537      5F534F55 
@@ -16678,7 +16678,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9555      4B533233 
  9556              	.LASF301:
  9557 09e7 63707573 		.ascii	"cpussTrimRamCtlOffset\000"
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 279
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 279
 
 
  9557      73547269 
@@ -16738,7 +16738,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9579      5953434C 
  9579      4B5F434C 
  9579      4B48465F 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 280
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 280
 
 
  9579      494E5F43 
@@ -16798,7 +16798,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9599      3100
  9600              	.LASF516:
  9601 0b93 43795F53 		.ascii	"Cy_SystemInit\000"
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 281
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 281
 
 
  9601      79737465 
@@ -16858,7 +16858,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9624              	.LASF362:
  9625 0c4b 70676169 		.ascii	"pgain\000"
  9625      6E00
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 282
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 282
 
 
  9626              	.LASF326:
@@ -16918,7 +16918,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9648              	.LASF207:
  9649 0d0a 4346475F 		.ascii	"CFG_IN\000"
  9649      494E00
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 283
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 283
 
 
  9650              	.LASF116:
@@ -16978,7 +16978,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9671 0db6 434C4B5F 		.ascii	"CLK_PATH_SELECT\000"
  9671      50415448 
  9671      5F53454C 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 284
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 284
 
 
  9671      45435400 
@@ -17038,7 +17038,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9695 0e6c 666C6173 		.ascii	"flashCtlMainWs4Freq\000"
  9695      6843746C 
  9695      4D61696E 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 285
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 285
 
 
  9695      57733446 
@@ -17098,7 +17098,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9719 0f1a 4359434F 		.ascii	"CYCONFIGCPYCODE\000"
  9719      4E464947 
  9719      43505943 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 286
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 286
 
 
  9719      4F444500 
@@ -17158,7 +17158,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9743      724E7200 
  9744              	.LASF309:
  9745 0fd2 63707573 		.ascii	"cpussRam2Ctl0\000"
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 287
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 287
 
 
  9745      7352616D 
@@ -17218,7 +17218,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9766              	.LASF149:
  9767 1096 434C4B5F 		.ascii	"CLK_FLL_CONFIG2\000"
  9767      464C4C5F 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 288
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 288
 
 
  9767      434F4E46 
@@ -17278,7 +17278,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9787      434C4F43 
  9787      4B533700 
  9788              	.LASF206:
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 289
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 289
 
 
  9789 1158 494E5452 		.ascii	"INTR_CFG\000"
@@ -17338,7 +17338,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9811 11fa 5057525F 		.ascii	"PWR_BUCK_CTL\000"
  9811      4255434B 
  9811      5F43544C 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 290
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 290
 
 
  9811      00
@@ -17398,7 +17398,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9833      434B5333 
  9833      00
  9834              	.LASF34:
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 291
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 291
 
 
  9835 12a7 50434C4B 		.ascii	"PCLK_UDB_CLOCKS4\000"
@@ -17458,7 +17458,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9853      655F7400 
  9854              	.LASF319:
  9855 1355 696E7472 		.ascii	"intrCfg\000"
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 292
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 292
 
 
  9855      43666700 
@@ -17518,7 +17518,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9875      4D61696E 
  9875      57733346 
  9875      72657100 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 293
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 293
 
 
  9876              	.LASF289:
@@ -17578,7 +17578,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9897      5F696E5F 
  9897      736F7572 
  9898              	.LASF95:
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 294
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 294
 
 
  9899 14d2 4449565F 		.ascii	"DIV_CMD\000"
@@ -17638,7 +17638,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9921 1579 5245535F 		.ascii	"RES_CAUSE\000"
  9921      43415553 
  9921      4500
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 295
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 295
 
 
  9922              	.LASF400:
@@ -17698,7 +17698,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9943      73497063 
  9943      4972714E 
  9943      7200
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 296
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 296
 
 
  9944              	.LASF504:
@@ -17758,7 +17758,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9966              	.LASF193:
  9967 16f1 494E5452 		.ascii	"INTR_SET\000"
  9967      5F534554 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 297
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 297
 
 
  9967      00
@@ -17818,7 +17818,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  9987      434C4F43 
  9987      4B533600 
  9988              	.LASF55:
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 298
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 298
 
 
  9989 17a9 50434C4B 		.ascii	"PCLK_TCPWM1_CLOCKS7\000"
@@ -17878,7 +17878,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  10009      544C00
  10010              	.LASF321:
  10011 185d 6366674F 		.ascii	"cfgOut\000"
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 299
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 299
 
 
  10011      757400
@@ -17938,7 +17938,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  10034              	.LASF171:
  10035 190b 52455345 		.ascii	"RESERVED14\000"
  10035      52564544 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 300
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 300
 
 
  10035      313400
@@ -17998,7 +17998,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  10055      4D505F49 
  10055      4E5F434C 
  10056              	.LASF410:
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 301
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 301
 
 
  10057 19ed 43595F53 		.ascii	"CY_SYSCLK_PUMP_IN_CLKPATH4\000"
@@ -18058,7 +18058,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  10075      73447743 
  10075      684E7200 
  10076              	.LASF461:
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 302
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 302
 
 
  10077 1ad0 43795F53 		.ascii	"Cy_SysClk_ClkTimerSetDivider\000"
@@ -18118,7 +18118,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  10099      4C4F434B 
  10099      5F534F55 
  10100              	.LASF416:
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 303
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 303
 
 
  10101 1b9c 43595F53 		.ascii	"CY_SYSCLK_PUMP_IN_CLKPATH10\000"
@@ -18178,7 +18178,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  10124              	.LASF188:
  10125 1c51 414C4D31 		.ascii	"ALM1_TIME\000"
  10125      5F54494D 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 304
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 304
 
 
  10125      4500
@@ -18238,7 +18238,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  10147      44425041 
  10147      4952325F 
  10147      524F5554 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 305
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 305
 
 
  10148              	.LASF112:
@@ -18298,7 +18298,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  10171      325F434C 
  10171      4F434B00 
  10172              	.LASF118:
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 306
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 306
 
 
  10173 1dc7 4D435744 		.ascii	"MCWDT_STRUCT_V1_Type\000"
@@ -18358,7 +18358,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  10193      6E5F636C 
  10193      6B74696D 
  10193      65725F69 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 307
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 307
 
 
  10193      6E5F736F 
@@ -18418,7 +18418,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  10215      66675369 
  10215      6F4F6666 
  10215      73657400 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 308
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 308
 
 
  10216              	.LASF453:
@@ -18478,7 +18478,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  10239      7973436C 
  10239      6B5F436C 
  10239      6B536C6F 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 309
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 309
 
 
  10239      77536574 
@@ -18538,7 +18538,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  10259 20ee 64774368 		.ascii	"dwChCtlPrioPos\000"
  10259      43746C50 
  10259      72696F50 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 310
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 310
 
 
  10259      6F7300
@@ -18598,7 +18598,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  10279      53656C50 
  10280              	.LASF310:
  10281 21c7 69706353 		.ascii	"ipcStructSize\000"
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 311
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 311
 
 
  10281      74727563 
@@ -18658,7 +18658,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  10302              	.LASF386:
  10303 2282 43595F53 		.ascii	"CY_SYSCLK_CLKHF_DIVIDE_BY_2\000"
  10303      5953434C 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 312
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 312
 
 
  10303      4B5F434C 
@@ -18718,7 +18718,7 @@ ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 1
  10325      7973436C 
  10325      6B5F436C 
  10325      6B506572 
-ARM GAS  C:\Users\adris\AppData\Local\Temp\cclq8Ibo.s 			page 313
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccUk4DRT.s 			page 313
 
 
  10325      69536574 

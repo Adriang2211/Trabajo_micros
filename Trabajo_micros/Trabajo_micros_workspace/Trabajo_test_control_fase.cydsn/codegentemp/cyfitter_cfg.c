@@ -215,7 +215,7 @@ static void ClockInit(void)
 	Cy_SysClk_PeriphSetDivider(CY_SYSCLK_DIV_16_BIT, 0u, 433u);
 	Cy_SysClk_PeriphEnableDivider(CY_SYSCLK_DIV_16_BIT, 0u);
 	Cy_SysClk_PeriphAssignDivider(PCLK_TCPWM0_CLOCKS0, CY_SYSCLK_DIV_16_BIT, 1u);
-	Cy_SysClk_PeriphSetDivider(CY_SYSCLK_DIV_16_BIT, 1u, 4999u);
+	Cy_SysClk_PeriphSetDivider(CY_SYSCLK_DIV_16_BIT, 1u, 499u);
 	Cy_SysClk_PeriphEnableDivider(CY_SYSCLK_DIV_16_BIT, 1u);
 	Cy_SysClk_PeriphAssignDivider(PCLK_TCPWM0_CLOCKS1, CY_SYSCLK_DIV_16_BIT, 1u);
 	Cy_SysClk_PeriphAssignDivider(PCLK_TCPWM0_CLOCKS2, CY_SYSCLK_DIV_16_BIT, 1u);

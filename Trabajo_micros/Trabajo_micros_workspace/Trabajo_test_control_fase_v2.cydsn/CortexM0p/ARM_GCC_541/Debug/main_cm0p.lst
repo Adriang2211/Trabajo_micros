@@ -1,0 +1,2519 @@
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0plus
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main_cm0p.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB511:
+  27              		.file 1 "main_cm0p.c"
+   1:main_cm0p.c   **** /* ========================================
+   2:main_cm0p.c   ****  *
+   3:main_cm0p.c   ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main_cm0p.c   ****  * All Rights Reserved
+   5:main_cm0p.c   ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main_cm0p.c   ****  *
+   7:main_cm0p.c   ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main_cm0p.c   ****  * WHICH IS THE PROPERTY OF your company.
+   9:main_cm0p.c   ****  *
+  10:main_cm0p.c   ****  * ========================================
+  11:main_cm0p.c   **** */
+  12:main_cm0p.c   **** #include "project.h"
+  13:main_cm0p.c   **** 
+  14:main_cm0p.c   **** int main(void)
+  15:main_cm0p.c   **** {
+  28              		.loc 1 15 0
+  29              		.cfi_startproc
+  30              		@ Volatile: function does not return.
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 10B5     		push	{r4, lr}
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 4, -8
+  36              		.cfi_offset 14, -4
+  37              	.LBB4:
+  38              	.LBB5:
+  39              		.file 2 "Generated_Source\\PSoC6\\pdl\\cmsis/include/cmsis_gcc.h"
+   1:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** /**************************************************************************//**
+   2:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * @file     cmsis_gcc.h
+   3:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * @brief    CMSIS compiler GCC header file
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 2
+
+
+   4:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * @version  V5.0.3
+   5:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * @date     16. January 2018
+   6:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  ******************************************************************************/
+   7:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** /*
+   8:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * Copyright (c) 2009-2017 ARM Limited. All rights reserved.
+   9:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  *
+  10:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * SPDX-License-Identifier: Apache-2.0
+  11:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  *
+  12:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * Licensed under the Apache License, Version 2.0 (the License); you may
+  13:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * not use this file except in compliance with the License.
+  14:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * You may obtain a copy of the License at
+  15:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  *
+  16:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * www.apache.org/licenses/LICENSE-2.0
+  17:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  *
+  18:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * Unless required by applicable law or agreed to in writing, software
+  19:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * distributed under the License is distributed on an AS IS BASIS, WITHOUT
+  20:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  21:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * See the License for the specific language governing permissions and
+  22:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * limitations under the License.
+  23:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  */
+  24:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** 
+  25:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef __CMSIS_GCC_H
+  26:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #define __CMSIS_GCC_H
+  27:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** 
+  28:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** /* ignore some GCC warnings */
+  29:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #pragma GCC diagnostic push
+  30:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wsign-conversion"
+  31:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wconversion"
+  32:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wunused-parameter"
+  33:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** 
+  34:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** /* Fallback for __has_builtin */
+  35:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef __has_builtin
+  36:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __has_builtin(x) (0)
+  37:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+  38:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** 
+  39:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** /* CMSIS compiler specific defines */
+  40:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __ASM
+  41:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __ASM                                  __asm
+  42:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+  43:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __INLINE
+  44:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __INLINE                               inline
+  45:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+  46:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __STATIC_INLINE
+  47:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __STATIC_INLINE                        static inline
+  48:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+  49:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __STATIC_FORCEINLINE                 
+  50:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __STATIC_FORCEINLINE                   __attribute__((always_inline)) static inline
+  51:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif                                           
+  52:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __NO_RETURN
+  53:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __NO_RETURN                            __attribute__((__noreturn__))
+  54:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+  55:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __USED
+  56:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __USED                                 __attribute__((used))
+  57:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+  58:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __WEAK
+  59:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __WEAK                                 __attribute__((weak))
+  60:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 3
+
+
+  61:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __PACKED
+  62:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __PACKED                               __attribute__((packed, aligned(1)))
+  63:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+  64:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __PACKED_STRUCT
+  65:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __PACKED_STRUCT                        struct __attribute__((packed, aligned(1)))
+  66:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+  67:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __PACKED_UNION
+  68:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __PACKED_UNION                         union __attribute__((packed, aligned(1)))
+  69:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+  70:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32        /* deprecated */
+  71:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  72:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  73:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  74:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   struct __attribute__((packed)) T_UINT32 { uint32_t v; };
+  75:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  76:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32(x)                  (((struct T_UINT32 *)(x))->v)
+  77:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+  78:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_WRITE
+  79:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  80:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  81:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  82:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT16_WRITE { uint16_t v; };
+  83:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  84:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __UNALIGNED_UINT16_WRITE(addr, val)    (void)((((struct T_UINT16_WRITE *)(void *)(addr))-
+  85:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+  86:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_READ
+  87:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  88:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  89:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  90:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT16_READ { uint16_t v; };
+  91:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  92:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __UNALIGNED_UINT16_READ(addr)          (((const struct T_UINT16_READ *)(const void *)(add
+  93:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+  94:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32_WRITE
+  95:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  96:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  97:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  98:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT32_WRITE { uint32_t v; };
+  99:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+ 100:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32_WRITE(addr, val)    (void)((((struct T_UINT32_WRITE *)(void *)(addr))-
+ 101:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+ 102:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32_READ
+ 103:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+ 104:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+ 105:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+ 106:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT32_READ { uint32_t v; };
+ 107:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+ 108:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32_READ(addr)          (((const struct T_UINT32_READ *)(const void *)(add
+ 109:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+ 110:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __ALIGNED
+ 111:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __ALIGNED(x)                           __attribute__((aligned(x)))
+ 112:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+ 113:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __RESTRICT
+ 114:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __RESTRICT                             __restrict
+ 115:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+ 116:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** 
+ 117:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** 
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 4
+
+
+ 118:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** /* ###########################  Core Function Access  ########################### */
+ 119:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** /** \ingroup  CMSIS_Core_FunctionInterface
+ 120:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****     \defgroup CMSIS_Core_RegAccFunctions CMSIS Core Register Access Functions
+ 121:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   @{
+ 122:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  */
+ 123:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** 
+ 124:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** /**
+ 125:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   \brief   Enable IRQ Interrupts
+ 126:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   \details Enables IRQ interrupts by clearing the I-bit in the CPSR.
+ 127:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
+ 128:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  */
+ 129:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __enable_irq(void)
+ 130:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** {
+ 131:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   __ASM volatile ("cpsie i" : : : "memory");
+  40              		.loc 2 131 0
+  41              		.syntax divided
+  42              	@ 131 "Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h" 1
+  43 0002 62B6     		cpsie i
+  44              	@ 0 "" 2
+  45              		.thumb
+  46              		.syntax unified
+  47              	.LBE5:
+  48              	.LBE4:
+  16:main_cm0p.c   ****     __enable_irq(); /* Enable global interrupts. */
+  17:main_cm0p.c   ****     /* Enable CM4.  CY_CORTEX_M4_APPL_ADDR must be updated if CM4 memory layout is changed. */
+  18:main_cm0p.c   ****     Cy_SysEnableCM4(CY_CORTEX_M4_APPL_ADDR); 
+  49              		.loc 1 18 0
+  50 0004 0148     		ldr	r0, .L3
+  51 0006 FFF7FEFF 		bl	Cy_SysEnableCM4
+  52              	.LVL0:
+  53              	.L2:
+  54 000a FEE7     		b	.L2
+  55              	.L4:
+  56              		.align	2
+  57              	.L3:
+  58 000c 00000810 		.word	268959744
+  59              		.cfi_endproc
+  60              	.LFE511:
+  61              		.size	main, .-main
+  62              		.text
+  63              	.Letext0:
+  64              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+  65              		.file 4 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+  66              		.file 5 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/device/cy_device.h"
+  67              		.file 6 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/scb/cy_scb_uart.h"
+  68              		.file 7 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/tcpwm/cy_tcpwm_counter.h"
+  69              		.file 8 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/tcpwm/cy_tcpwm_quaddec.h"
+  70              		.file 9 "Generated_Source\\PSoC6/UART_1.h"
+  71              		.file 10 "Generated_Source\\PSoC6/Counter_1.h"
+  72              		.file 11 "Generated_Source\\PSoC6/Counter_2.h"
+  73              		.file 12 "Generated_Source\\PSoC6/Encoder.h"
+  74              		.file 13 "./system_psoc6.h"
+  75              		.section	.debug_info,"",%progbits
+  76              	.Ldebug_info0:
+  77 0000 0A080000 		.4byte	0x80a
+  78 0004 0400     		.2byte	0x4
+  79 0006 00000000 		.4byte	.Ldebug_abbrev0
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 5
+
+
+  80 000a 04       		.byte	0x4
+  81 000b 01       		.uleb128 0x1
+  82 000c 16070000 		.4byte	.LASF160
+  83 0010 0C       		.byte	0xc
+  84 0011 7D000000 		.4byte	.LASF161
+  85 0015 5A080000 		.4byte	.LASF162
+  86 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  87 001d 00000000 		.4byte	0
+  88 0021 00000000 		.4byte	.Ldebug_line0
+  89 0025 02       		.uleb128 0x2
+  90 0026 02       		.byte	0x2
+  91 0027 05       		.byte	0x5
+  92 0028 7B060000 		.4byte	.LASF0
+  93 002c 02       		.uleb128 0x2
+  94 002d 01       		.byte	0x1
+  95 002e 08       		.byte	0x8
+  96 002f 3B060000 		.4byte	.LASF1
+  97 0033 02       		.uleb128 0x2
+  98 0034 01       		.byte	0x1
+  99 0035 06       		.byte	0x6
+ 100 0036 51090000 		.4byte	.LASF2
+ 101 003a 03       		.uleb128 0x3
+ 102 003b 97000000 		.4byte	.LASF3
+ 103 003f 03       		.byte	0x3
+ 104 0040 1D       		.byte	0x1d
+ 105 0041 2C000000 		.4byte	0x2c
+ 106 0045 03       		.uleb128 0x3
+ 107 0046 04030000 		.4byte	.LASF4
+ 108 004a 03       		.byte	0x3
+ 109 004b 29       		.byte	0x29
+ 110 004c 25000000 		.4byte	0x25
+ 111 0050 03       		.uleb128 0x3
+ 112 0051 E7070000 		.4byte	.LASF5
+ 113 0055 03       		.byte	0x3
+ 114 0056 2B       		.byte	0x2b
+ 115 0057 5B000000 		.4byte	0x5b
+ 116 005b 02       		.uleb128 0x2
+ 117 005c 02       		.byte	0x2
+ 118 005d 07       		.byte	0x7
+ 119 005e 3E080000 		.4byte	.LASF6
+ 120 0062 02       		.uleb128 0x2
+ 121 0063 04       		.byte	0x4
+ 122 0064 05       		.byte	0x5
+ 123 0065 30020000 		.4byte	.LASF7
+ 124 0069 03       		.uleb128 0x3
+ 125 006a E9020000 		.4byte	.LASF8
+ 126 006e 03       		.byte	0x3
+ 127 006f 41       		.byte	0x41
+ 128 0070 74000000 		.4byte	0x74
+ 129 0074 02       		.uleb128 0x2
+ 130 0075 04       		.byte	0x4
+ 131 0076 07       		.byte	0x7
+ 132 0077 A3030000 		.4byte	.LASF9
+ 133 007b 02       		.uleb128 0x2
+ 134 007c 08       		.byte	0x8
+ 135 007d 05       		.byte	0x5
+ 136 007e 9E010000 		.4byte	.LASF10
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 6
+
+
+ 137 0082 02       		.uleb128 0x2
+ 138 0083 08       		.byte	0x8
+ 139 0084 07       		.byte	0x7
+ 140 0085 14010000 		.4byte	.LASF11
+ 141 0089 04       		.uleb128 0x4
+ 142 008a 04       		.byte	0x4
+ 143 008b 05       		.byte	0x5
+ 144 008c 696E7400 		.ascii	"int\000"
+ 145 0090 02       		.uleb128 0x2
+ 146 0091 04       		.byte	0x4
+ 147 0092 07       		.byte	0x7
+ 148 0093 67030000 		.4byte	.LASF12
+ 149 0097 03       		.uleb128 0x3
+ 150 0098 AF090000 		.4byte	.LASF13
+ 151 009c 04       		.byte	0x4
+ 152 009d 18       		.byte	0x18
+ 153 009e 3A000000 		.4byte	0x3a
+ 154 00a2 03       		.uleb128 0x3
+ 155 00a3 96010000 		.4byte	.LASF14
+ 156 00a7 04       		.byte	0x4
+ 157 00a8 20       		.byte	0x20
+ 158 00a9 45000000 		.4byte	0x45
+ 159 00ad 03       		.uleb128 0x3
+ 160 00ae 74030000 		.4byte	.LASF15
+ 161 00b2 04       		.byte	0x4
+ 162 00b3 24       		.byte	0x24
+ 163 00b4 50000000 		.4byte	0x50
+ 164 00b8 03       		.uleb128 0x3
+ 165 00b9 F8060000 		.4byte	.LASF16
+ 166 00bd 04       		.byte	0x4
+ 167 00be 30       		.byte	0x30
+ 168 00bf 69000000 		.4byte	0x69
+ 169 00c3 02       		.uleb128 0x2
+ 170 00c4 04       		.byte	0x4
+ 171 00c5 07       		.byte	0x7
+ 172 00c6 1B050000 		.4byte	.LASF17
+ 173 00ca 05       		.uleb128 0x5
+ 174 00cb B8000000 		.4byte	0xb8
+ 175 00cf 02       		.uleb128 0x2
+ 176 00d0 08       		.byte	0x8
+ 177 00d1 04       		.byte	0x4
+ 178 00d2 B1070000 		.4byte	.LASF18
+ 179 00d6 06       		.uleb128 0x6
+ 180 00d7 B8       		.byte	0xb8
+ 181 00d8 05       		.byte	0x5
+ 182 00d9 34       		.byte	0x34
+ 183 00da E7040000 		.4byte	0x4e7
+ 184 00de 07       		.uleb128 0x7
+ 185 00df EA000000 		.4byte	.LASF19
+ 186 00e3 05       		.byte	0x5
+ 187 00e4 37       		.byte	0x37
+ 188 00e5 B8000000 		.4byte	0xb8
+ 189 00e9 00       		.byte	0
+ 190 00ea 07       		.uleb128 0x7
+ 191 00eb DE020000 		.4byte	.LASF20
+ 192 00ef 05       		.byte	0x5
+ 193 00f0 38       		.byte	0x38
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 7
+
+
+ 194 00f1 B8000000 		.4byte	0xb8
+ 195 00f5 04       		.byte	0x4
+ 196 00f6 07       		.uleb128 0x7
+ 197 00f7 56020000 		.4byte	.LASF21
+ 198 00fb 05       		.byte	0x5
+ 199 00fc 39       		.byte	0x39
+ 200 00fd B8000000 		.4byte	0xb8
+ 201 0101 08       		.byte	0x8
+ 202 0102 07       		.uleb128 0x7
+ 203 0103 2D060000 		.4byte	.LASF22
+ 204 0107 05       		.byte	0x5
+ 205 0108 3A       		.byte	0x3a
+ 206 0109 B8000000 		.4byte	0xb8
+ 207 010d 0C       		.byte	0xc
+ 208 010e 07       		.uleb128 0x7
+ 209 010f DF010000 		.4byte	.LASF23
+ 210 0113 05       		.byte	0x5
+ 211 0114 3B       		.byte	0x3b
+ 212 0115 B8000000 		.4byte	0xb8
+ 213 0119 10       		.byte	0x10
+ 214 011a 07       		.uleb128 0x7
+ 215 011b 17020000 		.4byte	.LASF24
+ 216 011f 05       		.byte	0x5
+ 217 0120 3C       		.byte	0x3c
+ 218 0121 B8000000 		.4byte	0xb8
+ 219 0125 14       		.byte	0x14
+ 220 0126 07       		.uleb128 0x7
+ 221 0127 0C040000 		.4byte	.LASF25
+ 222 012b 05       		.byte	0x5
+ 223 012c 3D       		.byte	0x3d
+ 224 012d B8000000 		.4byte	0xb8
+ 225 0131 18       		.byte	0x18
+ 226 0132 07       		.uleb128 0x7
+ 227 0133 74000000 		.4byte	.LASF26
+ 228 0137 05       		.byte	0x5
+ 229 0138 3E       		.byte	0x3e
+ 230 0139 B8000000 		.4byte	0xb8
+ 231 013d 1C       		.byte	0x1c
+ 232 013e 07       		.uleb128 0x7
+ 233 013f 2E0A0000 		.4byte	.LASF27
+ 234 0143 05       		.byte	0x5
+ 235 0144 3F       		.byte	0x3f
+ 236 0145 B8000000 		.4byte	0xb8
+ 237 0149 20       		.byte	0x20
+ 238 014a 07       		.uleb128 0x7
+ 239 014b B4050000 		.4byte	.LASF28
+ 240 014f 05       		.byte	0x5
+ 241 0150 40       		.byte	0x40
+ 242 0151 B8000000 		.4byte	0xb8
+ 243 0155 24       		.byte	0x24
+ 244 0156 07       		.uleb128 0x7
+ 245 0157 C7040000 		.4byte	.LASF29
+ 246 015b 05       		.byte	0x5
+ 247 015c 43       		.byte	0x43
+ 248 015d 97000000 		.4byte	0x97
+ 249 0161 28       		.byte	0x28
+ 250 0162 07       		.uleb128 0x7
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 8
+
+
+ 251 0163 57000000 		.4byte	.LASF30
+ 252 0167 05       		.byte	0x5
+ 253 0168 44       		.byte	0x44
+ 254 0169 97000000 		.4byte	0x97
+ 255 016d 29       		.byte	0x29
+ 256 016e 07       		.uleb128 0x7
+ 257 016f 240A0000 		.4byte	.LASF31
+ 258 0173 05       		.byte	0x5
+ 259 0174 45       		.byte	0x45
+ 260 0175 97000000 		.4byte	0x97
+ 261 0179 2A       		.byte	0x2a
+ 262 017a 07       		.uleb128 0x7
+ 263 017b A6050000 		.4byte	.LASF32
+ 264 017f 05       		.byte	0x5
+ 265 0180 46       		.byte	0x46
+ 266 0181 97000000 		.4byte	0x97
+ 267 0185 2B       		.byte	0x2b
+ 268 0186 07       		.uleb128 0x7
+ 269 0187 70040000 		.4byte	.LASF33
+ 270 018b 05       		.byte	0x5
+ 271 018c 47       		.byte	0x47
+ 272 018d 97000000 		.4byte	0x97
+ 273 0191 2C       		.byte	0x2c
+ 274 0192 07       		.uleb128 0x7
+ 275 0193 05080000 		.4byte	.LASF34
+ 276 0197 05       		.byte	0x5
+ 277 0198 48       		.byte	0x48
+ 278 0199 97000000 		.4byte	0x97
+ 279 019d 2D       		.byte	0x2d
+ 280 019e 07       		.uleb128 0x7
+ 281 019f E8010000 		.4byte	.LASF35
+ 282 01a3 05       		.byte	0x5
+ 283 01a4 49       		.byte	0x49
+ 284 01a5 97000000 		.4byte	0x97
+ 285 01a9 2E       		.byte	0x2e
+ 286 01aa 07       		.uleb128 0x7
+ 287 01ab DE040000 		.4byte	.LASF36
+ 288 01af 05       		.byte	0x5
+ 289 01b0 4A       		.byte	0x4a
+ 290 01b1 97000000 		.4byte	0x97
+ 291 01b5 2F       		.byte	0x2f
+ 292 01b6 07       		.uleb128 0x7
+ 293 01b7 CD070000 		.4byte	.LASF37
+ 294 01bb 05       		.byte	0x5
+ 295 01bc 4B       		.byte	0x4b
+ 296 01bd 97000000 		.4byte	0x97
+ 297 01c1 30       		.byte	0x30
+ 298 01c2 07       		.uleb128 0x7
+ 299 01c3 F0030000 		.4byte	.LASF38
+ 300 01c7 05       		.byte	0x5
+ 301 01c8 4E       		.byte	0x4e
+ 302 01c9 97000000 		.4byte	0x97
+ 303 01cd 31       		.byte	0x31
+ 304 01ce 07       		.uleb128 0x7
+ 305 01cf 89000000 		.4byte	.LASF39
+ 306 01d3 05       		.byte	0x5
+ 307 01d4 4F       		.byte	0x4f
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 9
+
+
+ 308 01d5 97000000 		.4byte	0x97
+ 309 01d9 32       		.byte	0x32
+ 310 01da 07       		.uleb128 0x7
+ 311 01db 5B030000 		.4byte	.LASF40
+ 312 01df 05       		.byte	0x5
+ 313 01e0 50       		.byte	0x50
+ 314 01e1 97000000 		.4byte	0x97
+ 315 01e5 33       		.byte	0x33
+ 316 01e6 07       		.uleb128 0x7
+ 317 01e7 4B050000 		.4byte	.LASF41
+ 318 01eb 05       		.byte	0x5
+ 319 01ec 51       		.byte	0x51
+ 320 01ed 97000000 		.4byte	0x97
+ 321 01f1 34       		.byte	0x34
+ 322 01f2 07       		.uleb128 0x7
+ 323 01f3 05090000 		.4byte	.LASF42
+ 324 01f7 05       		.byte	0x5
+ 325 01f8 52       		.byte	0x52
+ 326 01f9 A2000000 		.4byte	0xa2
+ 327 01fd 36       		.byte	0x36
+ 328 01fe 07       		.uleb128 0x7
+ 329 01ff 70020000 		.4byte	.LASF43
+ 330 0203 05       		.byte	0x5
+ 331 0204 53       		.byte	0x53
+ 332 0205 A2000000 		.4byte	0xa2
+ 333 0209 38       		.byte	0x38
+ 334 020a 07       		.uleb128 0x7
+ 335 020b 8A090000 		.4byte	.LASF44
+ 336 020f 05       		.byte	0x5
+ 337 0210 54       		.byte	0x54
+ 338 0211 A2000000 		.4byte	0xa2
+ 339 0215 3A       		.byte	0x3a
+ 340 0216 07       		.uleb128 0x7
+ 341 0217 08020000 		.4byte	.LASF45
+ 342 021b 05       		.byte	0x5
+ 343 021c 55       		.byte	0x55
+ 344 021d 97000000 		.4byte	0x97
+ 345 0221 3C       		.byte	0x3c
+ 346 0222 07       		.uleb128 0x7
+ 347 0223 97020000 		.4byte	.LASF46
+ 348 0227 05       		.byte	0x5
+ 349 0228 56       		.byte	0x56
+ 350 0229 97000000 		.4byte	0x97
+ 351 022d 3D       		.byte	0x3d
+ 352 022e 07       		.uleb128 0x7
+ 353 022f CF060000 		.4byte	.LASF47
+ 354 0233 05       		.byte	0x5
+ 355 0234 57       		.byte	0x57
+ 356 0235 97000000 		.4byte	0x97
+ 357 0239 3E       		.byte	0x3e
+ 358 023a 07       		.uleb128 0x7
+ 359 023b FB000000 		.4byte	.LASF48
+ 360 023f 05       		.byte	0x5
+ 361 0240 58       		.byte	0x58
+ 362 0241 97000000 		.4byte	0x97
+ 363 0245 3F       		.byte	0x3f
+ 364 0246 07       		.uleb128 0x7
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 10
+
+
+ 365 0247 BF050000 		.4byte	.LASF49
+ 366 024b 05       		.byte	0x5
+ 367 024c 59       		.byte	0x59
+ 368 024d 97000000 		.4byte	0x97
+ 369 0251 40       		.byte	0x40
+ 370 0252 07       		.uleb128 0x7
+ 371 0253 F4020000 		.4byte	.LASF50
+ 372 0257 05       		.byte	0x5
+ 373 0258 5A       		.byte	0x5a
+ 374 0259 97000000 		.4byte	0x97
+ 375 025d 41       		.byte	0x41
+ 376 025e 07       		.uleb128 0x7
+ 377 025f 8C040000 		.4byte	.LASF51
+ 378 0263 05       		.byte	0x5
+ 379 0264 5B       		.byte	0x5b
+ 380 0265 97000000 		.4byte	0x97
+ 381 0269 42       		.byte	0x42
+ 382 026a 07       		.uleb128 0x7
+ 383 026b 92050000 		.4byte	.LASF52
+ 384 026f 05       		.byte	0x5
+ 385 0270 5C       		.byte	0x5c
+ 386 0271 97000000 		.4byte	0x97
+ 387 0275 43       		.byte	0x43
+ 388 0276 07       		.uleb128 0x7
+ 389 0277 5F020000 		.4byte	.LASF53
+ 390 027b 05       		.byte	0x5
+ 391 027c 5D       		.byte	0x5d
+ 392 027d 97000000 		.4byte	0x97
+ 393 0281 44       		.byte	0x44
+ 394 0282 07       		.uleb128 0x7
+ 395 0283 00000000 		.4byte	.LASF54
+ 396 0287 05       		.byte	0x5
+ 397 0288 5E       		.byte	0x5e
+ 398 0289 B8000000 		.4byte	0xb8
+ 399 028d 48       		.byte	0x48
+ 400 028e 07       		.uleb128 0x7
+ 401 028f 48020000 		.4byte	.LASF55
+ 402 0293 05       		.byte	0x5
+ 403 0294 5F       		.byte	0x5f
+ 404 0295 B8000000 		.4byte	0xb8
+ 405 0299 4C       		.byte	0x4c
+ 406 029a 07       		.uleb128 0x7
+ 407 029b 640A0000 		.4byte	.LASF56
+ 408 029f 05       		.byte	0x5
+ 409 02a0 60       		.byte	0x60
+ 410 02a1 97000000 		.4byte	0x97
+ 411 02a5 50       		.byte	0x50
+ 412 02a6 07       		.uleb128 0x7
+ 413 02a7 70010000 		.4byte	.LASF57
+ 414 02ab 05       		.byte	0x5
+ 415 02ac 61       		.byte	0x61
+ 416 02ad 97000000 		.4byte	0x97
+ 417 02b1 51       		.byte	0x51
+ 418 02b2 07       		.uleb128 0x7
+ 419 02b3 9F090000 		.4byte	.LASF58
+ 420 02b7 05       		.byte	0x5
+ 421 02b8 62       		.byte	0x62
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 11
+
+
+ 422 02b9 97000000 		.4byte	0x97
+ 423 02bd 52       		.byte	0x52
+ 424 02be 07       		.uleb128 0x7
+ 425 02bf 12080000 		.4byte	.LASF59
+ 426 02c3 05       		.byte	0x5
+ 427 02c4 63       		.byte	0x63
+ 428 02c5 97000000 		.4byte	0x97
+ 429 02c9 53       		.byte	0x53
+ 430 02ca 07       		.uleb128 0x7
+ 431 02cb E8060000 		.4byte	.LASF60
+ 432 02cf 05       		.byte	0x5
+ 433 02d0 64       		.byte	0x64
+ 434 02d1 97000000 		.4byte	0x97
+ 435 02d5 54       		.byte	0x54
+ 436 02d6 07       		.uleb128 0x7
+ 437 02d7 82010000 		.4byte	.LASF61
+ 438 02db 05       		.byte	0x5
+ 439 02dc 65       		.byte	0x65
+ 440 02dd 97000000 		.4byte	0x97
+ 441 02e1 55       		.byte	0x55
+ 442 02e2 07       		.uleb128 0x7
+ 443 02e3 8F030000 		.4byte	.LASF62
+ 444 02e7 05       		.byte	0x5
+ 445 02e8 66       		.byte	0x66
+ 446 02e9 97000000 		.4byte	0x97
+ 447 02ed 56       		.byte	0x56
+ 448 02ee 07       		.uleb128 0x7
+ 449 02ef AA060000 		.4byte	.LASF63
+ 450 02f3 05       		.byte	0x5
+ 451 02f4 67       		.byte	0x67
+ 452 02f5 97000000 		.4byte	0x97
+ 453 02f9 57       		.byte	0x57
+ 454 02fa 07       		.uleb128 0x7
+ 455 02fb 24000000 		.4byte	.LASF64
+ 456 02ff 05       		.byte	0x5
+ 457 0300 68       		.byte	0x68
+ 458 0301 97000000 		.4byte	0x97
+ 459 0305 58       		.byte	0x58
+ 460 0306 07       		.uleb128 0x7
+ 461 0307 67060000 		.4byte	.LASF65
+ 462 030b 05       		.byte	0x5
+ 463 030c 69       		.byte	0x69
+ 464 030d 97000000 		.4byte	0x97
+ 465 0311 59       		.byte	0x59
+ 466 0312 07       		.uleb128 0x7
+ 467 0313 24050000 		.4byte	.LASF66
+ 468 0317 05       		.byte	0x5
+ 469 0318 6E       		.byte	0x6e
+ 470 0319 AD000000 		.4byte	0xad
+ 471 031d 5A       		.byte	0x5a
+ 472 031e 07       		.uleb128 0x7
+ 473 031f 51080000 		.4byte	.LASF67
+ 474 0323 05       		.byte	0x5
+ 475 0324 6F       		.byte	0x6f
+ 476 0325 AD000000 		.4byte	0xad
+ 477 0329 5C       		.byte	0x5c
+ 478 032a 07       		.uleb128 0x7
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 12
+
+
+ 479 032b 65000000 		.4byte	.LASF68
+ 480 032f 05       		.byte	0x5
+ 481 0330 70       		.byte	0x70
+ 482 0331 97000000 		.4byte	0x97
+ 483 0335 5E       		.byte	0x5e
+ 484 0336 07       		.uleb128 0x7
+ 485 0337 06060000 		.4byte	.LASF69
+ 486 033b 05       		.byte	0x5
+ 487 033c 71       		.byte	0x71
+ 488 033d 97000000 		.4byte	0x97
+ 489 0341 5F       		.byte	0x5f
+ 490 0342 07       		.uleb128 0x7
+ 491 0343 81050000 		.4byte	.LASF70
+ 492 0347 05       		.byte	0x5
+ 493 0348 72       		.byte	0x72
+ 494 0349 97000000 		.4byte	0x97
+ 495 034d 60       		.byte	0x60
+ 496 034e 07       		.uleb128 0x7
+ 497 034f DF050000 		.4byte	.LASF71
+ 498 0353 05       		.byte	0x5
+ 499 0354 73       		.byte	0x73
+ 500 0355 B8000000 		.4byte	0xb8
+ 501 0359 64       		.byte	0x64
+ 502 035a 07       		.uleb128 0x7
+ 503 035b 3A010000 		.4byte	.LASF72
+ 504 035f 05       		.byte	0x5
+ 505 0360 76       		.byte	0x76
+ 506 0361 AD000000 		.4byte	0xad
+ 507 0365 68       		.byte	0x68
+ 508 0366 07       		.uleb128 0x7
+ 509 0367 7D030000 		.4byte	.LASF73
+ 510 036b 05       		.byte	0x5
+ 511 036c 77       		.byte	0x77
+ 512 036d AD000000 		.4byte	0xad
+ 513 0371 6A       		.byte	0x6a
+ 514 0372 07       		.uleb128 0x7
+ 515 0373 2D040000 		.4byte	.LASF74
+ 516 0377 05       		.byte	0x5
+ 517 0378 78       		.byte	0x78
+ 518 0379 AD000000 		.4byte	0xad
+ 519 037d 6C       		.byte	0x6c
+ 520 037e 07       		.uleb128 0x7
+ 521 037f 53040000 		.4byte	.LASF75
+ 522 0383 05       		.byte	0x5
+ 523 0384 79       		.byte	0x79
+ 524 0385 AD000000 		.4byte	0xad
+ 525 0389 6E       		.byte	0x6e
+ 526 038a 07       		.uleb128 0x7
+ 527 038b 96060000 		.4byte	.LASF76
+ 528 038f 05       		.byte	0x5
+ 529 0390 7B       		.byte	0x7b
+ 530 0391 97000000 		.4byte	0x97
+ 531 0395 70       		.byte	0x70
+ 532 0396 07       		.uleb128 0x7
+ 533 0397 CA010000 		.4byte	.LASF77
+ 534 039b 05       		.byte	0x5
+ 535 039c 7C       		.byte	0x7c
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 13
+
+
+ 536 039d 97000000 		.4byte	0x97
+ 537 03a1 71       		.byte	0x71
+ 538 03a2 07       		.uleb128 0x7
+ 539 03a3 360A0000 		.4byte	.LASF78
+ 540 03a7 05       		.byte	0x5
+ 541 03a8 7D       		.byte	0x7d
+ 542 03a9 97000000 		.4byte	0x97
+ 543 03ad 72       		.byte	0x72
+ 544 03ae 07       		.uleb128 0x7
+ 545 03af 5C050000 		.4byte	.LASF79
+ 546 03b3 05       		.byte	0x5
+ 547 03b4 7E       		.byte	0x7e
+ 548 03b5 97000000 		.4byte	0x97
+ 549 03b9 73       		.byte	0x73
+ 550 03ba 07       		.uleb128 0x7
+ 551 03bb B8020000 		.4byte	.LASF80
+ 552 03bf 05       		.byte	0x5
+ 553 03c0 80       		.byte	0x80
+ 554 03c1 AD000000 		.4byte	0xad
+ 555 03c5 74       		.byte	0x74
+ 556 03c6 07       		.uleb128 0x7
+ 557 03c7 F2070000 		.4byte	.LASF81
+ 558 03cb 05       		.byte	0x5
+ 559 03cc 81       		.byte	0x81
+ 560 03cd AD000000 		.4byte	0xad
+ 561 03d1 76       		.byte	0x76
+ 562 03d2 07       		.uleb128 0x7
+ 563 03d3 82020000 		.4byte	.LASF82
+ 564 03d7 05       		.byte	0x5
+ 565 03d8 82       		.byte	0x82
+ 566 03d9 AD000000 		.4byte	0xad
+ 567 03dd 78       		.byte	0x78
+ 568 03de 07       		.uleb128 0x7
+ 569 03df A1000000 		.4byte	.LASF83
+ 570 03e3 05       		.byte	0x5
+ 571 03e4 83       		.byte	0x83
+ 572 03e5 AD000000 		.4byte	0xad
+ 573 03e9 7A       		.byte	0x7a
+ 574 03ea 07       		.uleb128 0x7
+ 575 03eb CC090000 		.4byte	.LASF84
+ 576 03ef 05       		.byte	0x5
+ 577 03f0 86       		.byte	0x86
+ 578 03f1 97000000 		.4byte	0x97
+ 579 03f5 7C       		.byte	0x7c
+ 580 03f6 07       		.uleb128 0x7
+ 581 03f7 32090000 		.4byte	.LASF85
+ 582 03fb 05       		.byte	0x5
+ 583 03fc 87       		.byte	0x87
+ 584 03fd 97000000 		.4byte	0x97
+ 585 0401 7D       		.byte	0x7d
+ 586 0402 07       		.uleb128 0x7
+ 587 0403 77090000 		.4byte	.LASF86
+ 588 0407 05       		.byte	0x5
+ 589 0408 88       		.byte	0x88
+ 590 0409 97000000 		.4byte	0x97
+ 591 040d 7E       		.byte	0x7e
+ 592 040e 07       		.uleb128 0x7
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 14
+
+
+ 593 040f CA020000 		.4byte	.LASF87
+ 594 0413 05       		.byte	0x5
+ 595 0414 89       		.byte	0x89
+ 596 0415 97000000 		.4byte	0x97
+ 597 0419 7F       		.byte	0x7f
+ 598 041a 07       		.uleb128 0x7
+ 599 041b 47030000 		.4byte	.LASF88
+ 600 041f 05       		.byte	0x5
+ 601 0420 8A       		.byte	0x8a
+ 602 0421 97000000 		.4byte	0x97
+ 603 0425 80       		.byte	0x80
+ 604 0426 07       		.uleb128 0x7
+ 605 0427 1B090000 		.4byte	.LASF89
+ 606 042b 05       		.byte	0x5
+ 607 042c 8D       		.byte	0x8d
+ 608 042d B8000000 		.4byte	0xb8
+ 609 0431 84       		.byte	0x84
+ 610 0432 07       		.uleb128 0x7
+ 611 0433 B6000000 		.4byte	.LASF90
+ 612 0437 05       		.byte	0x5
+ 613 0438 8E       		.byte	0x8e
+ 614 0439 B8000000 		.4byte	0xb8
+ 615 043d 88       		.byte	0x88
+ 616 043e 07       		.uleb128 0x7
+ 617 043f B7090000 		.4byte	.LASF91
+ 618 0443 05       		.byte	0x5
+ 619 0444 8F       		.byte	0x8f
+ 620 0445 B8000000 		.4byte	0xb8
+ 621 0449 8C       		.byte	0x8c
+ 622 044a 07       		.uleb128 0x7
+ 623 044b EA040000 		.4byte	.LASF92
+ 624 044f 05       		.byte	0x5
+ 625 0450 90       		.byte	0x90
+ 626 0451 B8000000 		.4byte	0xb8
+ 627 0455 90       		.byte	0x90
+ 628 0456 07       		.uleb128 0x7
+ 629 0457 17030000 		.4byte	.LASF93
+ 630 045b 05       		.byte	0x5
+ 631 045c 91       		.byte	0x91
+ 632 045d B8000000 		.4byte	0xb8
+ 633 0461 94       		.byte	0x94
+ 634 0462 07       		.uleb128 0x7
+ 635 0463 A6040000 		.4byte	.LASF94
+ 636 0467 05       		.byte	0x5
+ 637 0468 92       		.byte	0x92
+ 638 0469 B8000000 		.4byte	0xb8
+ 639 046d 98       		.byte	0x98
+ 640 046e 07       		.uleb128 0x7
+ 641 046f FF090000 		.4byte	.LASF95
+ 642 0473 05       		.byte	0x5
+ 643 0474 93       		.byte	0x93
+ 644 0475 B8000000 		.4byte	0xb8
+ 645 0479 9C       		.byte	0x9c
+ 646 047a 07       		.uleb128 0x7
+ 647 047b 54010000 		.4byte	.LASF96
+ 648 047f 05       		.byte	0x5
+ 649 0480 94       		.byte	0x94
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 15
+
+
+ 650 0481 B8000000 		.4byte	0xb8
+ 651 0485 A0       		.byte	0xa0
+ 652 0486 07       		.uleb128 0x7
+ 653 0487 F3010000 		.4byte	.LASF97
+ 654 048b 05       		.byte	0x5
+ 655 048c 95       		.byte	0x95
+ 656 048d AD000000 		.4byte	0xad
+ 657 0491 A4       		.byte	0xa4
+ 658 0492 07       		.uleb128 0x7
+ 659 0493 01070000 		.4byte	.LASF98
+ 660 0497 05       		.byte	0x5
+ 661 0498 96       		.byte	0x96
+ 662 0499 AD000000 		.4byte	0xad
+ 663 049d A6       		.byte	0xa6
+ 664 049e 07       		.uleb128 0x7
+ 665 049f FA050000 		.4byte	.LASF99
+ 666 04a3 05       		.byte	0x5
+ 667 04a4 97       		.byte	0x97
+ 668 04a5 AD000000 		.4byte	0xad
+ 669 04a9 A8       		.byte	0xa8
+ 670 04aa 07       		.uleb128 0x7
+ 671 04ab D9070000 		.4byte	.LASF100
+ 672 04af 05       		.byte	0x5
+ 673 04b0 98       		.byte	0x98
+ 674 04b1 AD000000 		.4byte	0xad
+ 675 04b5 AA       		.byte	0xaa
+ 676 04b6 07       		.uleb128 0x7
+ 677 04b7 3C040000 		.4byte	.LASF101
+ 678 04bb 05       		.byte	0x5
+ 679 04bc 99       		.byte	0x99
+ 680 04bd AD000000 		.4byte	0xad
+ 681 04c1 AC       		.byte	0xac
+ 682 04c2 07       		.uleb128 0x7
+ 683 04c3 73050000 		.4byte	.LASF102
+ 684 04c7 05       		.byte	0x5
+ 685 04c8 9A       		.byte	0x9a
+ 686 04c9 AD000000 		.4byte	0xad
+ 687 04cd AE       		.byte	0xae
+ 688 04ce 07       		.uleb128 0x7
+ 689 04cf E8080000 		.4byte	.LASF103
+ 690 04d3 05       		.byte	0x5
+ 691 04d4 9D       		.byte	0x9d
+ 692 04d5 AD000000 		.4byte	0xad
+ 693 04d9 B0       		.byte	0xb0
+ 694 04da 07       		.uleb128 0x7
+ 695 04db 43000000 		.4byte	.LASF104
+ 696 04df 05       		.byte	0x5
+ 697 04e0 9E       		.byte	0x9e
+ 698 04e1 B8000000 		.4byte	0xb8
+ 699 04e5 B4       		.byte	0xb4
+ 700 04e6 00       		.byte	0
+ 701 04e7 03       		.uleb128 0x3
+ 702 04e8 7C040000 		.4byte	.LASF105
+ 703 04ec 05       		.byte	0x5
+ 704 04ed 9F       		.byte	0x9f
+ 705 04ee D6000000 		.4byte	0xd6
+ 706 04f2 02       		.uleb128 0x2
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 16
+
+
+ 707 04f3 01       		.byte	0x1
+ 708 04f4 08       		.byte	0x8
+ 709 04f5 BD070000 		.4byte	.LASF106
+ 710 04f9 02       		.uleb128 0x2
+ 711 04fa 04       		.byte	0x4
+ 712 04fb 04       		.byte	0x4
+ 713 04fc D9050000 		.4byte	.LASF107
+ 714 0500 02       		.uleb128 0x2
+ 715 0501 08       		.byte	0x8
+ 716 0502 04       		.byte	0x4
+ 717 0503 7B020000 		.4byte	.LASF108
+ 718 0507 08       		.uleb128 0x8
+ 719 0508 04       		.byte	0x4
+ 720 0509 02       		.uleb128 0x2
+ 721 050a 01       		.byte	0x1
+ 722 050b 02       		.byte	0x2
+ 723 050c 35060000 		.4byte	.LASF109
+ 724 0510 09       		.uleb128 0x9
+ 725 0511 04       		.byte	0x4
+ 726 0512 16050000 		.4byte	0x516
+ 727 0516 0A       		.uleb128 0xa
+ 728 0517 21050000 		.4byte	0x521
+ 729 051b 0B       		.uleb128 0xb
+ 730 051c B8000000 		.4byte	0xb8
+ 731 0520 00       		.byte	0
+ 732 0521 0C       		.uleb128 0xc
+ 733 0522 C7030000 		.4byte	.LASF110
+ 734 0526 06       		.byte	0x6
+ 735 0527 D901     		.2byte	0x1d9
+ 736 0529 10050000 		.4byte	0x510
+ 737 052d 0D       		.uleb128 0xd
+ 738 052e 4C0A0000 		.4byte	.LASF126
+ 739 0532 38       		.byte	0x38
+ 740 0533 06       		.byte	0x6
+ 741 0534 7502     		.2byte	0x275
+ 742 0536 F1050000 		.4byte	0x5f1
+ 743 053a 0E       		.uleb128 0xe
+ 744 053b 24040000 		.4byte	.LASF111
+ 745 053f 06       		.byte	0x6
+ 746 0540 7802     		.2byte	0x278
+ 747 0542 CA000000 		.4byte	0xca
+ 748 0546 00       		.byte	0
+ 749 0547 0E       		.uleb128 0xe
+ 750 0548 9D050000 		.4byte	.LASF112
+ 751 054c 06       		.byte	0x6
+ 752 054d 7902     		.2byte	0x279
+ 753 054f CA000000 		.4byte	0xca
+ 754 0553 04       		.byte	0x4
+ 755 0554 0E       		.uleb128 0xe
+ 756 0555 4A010000 		.4byte	.LASF113
+ 757 0559 06       		.byte	0x6
+ 758 055a 7B02     		.2byte	0x27b
+ 759 055c 07050000 		.4byte	0x507
+ 760 0560 08       		.byte	0x8
+ 761 0561 0E       		.uleb128 0xe
+ 762 0562 24080000 		.4byte	.LASF114
+ 763 0566 06       		.byte	0x6
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 17
+
+
+ 764 0567 7C02     		.2byte	0x27c
+ 765 0569 B8000000 		.4byte	0xb8
+ 766 056d 0C       		.byte	0xc
+ 767 056e 0E       		.uleb128 0xe
+ 768 056f 98040000 		.4byte	.LASF115
+ 769 0573 06       		.byte	0x6
+ 770 0574 7D02     		.2byte	0x27d
+ 771 0576 CA000000 		.4byte	0xca
+ 772 057a 10       		.byte	0x10
+ 773 057b 0E       		.uleb128 0xe
+ 774 057c F1090000 		.4byte	.LASF116
+ 775 0580 06       		.byte	0x6
+ 776 0581 7E02     		.2byte	0x27e
+ 777 0583 CA000000 		.4byte	0xca
+ 778 0587 14       		.byte	0x14
+ 779 0588 0E       		.uleb128 0xe
+ 780 0589 4B090000 		.4byte	.LASF117
+ 781 058d 06       		.byte	0x6
+ 782 058e 8002     		.2byte	0x280
+ 783 0590 07050000 		.4byte	0x507
+ 784 0594 18       		.byte	0x18
+ 785 0595 0E       		.uleb128 0xe
+ 786 0596 1A000000 		.4byte	.LASF118
+ 787 059a 06       		.byte	0x6
+ 788 059b 8102     		.2byte	0x281
+ 789 059d B8000000 		.4byte	0xb8
+ 790 05a1 1C       		.byte	0x1c
+ 791 05a2 0E       		.uleb128 0xe
+ 792 05a3 0E030000 		.4byte	.LASF119
+ 793 05a7 06       		.byte	0x6
+ 794 05a8 8202     		.2byte	0x282
+ 795 05aa CA000000 		.4byte	0xca
+ 796 05ae 20       		.byte	0x20
+ 797 05af 0E       		.uleb128 0xe
+ 798 05b0 6A010000 		.4byte	.LASF120
+ 799 05b4 06       		.byte	0x6
+ 800 05b5 8402     		.2byte	0x284
+ 801 05b7 07050000 		.4byte	0x507
+ 802 05bb 24       		.byte	0x24
+ 803 05bc 0E       		.uleb128 0xe
+ 804 05bd 2C030000 		.4byte	.LASF121
+ 805 05c1 06       		.byte	0x6
+ 806 05c2 8502     		.2byte	0x285
+ 807 05c4 B8000000 		.4byte	0xb8
+ 808 05c8 28       		.byte	0x28
+ 809 05c9 0E       		.uleb128 0xe
+ 810 05ca 1C060000 		.4byte	.LASF122
+ 811 05ce 06       		.byte	0x6
+ 812 05cf 8602     		.2byte	0x286
+ 813 05d1 CA000000 		.4byte	0xca
+ 814 05d5 2C       		.byte	0x2c
+ 815 05d6 0E       		.uleb128 0xe
+ 816 05d7 4A040000 		.4byte	.LASF123
+ 817 05db 06       		.byte	0x6
+ 818 05dc 8B02     		.2byte	0x28b
+ 819 05de 21050000 		.4byte	0x521
+ 820 05e2 30       		.byte	0x30
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 18
+
+
+ 821 05e3 0E       		.uleb128 0xe
+ 822 05e4 43090000 		.4byte	.LASF124
+ 823 05e8 06       		.byte	0x6
+ 824 05e9 8E02     		.2byte	0x28e
+ 825 05eb B8000000 		.4byte	0xb8
+ 826 05ef 34       		.byte	0x34
+ 827 05f0 00       		.byte	0
+ 828 05f1 0C       		.uleb128 0xc
+ 829 05f2 5D090000 		.4byte	.LASF125
+ 830 05f6 06       		.byte	0x6
+ 831 05f7 9102     		.2byte	0x291
+ 832 05f9 2D050000 		.4byte	0x52d
+ 833 05fd 0F       		.uleb128 0xf
+ 834 05fe FF040000 		.4byte	.LASF127
+ 835 0602 4C       		.byte	0x4c
+ 836 0603 07       		.byte	0x7
+ 837 0604 2F       		.byte	0x2f
+ 838 0605 EE060000 		.4byte	0x6ee
+ 839 0609 07       		.uleb128 0x7
+ 840 060a F4000000 		.4byte	.LASF128
+ 841 060e 07       		.byte	0x7
+ 842 060f 31       		.byte	0x31
+ 843 0610 B8000000 		.4byte	0xb8
+ 844 0614 00       		.byte	0
+ 845 0615 07       		.uleb128 0x7
+ 846 0616 2B010000 		.4byte	.LASF129
+ 847 061a 07       		.byte	0x7
+ 848 061b 33       		.byte	0x33
+ 849 061c B8000000 		.4byte	0xb8
+ 850 0620 04       		.byte	0x4
+ 851 0621 07       		.uleb128 0x7
+ 852 0622 12000000 		.4byte	.LASF130
+ 853 0626 07       		.byte	0x7
+ 854 0627 34       		.byte	0x34
+ 855 0628 B8000000 		.4byte	0xb8
+ 856 062c 08       		.byte	0x8
+ 857 062d 07       		.uleb128 0x7
+ 858 062e CD000000 		.4byte	.LASF131
+ 859 0632 07       		.byte	0x7
+ 860 0633 35       		.byte	0x35
+ 861 0634 B8000000 		.4byte	0xb8
+ 862 0638 0C       		.byte	0xc
+ 863 0639 07       		.uleb128 0x7
+ 864 063a BE060000 		.4byte	.LASF132
+ 865 063e 07       		.byte	0x7
+ 866 063f 37       		.byte	0x37
+ 867 0640 B8000000 		.4byte	0xb8
+ 868 0644 10       		.byte	0x10
+ 869 0645 07       		.uleb128 0x7
+ 870 0646 A8070000 		.4byte	.LASF133
+ 871 064a 07       		.byte	0x7
+ 872 064b 38       		.byte	0x38
+ 873 064c B8000000 		.4byte	0xb8
+ 874 0650 14       		.byte	0x14
+ 875 0651 07       		.uleb128 0x7
+ 876 0652 12090000 		.4byte	.LASF134
+ 877 0656 07       		.byte	0x7
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 19
+
+
+ 878 0657 39       		.byte	0x39
+ 879 0658 B8000000 		.4byte	0xb8
+ 880 065c 18       		.byte	0x18
+ 881 065d 07       		.uleb128 0x7
+ 882 065e B5030000 		.4byte	.LASF135
+ 883 0662 07       		.byte	0x7
+ 884 0663 3A       		.byte	0x3a
+ 885 0664 09050000 		.4byte	0x509
+ 886 0668 1C       		.byte	0x1c
+ 887 0669 07       		.uleb128 0x7
+ 888 066a 36030000 		.4byte	.LASF136
+ 889 066e 07       		.byte	0x7
+ 890 066f 3C       		.byte	0x3c
+ 891 0670 B8000000 		.4byte	0xb8
+ 892 0674 20       		.byte	0x20
+ 893 0675 07       		.uleb128 0x7
+ 894 0676 A7020000 		.4byte	.LASF137
+ 895 067a 07       		.byte	0x7
+ 896 067b 3D       		.byte	0x3d
+ 897 067c B8000000 		.4byte	0xb8
+ 898 0680 24       		.byte	0x24
+ 899 0681 07       		.uleb128 0x7
+ 900 0682 07010000 		.4byte	.LASF138
+ 901 0686 07       		.byte	0x7
+ 902 0687 3F       		.byte	0x3f
+ 903 0688 B8000000 		.4byte	0xb8
+ 904 068c 28       		.byte	0x28
+ 905 068d 07       		.uleb128 0x7
+ 906 068e E1090000 		.4byte	.LASF139
+ 907 0692 07       		.byte	0x7
+ 908 0693 40       		.byte	0x40
+ 909 0694 B8000000 		.4byte	0xb8
+ 910 0698 2C       		.byte	0x2c
+ 911 0699 07       		.uleb128 0x7
+ 912 069a 32080000 		.4byte	.LASF140
+ 913 069e 07       		.byte	0x7
+ 914 069f 42       		.byte	0x42
+ 915 06a0 B8000000 		.4byte	0xb8
+ 916 06a4 30       		.byte	0x30
+ 917 06a5 07       		.uleb128 0x7
+ 918 06a6 F6080000 		.4byte	.LASF141
+ 919 06aa 07       		.byte	0x7
+ 920 06ab 43       		.byte	0x43
+ 921 06ac B8000000 		.4byte	0xb8
+ 922 06b0 34       		.byte	0x34
+ 923 06b1 07       		.uleb128 0x7
+ 924 06b2 BC040000 		.4byte	.LASF142
+ 925 06b6 07       		.byte	0x7
+ 926 06b7 45       		.byte	0x45
+ 927 06b8 B8000000 		.4byte	0xb8
+ 928 06bc 38       		.byte	0x38
+ 929 06bd 07       		.uleb128 0x7
+ 930 06be DC000000 		.4byte	.LASF143
+ 931 06c2 07       		.byte	0x7
+ 932 06c3 46       		.byte	0x46
+ 933 06c4 B8000000 		.4byte	0xb8
+ 934 06c8 3C       		.byte	0x3c
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 20
+
+
+ 935 06c9 07       		.uleb128 0x7
+ 936 06ca DE080000 		.4byte	.LASF144
+ 937 06ce 07       		.byte	0x7
+ 938 06cf 48       		.byte	0x48
+ 939 06d0 B8000000 		.4byte	0xb8
+ 940 06d4 40       		.byte	0x40
+ 941 06d5 07       		.uleb128 0x7
+ 942 06d6 150A0000 		.4byte	.LASF145
+ 943 06da 07       		.byte	0x7
+ 944 06db 49       		.byte	0x49
+ 945 06dc B8000000 		.4byte	0xb8
+ 946 06e0 44       		.byte	0x44
+ 947 06e1 07       		.uleb128 0x7
+ 948 06e2 C2070000 		.4byte	.LASF146
+ 949 06e6 07       		.byte	0x7
+ 950 06e7 4B       		.byte	0x4b
+ 951 06e8 B8000000 		.4byte	0xb8
+ 952 06ec 48       		.byte	0x48
+ 953 06ed 00       		.byte	0
+ 954 06ee 03       		.uleb128 0x3
+ 955 06ef AC010000 		.4byte	.LASF147
+ 956 06f3 07       		.byte	0x7
+ 957 06f4 4C       		.byte	0x4c
+ 958 06f5 FD050000 		.4byte	0x5fd
+ 959 06f9 0F       		.uleb128 0xf
+ 960 06fa 2F050000 		.4byte	.LASF148
+ 961 06fe 20       		.byte	0x20
+ 962 06ff 08       		.byte	0x8
+ 963 0700 2E       		.byte	0x2e
+ 964 0701 66070000 		.4byte	0x766
+ 965 0705 07       		.uleb128 0x7
+ 966 0706 DD060000 		.4byte	.LASF149
+ 967 070a 08       		.byte	0x8
+ 968 070b 31       		.byte	0x31
+ 969 070c B8000000 		.4byte	0xb8
+ 970 0710 00       		.byte	0
+ 971 0711 07       		.uleb128 0x7
+ 972 0712 36030000 		.4byte	.LASF136
+ 973 0716 08       		.byte	0x8
+ 974 0717 33       		.byte	0x33
+ 975 0718 B8000000 		.4byte	0xb8
+ 976 071c 04       		.byte	0x4
+ 977 071d 07       		.uleb128 0x7
+ 978 071e 21020000 		.4byte	.LASF150
+ 979 0722 08       		.byte	0x8
+ 980 0723 35       		.byte	0x35
+ 981 0724 B8000000 		.4byte	0xb8
+ 982 0728 08       		.byte	0x8
+ 983 0729 07       		.uleb128 0x7
+ 984 072a 38000000 		.4byte	.LASF151
+ 985 072e 08       		.byte	0x8
+ 986 072f 37       		.byte	0x37
+ 987 0730 B8000000 		.4byte	0xb8
+ 988 0734 0C       		.byte	0xc
+ 989 0735 07       		.uleb128 0x7
+ 990 0736 DC000000 		.4byte	.LASF143
+ 991 073a 08       		.byte	0x8
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 21
+
+
+ 992 073b 39       		.byte	0x39
+ 993 073c B8000000 		.4byte	0xb8
+ 994 0740 10       		.byte	0x10
+ 995 0741 07       		.uleb128 0x7
+ 996 0742 DE080000 		.4byte	.LASF144
+ 997 0746 08       		.byte	0x8
+ 998 0747 3B       		.byte	0x3b
+ 999 0748 B8000000 		.4byte	0xb8
+ 1000 074c 14       		.byte	0x14
+ 1001 074d 07       		.uleb128 0x7
+ 1002 074e E6030000 		.4byte	.LASF152
+ 1003 0752 08       		.byte	0x8
+ 1004 0753 3D       		.byte	0x3d
+ 1005 0754 B8000000 		.4byte	0xb8
+ 1006 0758 18       		.byte	0x18
+ 1007 0759 07       		.uleb128 0x7
+ 1008 075a D4040000 		.4byte	.LASF153
+ 1009 075e 08       		.byte	0x8
+ 1010 075f 3F       		.byte	0x3f
+ 1011 0760 B8000000 		.4byte	0xb8
+ 1012 0764 1C       		.byte	0x1c
+ 1013 0765 00       		.byte	0
+ 1014 0766 03       		.uleb128 0x3
+ 1015 0767 49060000 		.4byte	.LASF154
+ 1016 076b 08       		.byte	0x8
+ 1017 076c 41       		.byte	0x41
+ 1018 076d F9060000 		.4byte	0x6f9
+ 1019 0771 10       		.uleb128 0x10
+ 1020 0772 CC050000 		.4byte	.LASF163
+ 1021 0776 02       		.byte	0x2
+ 1022 0777 81       		.byte	0x81
+ 1023 0778 03       		.byte	0x3
+ 1024 0779 11       		.uleb128 0x11
+ 1025 077a A2020000 		.4byte	.LASF164
+ 1026 077e 01       		.byte	0x1
+ 1027 077f 0E       		.byte	0xe
+ 1028 0780 89000000 		.4byte	0x89
+ 1029 0784 00000000 		.4byte	.LFB511
+ 1030 0788 10000000 		.4byte	.LFE511-.LFB511
+ 1031 078c 01       		.uleb128 0x1
+ 1032 078d 9C       		.byte	0x9c
+ 1033 078e B5070000 		.4byte	0x7b5
+ 1034 0792 12       		.uleb128 0x12
+ 1035 0793 71070000 		.4byte	0x771
+ 1036 0797 02000000 		.4byte	.LBB4
+ 1037 079b 02000000 		.4byte	.LBE4-.LBB4
+ 1038 079f 01       		.byte	0x1
+ 1039 07a0 10       		.byte	0x10
+ 1040 07a1 13       		.uleb128 0x13
+ 1041 07a2 0A000000 		.4byte	.LVL0
+ 1042 07a6 01080000 		.4byte	0x801
+ 1043 07aa 14       		.uleb128 0x14
+ 1044 07ab 01       		.uleb128 0x1
+ 1045 07ac 50       		.byte	0x50
+ 1046 07ad 05       		.uleb128 0x5
+ 1047 07ae 0C       		.byte	0xc
+ 1048 07af 00000810 		.4byte	0x10080000
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 22
+
+
+ 1049 07b3 00       		.byte	0
+ 1050 07b4 00       		.byte	0
+ 1051 07b5 15       		.uleb128 0x15
+ 1052 07b6 F0050000 		.4byte	.LASF155
+ 1053 07ba 05       		.byte	0x5
+ 1054 07bb A7       		.byte	0xa7
+ 1055 07bc C0070000 		.4byte	0x7c0
+ 1056 07c0 09       		.uleb128 0x9
+ 1057 07c1 04       		.byte	0x4
+ 1058 07c2 C6070000 		.4byte	0x7c6
+ 1059 07c6 16       		.uleb128 0x16
+ 1060 07c7 E7040000 		.4byte	0x4e7
+ 1061 07cb 15       		.uleb128 0x15
+ 1062 07cc 39020000 		.4byte	.LASF156
+ 1063 07d0 09       		.byte	0x9
+ 1064 07d1 87       		.byte	0x87
+ 1065 07d2 F1050000 		.4byte	0x5f1
+ 1066 07d6 15       		.uleb128 0x15
+ 1067 07d7 85060000 		.4byte	.LASF157
+ 1068 07db 0A       		.byte	0xa
+ 1069 07dc 1F       		.byte	0x1f
+ 1070 07dd E1070000 		.4byte	0x7e1
+ 1071 07e1 16       		.uleb128 0x16
+ 1072 07e2 EE060000 		.4byte	0x6ee
+ 1073 07e6 15       		.uleb128 0x15
+ 1074 07e7 FB030000 		.4byte	.LASF158
+ 1075 07eb 0B       		.byte	0xb
+ 1076 07ec 1F       		.byte	0x1f
+ 1077 07ed E1070000 		.4byte	0x7e1
+ 1078 07f1 15       		.uleb128 0x15
+ 1079 07f2 15040000 		.4byte	.LASF159
+ 1080 07f6 0C       		.byte	0xc
+ 1081 07f7 1F       		.byte	0x1f
+ 1082 07f8 FC070000 		.4byte	0x7fc
+ 1083 07fc 16       		.uleb128 0x16
+ 1084 07fd 66070000 		.4byte	0x766
+ 1085 0801 17       		.uleb128 0x17
+ 1086 0802 60040000 		.4byte	.LASF165
+ 1087 0806 60040000 		.4byte	.LASF165
+ 1088 080a 0D       		.byte	0xd
+ 1089 080b 2502     		.2byte	0x225
+ 1090 080d 00       		.byte	0
+ 1091              		.section	.debug_abbrev,"",%progbits
+ 1092              	.Ldebug_abbrev0:
+ 1093 0000 01       		.uleb128 0x1
+ 1094 0001 11       		.uleb128 0x11
+ 1095 0002 01       		.byte	0x1
+ 1096 0003 25       		.uleb128 0x25
+ 1097 0004 0E       		.uleb128 0xe
+ 1098 0005 13       		.uleb128 0x13
+ 1099 0006 0B       		.uleb128 0xb
+ 1100 0007 03       		.uleb128 0x3
+ 1101 0008 0E       		.uleb128 0xe
+ 1102 0009 1B       		.uleb128 0x1b
+ 1103 000a 0E       		.uleb128 0xe
+ 1104 000b 55       		.uleb128 0x55
+ 1105 000c 17       		.uleb128 0x17
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 23
+
+
+ 1106 000d 11       		.uleb128 0x11
+ 1107 000e 01       		.uleb128 0x1
+ 1108 000f 10       		.uleb128 0x10
+ 1109 0010 17       		.uleb128 0x17
+ 1110 0011 00       		.byte	0
+ 1111 0012 00       		.byte	0
+ 1112 0013 02       		.uleb128 0x2
+ 1113 0014 24       		.uleb128 0x24
+ 1114 0015 00       		.byte	0
+ 1115 0016 0B       		.uleb128 0xb
+ 1116 0017 0B       		.uleb128 0xb
+ 1117 0018 3E       		.uleb128 0x3e
+ 1118 0019 0B       		.uleb128 0xb
+ 1119 001a 03       		.uleb128 0x3
+ 1120 001b 0E       		.uleb128 0xe
+ 1121 001c 00       		.byte	0
+ 1122 001d 00       		.byte	0
+ 1123 001e 03       		.uleb128 0x3
+ 1124 001f 16       		.uleb128 0x16
+ 1125 0020 00       		.byte	0
+ 1126 0021 03       		.uleb128 0x3
+ 1127 0022 0E       		.uleb128 0xe
+ 1128 0023 3A       		.uleb128 0x3a
+ 1129 0024 0B       		.uleb128 0xb
+ 1130 0025 3B       		.uleb128 0x3b
+ 1131 0026 0B       		.uleb128 0xb
+ 1132 0027 49       		.uleb128 0x49
+ 1133 0028 13       		.uleb128 0x13
+ 1134 0029 00       		.byte	0
+ 1135 002a 00       		.byte	0
+ 1136 002b 04       		.uleb128 0x4
+ 1137 002c 24       		.uleb128 0x24
+ 1138 002d 00       		.byte	0
+ 1139 002e 0B       		.uleb128 0xb
+ 1140 002f 0B       		.uleb128 0xb
+ 1141 0030 3E       		.uleb128 0x3e
+ 1142 0031 0B       		.uleb128 0xb
+ 1143 0032 03       		.uleb128 0x3
+ 1144 0033 08       		.uleb128 0x8
+ 1145 0034 00       		.byte	0
+ 1146 0035 00       		.byte	0
+ 1147 0036 05       		.uleb128 0x5
+ 1148 0037 35       		.uleb128 0x35
+ 1149 0038 00       		.byte	0
+ 1150 0039 49       		.uleb128 0x49
+ 1151 003a 13       		.uleb128 0x13
+ 1152 003b 00       		.byte	0
+ 1153 003c 00       		.byte	0
+ 1154 003d 06       		.uleb128 0x6
+ 1155 003e 13       		.uleb128 0x13
+ 1156 003f 01       		.byte	0x1
+ 1157 0040 0B       		.uleb128 0xb
+ 1158 0041 0B       		.uleb128 0xb
+ 1159 0042 3A       		.uleb128 0x3a
+ 1160 0043 0B       		.uleb128 0xb
+ 1161 0044 3B       		.uleb128 0x3b
+ 1162 0045 0B       		.uleb128 0xb
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 24
+
+
+ 1163 0046 01       		.uleb128 0x1
+ 1164 0047 13       		.uleb128 0x13
+ 1165 0048 00       		.byte	0
+ 1166 0049 00       		.byte	0
+ 1167 004a 07       		.uleb128 0x7
+ 1168 004b 0D       		.uleb128 0xd
+ 1169 004c 00       		.byte	0
+ 1170 004d 03       		.uleb128 0x3
+ 1171 004e 0E       		.uleb128 0xe
+ 1172 004f 3A       		.uleb128 0x3a
+ 1173 0050 0B       		.uleb128 0xb
+ 1174 0051 3B       		.uleb128 0x3b
+ 1175 0052 0B       		.uleb128 0xb
+ 1176 0053 49       		.uleb128 0x49
+ 1177 0054 13       		.uleb128 0x13
+ 1178 0055 38       		.uleb128 0x38
+ 1179 0056 0B       		.uleb128 0xb
+ 1180 0057 00       		.byte	0
+ 1181 0058 00       		.byte	0
+ 1182 0059 08       		.uleb128 0x8
+ 1183 005a 0F       		.uleb128 0xf
+ 1184 005b 00       		.byte	0
+ 1185 005c 0B       		.uleb128 0xb
+ 1186 005d 0B       		.uleb128 0xb
+ 1187 005e 00       		.byte	0
+ 1188 005f 00       		.byte	0
+ 1189 0060 09       		.uleb128 0x9
+ 1190 0061 0F       		.uleb128 0xf
+ 1191 0062 00       		.byte	0
+ 1192 0063 0B       		.uleb128 0xb
+ 1193 0064 0B       		.uleb128 0xb
+ 1194 0065 49       		.uleb128 0x49
+ 1195 0066 13       		.uleb128 0x13
+ 1196 0067 00       		.byte	0
+ 1197 0068 00       		.byte	0
+ 1198 0069 0A       		.uleb128 0xa
+ 1199 006a 15       		.uleb128 0x15
+ 1200 006b 01       		.byte	0x1
+ 1201 006c 27       		.uleb128 0x27
+ 1202 006d 19       		.uleb128 0x19
+ 1203 006e 01       		.uleb128 0x1
+ 1204 006f 13       		.uleb128 0x13
+ 1205 0070 00       		.byte	0
+ 1206 0071 00       		.byte	0
+ 1207 0072 0B       		.uleb128 0xb
+ 1208 0073 05       		.uleb128 0x5
+ 1209 0074 00       		.byte	0
+ 1210 0075 49       		.uleb128 0x49
+ 1211 0076 13       		.uleb128 0x13
+ 1212 0077 00       		.byte	0
+ 1213 0078 00       		.byte	0
+ 1214 0079 0C       		.uleb128 0xc
+ 1215 007a 16       		.uleb128 0x16
+ 1216 007b 00       		.byte	0
+ 1217 007c 03       		.uleb128 0x3
+ 1218 007d 0E       		.uleb128 0xe
+ 1219 007e 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 25
+
+
+ 1220 007f 0B       		.uleb128 0xb
+ 1221 0080 3B       		.uleb128 0x3b
+ 1222 0081 05       		.uleb128 0x5
+ 1223 0082 49       		.uleb128 0x49
+ 1224 0083 13       		.uleb128 0x13
+ 1225 0084 00       		.byte	0
+ 1226 0085 00       		.byte	0
+ 1227 0086 0D       		.uleb128 0xd
+ 1228 0087 13       		.uleb128 0x13
+ 1229 0088 01       		.byte	0x1
+ 1230 0089 03       		.uleb128 0x3
+ 1231 008a 0E       		.uleb128 0xe
+ 1232 008b 0B       		.uleb128 0xb
+ 1233 008c 0B       		.uleb128 0xb
+ 1234 008d 3A       		.uleb128 0x3a
+ 1235 008e 0B       		.uleb128 0xb
+ 1236 008f 3B       		.uleb128 0x3b
+ 1237 0090 05       		.uleb128 0x5
+ 1238 0091 01       		.uleb128 0x1
+ 1239 0092 13       		.uleb128 0x13
+ 1240 0093 00       		.byte	0
+ 1241 0094 00       		.byte	0
+ 1242 0095 0E       		.uleb128 0xe
+ 1243 0096 0D       		.uleb128 0xd
+ 1244 0097 00       		.byte	0
+ 1245 0098 03       		.uleb128 0x3
+ 1246 0099 0E       		.uleb128 0xe
+ 1247 009a 3A       		.uleb128 0x3a
+ 1248 009b 0B       		.uleb128 0xb
+ 1249 009c 3B       		.uleb128 0x3b
+ 1250 009d 05       		.uleb128 0x5
+ 1251 009e 49       		.uleb128 0x49
+ 1252 009f 13       		.uleb128 0x13
+ 1253 00a0 38       		.uleb128 0x38
+ 1254 00a1 0B       		.uleb128 0xb
+ 1255 00a2 00       		.byte	0
+ 1256 00a3 00       		.byte	0
+ 1257 00a4 0F       		.uleb128 0xf
+ 1258 00a5 13       		.uleb128 0x13
+ 1259 00a6 01       		.byte	0x1
+ 1260 00a7 03       		.uleb128 0x3
+ 1261 00a8 0E       		.uleb128 0xe
+ 1262 00a9 0B       		.uleb128 0xb
+ 1263 00aa 0B       		.uleb128 0xb
+ 1264 00ab 3A       		.uleb128 0x3a
+ 1265 00ac 0B       		.uleb128 0xb
+ 1266 00ad 3B       		.uleb128 0x3b
+ 1267 00ae 0B       		.uleb128 0xb
+ 1268 00af 01       		.uleb128 0x1
+ 1269 00b0 13       		.uleb128 0x13
+ 1270 00b1 00       		.byte	0
+ 1271 00b2 00       		.byte	0
+ 1272 00b3 10       		.uleb128 0x10
+ 1273 00b4 2E       		.uleb128 0x2e
+ 1274 00b5 00       		.byte	0
+ 1275 00b6 03       		.uleb128 0x3
+ 1276 00b7 0E       		.uleb128 0xe
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 26
+
+
+ 1277 00b8 3A       		.uleb128 0x3a
+ 1278 00b9 0B       		.uleb128 0xb
+ 1279 00ba 3B       		.uleb128 0x3b
+ 1280 00bb 0B       		.uleb128 0xb
+ 1281 00bc 27       		.uleb128 0x27
+ 1282 00bd 19       		.uleb128 0x19
+ 1283 00be 20       		.uleb128 0x20
+ 1284 00bf 0B       		.uleb128 0xb
+ 1285 00c0 00       		.byte	0
+ 1286 00c1 00       		.byte	0
+ 1287 00c2 11       		.uleb128 0x11
+ 1288 00c3 2E       		.uleb128 0x2e
+ 1289 00c4 01       		.byte	0x1
+ 1290 00c5 3F       		.uleb128 0x3f
+ 1291 00c6 19       		.uleb128 0x19
+ 1292 00c7 03       		.uleb128 0x3
+ 1293 00c8 0E       		.uleb128 0xe
+ 1294 00c9 3A       		.uleb128 0x3a
+ 1295 00ca 0B       		.uleb128 0xb
+ 1296 00cb 3B       		.uleb128 0x3b
+ 1297 00cc 0B       		.uleb128 0xb
+ 1298 00cd 27       		.uleb128 0x27
+ 1299 00ce 19       		.uleb128 0x19
+ 1300 00cf 49       		.uleb128 0x49
+ 1301 00d0 13       		.uleb128 0x13
+ 1302 00d1 8701     		.uleb128 0x87
+ 1303 00d3 19       		.uleb128 0x19
+ 1304 00d4 11       		.uleb128 0x11
+ 1305 00d5 01       		.uleb128 0x1
+ 1306 00d6 12       		.uleb128 0x12
+ 1307 00d7 06       		.uleb128 0x6
+ 1308 00d8 40       		.uleb128 0x40
+ 1309 00d9 18       		.uleb128 0x18
+ 1310 00da 9742     		.uleb128 0x2117
+ 1311 00dc 19       		.uleb128 0x19
+ 1312 00dd 01       		.uleb128 0x1
+ 1313 00de 13       		.uleb128 0x13
+ 1314 00df 00       		.byte	0
+ 1315 00e0 00       		.byte	0
+ 1316 00e1 12       		.uleb128 0x12
+ 1317 00e2 1D       		.uleb128 0x1d
+ 1318 00e3 00       		.byte	0
+ 1319 00e4 31       		.uleb128 0x31
+ 1320 00e5 13       		.uleb128 0x13
+ 1321 00e6 11       		.uleb128 0x11
+ 1322 00e7 01       		.uleb128 0x1
+ 1323 00e8 12       		.uleb128 0x12
+ 1324 00e9 06       		.uleb128 0x6
+ 1325 00ea 58       		.uleb128 0x58
+ 1326 00eb 0B       		.uleb128 0xb
+ 1327 00ec 59       		.uleb128 0x59
+ 1328 00ed 0B       		.uleb128 0xb
+ 1329 00ee 00       		.byte	0
+ 1330 00ef 00       		.byte	0
+ 1331 00f0 13       		.uleb128 0x13
+ 1332 00f1 898201   		.uleb128 0x4109
+ 1333 00f4 01       		.byte	0x1
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 27
+
+
+ 1334 00f5 11       		.uleb128 0x11
+ 1335 00f6 01       		.uleb128 0x1
+ 1336 00f7 31       		.uleb128 0x31
+ 1337 00f8 13       		.uleb128 0x13
+ 1338 00f9 00       		.byte	0
+ 1339 00fa 00       		.byte	0
+ 1340 00fb 14       		.uleb128 0x14
+ 1341 00fc 8A8201   		.uleb128 0x410a
+ 1342 00ff 00       		.byte	0
+ 1343 0100 02       		.uleb128 0x2
+ 1344 0101 18       		.uleb128 0x18
+ 1345 0102 9142     		.uleb128 0x2111
+ 1346 0104 18       		.uleb128 0x18
+ 1347 0105 00       		.byte	0
+ 1348 0106 00       		.byte	0
+ 1349 0107 15       		.uleb128 0x15
+ 1350 0108 34       		.uleb128 0x34
+ 1351 0109 00       		.byte	0
+ 1352 010a 03       		.uleb128 0x3
+ 1353 010b 0E       		.uleb128 0xe
+ 1354 010c 3A       		.uleb128 0x3a
+ 1355 010d 0B       		.uleb128 0xb
+ 1356 010e 3B       		.uleb128 0x3b
+ 1357 010f 0B       		.uleb128 0xb
+ 1358 0110 49       		.uleb128 0x49
+ 1359 0111 13       		.uleb128 0x13
+ 1360 0112 3F       		.uleb128 0x3f
+ 1361 0113 19       		.uleb128 0x19
+ 1362 0114 3C       		.uleb128 0x3c
+ 1363 0115 19       		.uleb128 0x19
+ 1364 0116 00       		.byte	0
+ 1365 0117 00       		.byte	0
+ 1366 0118 16       		.uleb128 0x16
+ 1367 0119 26       		.uleb128 0x26
+ 1368 011a 00       		.byte	0
+ 1369 011b 49       		.uleb128 0x49
+ 1370 011c 13       		.uleb128 0x13
+ 1371 011d 00       		.byte	0
+ 1372 011e 00       		.byte	0
+ 1373 011f 17       		.uleb128 0x17
+ 1374 0120 2E       		.uleb128 0x2e
+ 1375 0121 00       		.byte	0
+ 1376 0122 3F       		.uleb128 0x3f
+ 1377 0123 19       		.uleb128 0x19
+ 1378 0124 3C       		.uleb128 0x3c
+ 1379 0125 19       		.uleb128 0x19
+ 1380 0126 6E       		.uleb128 0x6e
+ 1381 0127 0E       		.uleb128 0xe
+ 1382 0128 03       		.uleb128 0x3
+ 1383 0129 0E       		.uleb128 0xe
+ 1384 012a 3A       		.uleb128 0x3a
+ 1385 012b 0B       		.uleb128 0xb
+ 1386 012c 3B       		.uleb128 0x3b
+ 1387 012d 05       		.uleb128 0x5
+ 1388 012e 00       		.byte	0
+ 1389 012f 00       		.byte	0
+ 1390 0130 00       		.byte	0
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 28
+
+
+ 1391              		.section	.debug_aranges,"",%progbits
+ 1392 0000 1C000000 		.4byte	0x1c
+ 1393 0004 0200     		.2byte	0x2
+ 1394 0006 00000000 		.4byte	.Ldebug_info0
+ 1395 000a 04       		.byte	0x4
+ 1396 000b 00       		.byte	0
+ 1397 000c 0000     		.2byte	0
+ 1398 000e 0000     		.2byte	0
+ 1399 0010 00000000 		.4byte	.LFB511
+ 1400 0014 10000000 		.4byte	.LFE511-.LFB511
+ 1401 0018 00000000 		.4byte	0
+ 1402 001c 00000000 		.4byte	0
+ 1403              		.section	.debug_ranges,"",%progbits
+ 1404              	.Ldebug_ranges0:
+ 1405 0000 00000000 		.4byte	.LFB511
+ 1406 0004 10000000 		.4byte	.LFE511
+ 1407 0008 00000000 		.4byte	0
+ 1408 000c 00000000 		.4byte	0
+ 1409              		.section	.debug_line,"",%progbits
+ 1410              	.Ldebug_line0:
+ 1411 0000 C1020000 		.section	.debug_str,"MS",%progbits,1
+ 1411      0200A002 
+ 1411      00000201 
+ 1411      FB0E0D00 
+ 1411      01010101 
+ 1412              	.LASF54:
+ 1413 0000 70726F74 		.ascii	"protBusMasterMask\000"
+ 1413      4275734D 
+ 1413      61737465 
+ 1413      724D6173 
+ 1413      6B00
+ 1414              	.LASF130:
+ 1415 0012 72756E4D 		.ascii	"runMode\000"
+ 1415      6F646500 
+ 1416              	.LASF118:
+ 1417 001a 72784275 		.ascii	"rxBufSize\000"
+ 1417      6653697A 
+ 1417      6500
+ 1418              	.LASF64:
+ 1419 0024 666C6173 		.ascii	"flashCtlMainWs3Freq\000"
+ 1419      6843746C 
+ 1419      4D61696E 
+ 1419      57733346 
+ 1419      72657100 
+ 1420              	.LASF151:
+ 1421 0038 696E6465 		.ascii	"indexInput\000"
+ 1421      78496E70 
+ 1421      757400
+ 1422              	.LASF104:
+ 1423 0043 6970634C 		.ascii	"ipcLockStatusOffset\000"
+ 1423      6F636B53 
+ 1423      74617475 
+ 1423      734F6666 
+ 1423      73657400 
+ 1424              	.LASF30:
+ 1425 0057 63727970 		.ascii	"cryptoVersion\000"
+ 1425      746F5665 
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 29
+
+
+ 1425      7273696F 
+ 1425      6E00
+ 1426              	.LASF68:
+ 1427 0065 64774368 		.ascii	"dwChCtlPrioPos\000"
+ 1427      43746C50 
+ 1427      72696F50 
+ 1427      6F7300
+ 1428              	.LASF26:
+ 1429 0074 70617373 		.ascii	"passBase\000"
+ 1429      42617365 
+ 1429      00
+ 1430              	.LASF161:
+ 1431 007d 6D61696E 		.ascii	"main_cm0p.c\000"
+ 1431      5F636D30 
+ 1431      702E6300 
+ 1432              	.LASF39:
+ 1433 0089 63707573 		.ascii	"cpussIpcIrqNr\000"
+ 1433      73497063 
+ 1433      4972714E 
+ 1433      7200
+ 1434              	.LASF3:
+ 1435 0097 5F5F7569 		.ascii	"__uint8_t\000"
+ 1435      6E74385F 
+ 1435      7400
+ 1436              	.LASF83:
+ 1437 00a1 70657269 		.ascii	"periDiv24_5CtlOffset\000"
+ 1437      44697632 
+ 1437      345F3543 
+ 1437      746C4F66 
+ 1437      66736574 
+ 1438              	.LASF90:
+ 1439 00b6 63707573 		.ascii	"cpussCm4ClockCtlOffset\000"
+ 1439      73436D34 
+ 1439      436C6F63 
+ 1439      6B43746C 
+ 1439      4F666673 
+ 1440              	.LASF131:
+ 1441 00cd 636F756E 		.ascii	"countDirection\000"
+ 1441      74446972 
+ 1441      65637469 
+ 1441      6F6E00
+ 1442              	.LASF143:
+ 1443 00dc 73746F70 		.ascii	"stopInputMode\000"
+ 1443      496E7075 
+ 1443      744D6F64 
+ 1443      6500
+ 1444              	.LASF19:
+ 1445 00ea 63707573 		.ascii	"cpussBase\000"
+ 1445      73426173 
+ 1445      6500
+ 1446              	.LASF128:
+ 1447 00f4 70657269 		.ascii	"period\000"
+ 1447      6F6400
+ 1448              	.LASF48:
+ 1449 00fb 70657269 		.ascii	"periClockNr\000"
+ 1449      436C6F63 
+ 1449      6B4E7200 
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 30
+
+
+ 1450              	.LASF138:
+ 1451 0107 63617074 		.ascii	"captureInput\000"
+ 1451      75726549 
+ 1451      6E707574 
+ 1451      00
+ 1452              	.LASF11:
+ 1453 0114 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1453      206C6F6E 
+ 1453      6720756E 
+ 1453      7369676E 
+ 1453      65642069 
+ 1454              	.LASF129:
+ 1455 012b 636C6F63 		.ascii	"clockPrescaler\000"
+ 1455      6B507265 
+ 1455      7363616C 
+ 1455      657200
+ 1456              	.LASF72:
+ 1457 013a 70657269 		.ascii	"periTrCmdOffset\000"
+ 1457      5472436D 
+ 1457      644F6666 
+ 1457      73657400 
+ 1458              	.LASF113:
+ 1459 014a 72785269 		.ascii	"rxRingBuf\000"
+ 1459      6E674275 
+ 1459      6600
+ 1460              	.LASF96:
+ 1461 0154 63707573 		.ascii	"cpussSysTickCtlOffset\000"
+ 1461      73537973 
+ 1461      5469636B 
+ 1461      43746C4F 
+ 1461      66667365 
+ 1462              	.LASF120:
+ 1463 016a 74784275 		.ascii	"txBuf\000"
+ 1463      6600
+ 1464              	.LASF57:
+ 1465 0170 666C6173 		.ascii	"flashPipeRequired\000"
+ 1465      68506970 
+ 1465      65526571 
+ 1465      75697265 
+ 1465      6400
+ 1466              	.LASF61:
+ 1467 0182 666C6173 		.ascii	"flashCtlMainWs0Freq\000"
+ 1467      6843746C 
+ 1467      4D61696E 
+ 1467      57733046 
+ 1467      72657100 
+ 1468              	.LASF14:
+ 1469 0196 696E7431 		.ascii	"int16_t\000"
+ 1469      365F7400 
+ 1470              	.LASF10:
+ 1471 019e 6C6F6E67 		.ascii	"long long int\000"
+ 1471      206C6F6E 
+ 1471      6720696E 
+ 1471      7400
+ 1472              	.LASF147:
+ 1473 01ac 63795F73 		.ascii	"cy_stc_tcpwm_counter_config_t\000"
+ 1473      74635F74 
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 31
+
+
+ 1473      6370776D 
+ 1473      5F636F75 
+ 1473      6E746572 
+ 1474              	.LASF77:
+ 1475 01ca 70657269 		.ascii	"periDivCmdTypeSelPos\000"
+ 1475      44697643 
+ 1475      6D645479 
+ 1475      70655365 
+ 1475      6C506F73 
+ 1476              	.LASF23:
+ 1477 01df 70726F74 		.ascii	"protBase\000"
+ 1477      42617365 
+ 1477      00
+ 1478              	.LASF35:
+ 1479 01e8 69706356 		.ascii	"ipcVersion\000"
+ 1479      65727369 
+ 1479      6F6E00
+ 1480              	.LASF97:
+ 1481 01f3 63707573 		.ascii	"cpussCm0NmiCtlOffset\000"
+ 1481      73436D30 
+ 1481      4E6D6943 
+ 1481      746C4F66 
+ 1481      66736574 
+ 1482              	.LASF45:
+ 1483 0208 73727373 		.ascii	"srssNumClkpath\000"
+ 1483      4E756D43 
+ 1483      6C6B7061 
+ 1483      746800
+ 1484              	.LASF24:
+ 1485 0217 6873696F 		.ascii	"hsiomBase\000"
+ 1485      6D426173 
+ 1485      6500
+ 1486              	.LASF150:
+ 1487 0221 696E6465 		.ascii	"indexInputMode\000"
+ 1487      78496E70 
+ 1487      75744D6F 
+ 1487      646500
+ 1488              	.LASF7:
+ 1489 0230 6C6F6E67 		.ascii	"long int\000"
+ 1489      20696E74 
+ 1489      00
+ 1490              	.LASF156:
+ 1491 0239 55415254 		.ascii	"UART_1_context\000"
+ 1491      5F315F63 
+ 1491      6F6E7465 
+ 1491      787400
+ 1492              	.LASF55:
+ 1493 0248 63727970 		.ascii	"cryptoMemSize\000"
+ 1493      746F4D65 
+ 1493      6D53697A 
+ 1493      6500
+ 1494              	.LASF21:
+ 1495 0256 70657269 		.ascii	"periBase\000"
+ 1495      42617365 
+ 1495      00
+ 1496              	.LASF53:
+ 1497 025f 73797350 		.ascii	"sysPmSimoPresent\000"
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 32
+
+
+ 1497      6D53696D 
+ 1497      6F507265 
+ 1497      73656E74 
+ 1497      00
+ 1498              	.LASF43:
+ 1499 0270 63707573 		.ascii	"cpussFmIrq\000"
+ 1499      73466D49 
+ 1499      727100
+ 1500              	.LASF108:
+ 1501 027b 646F7562 		.ascii	"double\000"
+ 1501      6C6500
+ 1502              	.LASF82:
+ 1503 0282 70657269 		.ascii	"periDiv16_5CtlOffset\000"
+ 1503      44697631 
+ 1503      365F3543 
+ 1503      746C4F66 
+ 1503      66736574 
+ 1504              	.LASF46:
+ 1505 0297 73727373 		.ascii	"srssNumPll\000"
+ 1505      4E756D50 
+ 1505      6C6C00
+ 1506              	.LASF164:
+ 1507 02a2 6D61696E 		.ascii	"main\000"
+ 1507      00
+ 1508              	.LASF137:
+ 1509 02a7 63617074 		.ascii	"captureInputMode\000"
+ 1509      75726549 
+ 1509      6E707574 
+ 1509      4D6F6465 
+ 1509      00
+ 1510              	.LASF80:
+ 1511 02b8 70657269 		.ascii	"periDiv8CtlOffset\000"
+ 1511      44697638 
+ 1511      43746C4F 
+ 1511      66667365 
+ 1511      7400
+ 1512              	.LASF87:
+ 1513 02ca 6770696F 		.ascii	"gpioPrtCfgOutOffset\000"
+ 1513      50727443 
+ 1513      66674F75 
+ 1513      744F6666 
+ 1513      73657400 
+ 1514              	.LASF20:
+ 1515 02de 666C6173 		.ascii	"flashcBase\000"
+ 1515      68634261 
+ 1515      736500
+ 1516              	.LASF8:
+ 1517 02e9 5F5F7569 		.ascii	"__uint32_t\000"
+ 1517      6E743332 
+ 1517      5F7400
+ 1518              	.LASF50:
+ 1519 02f4 70617373 		.ascii	"passSarChannels\000"
+ 1519      53617243 
+ 1519      68616E6E 
+ 1519      656C7300 
+ 1520              	.LASF4:
+ 1521 0304 5F5F696E 		.ascii	"__int16_t\000"
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 33
+
+
+ 1521      7431365F 
+ 1521      7400
+ 1522              	.LASF119:
+ 1523 030e 72784275 		.ascii	"rxBufIdx\000"
+ 1523      66496478 
+ 1523      00
+ 1524              	.LASF93:
+ 1525 0317 63707573 		.ascii	"cpussCm4PwrCtlOffset\000"
+ 1525      73436D34 
+ 1525      50777243 
+ 1525      746C4F66 
+ 1525      66736574 
+ 1526              	.LASF121:
+ 1527 032c 74784275 		.ascii	"txBufSize\000"
+ 1527      6653697A 
+ 1527      6500
+ 1528              	.LASF136:
+ 1529 0336 696E7465 		.ascii	"interruptSources\000"
+ 1529      72727570 
+ 1529      74536F75 
+ 1529      72636573 
+ 1529      00
+ 1530              	.LASF88:
+ 1531 0347 6770696F 		.ascii	"gpioPrtCfgSioOffset\000"
+ 1531      50727443 
+ 1531      66675369 
+ 1531      6F4F6666 
+ 1531      73657400 
+ 1532              	.LASF40:
+ 1533 035b 63707573 		.ascii	"cpussDwChNr\000"
+ 1533      73447743 
+ 1533      684E7200 
+ 1534              	.LASF12:
+ 1535 0367 756E7369 		.ascii	"unsigned int\000"
+ 1535      676E6564 
+ 1535      20696E74 
+ 1535      00
+ 1536              	.LASF15:
+ 1537 0374 75696E74 		.ascii	"uint16_t\000"
+ 1537      31365F74 
+ 1537      00
+ 1538              	.LASF73:
+ 1539 037d 70657269 		.ascii	"periTrCmdGrSelMsk\000"
+ 1539      5472436D 
+ 1539      64477253 
+ 1539      656C4D73 
+ 1539      6B00
+ 1540              	.LASF62:
+ 1541 038f 666C6173 		.ascii	"flashCtlMainWs1Freq\000"
+ 1541      6843746C 
+ 1541      4D61696E 
+ 1541      57733146 
+ 1541      72657100 
+ 1542              	.LASF9:
+ 1543 03a3 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1543      20756E73 
+ 1543      69676E65 
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 34
+
+
+ 1543      6420696E 
+ 1543      7400
+ 1544              	.LASF135:
+ 1545 03b5 656E6162 		.ascii	"enableCompareSwap\000"
+ 1545      6C65436F 
+ 1545      6D706172 
+ 1545      65537761 
+ 1545      7000
+ 1546              	.LASF110:
+ 1547 03c7 63795F63 		.ascii	"cy_cb_scb_uart_handle_events_t\000"
+ 1547      625F7363 
+ 1547      625F7561 
+ 1547      72745F68 
+ 1547      616E646C 
+ 1548              	.LASF152:
+ 1549 03e6 70686941 		.ascii	"phiAInput\000"
+ 1549      496E7075 
+ 1549      7400
+ 1550              	.LASF38:
+ 1551 03f0 63707573 		.ascii	"cpussIpcNr\000"
+ 1551      73497063 
+ 1551      4E7200
+ 1552              	.LASF158:
+ 1553 03fb 436F756E 		.ascii	"Counter_2_config\000"
+ 1553      7465725F 
+ 1553      325F636F 
+ 1553      6E666967 
+ 1553      00
+ 1554              	.LASF25:
+ 1555 040c 6770696F 		.ascii	"gpioBase\000"
+ 1555      42617365 
+ 1555      00
+ 1556              	.LASF159:
+ 1557 0415 456E636F 		.ascii	"Encoder_config\000"
+ 1557      6465725F 
+ 1557      636F6E66 
+ 1557      696700
+ 1558              	.LASF111:
+ 1559 0424 74785374 		.ascii	"txStatus\000"
+ 1559      61747573 
+ 1559      00
+ 1560              	.LASF74:
+ 1561 042d 70657269 		.ascii	"periTrGrOffset\000"
+ 1561      54724772 
+ 1561      4F666673 
+ 1561      657400
+ 1562              	.LASF101:
+ 1563 043c 63707573 		.ascii	"cpussRam1Ctl0\000"
+ 1563      7352616D 
+ 1563      3143746C 
+ 1563      3000
+ 1564              	.LASF123:
+ 1565 044a 63624576 		.ascii	"cbEvents\000"
+ 1565      656E7473 
+ 1565      00
+ 1566              	.LASF75:
+ 1567 0453 70657269 		.ascii	"periTrGrSize\000"
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 35
+
+
+ 1567      54724772 
+ 1567      53697A65 
+ 1567      00
+ 1568              	.LASF165:
+ 1569 0460 43795F53 		.ascii	"Cy_SysEnableCM4\000"
+ 1569      7973456E 
+ 1569      61626C65 
+ 1569      434D3400 
+ 1570              	.LASF33:
+ 1571 0470 6770696F 		.ascii	"gpioVersion\000"
+ 1571      56657273 
+ 1571      696F6E00 
+ 1572              	.LASF105:
+ 1573 047c 63795F73 		.ascii	"cy_stc_device_t\000"
+ 1573      74635F64 
+ 1573      65766963 
+ 1573      655F7400 
+ 1574              	.LASF51:
+ 1575 048c 65704D6F 		.ascii	"epMonitorNr\000"
+ 1575      6E69746F 
+ 1575      724E7200 
+ 1576              	.LASF115:
+ 1577 0498 72785269 		.ascii	"rxRingBufHead\000"
+ 1577      6E674275 
+ 1577      66486561 
+ 1577      6400
+ 1578              	.LASF94:
+ 1579 04a6 63707573 		.ascii	"cpussTrimRamCtlOffset\000"
+ 1579      73547269 
+ 1579      6D52616D 
+ 1579      43746C4F 
+ 1579      66667365 
+ 1580              	.LASF142:
+ 1581 04bc 73746172 		.ascii	"startInput\000"
+ 1581      74496E70 
+ 1581      757400
+ 1582              	.LASF29:
+ 1583 04c7 63707573 		.ascii	"cpussVersion\000"
+ 1583      73566572 
+ 1583      73696F6E 
+ 1583      00
+ 1584              	.LASF153:
+ 1585 04d4 70686942 		.ascii	"phiBInput\000"
+ 1585      496E7075 
+ 1585      7400
+ 1586              	.LASF36:
+ 1587 04de 70657269 		.ascii	"periVersion\000"
+ 1587      56657273 
+ 1587      696F6E00 
+ 1588              	.LASF92:
+ 1589 04ea 63707573 		.ascii	"cpussCm0StatusOffset\000"
+ 1589      73436D30 
+ 1589      53746174 
+ 1589      75734F66 
+ 1589      66736574 
+ 1590              	.LASF127:
+ 1591 04ff 63795F73 		.ascii	"cy_stc_tcpwm_counter_config\000"
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 36
+
+
+ 1591      74635F74 
+ 1591      6370776D 
+ 1591      5F636F75 
+ 1591      6E746572 
+ 1592              	.LASF17:
+ 1593 051b 73697A65 		.ascii	"sizetype\000"
+ 1593      74797065 
+ 1593      00
+ 1594              	.LASF66:
+ 1595 0524 64774368 		.ascii	"dwChOffset\000"
+ 1595      4F666673 
+ 1595      657400
+ 1596              	.LASF148:
+ 1597 052f 63795F73 		.ascii	"cy_stc_tcpwm_quaddec_config\000"
+ 1597      74635F74 
+ 1597      6370776D 
+ 1597      5F717561 
+ 1597      64646563 
+ 1598              	.LASF41:
+ 1599 054b 63707573 		.ascii	"cpussFlashPaSize\000"
+ 1599      73466C61 
+ 1599      73685061 
+ 1599      53697A65 
+ 1599      00
+ 1600              	.LASF79:
+ 1601 055c 70657269 		.ascii	"periDivCmdPaTypeSelPos\000"
+ 1601      44697643 
+ 1601      6D645061 
+ 1601      54797065 
+ 1601      53656C50 
+ 1602              	.LASF102:
+ 1603 0573 63707573 		.ascii	"cpussRam2Ctl0\000"
+ 1603      7352616D 
+ 1603      3243746C 
+ 1603      3000
+ 1604              	.LASF70:
+ 1605 0581 64775374 		.ascii	"dwStatusChIdxPos\000"
+ 1605      61747573 
+ 1605      43684964 
+ 1605      78506F73 
+ 1605      00
+ 1606              	.LASF52:
+ 1607 0592 75646250 		.ascii	"udbPresent\000"
+ 1607      72657365 
+ 1607      6E7400
+ 1608              	.LASF112:
+ 1609 059d 72785374 		.ascii	"rxStatus\000"
+ 1609      61747573 
+ 1609      00
+ 1610              	.LASF32:
+ 1611 05a6 666C6173 		.ascii	"flashcVersion\000"
+ 1611      68635665 
+ 1611      7273696F 
+ 1611      6E00
+ 1612              	.LASF28:
+ 1613 05b4 63727970 		.ascii	"cryptoBase\000"
+ 1613      746F4261 
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 37
+
+
+ 1613      736500
+ 1614              	.LASF49:
+ 1615 05bf 736D6966 		.ascii	"smifDeviceNr\000"
+ 1615      44657669 
+ 1615      63654E72 
+ 1615      00
+ 1616              	.LASF163:
+ 1617 05cc 5F5F656E 		.ascii	"__enable_irq\000"
+ 1617      61626C65 
+ 1617      5F697271 
+ 1617      00
+ 1618              	.LASF107:
+ 1619 05d9 666C6F61 		.ascii	"float\000"
+ 1619      7400
+ 1620              	.LASF71:
+ 1621 05df 64775374 		.ascii	"dwStatusChIdxMsk\000"
+ 1621      61747573 
+ 1621      43684964 
+ 1621      784D736B 
+ 1621      00
+ 1622              	.LASF155:
+ 1623 05f0 63795F64 		.ascii	"cy_device\000"
+ 1623      65766963 
+ 1623      6500
+ 1624              	.LASF99:
+ 1625 05fa 63707573 		.ascii	"cpussRomCtl\000"
+ 1625      73526F6D 
+ 1625      43746C00 
+ 1626              	.LASF69:
+ 1627 0606 64774368 		.ascii	"dwChCtlPreemptablePos\000"
+ 1627      43746C50 
+ 1627      7265656D 
+ 1627      70746162 
+ 1627      6C65506F 
+ 1628              	.LASF122:
+ 1629 061c 74784C65 		.ascii	"txLeftToTransmit\000"
+ 1629      6674546F 
+ 1629      5472616E 
+ 1629      736D6974 
+ 1629      00
+ 1630              	.LASF22:
+ 1631 062d 75646242 		.ascii	"udbBase\000"
+ 1631      61736500 
+ 1632              	.LASF109:
+ 1633 0635 5F426F6F 		.ascii	"_Bool\000"
+ 1633      6C00
+ 1634              	.LASF1:
+ 1635 063b 756E7369 		.ascii	"unsigned char\000"
+ 1635      676E6564 
+ 1635      20636861 
+ 1635      7200
+ 1636              	.LASF154:
+ 1637 0649 63795F73 		.ascii	"cy_stc_tcpwm_quaddec_config_t\000"
+ 1637      74635F74 
+ 1637      6370776D 
+ 1637      5F717561 
+ 1637      64646563 
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 38
+
+
+ 1638              	.LASF65:
+ 1639 0667 666C6173 		.ascii	"flashCtlMainWs4Freq\000"
+ 1639      6843746C 
+ 1639      4D61696E 
+ 1639      57733446 
+ 1639      72657100 
+ 1640              	.LASF0:
+ 1641 067b 73686F72 		.ascii	"short int\000"
+ 1641      7420696E 
+ 1641      7400
+ 1642              	.LASF157:
+ 1643 0685 436F756E 		.ascii	"Counter_1_config\000"
+ 1643      7465725F 
+ 1643      315F636F 
+ 1643      6E666967 
+ 1643      00
+ 1644              	.LASF76:
+ 1645 0696 70657269 		.ascii	"periDivCmdDivSelMsk\000"
+ 1645      44697643 
+ 1645      6D644469 
+ 1645      7653656C 
+ 1645      4D736B00 
+ 1646              	.LASF63:
+ 1647 06aa 666C6173 		.ascii	"flashCtlMainWs2Freq\000"
+ 1647      6843746C 
+ 1647      4D61696E 
+ 1647      57733246 
+ 1647      72657100 
+ 1648              	.LASF132:
+ 1649 06be 636F6D70 		.ascii	"compareOrCapture\000"
+ 1649      6172654F 
+ 1649      72436170 
+ 1649      74757265 
+ 1649      00
+ 1650              	.LASF47:
+ 1651 06cf 73727373 		.ascii	"srssNumHfroot\000"
+ 1651      4E756D48 
+ 1651      66726F6F 
+ 1651      7400
+ 1652              	.LASF149:
+ 1653 06dd 7265736F 		.ascii	"resolution\000"
+ 1653      6C757469 
+ 1653      6F6E00
+ 1654              	.LASF60:
+ 1655 06e8 666C6173 		.ascii	"flashEraseDelay\000"
+ 1655      68457261 
+ 1655      73654465 
+ 1655      6C617900 
+ 1656              	.LASF16:
+ 1657 06f8 75696E74 		.ascii	"uint32_t\000"
+ 1657      33325F74 
+ 1657      00
+ 1658              	.LASF98:
+ 1659 0701 63707573 		.ascii	"cpussCm4NmiCtlOffset\000"
+ 1659      73436D34 
+ 1659      4E6D6943 
+ 1659      746C4F66 
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 39
+
+
+ 1659      66736574 
+ 1660              	.LASF160:
+ 1661 0716 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1661      43313120 
+ 1661      352E342E 
+ 1661      31203230 
+ 1661      31363036 
+ 1662 0749 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0plus -mthumb -"
+ 1662      20726576 
+ 1662      6973696F 
+ 1662      6E203233 
+ 1662      37373135 
+ 1663 077c 67202D4F 		.ascii	"g -Og -ffunction-sections -ffat-lto-objects\000"
+ 1663      67202D66 
+ 1663      66756E63 
+ 1663      74696F6E 
+ 1663      2D736563 
+ 1664              	.LASF133:
+ 1665 07a8 636F6D70 		.ascii	"compare0\000"
+ 1665      61726530 
+ 1665      00
+ 1666              	.LASF18:
+ 1667 07b1 6C6F6E67 		.ascii	"long double\000"
+ 1667      20646F75 
+ 1667      626C6500 
+ 1668              	.LASF106:
+ 1669 07bd 63686172 		.ascii	"char\000"
+ 1669      00
+ 1670              	.LASF146:
+ 1671 07c2 636F756E 		.ascii	"countInput\000"
+ 1671      74496E70 
+ 1671      757400
+ 1672              	.LASF37:
+ 1673 07cd 70726F74 		.ascii	"protVersion\000"
+ 1673      56657273 
+ 1673      696F6E00 
+ 1674              	.LASF100:
+ 1675 07d9 63707573 		.ascii	"cpussRam0Ctl0\000"
+ 1675      7352616D 
+ 1675      3043746C 
+ 1675      3000
+ 1676              	.LASF5:
+ 1677 07e7 5F5F7569 		.ascii	"__uint16_t\000"
+ 1677      6E743136 
+ 1677      5F7400
+ 1678              	.LASF81:
+ 1679 07f2 70657269 		.ascii	"periDiv16CtlOffset\000"
+ 1679      44697631 
+ 1679      3643746C 
+ 1679      4F666673 
+ 1679      657400
+ 1680              	.LASF34:
+ 1681 0805 6873696F 		.ascii	"hsiomVersion\000"
+ 1681      6D566572 
+ 1681      73696F6E 
+ 1681      00
+ 1682              	.LASF59:
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 40
+
+
+ 1683 0812 666C6173 		.ascii	"flashProgramDelay\000"
+ 1683      6850726F 
+ 1683      6772616D 
+ 1683      44656C61 
+ 1683      7900
+ 1684              	.LASF114:
+ 1685 0824 72785269 		.ascii	"rxRingBufSize\000"
+ 1685      6E674275 
+ 1685      6653697A 
+ 1685      6500
+ 1686              	.LASF140:
+ 1687 0832 72656C6F 		.ascii	"reloadInput\000"
+ 1687      6164496E 
+ 1687      70757400 
+ 1688              	.LASF6:
+ 1689 083e 73686F72 		.ascii	"short unsigned int\000"
+ 1689      7420756E 
+ 1689      7369676E 
+ 1689      65642069 
+ 1689      6E7400
+ 1690              	.LASF67:
+ 1691 0851 64774368 		.ascii	"dwChSize\000"
+ 1691      53697A65 
+ 1691      00
+ 1692              	.LASF162:
+ 1693 085a 433A5C55 		.ascii	"C:\\Users\\adris\\OneDrive\\Documentos\\GitHub\\Tra"
+ 1693      73657273 
+ 1693      5C616472 
+ 1693      69735C4F 
+ 1693      6E654472 
+ 1694 0887 62616A6F 		.ascii	"bajo_micros\\Trabajo_micros\\Trabajo_micros_workspa"
+ 1694      5F6D6963 
+ 1694      726F735C 
+ 1694      54726162 
+ 1694      616A6F5F 
+ 1695 08b8 63655C54 		.ascii	"ce\\Trabajo_test_control_fase_v2.cydsn\000"
+ 1695      72616261 
+ 1695      6A6F5F74 
+ 1695      6573745F 
+ 1695      636F6E74 
+ 1696              	.LASF144:
+ 1697 08de 73746F70 		.ascii	"stopInput\000"
+ 1697      496E7075 
+ 1697      7400
+ 1698              	.LASF103:
+ 1699 08e8 69706353 		.ascii	"ipcStructSize\000"
+ 1699      74727563 
+ 1699      7453697A 
+ 1699      6500
+ 1700              	.LASF141:
+ 1701 08f6 73746172 		.ascii	"startInputMode\000"
+ 1701      74496E70 
+ 1701      75744D6F 
+ 1701      646500
+ 1702              	.LASF42:
+ 1703 0905 63707573 		.ascii	"cpussIpc0Irq\000"
+ 1703      73497063 
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 41
+
+
+ 1703      30497271 
+ 1703      00
+ 1704              	.LASF134:
+ 1705 0912 636F6D70 		.ascii	"compare1\000"
+ 1705      61726531 
+ 1705      00
+ 1706              	.LASF89:
+ 1707 091b 63707573 		.ascii	"cpussCm0ClockCtlOffset\000"
+ 1707      73436D30 
+ 1707      436C6F63 
+ 1707      6B43746C 
+ 1707      4F666673 
+ 1708              	.LASF85:
+ 1709 0932 6770696F 		.ascii	"gpioPrtCfgOffset\000"
+ 1709      50727443 
+ 1709      66674F66 
+ 1709      66736574 
+ 1709      00
+ 1710              	.LASF124:
+ 1711 0943 696E6974 		.ascii	"initKey\000"
+ 1711      4B657900 
+ 1712              	.LASF117:
+ 1713 094b 72784275 		.ascii	"rxBuf\000"
+ 1713      6600
+ 1714              	.LASF2:
+ 1715 0951 7369676E 		.ascii	"signed char\000"
+ 1715      65642063 
+ 1715      68617200 
+ 1716              	.LASF125:
+ 1717 095d 63795F73 		.ascii	"cy_stc_scb_uart_context_t\000"
+ 1717      74635F73 
+ 1717      63625F75 
+ 1717      6172745F 
+ 1717      636F6E74 
+ 1718              	.LASF86:
+ 1719 0977 6770696F 		.ascii	"gpioPrtCfgInOffset\000"
+ 1719      50727443 
+ 1719      6667496E 
+ 1719      4F666673 
+ 1719      657400
+ 1720              	.LASF44:
+ 1721 098a 63707573 		.ascii	"cpussNotConnectedIrq\000"
+ 1721      734E6F74 
+ 1721      436F6E6E 
+ 1721      65637465 
+ 1721      64497271 
+ 1722              	.LASF58:
+ 1723 099f 666C6173 		.ascii	"flashWriteDelay\000"
+ 1723      68577269 
+ 1723      74654465 
+ 1723      6C617900 
+ 1724              	.LASF13:
+ 1725 09af 75696E74 		.ascii	"uint8_t\000"
+ 1725      385F7400 
+ 1726              	.LASF91:
+ 1727 09b7 63707573 		.ascii	"cpussCm4StatusOffset\000"
+ 1727      73436D34 
+ARM GAS  C:\Users\adris\AppData\Local\Temp\ccdr1Wlg.s 			page 42
+
+
+ 1727      53746174 
+ 1727      75734F66 
+ 1727      66736574 
+ 1728              	.LASF84:
+ 1729 09cc 6770696F 		.ascii	"gpioPrtIntrCfgOffset\000"
+ 1729      50727449 
+ 1729      6E747243 
+ 1729      66674F66 
+ 1729      66736574 
+ 1730              	.LASF139:
+ 1731 09e1 72656C6F 		.ascii	"reloadInputMode\000"
+ 1731      6164496E 
+ 1731      7075744D 
+ 1731      6F646500 
+ 1732              	.LASF116:
+ 1733 09f1 72785269 		.ascii	"rxRingBufTail\000"
+ 1733      6E674275 
+ 1733      66546169 
+ 1733      6C00
+ 1734              	.LASF95:
+ 1735 09ff 63707573 		.ascii	"cpussTrimRomCtlOffset\000"
+ 1735      73547269 
+ 1735      6D526F6D 
+ 1735      43746C4F 
+ 1735      66667365 
+ 1736              	.LASF145:
+ 1737 0a15 636F756E 		.ascii	"countInputMode\000"
+ 1737      74496E70 
+ 1737      75744D6F 
+ 1737      646500
+ 1738              	.LASF31:
+ 1739 0a24 64775665 		.ascii	"dwVersion\000"
+ 1739      7273696F 
+ 1739      6E00
+ 1740              	.LASF27:
+ 1741 0a2e 69706342 		.ascii	"ipcBase\000"
+ 1741      61736500 
+ 1742              	.LASF78:
+ 1743 0a36 70657269 		.ascii	"periDivCmdPaDivSelPos\000"
+ 1743      44697643 
+ 1743      6D645061 
+ 1743      44697653 
+ 1743      656C506F 
+ 1744              	.LASF126:
+ 1745 0a4c 63795F73 		.ascii	"cy_stc_scb_uart_context\000"
+ 1745      74635F73 
+ 1745      63625F75 
+ 1745      6172745F 
+ 1745      636F6E74 
+ 1746              	.LASF56:
+ 1747 0a64 666C6173 		.ascii	"flashRwwRequired\000"
+ 1747      68527777 
+ 1747      52657175 
+ 1747      69726564 
+ 1747      00
+ 1748              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
