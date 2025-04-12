@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Trabajo_test_control_fase_v2_2.cydwr\Pins">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\Counter_1">
 <ExpandedNodeIds>
 <v>Trabajo_micros_workspace</v>
 <v>Trabajo_micros_workspace\Prueba_01_LEDs\TopDesign</v>
@@ -348,7 +348,6 @@
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\Generated_Source\PSoC6\pdl\devices\psoc6\include</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\Generated_Source\PSoC6\Encoder</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\Generated_Source\PSoC6\UART_1</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\TopDesign</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Trabajo_test_control_fase_v2_2.cydwr</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Trabajo_test_control_fase_v2_2.cydwr\Pins</v>
@@ -391,6 +390,55 @@
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Generated_Source</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Generated_Source\PSoC6</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Generated_Source\PSoC6\UART_1</v>
+<v>Trabajo_micros_workspace\Trabajo_v01</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\TopDesign</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Trabajo_v01.cydwr</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Trabajo_v01.cydwr\Pins</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Trabajo_v01.cydwr\Analog</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Trabajo_v01.cydwr\DMA</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Trabajo_v01.cydwr\Clocks</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Trabajo_v01.cydwr\Interrupts</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Trabajo_v01.cydwr\System</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Trabajo_v01.cydwr\Directives</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\ARM GCC Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\ARM GCC Generic\cy8c6xx7_cm0plus.ld</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\ARM IAR Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\ARM IAR Generic\cy8c6xx7_cm0plus.icf</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\ARM MDK Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\ARM MDK Generic\cy8c6xx7_cm0plus.scat</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\Header Files</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\Source Files</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\Source Files\ARM GCC Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\Source Files\ARM GCC Generic\startup_psoc6_01_cm0plus.S</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\Source Files\ARM IAR Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\Source Files\ARM IAR Generic\startup_psoc6_01_cm0plus.s</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\Source Files\ARM MDK Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\Source Files\ARM MDK Generic\startup_psoc6_01_cm0plus.s</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\Source Files\main_cm0p.c</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\Source Files\system_psoc6_cm0plus.c</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\ARM GCC Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\ARM GCC Generic\cy8c6xx7_cm4_dual.ld</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\ARM IAR Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\ARM IAR Generic\cy8c6xx7_cm4_dual.icf</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\ARM MDK Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\ARM MDK Generic\cy8c6xx7_cm4_dual.scat</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\Header Files</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\Source Files</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\Source Files\ARM GCC Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\Source Files\ARM GCC Generic\startup_psoc6_01_cm4.S</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\Source Files\ARM IAR Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\Source Files\ARM IAR Generic\startup_psoc6_01_cm4.s</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\Source Files\ARM MDK Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\Source Files\ARM MDK Generic\startup_psoc6_01_cm4.s</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\Source Files\main_cm4.c</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\Source Files\system_psoc6_cm4.c</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Shared Files</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Shared Files\cyapicallbacks.h</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Shared Files\system_psoc6.h</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6</v>
 <v>Trabajo_micros_workspace\CE221117_PSoC6MCU_UARTusingHighLevelAPIs.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
@@ -403,32 +451,64 @@
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\TopDesign</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Trabajo_test_control_fase_v2_2.cydwr</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Trabajo_test_control_fase_v2_2.cydwr\Pins</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Trabajo_test_control_fase_v2_2.cydwr\Analog</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Trabajo_test_control_fase_v2_2.cydwr\DMA</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Trabajo_test_control_fase_v2_2.cydwr\Clocks</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Trabajo_test_control_fase_v2_2.cydwr\Interrupts</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Trabajo_test_control_fase_v2_2.cydwr\System</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Trabajo_test_control_fase_v2_2.cydwr\Directives</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\CM0p (Core 0)</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\CM4 (Core 1)</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\CM4 (Core 1)\ARM GCC Generic</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\CM4 (Core 1)\ARM IAR Generic</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\CM4 (Core 1)\ARM MDK Generic</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\CM4 (Core 1)\Header Files</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\CM4 (Core 1)\Source Files</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\CM4 (Core 1)\Source Files\ARM GCC Generic</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\CM4 (Core 1)\Source Files\ARM IAR Generic</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\CM4 (Core 1)\Source Files\ARM MDK Generic</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\CM4 (Core 1)\Source Files\main_cm4.c</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\CM4 (Core 1)\Source Files\system_psoc6_cm4.c</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Shared Files</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Shared Files\cyapicallbacks.h</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Shared Files\system_psoc6.h</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Generated_Source</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Generated_Source\PSoC6</v>
+<v>Trabajo_micros_workspace\Trabajo_v01</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\TopDesign</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Trabajo_v01.cydwr</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Trabajo_v01.cydwr\Pins</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Trabajo_v01.cydwr\Analog</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Trabajo_v01.cydwr\DMA</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Trabajo_v01.cydwr\Clocks</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Trabajo_v01.cydwr\Interrupts</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Trabajo_v01.cydwr\System</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Trabajo_v01.cydwr\Directives</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\ARM GCC Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\ARM GCC Generic\cy8c6xx7_cm0plus.ld</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\ARM IAR Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\ARM IAR Generic\cy8c6xx7_cm0plus.icf</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\ARM MDK Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\ARM MDK Generic\cy8c6xx7_cm0plus.scat</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\Header Files</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\Source Files</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\Source Files\ARM GCC Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\Source Files\ARM GCC Generic\startup_psoc6_01_cm0plus.S</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\Source Files\ARM IAR Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\Source Files\ARM IAR Generic\startup_psoc6_01_cm0plus.s</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\Source Files\ARM MDK Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\Source Files\ARM MDK Generic\startup_psoc6_01_cm0plus.s</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\Source Files\main_cm0p.c</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM0p (Core 0)\Source Files\system_psoc6_cm0plus.c</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\ARM GCC Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\ARM GCC Generic\cy8c6xx7_cm4_dual.ld</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\ARM IAR Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\ARM IAR Generic\cy8c6xx7_cm4_dual.icf</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\ARM MDK Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\ARM MDK Generic\cy8c6xx7_cm4_dual.scat</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\Header Files</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\Source Files</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\Source Files\ARM GCC Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\Source Files\ARM GCC Generic\startup_psoc6_01_cm4.S</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\Source Files\ARM IAR Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\Source Files\ARM IAR Generic\startup_psoc6_01_cm4.s</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\Source Files\ARM MDK Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\Source Files\ARM MDK Generic\startup_psoc6_01_cm4.s</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\Source Files\main_cm4.c</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\Source Files\system_psoc6_cm4.c</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Shared Files</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Shared Files\cyapicallbacks.h</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Shared Files\system_psoc6.h</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\pdl</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\Clock_1</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\Counter_1</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\Counter_2</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\Pins and Interrupts</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\UART_1</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\UART_1_SCBCLK</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\cycodeshareexport.ld</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\cycodeshareimport.ld</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\TopDesign\TopDesign.cysch">
@@ -458,6 +538,9 @@
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\TopDesign</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\TopDesign\TopDesign.cysch</v>
+<v>Trabajo_micros_workspace\Trabajo_v01</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\TopDesign</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\TopDesign\TopDesign.cysch</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Trabajo_micros_workspace</v>
@@ -485,6 +568,9 @@
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\TopDesign</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\TopDesign\TopDesign.cysch</v>
+<v>Trabajo_micros_workspace\Trabajo_v01</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\TopDesign</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\TopDesign\TopDesign.cysch</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -1176,6 +1262,97 @@
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Trabajo_test_control_fase_v2_2.gpdsc</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Trabajo_test_control_fase_v2_2.rpt</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Trabajo_test_control_fase_v2_2_timing.html</v>
+<v>Trabajo_micros_workspace\Trabajo_v01</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\Counter_1.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\Counter_2.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_clk.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_device.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_efuse.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_flash.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_gpio.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_drv.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_pipe.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_sema.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_lvd.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_profile.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_prot.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_common.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_ezi2c.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_i2c.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_spi.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_uart.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysanalog.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysclk.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysint.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syslib.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syslib_gcc.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syspm.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_systick.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_tcpwm_counter.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_tcpwm_pwm.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_tcpwm_quaddec.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_trigmux.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_wdt.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyfitter_sysint_cfg.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\main_cm0p.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\startup_psoc6_01_cm0plus.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\system_psoc6_cm0plus.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Trabajo_v01.elf</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Trabajo_v01.hex</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Trabajo_v01.map</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\Counter_1.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\Counter_2.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_clk.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_device.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_efuse.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_flash.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_gpio.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ipc_drv.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ipc_pipe.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ipc_sema.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_lvd.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_profile.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_prot.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_common.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_ezi2c.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_i2c.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_spi.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_uart.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_sysanalog.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_sysclk.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_sysint.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_syslib.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_syslib_gcc.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_syspm.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_systick.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_tcpwm_counter.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_tcpwm_pwm.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_tcpwm_quaddec.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_trigmux.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_wdt.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cyfitter_sysint_cfg.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\main_cm4.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\startup_psoc6_01_cm4.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\system_psoc6_cm4.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Trabajo_v01.elf</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Trabajo_v01.hex</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Trabajo_v01.map</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Trabajo_v01.gpdsc</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Trabajo_v01.rpt</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Trabajo_v01_timing.html</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Trabajo_micros_workspace</v>
@@ -1213,6 +1390,38 @@
 <v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyfitter_sysint_cfg.lst</v>
 <v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM0p\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
 <v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM0p\ARM_GCC_541\Debug\Listing Files\main_cm0p.lst</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM0p\ARM_GCC_541\Debug\Listing Files\startup_psoc6_01_cm0plus.lst</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM0p\ARM_GCC_541\Debug\Listing Files\system_psoc6_cm0plus.lst</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM0p\ARM_GCC_541\Debug\Prueba_01_LEDs.elf</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM0p\ARM_GCC_541\Debug\Prueba_01_LEDs.hex</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM0p\ARM_GCC_541\Debug\Prueba_01_LEDs.map</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_clk.lst</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_device.lst</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_efuse.lst</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_flash.lst</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_gpio.lst</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ipc_drv.lst</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ipc_pipe.lst</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ipc_sema.lst</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_lvd.lst</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_profile.lst</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_prot.lst</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_common.lst</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_ezi2c.lst</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_i2c.lst</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_spi.lst</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_uart.lst</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_sysanalog.lst</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_sysclk.lst</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_sysint.lst</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_syslib.lst</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_syslib_gcc.lst</v>
+<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_syspm.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -1322,6 +1531,26 @@
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\SysInt_PDL_v1_0\SysInt_PDL_v1_0.pdf</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\TCPWM_Counter_PDL_v1_0</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\TCPWM_Counter_PDL_v1_0\TCPWM_Counter_PDL_v1_0.pdf</v>
+<v>Trabajo_micros_workspace\Trabajo_v01</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\PSoC 6 Architecture TRM</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\PSoC 63 Family Datasheet</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Peripheral Driver Library</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\System Reference Guides</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Gnd_v1_0</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Gnd_v1_0\Gnd_v1_0.pdf</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\GPIO_PDL_v1_0</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\LED_v1_0.pdf</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\PhotoTrans_v1_0.pdf</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Power_v1_0.pdf</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Resistor_v1_0</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\SCB_UART_PDL_v2_0.pdf</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\SysClk_PDL_v1_0.pdf</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\SysInt_PDL_v1_0</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\SysInt_PDL_v1_0\SysInt_PDL_v1_0.pdf</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\TCPWM_Counter_PDL_v1_0</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\TCPWM_Counter_PDL_v1_0\TCPWM_Counter_PDL_v1_0.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Trabajo_micros_workspace</v>
@@ -1359,6 +1588,38 @@
 <v>Trabajo_micros_workspace\Test_pulsador\System Reference Guides</v>
 <v>Trabajo_micros_workspace\Test_pulsador\GPIO_PDL_v1_0</v>
 <v>Trabajo_micros_workspace\Test_pulsador\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
+<v>Trabajo_micros_workspace\Test_pulsador\SCB_UART_PDL_v2_0.pdf</v>
+<v>Trabajo_micros_workspace\Test_pulsador\SysClk_PDL_v1_0.pdf</v>
+<v>Trabajo_micros_workspace\Test_pulsador\SysInt_PDL_v1_0</v>
+<v>Trabajo_micros_workspace\Test_pulsador\SysInt_PDL_v1_0\SysInt_PDL_v1_0.pdf</v>
+<v>Trabajo_micros_workspace\Test_pulsador\TCPWM_Counter_PDL_v1_0.pdf</v>
+<v>Trabajo_micros_workspace\Trabajo_microcontroladores</v>
+<v>Trabajo_micros_workspace\Trabajo_microcontroladores\PSoC 6 Architecture TRM</v>
+<v>Trabajo_micros_workspace\Trabajo_microcontroladores\PSoC 63 Family Datasheet</v>
+<v>Trabajo_micros_workspace\Trabajo_microcontroladores\Peripheral Driver Library</v>
+<v>Trabajo_micros_workspace\Trabajo_microcontroladores\System Reference Guides</v>
+<v>Trabajo_micros_workspace\Trabajo_test_control_fase</v>
+<v>Trabajo_micros_workspace\Trabajo_test_control_fase\PSoC 6 Architecture TRM</v>
+<v>Trabajo_micros_workspace\Trabajo_test_control_fase\PSoC 63 Family Datasheet</v>
+<v>Trabajo_micros_workspace\Trabajo_test_control_fase\Peripheral Driver Library</v>
+<v>Trabajo_micros_workspace\Trabajo_test_control_fase\System Reference Guides</v>
+<v>Trabajo_micros_workspace\Trabajo_test_control_fase\GPIO_PDL_v1_0</v>
+<v>Trabajo_micros_workspace\Trabajo_test_control_fase\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
+<v>Trabajo_micros_workspace\Trabajo_test_control_fase\SCB_UART_PDL_v2_0.pdf</v>
+<v>Trabajo_micros_workspace\Trabajo_test_control_fase\SysClk_PDL_v1_0.pdf</v>
+<v>Trabajo_micros_workspace\Trabajo_test_control_fase\SysInt_PDL_v1_0</v>
+<v>Trabajo_micros_workspace\Trabajo_test_control_fase\SysInt_PDL_v1_0\SysInt_PDL_v1_0.pdf</v>
+<v>Trabajo_micros_workspace\Trabajo_test_control_fase\TCPWM_Counter_PDL_v1_0</v>
+<v>Trabajo_micros_workspace\Trabajo_test_control_fase\TCPWM_Counter_PDL_v1_0\TCPWM_Counter_PDL_v1_0.pdf</v>
+<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2</v>
+<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\PSoC 6 Architecture TRM</v>
+<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\PSoC 63 Family Datasheet</v>
+<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\Peripheral Driver Library</v>
+<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\System Reference Guides</v>
+<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\Gnd_v1_0</v>
+<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\Gnd_v1_0\Gnd_v1_0.pdf</v>
+<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\GPIO_PDL_v1_0</v>
+<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -1373,9 +1634,8 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\Trabajo_test_control_fase_v2_2.cydsn\main_cm4.c" />
-<name v=".\Trabajo_test_control_fase_v2_2.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\Trabajo_test_control_fase_v2_2.cydsn\Trabajo_test_control_fase_v2_2.cydwr" />
+<name v=".\Trabajo_v01.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Trabajo_v01.cydsn\Trabajo_v01.cydwr" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -1383,7 +1643,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1063, 1054" SelectedTabbedMdiWindow="339c8f36-9e23-41d9-8bcc-f853b95de5fe"><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2.cydsn\main_cm4.c" Guid="339c8f36-9e23-41d9-8bcc-f853b95de5fe" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2.cydsn\TopDesign\TopDesign.cysch" Guid="476faf9f-2d3f-4e07-a940-6794ff367f20" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2.cydsn\Trabajo_test_control_fase_v2_2.cydwr" Guid="613001c5-c78b-4bb3-bbc7-ec4b1fd02323" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="915, 522" SelectedTabbedMdiWindow="87c50303-8a9b-4e2d-8ae4-03977c12e253"><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\TopDesign\TopDesign.cysch" Guid="87c50303-8a9b-4e2d-8ae4-03977c12e253" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\Trabajo_v01.cydwr" Guid="a86f460d-0513-449e-a00c-2b3e64c2ed7f" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

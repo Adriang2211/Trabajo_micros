@@ -3,7 +3,7 @@
 <!--This file is machine generated and read. It is not intended to be edited by hand.-->
 <!--Due to this, there is no schema for this file.-->
 <CyGuid_2867d519-54d2-4c01-9830-c51cb08bc3dd type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize" version="5" xml_contents_version="3" name="Trabajo_micros_workspace" persistent="Trabajo_micros_workspace.cywrk" platform="NOT_USED">
-<current_project name=".\Trabajo_test_control_fase_v2_2.cydsn\Trabajo_test_control_fase_v2_2.cyprj" />
+<current_project name=".\Trabajo_v01.cydsn\Trabajo_v01.cyprj" />
 <wrkspc_folders />
 <files>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
@@ -23,6 +23,7 @@
 <v>.\Trabajo_test_control_fase.cydsn\Trabajo_test_control_fase.cyprj</v>
 <v>.\Trabajo_test_control_fase_v2.cydsn\Trabajo_test_control_fase_v2.cyprj</v>
 <v>.\Trabajo_test_control_fase_v2_2.cydsn\Trabajo_test_control_fase_v2_2.cyprj</v>
+<v>.\Trabajo_v01.cydsn\Trabajo_v01.cyprj</v>
 </projects>
 <workspace_id v="4104b59a-c5e7-496f-bfda-329f2cb5df90" />
 <WriteAppVersionLastSavedWith v="4.4.0.80" />
