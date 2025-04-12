@@ -22,6 +22,8 @@ volatile long signed int cuentas = 0;
 volatile long signed int cuentas1 = 0;
 volatile double posicion_abs = 0;
 
+volatile _Bool flag_sentido = false; //Subir
+
 
 //Variables para funcionamiento de RX UART
 uint32_t rx_data;
@@ -62,12 +64,12 @@ void Timer2_int_IRQHandler(void){
 
 void Encoder_int_IRQHandler(void){
     
-    if (Cy_GPIO_Read(Encoder_ChB_PORT, Encoder_ChB_NUM)){
-        cuentas++;
+    cuentas++;
+    
+    if (flag_sentido){
         posicion_abs = posicion_abs + 0.01;
     }
     else{
-        cuentas--;
         posicion_abs = posicion_abs - 0.01;
     }
  
@@ -105,6 +107,13 @@ void ISR_UART(void)
                 Cy_TCPWM_Counter_SetPeriod(Counter_2_HW, Counter_2_CNT_NUM, Cy_TCPWM_Counter_GetPeriod(Counter_1_HW, Counter_1_CNT_NUM)+1);
                 Cy_SCB_UART_PutString(UART_1_HW, "Recudido periodo\n");
             }
+            else if (strncmp(buffer_rx, "c", 1) == 0){
+                Cy_GPIO_Inv(Rele_1_PORT, Rele_1_NUM);
+                Cy_SysLib_Delay(500);
+                Cy_GPIO_Inv(Rele_2_PORT, Rele_2_NUM);
+                flag_sentido = !flag_sentido;
+            }
+            
             else
             {
                 Cy_SCB_UART_PutString(UART_1_HW, "\r\nComando no valido\r\n");
@@ -126,8 +135,6 @@ void ISR_UART(void)
         //Tratamiento de errores
     }
 }
-
-
 
 int main(void)
 {
@@ -190,6 +197,9 @@ int main(void)
     NVIC_EnableIRQ(Encoder_int_cfg.intrSrc);
     
     
+    //Inicializar el sentido de giro del sistema
+    Cy_GPIO_Write(Rele_1_PORT, Rele_1_NUM, 1);
+    Cy_GPIO_Write(Rele_2_PORT, Rele_2_NUM, 1);
 
 
     
@@ -206,7 +216,10 @@ int main(void)
         
         Cy_SysLib_Delay(1000); //Demuestra que no interfiere con la interrupción
         Cy_GPIO_Inv(LED_verde_PORT, LED_verde_NUM);
-        snprintf(buffer, sizeof(buffer), "%ld rpm - Pos:%f \n", (long int)(cuentas - cuentas1)*60/PULSES_PER_ROTATION/REL_REDUCTION, posicion_abs);
+        int32_t velocidad = cuentas - cuentas1;
+        if (!flag_sentido)
+            velocidad = velocidad*(-1);
+        snprintf(buffer, sizeof(buffer), "%ld rpm - Pos:%f \n", (long int)(velocidad)*60/PULSES_PER_ROTATION/REL_REDUCTION, posicion_abs);
         cuentas1 = cuentas;
         Cy_SCB_UART_PutString(UART_1_HW, buffer);
         

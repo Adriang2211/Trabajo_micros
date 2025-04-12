@@ -128,6 +128,50 @@
 #define SW4_SLEWRATE CY_GPIO_SLEW_FAST
 #define SW4_THRESHOLD_LEVEL CY_GPIO_VTRIP_CMOS
 
+/* Rele_1 */
+#define Rele_1_0_DRIVEMODE CY_GPIO_DM_STRONG_IN_OFF
+#define Rele_1_0_INBUF_ENABLED 0u
+#define Rele_1_0_INIT_DRIVESTATE 1u
+#define Rele_1_0_INIT_MUXSEL 0u
+#define Rele_1_0_INPUT_SYNC 2u
+#define Rele_1_0_INTERRUPT_MODE CY_GPIO_INTR_DISABLE
+#define Rele_1_0_NUM 4u
+#define Rele_1_0_PORT GPIO_PRT5
+#define Rele_1_0_SLEWRATE CY_GPIO_SLEW_FAST
+#define Rele_1_0_THRESHOLD_LEVEL CY_GPIO_VTRIP_CMOS
+#define Rele_1_DRIVEMODE CY_GPIO_DM_STRONG_IN_OFF
+#define Rele_1_INBUF_ENABLED 0u
+#define Rele_1_INIT_DRIVESTATE 1u
+#define Rele_1_INIT_MUXSEL 0u
+#define Rele_1_INPUT_SYNC 2u
+#define Rele_1_INTERRUPT_MODE CY_GPIO_INTR_DISABLE
+#define Rele_1_NUM 4u
+#define Rele_1_PORT GPIO_PRT5
+#define Rele_1_SLEWRATE CY_GPIO_SLEW_FAST
+#define Rele_1_THRESHOLD_LEVEL CY_GPIO_VTRIP_CMOS
+
+/* Rele_2 */
+#define Rele_2_0_DRIVEMODE CY_GPIO_DM_STRONG_IN_OFF
+#define Rele_2_0_INBUF_ENABLED 0u
+#define Rele_2_0_INIT_DRIVESTATE 1u
+#define Rele_2_0_INIT_MUXSEL 0u
+#define Rele_2_0_INPUT_SYNC 2u
+#define Rele_2_0_INTERRUPT_MODE CY_GPIO_INTR_DISABLE
+#define Rele_2_0_NUM 5u
+#define Rele_2_0_PORT GPIO_PRT5
+#define Rele_2_0_SLEWRATE CY_GPIO_SLEW_FAST
+#define Rele_2_0_THRESHOLD_LEVEL CY_GPIO_VTRIP_CMOS
+#define Rele_2_DRIVEMODE CY_GPIO_DM_STRONG_IN_OFF
+#define Rele_2_INBUF_ENABLED 0u
+#define Rele_2_INIT_DRIVESTATE 1u
+#define Rele_2_INIT_MUXSEL 0u
+#define Rele_2_INPUT_SYNC 2u
+#define Rele_2_INTERRUPT_MODE CY_GPIO_INTR_DISABLE
+#define Rele_2_NUM 5u
+#define Rele_2_PORT GPIO_PRT5
+#define Rele_2_SLEWRATE CY_GPIO_SLEW_FAST
+#define Rele_2_THRESHOLD_LEVEL CY_GPIO_VTRIP_CMOS
+
 /* LED_rojo */
 #define LED_rojo_0_DRIVEMODE CY_GPIO_DM_OD_DRIVESLOW_IN_OFF
 #define LED_rojo_0_INBUF_ENABLED 0u
@@ -260,28 +304,6 @@
 #define OPTO_PC817_SLEWRATE CY_GPIO_SLEW_FAST
 #define OPTO_PC817_THRESHOLD_LEVEL CY_GPIO_VTRIP_CMOS
 
-/* Rele_motor */
-#define Rele_motor_0_DRIVEMODE CY_GPIO_DM_STRONG_IN_OFF
-#define Rele_motor_0_INBUF_ENABLED 0u
-#define Rele_motor_0_INIT_DRIVESTATE 0u
-#define Rele_motor_0_INIT_MUXSEL 0u
-#define Rele_motor_0_INPUT_SYNC 2u
-#define Rele_motor_0_INTERRUPT_MODE CY_GPIO_INTR_DISABLE
-#define Rele_motor_0_NUM 4u
-#define Rele_motor_0_PORT GPIO_PRT5
-#define Rele_motor_0_SLEWRATE CY_GPIO_SLEW_FAST
-#define Rele_motor_0_THRESHOLD_LEVEL CY_GPIO_VTRIP_CMOS
-#define Rele_motor_DRIVEMODE CY_GPIO_DM_STRONG_IN_OFF
-#define Rele_motor_INBUF_ENABLED 0u
-#define Rele_motor_INIT_DRIVESTATE 0u
-#define Rele_motor_INIT_MUXSEL 0u
-#define Rele_motor_INPUT_SYNC 2u
-#define Rele_motor_INTERRUPT_MODE CY_GPIO_INTR_DISABLE
-#define Rele_motor_NUM 4u
-#define Rele_motor_PORT GPIO_PRT5
-#define Rele_motor_SLEWRATE CY_GPIO_SLEW_FAST
-#define Rele_motor_THRESHOLD_LEVEL CY_GPIO_VTRIP_CMOS
-
 /* Encoder_ChA */
 #define Encoder_ChA_0_DRIVEMODE CY_GPIO_DM_HIGHZ
 #define Encoder_ChA_0_INBUF_ENABLED 1u
@@ -325,27 +347,5 @@
 #define Encoder_ChB_PORT GPIO_PRT10
 #define Encoder_ChB_SLEWRATE CY_GPIO_SLEW_FAST
 #define Encoder_ChB_THRESHOLD_LEVEL CY_GPIO_VTRIP_CMOS
-
-/* Rele_sentido_motor */
-#define Rele_sentido_motor_0_DRIVEMODE CY_GPIO_DM_STRONG_IN_OFF
-#define Rele_sentido_motor_0_INBUF_ENABLED 0u
-#define Rele_sentido_motor_0_INIT_DRIVESTATE 0u
-#define Rele_sentido_motor_0_INIT_MUXSEL 0u
-#define Rele_sentido_motor_0_INPUT_SYNC 2u
-#define Rele_sentido_motor_0_INTERRUPT_MODE CY_GPIO_INTR_DISABLE
-#define Rele_sentido_motor_0_NUM 5u
-#define Rele_sentido_motor_0_PORT GPIO_PRT5
-#define Rele_sentido_motor_0_SLEWRATE CY_GPIO_SLEW_FAST
-#define Rele_sentido_motor_0_THRESHOLD_LEVEL CY_GPIO_VTRIP_CMOS
-#define Rele_sentido_motor_DRIVEMODE CY_GPIO_DM_STRONG_IN_OFF
-#define Rele_sentido_motor_INBUF_ENABLED 0u
-#define Rele_sentido_motor_INIT_DRIVESTATE 0u
-#define Rele_sentido_motor_INIT_MUXSEL 0u
-#define Rele_sentido_motor_INPUT_SYNC 2u
-#define Rele_sentido_motor_INTERRUPT_MODE CY_GPIO_INTR_DISABLE
-#define Rele_sentido_motor_NUM 5u
-#define Rele_sentido_motor_PORT GPIO_PRT5
-#define Rele_sentido_motor_SLEWRATE CY_GPIO_SLEW_FAST
-#define Rele_sentido_motor_THRESHOLD_LEVEL CY_GPIO_VTRIP_CMOS
 
 #endif /* INCLUDED_CYFITTER_GPIO_H */

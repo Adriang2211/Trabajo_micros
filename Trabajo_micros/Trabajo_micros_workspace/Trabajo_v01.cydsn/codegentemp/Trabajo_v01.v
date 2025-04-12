@@ -1,6 +1,6 @@
 // ======================================================================
 // Trabajo_v01.v generated from TopDesign.cysch
-// 04/12/2025 at 12:56
+// 04/12/2025 at 19:27
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -436,6 +436,8 @@ endmodule
 // top
 module top ;
 
+    electrical  Net_199;
+    electrical  Net_197;
           wire  Net_196;
     electrical  Net_195;
           wire  Net_194;
@@ -446,8 +448,6 @@ module top ;
     electrical  Net_189;
           wire  Net_188;
     electrical  Net_187;
-    electrical  Net_180;
-    electrical  Net_172;
     electrical  Net_92;
     electrical  Net_88;
     electrical  Net_84;
@@ -483,11 +483,6 @@ module top ;
           wire  Net_9;
     electrical  Net_4;
     electrical  Net_3;
-    electrical  Net_175;
-    electrical  Net_185;
-    electrical  Net_176;
-    electrical  Net_173;
-    electrical  Net_170;
           wire  Net_163;
           wire  Net_78;
           wire  Net_79;
@@ -863,133 +858,6 @@ module top ;
 		 (.int_signal(Net_163));
 
 
-	wire [0:0] tmpFB_0__Rele_sentido_motor_net;
-	wire [0:0] tmpIO_0__Rele_sentido_motor_net;
-	electrical [0:0] tmpSIOVREF__Rele_sentido_motor_net;
-
-	cy_mxs40_gpio_v1_0
-		#(.id("20f3bf18-2f21-4340-ad4c-6e7cf97ad755"),
-		  .width(1),
-		  .sio_grp_cnt(0),
-		  .drive_mode("6"),
-		  .ibuf_enabled("0"),
-		  .init_dr_st("0"),
-		  .input_sync("0"),
-		  .intr_mode("0"),
-		  .io_voltage(""),
-		  .output_conn("0"),
-		  .oe_conn("0"),
-		  .output_sync("0"),
-		  .oe_sync("0"),
-		  .drive_strength("0"),
-		  .max_frequency("100"),
-		  .i2c_mode("0"),
-		  .output_current_cap("8"),
-		  .pin_aliases(""),
-		  .pin_mode("O"),
-		  .slew_rate("0"),
-		  .vtrip("0"),
-		  .use_annotation("1"),
-		  .hotswap_needed("0"))
-		Rele_sentido_motor
-		 (.oe({1'b1}),
-		  .y({1'b0}),
-		  .fb({tmpFB_0__Rele_sentido_motor_net[0:0]}),
-		  .io({tmpIO_0__Rele_sentido_motor_net[0:0]}),
-		  .siovref(tmpSIOVREF__Rele_sentido_motor_net),
-		  .annotation({Net_170}));
-
-
-	wire [0:0] tmpFB_0__Rele_motor_net;
-	wire [0:0] tmpIO_0__Rele_motor_net;
-	electrical [0:0] tmpSIOVREF__Rele_motor_net;
-
-	cy_mxs40_gpio_v1_0
-		#(.id("52e45e68-a6fb-4892-835e-164d24ecfc5d"),
-		  .width(1),
-		  .sio_grp_cnt(0),
-		  .drive_mode("6"),
-		  .ibuf_enabled("0"),
-		  .init_dr_st("0"),
-		  .input_sync("0"),
-		  .intr_mode("0"),
-		  .io_voltage(""),
-		  .output_conn("0"),
-		  .oe_conn("0"),
-		  .output_sync("0"),
-		  .oe_sync("0"),
-		  .drive_strength("0"),
-		  .max_frequency("100"),
-		  .i2c_mode("0"),
-		  .output_current_cap("8"),
-		  .pin_aliases(""),
-		  .pin_mode("O"),
-		  .slew_rate("0"),
-		  .vtrip("0"),
-		  .use_annotation("1"),
-		  .hotswap_needed("0"))
-		Rele_motor
-		 (.oe({1'b1}),
-		  .y({1'b0}),
-		  .fb({tmpFB_0__Rele_motor_net[0:0]}),
-		  .io({tmpIO_0__Rele_motor_net[0:0]}),
-		  .siovref(tmpSIOVREF__Rele_motor_net),
-		  .annotation({Net_172}));
-
-
-    cy_annotation_universal_v1_0 K_1 (
-        .connect({
-            Net_176,
-            Net_173,
-            Net_175,
-            Net_185,
-            Net_185,
-            Net_175,
-            Net_180,
-            Net_170
-        })
-    );
-    defparam K_1.comp_name = "Relay_v1_0";
-    defparam K_1.port_names = "C1, C2, NC1, NC2, NO1, NO2, T1, T2";
-    defparam K_1.width = 8;
-
-    cy_annotation_universal_v1_0 M_1 (
-        .connect({
-            Net_176,
-            Net_173
-        })
-    );
-    defparam M_1.comp_name = "Motor_v1_0";
-    defparam M_1.port_names = "T1, T2";
-    defparam M_1.width = 2;
-
-    cy_annotation_universal_v1_0 PWR_1 (
-        .connect({
-            Net_185
-        })
-    );
-    defparam PWR_1.comp_name = "Power_v1_0";
-    defparam PWR_1.port_names = "T1";
-    defparam PWR_1.width = 1;
-
-    cy_annotation_universal_v1_0 GND_3 (
-        .connect({
-            Net_175
-        })
-    );
-    defparam GND_3.comp_name = "Gnd_v1_0";
-    defparam GND_3.port_names = "T1";
-    defparam GND_3.width = 1;
-
-    cy_annotation_universal_v1_0 GND_4 (
-        .connect({
-            Net_180
-        })
-    );
-    defparam GND_4.comp_name = "Gnd_v1_0";
-    defparam GND_4.port_names = "T1";
-    defparam GND_4.width = 1;
-
 	wire [0:0] tmpIO_0__SW0_net;
 	electrical [0:0] tmpSIOVREF__SW0_net;
 
@@ -1208,6 +1076,80 @@ module top ;
 		  .int_type(2'b10))
 		SW4_int
 		 (.int_signal(Net_196));
+
+
+	wire [0:0] tmpFB_0__Rele_1_net;
+	wire [0:0] tmpIO_0__Rele_1_net;
+	electrical [0:0] tmpSIOVREF__Rele_1_net;
+
+	cy_mxs40_gpio_v1_0
+		#(.id("06b66808-e4f7-4bf9-8472-e97cd285d1db"),
+		  .width(1),
+		  .sio_grp_cnt(0),
+		  .drive_mode("6"),
+		  .ibuf_enabled("0"),
+		  .init_dr_st("1"),
+		  .input_sync("0"),
+		  .intr_mode("0"),
+		  .io_voltage(""),
+		  .output_conn("0"),
+		  .oe_conn("0"),
+		  .output_sync("0"),
+		  .oe_sync("0"),
+		  .drive_strength("0"),
+		  .max_frequency("100"),
+		  .i2c_mode("0"),
+		  .output_current_cap("8"),
+		  .pin_aliases(""),
+		  .pin_mode("O"),
+		  .slew_rate("0"),
+		  .vtrip("0"),
+		  .use_annotation("1"),
+		  .hotswap_needed("0"))
+		Rele_1
+		 (.oe({1'b1}),
+		  .y({1'b0}),
+		  .fb({tmpFB_0__Rele_1_net[0:0]}),
+		  .io({tmpIO_0__Rele_1_net[0:0]}),
+		  .siovref(tmpSIOVREF__Rele_1_net),
+		  .annotation({Net_197}));
+
+
+	wire [0:0] tmpFB_0__Rele_2_net;
+	wire [0:0] tmpIO_0__Rele_2_net;
+	electrical [0:0] tmpSIOVREF__Rele_2_net;
+
+	cy_mxs40_gpio_v1_0
+		#(.id("e50236d2-2831-44db-a6db-3ecaa4e86800"),
+		  .width(1),
+		  .sio_grp_cnt(0),
+		  .drive_mode("6"),
+		  .ibuf_enabled("0"),
+		  .init_dr_st("1"),
+		  .input_sync("0"),
+		  .intr_mode("0"),
+		  .io_voltage(""),
+		  .output_conn("0"),
+		  .oe_conn("0"),
+		  .output_sync("0"),
+		  .oe_sync("0"),
+		  .drive_strength("0"),
+		  .max_frequency("100"),
+		  .i2c_mode("0"),
+		  .output_current_cap("8"),
+		  .pin_aliases(""),
+		  .pin_mode("O"),
+		  .slew_rate("0"),
+		  .vtrip("0"),
+		  .use_annotation("1"),
+		  .hotswap_needed("0"))
+		Rele_2
+		 (.oe({1'b1}),
+		  .y({1'b0}),
+		  .fb({tmpFB_0__Rele_2_net[0:0]}),
+		  .io({tmpIO_0__Rele_2_net[0:0]}),
+		  .siovref(tmpSIOVREF__Rele_2_net),
+		  .annotation({Net_199}));
 
 
 

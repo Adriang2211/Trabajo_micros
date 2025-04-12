@@ -1,5 +1,5 @@
 # Trabajo_v01
-# 2025-04-12 10:56:06Z
+# 2025-04-12 17:27:43Z
 
 dont_use_location SMIF -1 -1 0
 dont_use_location p4usbcell -1 -1 0
@@ -16,10 +16,10 @@ set_io "OPTO_PC817(0)" iocell 5 2
 set_io "OPTO_trig(0)" iocell 5 3
 set_io "Encoder_ChB(0)" iocell 10 5
 set_io "Encoder_ChA(0)" iocell 10 4
-set_io "Rele_sentido_motor(0)" iocell 5 5
-set_io "Rele_motor(0)" iocell 5 4
 set_io "SW0(0)" iocell 9 0
 set_io "SW1(0)" iocell 9 1
 set_io "SW2(0)" iocell 9 2
 set_io "SW3(0)" iocell 9 3
 set_io "SW4(0)" iocell 9 4
+set_io "Rele_1(0)" iocell 5 4
+set_io "Rele_2(0)" iocell 5 5

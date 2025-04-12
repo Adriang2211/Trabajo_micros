@@ -8,6 +8,7 @@
     <Group key="Pin">
       <Data key="0c43e256-3e81-48a1-af9d-6513e0fe3501" value="OPTO_trig" />
       <Data key="4cca878b-77b5-471d-8aeb-ad6925202455" value="OPTO_PC817" />
+      <Data key="06b66808-e4f7-4bf9-8472-e97cd285d1db" value="Rele_1" />
       <Data key="8fe56ad8-4448-4b87-9f95-a187a89a04fa" value="SW3" />
       <Data key="20f3bf18-2f21-4340-ad4c-6e7cf97ad755" value="Rele_sentido_motor" />
       <Data key="52e45e68-a6fb-4892-835e-164d24ecfc5d" value="Rele_motor" />
@@ -21,6 +22,7 @@
       <Data key="bfa13a31-7fe4-4a32-8673-0f4b849dc92c" value="SW4" />
       <Data key="d1f7c2b9-407d-4b35-98c6-7f33c892f552" value="SW1" />
       <Data key="d340790b-63c2-4ea6-a2e5-36bbe948008d" value="SW0" />
+      <Data key="e50236d2-2831-44db-a6db-3ecaa4e86800" value="Rele_2" />
     </Group>
   </Group>
   <Group key="M0S8Clock">
@@ -618,6 +620,11 @@
         <Data key="Port Format" value="5,2" />
       </Group>
     </Group>
+    <Group key="06b66808-e4f7-4bf9-8472-e97cd285d1db">
+      <Group key="0">
+        <Data key="Port Format" value="5,4" />
+      </Group>
+    </Group>
     <Group key="8fe56ad8-4448-4b87-9f95-a187a89a04fa">
       <Group key="0">
         <Data key="Port Format" value="9,3" />
@@ -681,6 +688,11 @@
     <Group key="d340790b-63c2-4ea6-a2e5-36bbe948008d">
       <Group key="0">
         <Data key="Port Format" value="9,0" />
+      </Group>
+    </Group>
+    <Group key="e50236d2-2831-44db-a6db-3ecaa4e86800">
+      <Group key="0">
+        <Data key="Port Format" value="5,5" />
       </Group>
     </Group>
   </Group>
