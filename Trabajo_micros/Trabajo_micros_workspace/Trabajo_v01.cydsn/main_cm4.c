@@ -18,8 +18,9 @@
 // Relación de reducción de la reductora del motor
 #define REL_REDUCTION 150
 
-volatile long unsigned int cuentas = 0;
-volatile long unsigned int cuentas1 = 0;
+volatile long signed int cuentas = 0;
+volatile long signed int cuentas1 = 0;
+volatile double posicion_abs = 0;
 
 
 //Variables para funcionamiento de RX UART
@@ -61,10 +62,14 @@ void Timer2_int_IRQHandler(void){
 
 void Encoder_int_IRQHandler(void){
     
-    if (Cy_GPIO_Read(Encoder_ChB_PORT, Encoder_ChB_NUM))
+    if (Cy_GPIO_Read(Encoder_ChB_PORT, Encoder_ChB_NUM)){
         cuentas++;
-    else
+        posicion_abs = posicion_abs + 0.01;
+    }
+    else{
         cuentas--;
+        posicion_abs = posicion_abs - 0.01;
+    }
  
 }
 
@@ -201,7 +206,7 @@ int main(void)
         
         Cy_SysLib_Delay(1000); //Demuestra que no interfiere con la interrupción
         Cy_GPIO_Inv(LED_verde_PORT, LED_verde_NUM);
-        snprintf(buffer, sizeof(buffer), "%ld rpm - Periodo contador: %i\n", (long int)(cuentas - cuentas1)*60/PULSES_PER_ROTATION/REL_REDUCTION, (int)Counter_1_GetPeriod());
+        snprintf(buffer, sizeof(buffer), "%ld rpm - Pos:%f \n", (long int)(cuentas - cuentas1)*60/PULSES_PER_ROTATION/REL_REDUCTION, posicion_abs);
         cuentas1 = cuentas;
         Cy_SCB_UART_PutString(UART_1_HW, buffer);
         
