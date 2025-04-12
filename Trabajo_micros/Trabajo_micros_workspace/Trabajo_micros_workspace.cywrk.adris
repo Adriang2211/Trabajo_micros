@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\Counter_1">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Trabajo_micros_workspace\Trabajo_v01\CM4 (Core 1)\Source Files\main_cm4.c">
 <ExpandedNodeIds>
 <v>Trabajo_micros_workspace</v>
 <v>Trabajo_micros_workspace\Prueba_01_LEDs\TopDesign</v>
@@ -1636,6 +1636,7 @@
 <OpenDocs>
 <name v=".\Trabajo_v01.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\Trabajo_v01.cydsn\Trabajo_v01.cydwr" />
+<name v=".\Trabajo_v01.cydsn\main_cm4.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -1643,7 +1644,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="915, 522" SelectedTabbedMdiWindow="87c50303-8a9b-4e2d-8ae4-03977c12e253"><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\TopDesign\TopDesign.cysch" Guid="87c50303-8a9b-4e2d-8ae4-03977c12e253" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\Trabajo_v01.cydwr" Guid="a86f460d-0513-449e-a00c-2b3e64c2ed7f" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="980, 1098" SelectedTabbedMdiWindow="b78db0dd-8f67-4181-aa4a-b9311ec17f32"><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\TopDesign\TopDesign.cysch" Guid="87c50303-8a9b-4e2d-8ae4-03977c12e253" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\Trabajo_v01.cydwr" Guid="a86f460d-0513-449e-a00c-2b3e64c2ed7f" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\main_cm4.c" Guid="b78db0dd-8f67-4181-aa4a-b9311ec17f32" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="0ad4414e-7fa6-4e26-84fa-f8e9cca45eea" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

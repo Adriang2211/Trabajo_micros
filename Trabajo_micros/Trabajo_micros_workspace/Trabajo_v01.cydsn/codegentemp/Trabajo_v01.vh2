@@ -2,7 +2,7 @@
 --	Conversion of Trabajo_v01.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sat Apr 12 19:27:40 2025
+--	Sat Apr 12 20:34:33 2025
 --
 
 USE cypress.cypress.all;

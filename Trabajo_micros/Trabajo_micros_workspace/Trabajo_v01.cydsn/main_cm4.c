@@ -34,9 +34,23 @@ uint8_t error_uart_rx;
 char buffer_rx [BUFFER_RX_UART];
 uint16_t buffer_index = 0;
 
+
+//Variables de los pulsadores
+_Bool flag_sw0 = false;
+_Bool flag_sw1 = false;
+_Bool flag_sw2 = false;
+_Bool flag_sw3 = false;
+_Bool flag_sw4 = false;
+uint32_t last_sw0;
+uint32_t last_sw1;
+uint32_t last_sw2;
+uint32_t last_sw3;
+uint32_t last_sw4;
+
+
 void Opto_detec_IRQHandler(void){
     
-    
+    Cy_GPIO_ClearInterrupt(OPTO_PC817_PORT, OPTO_PC817_NUM);
     Cy_GPIO_Write(OPTO_trig_PORT, OPTO_trig_NUM, 0);
     Counter_1_Enable();
     Counter_1_SetCounter(0);
@@ -136,6 +150,31 @@ void ISR_UART(void)
     }
 }
 
+void SW0_IRQHandler(void){
+    Cy_GPIO_ClearInterrupt(SW0_PORT, SW0_NUM);
+    
+}
+
+void SW1_IRQHandler(void){
+    Cy_GPIO_ClearInterrupt(SW1_PORT, SW1_NUM);
+    
+}
+
+void SW2_IRQHandler(void){
+    Cy_GPIO_ClearInterrupt(SW2_PORT, SW2_NUM);
+    
+}
+
+void SW3_IRQHandler(void){
+    Cy_GPIO_ClearInterrupt(SW3_PORT, SW3_NUM);
+    
+}
+
+void SW4_IRQHandler(void){
+    Cy_GPIO_ClearInterrupt(SW4_PORT, SW4_NUM);
+    
+}
+
 int main(void)
 {
     __enable_irq(); /* Enable global interrupts. */
@@ -202,7 +241,30 @@ int main(void)
     Cy_GPIO_Write(Rele_2_PORT, Rele_2_NUM, 1);
 
 
+    // Configurar las interrupciones del pulsador SW0
+    Cy_SysInt_Init(&SW0_int_cfg, SW0_IRQHandler);
+    NVIC_ClearPendingIRQ(SW0_int_cfg.intrSrc);
+    NVIC_EnableIRQ(SW0_int_cfg.intrSrc);
     
+    // Configurar las interrupciones del pulsador SW1
+    Cy_SysInt_Init(&SW1_int_cfg, SW1_IRQHandler);
+    NVIC_ClearPendingIRQ(SW1_int_cfg.intrSrc);
+    NVIC_EnableIRQ(SW1_int_cfg.intrSrc);
+    
+    // Configurar las interrupciones del pulsador SW2
+    Cy_SysInt_Init(&SW2_int_cfg, SW2_IRQHandler);
+    NVIC_ClearPendingIRQ(SW2_int_cfg.intrSrc);
+    NVIC_EnableIRQ(SW2_int_cfg.intrSrc);
+    
+    // Configurar las interrupciones del pulsador SW3
+    Cy_SysInt_Init(&SW3_int_cfg, SW3_IRQHandler);
+    NVIC_ClearPendingIRQ(SW3_int_cfg.intrSrc);
+    NVIC_EnableIRQ(SW3_int_cfg.intrSrc);
+    
+    // Configurar las interrupciones del pulsador SW4
+    Cy_SysInt_Init(&SW4_int_cfg, SW4_IRQHandler);
+    NVIC_ClearPendingIRQ(SW4_int_cfg.intrSrc);
+    NVIC_EnableIRQ(SW4_int_cfg.intrSrc);
     
     // Crear un buffer limpio para COM UART
     char buffer [50];
