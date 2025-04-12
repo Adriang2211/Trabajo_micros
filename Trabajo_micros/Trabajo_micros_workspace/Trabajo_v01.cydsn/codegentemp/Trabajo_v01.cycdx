@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<blockRegMap version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cypress.com/xsd/cyblockregmap cyblockregmap.xsd" xmlns="http://cypress.com/xsd/cyblockregmap">
+  <block name="PWR_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="M_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="GND_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="GND_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="K_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Encoder_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="GND_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Rele_motor" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Rele_sentido_motor" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="SW0" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="SW3_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="SW3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="SW4_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="SW4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="SW2_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="SW1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="SW0_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="SW2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="SW1_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="OPTO_PC817" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Opto_detec_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="OPTO_trig" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Trig_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Counter_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+    <block name="TCPWM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  </block>
+  <block name="LED_rojo" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="LED_verde" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Clock_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="UART_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+    <block name="rx_VM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="rx" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="cts_VM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="SCB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="SCB_IRQ" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="clock_VM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="SCBCLK" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="ZeroTerminal_7" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="tx" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="or_sclk" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  </block>
+  <block name="Counter_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+    <block name="TCPWM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  </block>
+  <block name="Q_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="GND_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="R1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Board_power" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="R2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Encoder_ChB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Trig_end_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="D_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Encoder_ChA" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+</blockRegMap>
