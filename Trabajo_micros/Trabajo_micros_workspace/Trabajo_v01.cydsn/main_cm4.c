@@ -47,7 +47,21 @@ volatile uint32_t last_sw1 = 0;
 volatile uint32_t last_sw2 = 0;
 volatile uint32_t last_sw3 = 0;
 volatile uint32_t last_sw4 = 0;
-#define DEBOUNCER_TIME 2000
+#define DEBOUNCER_TIME 200
+
+
+// Maquina de estados
+uint8_t estado = 0;
+
+_Bool flanco_0 = false; //Para primer ciclo de ejecución tras cambio de estado
+_Bool flanco_1 = false;
+_Bool flanco_2 = false;
+_Bool flanco_3 = false;
+_Bool flanco_4 = false;
+_Bool flanco_5 = false;
+_Bool flanco_6 = false;
+_Bool flanco_7 = false;
+_Bool flanco_8 = false;
 
 
 void Opto_detec_IRQHandler(void){
@@ -157,7 +171,8 @@ void SW0_IRQHandler(void){
     if (Debouncer_CLK_GetCounter() - last_sw0 > DEBOUNCER_TIME){
         last_sw0 = Debouncer_CLK_GetCounter();
         //Código a ejecutar cuando se pulsa el boton
-        Cy_SCB_UART_PutString(UART_1_HW, "P0\n");
+        Cy_SCB_UART_PutString(UART_1_HW, "Debug - P0\n");
+        flag_sw0 = true;
     }
     
 }
@@ -167,7 +182,8 @@ void SW1_IRQHandler(void){
     if (Debouncer_CLK_GetCounter()  - last_sw1 > DEBOUNCER_TIME){
         last_sw1 = Debouncer_CLK_GetCounter();
         //Código a ejecutar cuando se pulsa el boton
-        Cy_SCB_UART_PutString(UART_1_HW, "P1\n");
+        Cy_SCB_UART_PutString(UART_1_HW, "Debug - P1\n");
+        flag_sw1 = true;
     }
     
 }
@@ -177,7 +193,8 @@ void SW2_IRQHandler(void){
     if (Debouncer_CLK_GetCounter()  - last_sw2 > DEBOUNCER_TIME){
         last_sw2 = Debouncer_CLK_GetCounter();
         //Código a ejecutar cuando se pulsa el boton
-        Cy_SCB_UART_PutString(UART_1_HW, "P2\n");
+        Cy_SCB_UART_PutString(UART_1_HW, "Debug - P2\n");
+        flag_sw2 = true;
     }
     
 }
@@ -187,7 +204,8 @@ void SW3_IRQHandler(void){
     if (Debouncer_CLK_GetCounter()  - last_sw3 > DEBOUNCER_TIME){
         last_sw3 = Debouncer_CLK_GetCounter();
         //Código a ejecutar cuando se pulsa el boton
-        Cy_SCB_UART_PutString(UART_1_HW, "P3\n");
+        Cy_SCB_UART_PutString(UART_1_HW, "Debug - P3\n");
+        flag_sw3 = true;
     }
     
 }
@@ -197,7 +215,8 @@ void SW4_IRQHandler(void){
     if (Debouncer_CLK_GetCounter()  - last_sw4 > DEBOUNCER_TIME){
         last_sw4 = Debouncer_CLK_GetCounter();
         //Código a ejecutar cuando se pulsa el boton
-        Cy_SCB_UART_PutString(UART_1_HW, "P4\n");
+        Cy_SCB_UART_PutString(UART_1_HW, "Debug - P4\n");
+        flag_sw4 = true;
     }
     
 }
@@ -345,18 +364,171 @@ int main(void)
     for (int i = 0; i < 20; i++)
         buffer[i] = ' ';
     
+    //Variables locales
+    uint8_t siguiente_estado = 0;   
+        
+    //Inicialización máquina de estados
+    estado = 0;
+    flanco_0 = true;    
+        
     for(;;)
     {
         /* Place your application code here. */
         
-        Cy_SysLib_Delay(1000); //Demuestra que no interfiere con la interrupción
-        Cy_GPIO_Inv(LED_verde_PORT, LED_verde_NUM);
-        int32_t velocidad = cuentas - cuentas1;
-        if (!flag_sentido)
-            velocidad = velocidad*(-1);
-        snprintf(buffer, sizeof(buffer), "%ld rpm - Pos:%f \n", (long int)(velocidad)*60/PULSES_PER_ROTATION/REL_REDUCTION, posicion_abs);
-        cuentas1 = cuentas;
-        Cy_SCB_UART_PutString(UART_1_HW, buffer);
+        // TRANSICIÓN DE ESTADOS
+        switch (estado){
+            case 0: //Reposo total
+                //Transición a estado 1
+                if (flag_sw1){
+                    siguiente_estado = 1;
+                    flanco_1 = true;
+                    flag_sw1 = false;
+                }
+                //Transición a estado 0
+                else if(flag_sw0){
+                    siguiente_estado = 2;
+                    flanco_2 = true;
+                    flag_sw0 = false;
+                }
+                else
+                    siguiente_estado = 0;
+            break;
+            case 1: //Bajar hasta "home"
+                //Transición a estado 0
+                if (flag_sw1){
+                    siguiente_estado = 0;
+                    flanco_0 = true;
+                    flag_sw1 = false;
+                }
+                //Transición a estado 1
+                else if(flag_sw0){
+                    siguiente_estado = 2;
+                    flanco_2 = true;
+                    flag_sw0 = false;
+                }
+                else
+                    siguiente_estado = 1;
+            
+            break;
+            case 2: //Reposo en operación
+                //Transición a estado 3
+                if (flag_sw0 || flag_sw1 || flag_sw2 || flag_sw3 || flag_sw4){
+                    siguiente_estado = 3;
+                    flanco_3 = true;
+                    flag_sw0 = false;
+                    flag_sw1 = false;
+                    flag_sw2 = false;
+                    flag_sw3 = false;
+                    flag_sw4 = false;
+                }
+                else
+                    siguiente_estado = 2;
+            
+            break;
+            case 3: //Solicitado
+            
+            break;
+            case 4: //Subir
+            
+            break;
+            case 5: //Bajar
+            
+            break;
+            case 6: //Abrir puerta
+            
+            break;
+            case 7: //Puerta abierta
+            
+            break;
+            case 8: //Cerrando puerta
+            
+            break;
+        }
+        
+        estado = siguiente_estado;
+        
+        // ACCIONES ASOCIADAS A LOS ESTADOS
+        switch (estado){
+            case 0:
+                if (flanco_0){
+                    flanco_0 = false;
+                    //Acciones primer ciclo de ejecución   
+                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 0\n");
+                }
+            break;
+            case 1:
+                if (flanco_1){
+                    flanco_1 = false;
+                    //Acciones primer ciclo de ejecución
+                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 1\n");
+                    
+                }
+            
+            break;
+            case 2:
+                if (flanco_2){
+                    flanco_2 = false;
+                    //Acciones primer ciclo de ejecución
+                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 2\n");
+                    
+                }
+            
+            break;
+            case 3:
+                if (flanco_3){
+                    flanco_3 = false;
+                    //Acciones primer ciclo de ejecución
+                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 3\n");
+                    
+                }
+            
+            break;
+            case 4:
+                if (flanco_4){
+                    flanco_4 = false;
+                    //Acciones primer ciclo de ejecución
+                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 4\n");
+                    
+                }
+            
+            break;
+            case 5:
+                if (flanco_5){
+                    flanco_5 = false;
+                    //Acciones primer ciclo de ejecución
+                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 5\n");
+                    
+                }
+            
+            break;
+            case 6:
+                if (flanco_6){
+                    flanco_6 = false;
+                    //Acciones primer ciclo de ejecución
+                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 6\n");
+                    
+                }
+            
+            break;
+            case 7:
+                if (flanco_7){
+                    flanco_7 = false;
+                    //Acciones primer ciclo de ejecución
+                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 7\n");
+                    
+                }
+            
+            break;
+            case 8:
+                if (flanco_8){
+                    flanco_8 = false;
+                    //Acciones primer ciclo de ejecución
+                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 8\n");
+                    
+                }
+            
+            break;
+        }
         
     }
 }

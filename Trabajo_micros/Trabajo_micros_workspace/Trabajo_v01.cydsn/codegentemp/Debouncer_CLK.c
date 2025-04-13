@@ -28,9 +28,9 @@ uint8_t Debouncer_CLK_initVar = 0U;
 */ 
 cy_stc_tcpwm_counter_config_t const Debouncer_CLK_config =
 {
-        .period = 10000UL,
+        .period = 2147483647UL,
         .clockPrescaler = 0UL,
-        .runMode = 0UL,
+        .runMode = 1UL,
         .countDirection = 0UL,
         .compareOrCapture = 2UL,
         .compare0 = 16384UL,
