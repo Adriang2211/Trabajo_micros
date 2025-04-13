@@ -18,6 +18,7 @@
 #define PULSES_PER_ROTATION 10
 // Relación de reducción de la reductora del motor
 #define REL_REDUCTION 150
+#define TOLERANCIA_LLEGADA 5 //en mm
 
 volatile long signed int cuentas = 0;
 volatile long signed int cuentas1 = 0;
@@ -62,6 +63,22 @@ _Bool flanco_5 = false;
 _Bool flanco_6 = false;
 _Bool flanco_7 = false;
 _Bool flanco_8 = false;
+_Bool flanco_9 = false;
+_Bool flanco_10 = false;
+_Bool flanco_11 = false;
+_Bool flanco_12 = false;
+
+
+//Cota de los pisos (en mm)
+double piso0 = 0;
+double piso1 = 115;
+double piso2 = 230;
+double piso3 = 445;
+double piso4 = 560;
+
+
+volatile _Bool flag_periodic_main = false;
+
 
 
 void Opto_detec_IRQHandler(void){
@@ -96,75 +113,16 @@ void Encoder_int_IRQHandler(void){
     
     cuentas++;
     
-    if (flag_sentido){
-        posicion_abs = posicion_abs + 0.01;
+    if (!flag_sentido){
+        posicion_abs = posicion_abs + 0.094;
     }
     else{
-        posicion_abs = posicion_abs - 0.01;
+        posicion_abs = posicion_abs - 0.094;
     }
  
 }
 
-void ISR_UART(void)
-{
-    // Verificar si se ha recibido un dato en el buffer RX
-    if ((UART_1_HW->INTR_RX_MASKED & SCB_INTR_RX_MASKED_NOT_EMPTY_Msk) != 0)
-    {
-        // Limpiar la interrupción
-        Cy_SCB_ClearRxInterrupt(UART_1_HW, CY_SCB_RX_INTR_NOT_EMPTY);
 
-        // Leer el carácter recibido
-        char received_char = Cy_SCB_UART_Get(UART_1_HW);
-
-        // Si es un Enter (fin de línea), procesamos el comando
-        if (received_char == '\n' || received_char == '\r')
-        {
-            // Null-terminar la cadena para procesarla
-            buffer_rx[buffer_index] = '\0';  // Finaliza el comando
-            Cy_SCB_UART_PutString(UART_1_HW, buffer_rx);
-            
-            // Comprobar si el comando es "ON" o "OFF"
-            if (strncmp(buffer_rx, "+", 1) == 0)
-            {
-                // Counter period ++
-                Cy_TCPWM_Counter_SetPeriod(Counter_1_HW, Counter_1_CNT_NUM, Cy_TCPWM_Counter_GetPeriod(Counter_1_HW, Counter_1_CNT_NUM)+20);
-                Cy_TCPWM_Counter_SetPeriod(Counter_2_HW, Counter_2_CNT_NUM, Cy_TCPWM_Counter_GetPeriod(Counter_1_HW, Counter_1_CNT_NUM)+1);
-                Cy_SCB_UART_PutString(UART_1_HW, "Aumentado periodo\n");
-            }
-            else if (strncmp(buffer_rx, "-", 1) == 0)
-            {
-                Cy_TCPWM_Counter_SetPeriod(Counter_1_HW, Counter_1_CNT_NUM, Cy_TCPWM_Counter_GetPeriod(Counter_1_HW, Counter_1_CNT_NUM)-20);
-                Cy_TCPWM_Counter_SetPeriod(Counter_2_HW, Counter_2_CNT_NUM, Cy_TCPWM_Counter_GetPeriod(Counter_1_HW, Counter_1_CNT_NUM)+1);
-                Cy_SCB_UART_PutString(UART_1_HW, "Recudido periodo\n");
-            }
-            else if (strncmp(buffer_rx, "c", 1) == 0){
-                Cy_GPIO_Inv(Rele_1_PORT, Rele_1_NUM);
-                Cy_SysLib_Delay(500);
-                Cy_GPIO_Inv(Rele_2_PORT, Rele_2_NUM);
-                flag_sentido = !flag_sentido;
-            }
-            
-            else
-            {
-                Cy_SCB_UART_PutString(UART_1_HW, "\r\nComando no valido\r\n");
-            }
-
-            // Resetear el índice del buffer y limpiarlo
-            data_received = 1;
-            buffer_index = 0;
-            memset(buffer_rx, 0, BUFFER_RX_UART);
-        }
-        else if (buffer_index < BUFFER_RX_UART - 1)
-        {
-            // Si no es fin de línea, almacenar el carácter en el buffer
-            buffer_rx[buffer_index++] = received_char;
-        }
-    }
-    else
-    {
-        //Tratamiento de errores
-    }
-}
 
 void SW0_IRQHandler(void){
     Cy_GPIO_ClearInterrupt(SW0_PORT, SW0_NUM);
@@ -225,7 +183,9 @@ void Debouncer_ovrflw_int_IRQHandler(void){
     /*
     Para cuando el contador se de la vuelta, que no deje de funcionar
     el debouncer. Se mantienen aquellas diferencias que fuesen menores
-    al tiempo fijado para el debouncer
+    al tiempo fijado para el debouncer.
+    Esta interrupción se ejecuta solo cada varias semanas, por lo que no
+    es un gran problema que sea un poco lenta.
     */
     Debouncer_CLK_ClearInterrupt(Debouncer_CLK_config.interruptSources);
     Cy_SCB_UART_PutString(UART_1_HW, "Deboug ovrflw\n");
@@ -255,6 +215,121 @@ void Debouncer_ovrflw_int_IRQHandler(void){
         last_sw4 = dif_sw0;
     else
         last_sw4 = 0;
+}
+
+void Periodic_main_IRQHandler(void){
+    Counter_3_ClearInterrupt(Counter_3_config.interruptSources);
+    flag_periodic_main = true;
+}
+
+void Motor_subir(){
+    Cy_GPIO_Write(Rele_1_PORT, Rele_1_NUM, 1);
+    Cy_SysLib_Delay(500); //Es bloqueante intencionadamente - sistema parado por seguridad
+    Cy_GPIO_Write(Rele_2_PORT, Rele_2_NUM, 1);
+    flag_sentido = false;
+}
+
+void Motor_bajar(){
+    Cy_GPIO_Write(Rele_1_PORT, Rele_1_NUM, 0);
+    Cy_SysLib_Delay(500); //Es bloqueante intencionadamente - sistema parado por seguridad
+    Cy_GPIO_Write(Rele_2_PORT, Rele_2_NUM, 0);
+    flag_sentido = true;
+}
+
+void Motor_parado(){
+    Cy_GPIO_Write(Rele_1_PORT, Rele_1_NUM, 0);
+    Cy_SysLib_Delay(100); //Es bloqueante intencionadamente - sistema parado por seguridad
+    Cy_GPIO_Write(Rele_2_PORT, Rele_2_NUM, 1);
+}
+
+void Motor_setPeriodo(uint periodo){
+    if (periodo < 500){
+        Counter_1_SetPeriod(500);
+        Counter_2_SetPeriod(501);
+    }
+    else if(periodo > 900){
+        Counter_1_SetPeriod(899);
+        Counter_2_SetPeriod(900);
+    }
+    else{
+        Counter_1_SetPeriod(periodo);
+        Counter_2_SetPeriod(periodo+1);
+    }
+}
+
+void Motor_setVelocidad(uint velocidad){
+    //Valores de velocidad de 0 a 400
+    Motor_setPeriodo(900 - velocidad);
+}
+
+
+void ISR_UART(void)
+{
+    /*
+    // Verificar si se ha recibido un dato en el buffer RX
+    if ((UART_1_HW->INTR_RX_MASKED & SCB_INTR_RX_MASKED_NOT_EMPTY_Msk) != 0)
+    {
+        // Limpiar la interrupción
+        Cy_SCB_ClearRxInterrupt(UART_1_HW, CY_SCB_RX_INTR_NOT_EMPTY);
+
+        // Leer el carácter recibido
+        char received_char = Cy_SCB_UART_Get(UART_1_HW);
+
+        // Si es un Enter (fin de línea), procesamos el comando
+        if (received_char == '\n' || received_char == '\r')
+        {
+            // Null-terminar la cadena para procesarla
+            buffer_rx[buffer_index] = '\0';  // Finaliza el comando
+            Cy_SCB_UART_PutString(UART_1_HW, buffer_rx);
+            
+            // Comprobar si el comando es "ON" o "OFF"
+            if (strncmp(buffer_rx, "+", 1) == 0)
+            {
+                // Counter period ++
+                Cy_TCPWM_Counter_SetPeriod(Counter_1_HW, Counter_1_CNT_NUM, Cy_TCPWM_Counter_GetPeriod(Counter_1_HW, Counter_1_CNT_NUM)+20);
+                Cy_TCPWM_Counter_SetPeriod(Counter_2_HW, Counter_2_CNT_NUM, Cy_TCPWM_Counter_GetPeriod(Counter_1_HW, Counter_1_CNT_NUM)+1);
+                Cy_SCB_UART_PutString(UART_1_HW, "Aumentado periodo\n");
+            }
+            else if (strncmp(buffer_rx, "-", 1) == 0)
+            {
+                Cy_TCPWM_Counter_SetPeriod(Counter_1_HW, Counter_1_CNT_NUM, Cy_TCPWM_Counter_GetPeriod(Counter_1_HW, Counter_1_CNT_NUM)-20);
+                Cy_TCPWM_Counter_SetPeriod(Counter_2_HW, Counter_2_CNT_NUM, Cy_TCPWM_Counter_GetPeriod(Counter_1_HW, Counter_1_CNT_NUM)+1);
+                Cy_SCB_UART_PutString(UART_1_HW, "Recudido periodo\n");
+            }
+            else if (strncmp(buffer_rx, "c", 1) == 0){
+                Cy_GPIO_Inv(Rele_1_PORT, Rele_1_NUM);
+                Cy_SysLib_Delay(500);
+                Cy_GPIO_Inv(Rele_2_PORT, Rele_2_NUM);
+                flag_sentido = !flag_sentido;
+            }
+            else if (strncmp(buffer_rx, "s", 1) == 0){
+                Motor_subir();
+            }
+            else if (strncmp(buffer_rx, "b", 1) == 0){
+                Motor_bajar();
+            }
+            
+            else
+            {
+                Cy_SCB_UART_PutString(UART_1_HW, "\r\nComando no valido\r\n");
+            }
+
+            // Resetear el índice del buffer y limpiarlo
+            data_received = 1;
+            buffer_index = 0;
+            memset(buffer_rx, 0, BUFFER_RX_UART);
+        }
+        else if (buffer_index < BUFFER_RX_UART - 1)
+        {
+            // Si no es fin de línea, almacenar el carácter en el buffer
+            buffer_rx[buffer_index++] = received_char;
+        }
+    }
+    else
+    {
+        //Tratamiento de errores
+    }
+    */
 }
 
 int main(void)
@@ -312,12 +387,20 @@ int main(void)
     NVIC_EnableIRQ(Debouncer_ovrflw_int_cfg.intrSrc);
     
     
+    // Configurar las interrupciones del temporizador 4 (periodic main)
+    // (Es para tareas que se ejecutan solo cada x tiempo en main)
+    Cy_SysInt_Init(&Periodic_main_int_cfg, Periodic_main_IRQHandler);
+    NVIC_ClearPendingIRQ(Periodic_main_int_cfg.intrSrc);
+    NVIC_EnableIRQ(Periodic_main_int_cfg.intrSrc);
+    
+    
     //Inicializar contadores
     Counter_1_Start();
     Counter_2_Start();
     Counter_1_Disable();
     Counter_2_Disable();
     Debouncer_CLK_Start();
+    Counter_3_Start();
     
     
     // Configurar las interrupciones del encoder
@@ -365,7 +448,12 @@ int main(void)
         buffer[i] = ' ';
     
     //Variables locales
-    uint8_t siguiente_estado = 0;   
+    uint8_t siguiente_estado = 0;
+    double destino = 0;
+    uint16_t velocidad_consigna = 150;
+    uint16_t velocidad_consigna_rampa = 0;
+    uint16_t velocidad_consigna_ajuste = 50;
+    uint16_t contador_rampa = 0;
         
     //Inicialización máquina de estados
     estado = 0;
@@ -375,6 +463,11 @@ int main(void)
     {
         /* Place your application code here. */
         
+        if (flag_periodic_main){
+            flag_periodic_main = false;
+            snprintf(buffer, sizeof(buffer), "Posicion: %2.2f\n", posicion_abs);
+            Cy_SCB_UART_PutString(UART_1_HW, buffer);
+        }
         // TRANSICIÓN DE ESTADOS
         switch (estado){
             case 0: //Reposo total
@@ -389,6 +482,7 @@ int main(void)
                     siguiente_estado = 2;
                     flanco_2 = true;
                     flag_sw0 = false;
+                    posicion_abs = 0; //Accion excepcional ("maquina de Mealey")
                 }
                 else
                     siguiente_estado = 0;
@@ -400,11 +494,12 @@ int main(void)
                     flanco_0 = true;
                     flag_sw1 = false;
                 }
-                //Transición a estado 1
+                //Transición a estado 2
                 else if(flag_sw0){
                     siguiente_estado = 2;
                     flanco_2 = true;
                     flag_sw0 = false;
+                    posicion_abs = 0; //Accion excepcional ("maquina de Mealey")
                 }
                 else
                     siguiente_estado = 1;
@@ -415,33 +510,82 @@ int main(void)
                 if (flag_sw0 || flag_sw1 || flag_sw2 || flag_sw3 || flag_sw4){
                     siguiente_estado = 3;
                     flanco_3 = true;
+                    if(flag_sw0)
+                        destino = piso0;
+                    else if(flag_sw1)
+                        destino = piso1;
+                    else if (flag_sw2)
+                        destino = piso2;
+                    else if (flag_sw3)
+                        destino = piso3;
+                    else
+                        destino = piso4;
                     flag_sw0 = false;
                     flag_sw1 = false;
                     flag_sw2 = false;
                     flag_sw3 = false;
                     flag_sw4 = false;
+                    snprintf(buffer, sizeof(buffer), "Destino: %2.2f\n", destino);
+                    Cy_SCB_UART_PutString(UART_1_HW, buffer);
                 }
                 else
                     siguiente_estado = 2;
             
             break;
             case 3: //Solicitado
+                //Transición a estado 4 (rampa aceleración subir)
+                if (destino > posicion_abs){
+                    siguiente_estado = 4;
+                    flanco_4 = true;
+                }
+                //Transición a estado 5 (rampa aceleración bajar)
+                else if (destino < posicion_abs){
+                    siguiente_estado = 7;
+                    flanco_5 = true;
+                }
+                //Transición a estado 2 (se ha solicitado desde el mismo piso, volver a reposo)
+                else{
+                    siguiente_estado = 2;
+                    flanco_2 = true;
+                }
             
             break;
-            case 4: //Subir
+            case 4: //Subir - rampa de aceleración
+                if (velocidad_consigna_rampa == velocidad_consigna){
+                    siguiente_estado = 5;
+                    flanco_5 = true;
+                }
             
             break;
-            case 5: //Bajar
+            case 5: //Subir
+                if (destino - posicion_abs < 100){
+                    siguiente_estado = 6;
+                    flanco_6 = true;
+                }
+            break;
+            case 6: //Subir - rampa de frenado
+                if (destino - posicion_abs < TOLERANCIA_LLEGADA || posicion_abs > destino){
+                    siguiente_estado = 10;
+                    flanco_10 = true;
+                }
+            break;
+            case 7: //Bajar - rampa de aceleración
             
             break;
-            case 6: //Abrir puerta
+            case 8: //Bajar
             
             break;
-            case 7: //Puerta abierta
-            
+            case 9: //Bajar - rampa de frenado
+                
             break;
-            case 8: //Cerrando puerta
-            
+            case 10: //Abrir puerta
+                
+            break;
+            case 11: //Puerta abierta (esperando)
+                
+            break;
+            case 12: //Cerrando puerta
+                
             break;
         }
         
@@ -454,6 +598,8 @@ int main(void)
                     flanco_0 = false;
                     //Acciones primer ciclo de ejecución   
                     Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 0\n");
+                    Motor_parado();
+                    Motor_setVelocidad(0); //Por seguridad aunque es redundante
                 }
             break;
             case 1:
@@ -461,6 +607,8 @@ int main(void)
                     flanco_1 = false;
                     //Acciones primer ciclo de ejecución
                     Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 1\n");
+                    Motor_bajar();
+                    Motor_setVelocidad(200);
                     
                 }
             
@@ -470,6 +618,8 @@ int main(void)
                     flanco_2 = false;
                     //Acciones primer ciclo de ejecución
                     Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 2\n");
+                    Motor_parado();
+                    Motor_setVelocidad(0);
                     
                 }
             
@@ -479,35 +629,52 @@ int main(void)
                     flanco_3 = false;
                     //Acciones primer ciclo de ejecución
                     Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 3\n");
+                    Motor_parado();
+                    Motor_setVelocidad(0);
                     
                 }
             
             break;
-            case 4:
+            case 4: //Rampa de aceleración subida
                 if (flanco_4){
                     flanco_4 = false;
                     //Acciones primer ciclo de ejecución
                     Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 4\n");
-                    
+                    Motor_subir();
+                    contador_rampa = 0;
+                    velocidad_consigna_rampa = 50;
                 }
+                contador_rampa++;
+                if (contador_rampa == 2000){
+                    contador_rampa = 0;
+                    velocidad_consigna_rampa++;
+                }
+                Motor_setVelocidad(velocidad_consigna_rampa);
             
             break;
-            case 5:
+            case 5: //Subir
                 if (flanco_5){
                     flanco_5 = false;
                     //Acciones primer ciclo de ejecución
                     Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 5\n");
-                    
+                    Motor_subir();
+                    Motor_setVelocidad(velocidad_consigna);
                 }
             
             break;
-            case 6:
+            case 6: //Rampa de frenada en subida y ajuste de llegada
                 if (flanco_6){
                     flanco_6 = false;
                     //Acciones primer ciclo de ejecución
                     Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 6\n");
-                    
+                    contador_rampa = 0;
                 }
+                contador_rampa++;
+                if (contador_rampa == 1000 && velocidad_consigna_rampa > velocidad_consigna_ajuste){
+                    velocidad_consigna_rampa--;
+                    contador_rampa = 0;
+                }
+                Motor_setVelocidad(velocidad_consigna_rampa);
             
             break;
             case 7:
@@ -522,6 +689,44 @@ int main(void)
             case 8:
                 if (flanco_8){
                     flanco_8 = false;
+                    //Acciones primer ciclo de ejecución
+                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 8\n");
+                    
+                }
+            
+            break;
+            case 9:
+                if (flanco_9){
+                    flanco_9 = false;
+                    //Acciones primer ciclo de ejecución
+                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 8\n");
+                    
+                }
+            
+            break;
+            case 10:
+                if (flanco_10){
+                    flanco_10 = false;
+                    //Acciones primer ciclo de ejecución
+                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 8\n");
+                    Motor_parado();
+                    Motor_setVelocidad(0);
+                    
+                }
+            
+            break;
+            case 11:
+                if (flanco_11){
+                    flanco_11 = false;
+                    //Acciones primer ciclo de ejecución
+                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 8\n");
+                    
+                }
+            
+            break;
+            case 12:
+                if (flanco_12){
+                    flanco_12 = false;
                     //Acciones primer ciclo de ejecución
                     Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 8\n");
                     

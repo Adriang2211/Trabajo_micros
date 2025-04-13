@@ -28,7 +28,7 @@ uint8_t Counter_2_initVar = 0U;
 */ 
 cy_stc_tcpwm_counter_config_t const Counter_2_config =
 {
-        .period = 551UL,
+        .period = 801UL,
         .clockPrescaler = 0UL,
         .runMode = 0UL,
         .countDirection = 0UL,

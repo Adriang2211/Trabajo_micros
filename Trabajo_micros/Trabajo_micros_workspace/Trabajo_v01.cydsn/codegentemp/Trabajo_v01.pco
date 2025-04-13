@@ -1,5 +1,5 @@
 # Trabajo_v01
-# 2025-04-13 11:45:36Z
+# 2025-04-13 22:48:05Z
 
 dont_use_location SMIF -1 -1 0
 dont_use_location p4usbcell -1 -1 0
@@ -20,18 +20,18 @@ set_io "Encoder_ChB(0)" iocell 10 5
 set_io "Encoder_ChA(0)" iocell 10 4
 set_io "SW0(0)" iocell 9 0
 set_io "SW1(0)" iocell 9 1
-set_io "SW2(0)" iocell 9 2
-set_io "SW3(0)" iocell 9 3
-set_io "SW4(0)" iocell 9 4
-set_io "Rele_1(0)" iocell 5 4
-set_io "Rele_2(0)" iocell 5 5
+set_io "SW2(0)" iocell 9 3
+set_io "SW3(0)" iocell 9 4
+set_io "SW4(0)" iocell 9 5
+set_io "Rele_1(0)" iocell 10 0
+set_io "Rele_2(0)" iocell 10 1
 set_location "\UART_1:SCB_IRQ\" interrupt -1 -1 46
 set_location "\UART_1:SCB\" SCB -1 -1 5
 set_location "\Counter_1:TCPWM\" TCPWM -1 -1 1
 set_location "Opto_detec_int" interrupt -1 -1 123
 set_location "Trig_int" interrupt -1 -1 91
-set_location "\Counter_2:TCPWM\" TCPWM -1 -1 2
-set_location "Trig_end_int" interrupt -1 -1 92
+set_location "\Counter_2:TCPWM\" TCPWM -1 -1 3
+set_location "Trig_end_int" interrupt -1 -1 93
 set_location "Encoder_int" interrupt -1 -1 122
 set_location "SW0_int" interrupt -1 -1 124
 set_location "SW1_int" interrupt -1 -1 125
@@ -40,3 +40,5 @@ set_location "SW3_int" interrupt -1 -1 127
 set_location "SW4_int" interrupt -1 -1 128
 set_location "\Debouncer_CLK:TCPWM\" TCPWM -1 -1 0
 set_location "Debouncer_ovrflw_int" interrupt -1 -1 90
+set_location "\Counter_3:TCPWM\" TCPWM -1 -1 2
+set_location "Periodic_main_int" interrupt -1 -1 92

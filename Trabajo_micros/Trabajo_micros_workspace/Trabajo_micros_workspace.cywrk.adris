@@ -442,21 +442,6 @@
 <v>Trabajo_micros_workspace\CE221117_PSoC6MCU_UARTusingHighLevelAPIs.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>Trabajo_micros_workspace</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs</v>
-<v>Trabajo_micros_workspace\Prueba_02_LEDs_No_bloqueante</v>
-<v>Trabajo_micros_workspace\Prueba_03_Interrupciones</v>
-<v>Trabajo_micros_workspace\Test_pulsador</v>
-<v>Trabajo_micros_workspace\Trabajo_microcontroladores</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2</v>
-<v>Trabajo_micros_workspace\Trabajo_v01</v>
-<v>Trabajo_micros_workspace\Trabajo_v01\TopDesign</v>
-<v>Trabajo_micros_workspace\Trabajo_v01\Trabajo_v01.cydwr</v>
-<v>Trabajo_micros_workspace\Trabajo_v01\Trabajo_v01.cydwr\Pins</v>
-<v>Trabajo_micros_workspace\Trabajo_v01\Trabajo_v01.cydwr\Analog</v>
-<v>Trabajo_micros_workspace\Trabajo_v01\Trabajo_v01.cydwr\DMA</v>
 <v>Trabajo_micros_workspace\Trabajo_v01\Trabajo_v01.cydwr\Clocks</v>
 <v>Trabajo_micros_workspace\Trabajo_v01\Trabajo_v01.cydwr\Interrupts</v>
 <v>Trabajo_micros_workspace\Trabajo_v01\Trabajo_v01.cydwr\System</v>
@@ -505,10 +490,25 @@
 <v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\Clock_2</v>
 <v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\Counter_1</v>
 <v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\Counter_2</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\Counter_3</v>
 <v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\Debouncer_CLK</v>
 <v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\Pins and Interrupts</v>
 <v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\UART_1</v>
 <v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\UART_1_SCBCLK</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\cycodeshareexport.ld</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\cycodeshareimport.ld</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\cycodeshareimport.scat</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\cydevice_trm.h</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\cydevicegnu_trm.inc</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\cydeviceiar_trm.inc</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\cydevicerv_trm.inc</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\cydisabledsheets.h</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\cyfitter.h</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\cyfitter_cfg.c</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\cyfitter_cfg.h</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\cymetadata.c</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\Generated_Source\PSoC6\project.h</v>
+<v>Trabajo_micros_workspace\CE221117_PSoC6MCU_UARTusingHighLevelAPIs.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\TopDesign\TopDesign.cysch">
@@ -1269,6 +1269,7 @@
 <v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files</v>
 <v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\Counter_1.lst</v>
 <v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\Counter_2.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\Counter_3.lst</v>
 <v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_clk.lst</v>
 <v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_device.lst</v>
 <v>Trabajo_micros_workspace\Trabajo_v01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_efuse.lst</v>
@@ -1314,6 +1315,7 @@
 <v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files</v>
 <v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\Counter_1.lst</v>
 <v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\Counter_2.lst</v>
+<v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\Counter_3.lst</v>
 <v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_clk.lst</v>
 <v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_device.lst</v>
 <v>Trabajo_micros_workspace\Trabajo_v01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_efuse.lst</v>
@@ -1647,7 +1649,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="980, 1098" SelectedTabbedMdiWindow="b78db0dd-8f67-4181-aa4a-b9311ec17f32"><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\TopDesign\TopDesign.cysch" Guid="87c50303-8a9b-4e2d-8ae4-03977c12e253" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\Trabajo_v01.cydwr" Guid="a86f460d-0513-449e-a00c-2b3e64c2ed7f" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\main_cm4.c" Guid="b78db0dd-8f67-4181-aa4a-b9311ec17f32" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="0ad4414e-7fa6-4e26-84fa-f8e9cca45eea" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="2018, 1107" SelectedTabbedMdiWindow="b78db0dd-8f67-4181-aa4a-b9311ec17f32"><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\TopDesign\TopDesign.cysch" Guid="87c50303-8a9b-4e2d-8ae4-03977c12e253" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\Trabajo_v01.cydwr" Guid="a86f460d-0513-449e-a00c-2b3e64c2ed7f" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\main_cm4.c" Guid="b78db0dd-8f67-4181-aa4a-b9311ec17f32" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="0ad4414e-7fa6-4e26-84fa-f8e9cca45eea" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

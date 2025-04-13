@@ -48,10 +48,16 @@
 #define Counter_1_TCPWM__IDX 0u
 
 /* Counter_2 */
-#define Counter_2_TCPWM__CNT_HW TCPWM0_CNT2
-#define Counter_2_TCPWM__CNT_IDX 2u
+#define Counter_2_TCPWM__CNT_HW TCPWM0_CNT3
+#define Counter_2_TCPWM__CNT_IDX 3u
 #define Counter_2_TCPWM__HW TCPWM0
 #define Counter_2_TCPWM__IDX 0u
+
+/* Counter_3 */
+#define Counter_3_TCPWM__CNT_HW TCPWM0_CNT2
+#define Counter_3_TCPWM__CNT_IDX 2u
+#define Counter_3_TCPWM__HW TCPWM0
+#define Counter_3_TCPWM__IDX 0u
 
 /* Debouncer_CLK */
 #define Debouncer_CLK_TCPWM__CNT_HW TCPWM0_CNT0

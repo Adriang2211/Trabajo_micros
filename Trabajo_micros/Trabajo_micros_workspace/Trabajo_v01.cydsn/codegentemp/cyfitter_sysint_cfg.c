@@ -38,6 +38,12 @@
         .intrPriority = Trig_int__INTC_CORTEXM4_PRIORITY
     };
 
+    /* Periodic_main_int */
+    const cy_stc_sysint_t Periodic_main_int_cfg = {
+        .intrSrc = (IRQn_Type)Periodic_main_int__INTC_NUMBER,
+        .intrPriority = Periodic_main_int__INTC_CORTEXM4_PRIORITY
+    };
+
     /* Trig_end_int */
     const cy_stc_sysint_t Trig_end_int_cfg = {
         .intrSrc = (IRQn_Type)Trig_end_int__INTC_NUMBER,

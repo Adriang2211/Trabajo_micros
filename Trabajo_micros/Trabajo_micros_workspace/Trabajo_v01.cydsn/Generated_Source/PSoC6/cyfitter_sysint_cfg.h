@@ -30,6 +30,9 @@
     #define Trig_int__INTC_ASSIGNED 1u
     extern const cy_stc_sysint_t Trig_int_cfg;
 
+    #define Periodic_main_int__INTC_ASSIGNED 1u
+    extern const cy_stc_sysint_t Periodic_main_int_cfg;
+
     #define Trig_end_int__INTC_ASSIGNED 1u
     extern const cy_stc_sysint_t Trig_end_int_cfg;
 

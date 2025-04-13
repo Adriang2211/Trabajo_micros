@@ -1,5 +1,5 @@
 -- Project:   Trabajo_v01
--- Generated: 04/13/2025 13:45:36
+-- Generated: 04/14/2025 00:48:05
 -- PSoC Creator  4.4
 
 ENTITY Trabajo_v01 IS
@@ -70,13 +70,19 @@ ARCHITECTURE __DEFAULT__ OF Trabajo_v01 IS
     SIGNAL Net_211 : bit;
     SIGNAL Net_212 : bit;
     SIGNAL Net_213 : bit;
-    SIGNAL Net_214_ff13 : bit;
-    ATTRIBUTE global_signal OF Net_214_ff13 : SIGNAL IS true;
+    SIGNAL Net_214_ff14 : bit;
+    ATTRIBUTE global_signal OF Net_214_ff14 : SIGNAL IS true;
+    SIGNAL Net_222 : bit;
+    SIGNAL Net_224 : bit;
+    SIGNAL Net_225 : bit;
+    SIGNAL Net_229 : bit;
     SIGNAL Net_33 : bit;
     SIGNAL Net_38_ff11 : bit;
     ATTRIBUTE global_signal OF Net_38_ff11 : SIGNAL IS true;
     SIGNAL Net_38_ff12 : bit;
     ATTRIBUTE global_signal OF Net_38_ff12 : SIGNAL IS true;
+    SIGNAL Net_38_ff13 : bit;
+    ATTRIBUTE global_signal OF Net_38_ff13 : SIGNAL IS true;
     SIGNAL Net_45 : bit;
     SIGNAL Net_46 : bit;
     SIGNAL Net_47 : bit;
@@ -98,6 +104,8 @@ ARCHITECTURE __DEFAULT__ OF Trabajo_v01 IS
     SIGNAL \Counter_1:Net_2\ : bit;
     SIGNAL \Counter_2:Net_1\ : bit;
     SIGNAL \Counter_2:Net_2\ : bit;
+    SIGNAL \Counter_3:Net_1\ : bit;
+    SIGNAL \Counter_3:Net_2\ : bit;
     SIGNAL \Debouncer_CLK:Net_1\ : bit;
     SIGNAL \Debouncer_CLK:Net_2\ : bit;
     SIGNAL \UART_1:Net_1172\ : bit;
@@ -146,22 +154,22 @@ ARCHITECTURE __DEFAULT__ OF Trabajo_v01 IS
     ATTRIBUTE lib_model OF SW1(0) : LABEL IS "iocell12";
     ATTRIBUTE Location OF SW1(0) : LABEL IS "P9[1]";
     ATTRIBUTE lib_model OF SW2(0) : LABEL IS "iocell13";
-    ATTRIBUTE Location OF SW2(0) : LABEL IS "P9[2]";
+    ATTRIBUTE Location OF SW2(0) : LABEL IS "P9[3]";
     ATTRIBUTE lib_model OF SW3(0) : LABEL IS "iocell14";
-    ATTRIBUTE Location OF SW3(0) : LABEL IS "P9[3]";
+    ATTRIBUTE Location OF SW3(0) : LABEL IS "P9[4]";
     ATTRIBUTE lib_model OF SW4(0) : LABEL IS "iocell15";
-    ATTRIBUTE Location OF SW4(0) : LABEL IS "P9[4]";
+    ATTRIBUTE Location OF SW4(0) : LABEL IS "P9[5]";
     ATTRIBUTE lib_model OF Rele_1(0) : LABEL IS "iocell16";
-    ATTRIBUTE Location OF Rele_1(0) : LABEL IS "P5[4]";
+    ATTRIBUTE Location OF Rele_1(0) : LABEL IS "P10[0]";
     ATTRIBUTE lib_model OF Rele_2(0) : LABEL IS "iocell17";
-    ATTRIBUTE Location OF Rele_2(0) : LABEL IS "P5[5]";
+    ATTRIBUTE Location OF Rele_2(0) : LABEL IS "P10[1]";
     ATTRIBUTE Location OF \UART_1:SCB_IRQ\ : LABEL IS "[IntrContainer=(0)][IntrId=(46)]";
     ATTRIBUTE Location OF \UART_1:SCB\ : LABEL IS "F(SCB,5)";
     ATTRIBUTE Location OF \Counter_1:TCPWM\ : LABEL IS "F(TCPWM,1)";
     ATTRIBUTE Location OF Opto_detec_int : LABEL IS "[IntrContainer=(0)][IntrId=(123)]";
     ATTRIBUTE Location OF Trig_int : LABEL IS "[IntrContainer=(0)][IntrId=(91)]";
-    ATTRIBUTE Location OF \Counter_2:TCPWM\ : LABEL IS "F(TCPWM,2)";
-    ATTRIBUTE Location OF Trig_end_int : LABEL IS "[IntrContainer=(0)][IntrId=(92)]";
+    ATTRIBUTE Location OF \Counter_2:TCPWM\ : LABEL IS "F(TCPWM,3)";
+    ATTRIBUTE Location OF Trig_end_int : LABEL IS "[IntrContainer=(0)][IntrId=(93)]";
     ATTRIBUTE Location OF Encoder_int : LABEL IS "[IntrContainer=(0)][IntrId=(122)]";
     ATTRIBUTE Location OF SW0_int : LABEL IS "[IntrContainer=(0)][IntrId=(124)]";
     ATTRIBUTE Location OF SW1_int : LABEL IS "[IntrContainer=(0)][IntrId=(125)]";
@@ -170,6 +178,8 @@ ARCHITECTURE __DEFAULT__ OF Trabajo_v01 IS
     ATTRIBUTE Location OF SW4_int : LABEL IS "[IntrContainer=(0)][IntrId=(128)]";
     ATTRIBUTE Location OF \Debouncer_CLK:TCPWM\ : LABEL IS "F(TCPWM,0)";
     ATTRIBUTE Location OF Debouncer_ovrflw_int : LABEL IS "[IntrContainer=(0)][IntrId=(90)]";
+    ATTRIBUTE Location OF \Counter_3:TCPWM\ : LABEL IS "F(TCPWM,2)";
+    ATTRIBUTE Location OF Periodic_main_int : LABEL IS "[IntrContainer=(0)][IntrId=(92)]";
     COMPONENT CLK_GEN
         PORT (
             gen_clk_in_0 : IN std_ulogic;
@@ -559,9 +569,10 @@ BEGIN
             wco => ClockBlock_WCO,
             lfclk => ClockBlock_LFClk,
             ff_div_0 => open,
-            ff_div_11 => Net_214_ff13,
+            ff_div_11 => Net_214_ff14,
             ff_div_12 => Net_38_ff11,
-            ff_div_13 => Net_38_ff12,
+            ff_div_13 => Net_38_ff13,
+            ff_div_14 => Net_38_ff12,
             ff_div_5 => \UART_1:Net_847_ff0\,
             periclk_App => periclk_App);
 
@@ -1654,7 +1665,7 @@ BEGIN
             exact_width => 0,
             width => 32)
         PORT MAP(
-            clock => Net_214_ff13,
+            clock => Net_214_ff14,
             capture => '0',
             count => '1',
             reload => '0',
@@ -1674,6 +1685,34 @@ BEGIN
             int_type => "10")
         PORT MAP(
             interrupt => Net_213,
+            clock => ClockBlock_PeriClk);
+
+    \Counter_3:TCPWM\:TCPWM
+        GENERIC MAP(
+            cy_registers => "",
+            exact_width => 0,
+            width => 16)
+        PORT MAP(
+            clock => Net_38_ff13,
+            capture => '0',
+            count => '1',
+            reload => '0',
+            stop => '0',
+            start => '0',
+            tr_underflow => Net_229,
+            tr_compare_match => Net_222,
+            tr_overflow => Net_225,
+            line_compl => \Counter_3:Net_1\,
+            line => \Counter_3:Net_2\,
+            interrupt => Net_224);
+
+    Periodic_main_int:interrupt
+        GENERIC MAP(
+            cy_registers => "",
+            deepsleep_required => 0,
+            int_type => "10")
+        PORT MAP(
+            interrupt => Net_224,
             clock => ClockBlock_PeriClk);
 
 END __DEFAULT__;
