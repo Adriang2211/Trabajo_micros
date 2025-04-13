@@ -1,6 +1,6 @@
 // ======================================================================
 // Trabajo_v01.v generated from TopDesign.cysch
-// 04/12/2025 at 20:34
+// 04/13/2025 at 12:59
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -433,9 +433,65 @@ module TCPWM_Counter_PDL_v1_0_2 (
 
 endmodule
 
+// TCPWM_Counter_PDL_v1_0(CaptureInput=7, CaptureInputMasked=3, ClockPrescaler=0, Compare0=16384, Compare1=16384, CompareOrCapture=2, CountDirection=0, CountInput=7, CountInputMasked=3, EnableCompareSwap=false, InterruptSource=1, Period=10000, ReloadInput=7, ReloadInputMasked=3, Resolution=32, RunMode=0, StartInput=7, StartInputMasked=3, StopInput=7, StopInputMasked=3, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=TCPWM_Counter_PDL_v1_0, CY_CONFIG_TITLE=Debouncer_CLK, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Debouncer_CLK, CY_INSTANCE_SHORT_NAME=Debouncer_CLK, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=0, CY_PDL_DRIVER_NAME=tcpwm, CY_PDL_DRIVER_REQ_VERSION=1.0.0, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.4, INSTANCE_NAME=Debouncer_CLK, )
+module TCPWM_Counter_PDL_v1_0_3 (
+    capture,
+    clock,
+    compare,
+    count,
+    interrupt,
+    ovrflw,
+    reload,
+    start,
+    stop,
+    undrflw);
+    input       capture;
+    input       clock;
+    output      compare;
+    input       count;
+    output      interrupt;
+    output      ovrflw;
+    input       reload;
+    input       start;
+    input       stop;
+    output      undrflw;
+
+
+          wire  Net_1;
+          wire  Net_2;
+
+    cy_mxs40_tcpwm_v1_0 TCPWM (
+        .capture(capture),
+        .clock(clock),
+        .count(count),
+        .interrupt(interrupt),
+        .line(Net_2),
+        .line_compl(Net_1),
+        .reload(reload),
+        .start(start),
+        .stop(stop),
+        .tr_compare_match(compare),
+        .tr_overflow(ovrflw),
+        .tr_underflow(undrflw));
+    defparam TCPWM.exact_width = 0;
+    defparam TCPWM.width = 32;
+
+
+
+endmodule
+
 // top
 module top ;
 
+          wire  Net_219;
+          wire  Net_211;
+          wire  Net_210;
+          wire  Net_209;
+          wire  Net_208;
+          wire  Net_212;
+          wire  Net_205;
+          wire  Net_204;
+          wire  Net_202;
     electrical  Net_199;
     electrical  Net_197;
           wire  Net_196;
@@ -483,6 +539,8 @@ module top ;
           wire  Net_9;
     electrical  Net_4;
     electrical  Net_3;
+          wire  Net_214;
+          wire  Net_213;
           wire  Net_163;
           wire  Net_78;
           wire  Net_79;
@@ -1150,6 +1208,38 @@ module top ;
 		  .io({tmpIO_0__Rele_2_net[0:0]}),
 		  .siovref(tmpSIOVREF__Rele_2_net),
 		  .annotation({Net_199}));
+
+
+    TCPWM_Counter_PDL_v1_0_3 Debouncer_CLK (
+        .capture(1'b0),
+        .clock(Net_214),
+        .compare(Net_204),
+        .count(1'b1),
+        .interrupt(Net_213),
+        .ovrflw(Net_212),
+        .reload(1'b0),
+        .start(1'b0),
+        .stop(1'b0),
+        .undrflw(Net_211));
+
+
+	cy_mxs40_isr_v1_0
+		#(.deepsleep_required(0),
+		  .int_type(2'b10))
+		Debouncer_ovrflw_int
+		 (.int_signal(Net_213));
+
+
+
+	cy_clock_v1_0
+		#(.id("27d16f67-a32b-40d7-a238-1c7f2fc61ecf"),
+		  .source_clock_id("2FB4EC85-8328-4C5A-9ED9-8B63060178EB"),
+		  .divisor(0),
+		  .period("1000000000000"),
+		  .is_direct(0),
+		  .is_digital(0))
+		Clock_2
+		 (.clock_out(Net_214));
 
 
 

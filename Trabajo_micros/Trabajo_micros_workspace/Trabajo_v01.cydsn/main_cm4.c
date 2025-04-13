@@ -12,6 +12,7 @@
 #include "project.h"
 #include <stdio.h>  // Para usar sprintf
 #include <string.h>
+#include <stdlib.h>
 
 // Pulsos por rotación que proporciona el encoder
 #define PULSES_PER_ROTATION 10
@@ -36,16 +37,17 @@ uint16_t buffer_index = 0;
 
 
 //Variables de los pulsadores
-_Bool flag_sw0 = false;
-_Bool flag_sw1 = false;
-_Bool flag_sw2 = false;
-_Bool flag_sw3 = false;
-_Bool flag_sw4 = false;
-uint32_t last_sw0;
-uint32_t last_sw1;
-uint32_t last_sw2;
-uint32_t last_sw3;
-uint32_t last_sw4;
+volatile _Bool flag_sw0 = false;
+volatile _Bool flag_sw1 = false;
+volatile _Bool flag_sw2 = false;
+volatile _Bool flag_sw3 = false;
+volatile _Bool flag_sw4 = false;
+volatile uint32_t last_sw0 = 0;
+volatile uint32_t last_sw1 = 0;
+volatile uint32_t last_sw2 = 0;
+volatile uint32_t last_sw3 = 0;
+volatile uint32_t last_sw4 = 0;
+#define DEBOUNCER_TIME 2000
 
 
 void Opto_detec_IRQHandler(void){
@@ -152,27 +154,88 @@ void ISR_UART(void)
 
 void SW0_IRQHandler(void){
     Cy_GPIO_ClearInterrupt(SW0_PORT, SW0_NUM);
+    if (Debouncer_CLK_GetCounter() - last_sw0 > DEBOUNCER_TIME){
+        last_sw0 = Debouncer_CLK_GetCounter();
+        //Código a ejecutar cuando se pulsa el boton
+        Cy_SCB_UART_PutString(UART_1_HW, "P0\n");
+    }
     
 }
 
 void SW1_IRQHandler(void){
     Cy_GPIO_ClearInterrupt(SW1_PORT, SW1_NUM);
+    if (Debouncer_CLK_GetCounter()  - last_sw1 > DEBOUNCER_TIME){
+        last_sw1 = Debouncer_CLK_GetCounter();
+        //Código a ejecutar cuando se pulsa el boton
+        Cy_SCB_UART_PutString(UART_1_HW, "P1\n");
+    }
     
 }
 
 void SW2_IRQHandler(void){
     Cy_GPIO_ClearInterrupt(SW2_PORT, SW2_NUM);
+    if (Debouncer_CLK_GetCounter()  - last_sw2 > DEBOUNCER_TIME){
+        last_sw2 = Debouncer_CLK_GetCounter();
+        //Código a ejecutar cuando se pulsa el boton
+        Cy_SCB_UART_PutString(UART_1_HW, "P2\n");
+    }
     
 }
 
 void SW3_IRQHandler(void){
     Cy_GPIO_ClearInterrupt(SW3_PORT, SW3_NUM);
+    if (Debouncer_CLK_GetCounter()  - last_sw3 > DEBOUNCER_TIME){
+        last_sw3 = Debouncer_CLK_GetCounter();
+        //Código a ejecutar cuando se pulsa el boton
+        Cy_SCB_UART_PutString(UART_1_HW, "P3\n");
+    }
     
 }
 
 void SW4_IRQHandler(void){
     Cy_GPIO_ClearInterrupt(SW4_PORT, SW4_NUM);
+    if (Debouncer_CLK_GetCounter()  - last_sw4 > DEBOUNCER_TIME){
+        last_sw4 = Debouncer_CLK_GetCounter();
+        //Código a ejecutar cuando se pulsa el boton
+        Cy_SCB_UART_PutString(UART_1_HW, "P4\n");
+    }
     
+}
+
+void Debouncer_ovrflw_int_IRQHandler(void){
+    /*
+    Para cuando el contador se de la vuelta, que no deje de funcionar
+    el debouncer. Se mantienen aquellas diferencias que fuesen menores
+    al tiempo fijado para el debouncer
+    */
+    Debouncer_CLK_ClearInterrupt(Debouncer_CLK_config.interruptSources);
+    Cy_SCB_UART_PutString(UART_1_HW, "Deboug ovrflw\n");
+    uint32_t dif_sw0 = Debouncer_CLK_GetPeriod() - last_sw0; //Lo que llevaba contado
+    uint32_t dif_sw1 = Debouncer_CLK_GetPeriod() - last_sw1;
+    uint32_t dif_sw2 = Debouncer_CLK_GetPeriod() - last_sw2;
+    uint32_t dif_sw3 = Debouncer_CLK_GetPeriod() - last_sw3;
+    uint32_t dif_sw4 = Debouncer_CLK_GetPeriod() - last_sw4;
+    Debouncer_CLK_SetCounter(DEBOUNCER_TIME);
+    if (dif_sw0 < DEBOUNCER_TIME)
+        last_sw0 = dif_sw0;
+    else
+        last_sw0 = 0;
+    if (dif_sw1 < DEBOUNCER_TIME)
+        last_sw1 = dif_sw0;
+    else
+        last_sw1 = 0;
+    if (dif_sw2 < DEBOUNCER_TIME)
+        last_sw2 = dif_sw0;
+    else
+        last_sw2 = 0;
+    if (dif_sw3 < DEBOUNCER_TIME)
+        last_sw3 = dif_sw0;
+    else
+        last_sw3 = 0;
+    if (dif_sw4 < DEBOUNCER_TIME)
+        last_sw4 = dif_sw0;
+    else
+        last_sw4 = 0;
 }
 
 int main(void)
@@ -213,12 +276,6 @@ int main(void)
     // Habilitar las interrupciones del boton
     NVIC_EnableIRQ(Trig_int_cfg.intrSrc);
     
-    //Inicializar contadores
-    Counter_1_Start();
-    Counter_2_Start();
-    Counter_1_Disable();
-    Counter_2_Disable();
-    
     
     // Configurar las interrupciones del temporizador 2
     Cy_SysInt_Init(&Trig_end_int_cfg, Timer2_int_IRQHandler);
@@ -226,6 +283,22 @@ int main(void)
     NVIC_ClearPendingIRQ(Trig_end_int_cfg.intrSrc);
     // Habilitar las interrupciones del boton
     NVIC_EnableIRQ(Trig_end_int_cfg.intrSrc);
+    
+    
+    // Configurar las interrupciones del temporizador 3 (debouncer_clk)
+    Cy_SysInt_Init(&Debouncer_ovrflw_int_cfg, Debouncer_ovrflw_int_IRQHandler);
+    // Limpiar interrupciones espúreas
+    NVIC_ClearPendingIRQ(Debouncer_ovrflw_int_cfg.intrSrc);
+    // Habilitar las interrupciones del boton
+    NVIC_EnableIRQ(Debouncer_ovrflw_int_cfg.intrSrc);
+    
+    
+    //Inicializar contadores
+    Counter_1_Start();
+    Counter_2_Start();
+    Counter_1_Disable();
+    Counter_2_Disable();
+    Debouncer_CLK_Start();
     
     
     // Configurar las interrupciones del encoder

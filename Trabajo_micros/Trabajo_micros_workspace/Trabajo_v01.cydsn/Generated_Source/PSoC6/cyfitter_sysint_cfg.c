@@ -26,6 +26,12 @@
         .intrPriority = UART_1_SCB_IRQ__INTC_CORTEXM4_PRIORITY
     };
 
+    /* Debouncer_ovrflw_int */
+    const cy_stc_sysint_t Debouncer_ovrflw_int_cfg = {
+        .intrSrc = (IRQn_Type)Debouncer_ovrflw_int__INTC_NUMBER,
+        .intrPriority = Debouncer_ovrflw_int__INTC_CORTEXM4_PRIORITY
+    };
+
     /* Trig_int */
     const cy_stc_sysint_t Trig_int_cfg = {
         .intrSrc = (IRQn_Type)Trig_int__INTC_NUMBER,

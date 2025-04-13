@@ -36,17 +36,28 @@
 #define Clock_1__DIV_NUM 0
 #define Clock_1__DIV_TYPE CY_SYSCLK_DIV_16_BIT
 
+/* Clock_2 */
+#define Clock_2__DIV_IDX 9
+#define Clock_2__DIV_NUM 1
+#define Clock_2__DIV_TYPE CY_SYSCLK_DIV_16_BIT
+
 /* Counter_1 */
-#define Counter_1_TCPWM__CNT_HW TCPWM0_CNT0
-#define Counter_1_TCPWM__CNT_IDX 0u
+#define Counter_1_TCPWM__CNT_HW TCPWM0_CNT1
+#define Counter_1_TCPWM__CNT_IDX 1u
 #define Counter_1_TCPWM__HW TCPWM0
 #define Counter_1_TCPWM__IDX 0u
 
 /* Counter_2 */
-#define Counter_2_TCPWM__CNT_HW TCPWM0_CNT1
-#define Counter_2_TCPWM__CNT_IDX 1u
+#define Counter_2_TCPWM__CNT_HW TCPWM0_CNT2
+#define Counter_2_TCPWM__CNT_IDX 2u
 #define Counter_2_TCPWM__HW TCPWM0
 #define Counter_2_TCPWM__IDX 0u
+
+/* Debouncer_CLK */
+#define Debouncer_CLK_TCPWM__CNT_HW TCPWM0_CNT0
+#define Debouncer_CLK_TCPWM__CNT_IDX 0u
+#define Debouncer_CLK_TCPWM__HW TCPWM0
+#define Debouncer_CLK_TCPWM__IDX 0u
 
 /* Miscellaneous */
 #define CPUSS__CTI_TR_IN_0 TRIG5_OUT_CPUSS_CTI_TR_IN0

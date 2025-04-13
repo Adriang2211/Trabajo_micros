@@ -1,5 +1,5 @@
 -- Project:   Trabajo_v01
--- Generated: 04/12/2025 20:34:36
+-- Generated: 04/13/2025 12:59:27
 -- PSoC Creator  4.4
 
 ENTITY Trabajo_v01 IS
@@ -66,6 +66,12 @@ ARCHITECTURE __DEFAULT__ OF Trabajo_v01 IS
     SIGNAL Net_192 : bit;
     SIGNAL Net_194 : bit;
     SIGNAL Net_196 : bit;
+    SIGNAL Net_204 : bit;
+    SIGNAL Net_211 : bit;
+    SIGNAL Net_212 : bit;
+    SIGNAL Net_213 : bit;
+    SIGNAL Net_214_ff13 : bit;
+    ATTRIBUTE global_signal OF Net_214_ff13 : SIGNAL IS true;
     SIGNAL Net_33 : bit;
     SIGNAL Net_38_ff11 : bit;
     ATTRIBUTE global_signal OF Net_38_ff11 : SIGNAL IS true;
@@ -92,6 +98,8 @@ ARCHITECTURE __DEFAULT__ OF Trabajo_v01 IS
     SIGNAL \Counter_1:Net_2\ : bit;
     SIGNAL \Counter_2:Net_1\ : bit;
     SIGNAL \Counter_2:Net_2\ : bit;
+    SIGNAL \Debouncer_CLK:Net_1\ : bit;
+    SIGNAL \Debouncer_CLK:Net_2\ : bit;
     SIGNAL \UART_1:Net_1172\ : bit;
     SIGNAL \UART_1:Net_161\ : bit;
     SIGNAL \UART_1:Net_847_ff0\ : bit;
@@ -149,17 +157,19 @@ ARCHITECTURE __DEFAULT__ OF Trabajo_v01 IS
     ATTRIBUTE Location OF Rele_2(0) : LABEL IS "P5[5]";
     ATTRIBUTE Location OF \UART_1:SCB_IRQ\ : LABEL IS "[IntrContainer=(0)][IntrId=(46)]";
     ATTRIBUTE Location OF \UART_1:SCB\ : LABEL IS "F(SCB,5)";
-    ATTRIBUTE Location OF \Counter_1:TCPWM\ : LABEL IS "F(TCPWM,0)";
+    ATTRIBUTE Location OF \Counter_1:TCPWM\ : LABEL IS "F(TCPWM,1)";
     ATTRIBUTE Location OF Opto_detec_int : LABEL IS "[IntrContainer=(0)][IntrId=(123)]";
-    ATTRIBUTE Location OF Trig_int : LABEL IS "[IntrContainer=(0)][IntrId=(90)]";
-    ATTRIBUTE Location OF \Counter_2:TCPWM\ : LABEL IS "F(TCPWM,1)";
-    ATTRIBUTE Location OF Trig_end_int : LABEL IS "[IntrContainer=(0)][IntrId=(91)]";
+    ATTRIBUTE Location OF Trig_int : LABEL IS "[IntrContainer=(0)][IntrId=(91)]";
+    ATTRIBUTE Location OF \Counter_2:TCPWM\ : LABEL IS "F(TCPWM,2)";
+    ATTRIBUTE Location OF Trig_end_int : LABEL IS "[IntrContainer=(0)][IntrId=(92)]";
     ATTRIBUTE Location OF Encoder_int : LABEL IS "[IntrContainer=(0)][IntrId=(122)]";
     ATTRIBUTE Location OF SW0_int : LABEL IS "[IntrContainer=(0)][IntrId=(124)]";
     ATTRIBUTE Location OF SW1_int : LABEL IS "[IntrContainer=(0)][IntrId=(125)]";
     ATTRIBUTE Location OF SW2_int : LABEL IS "[IntrContainer=(0)][IntrId=(126)]";
     ATTRIBUTE Location OF SW3_int : LABEL IS "[IntrContainer=(0)][IntrId=(127)]";
     ATTRIBUTE Location OF SW4_int : LABEL IS "[IntrContainer=(0)][IntrId=(128)]";
+    ATTRIBUTE Location OF \Debouncer_CLK:TCPWM\ : LABEL IS "F(TCPWM,0)";
+    ATTRIBUTE Location OF Debouncer_ovrflw_int : LABEL IS "[IntrContainer=(0)][IntrId=(90)]";
     COMPONENT CLK_GEN
         PORT (
             gen_clk_in_0 : IN std_ulogic;
@@ -549,8 +559,9 @@ BEGIN
             wco => ClockBlock_WCO,
             lfclk => ClockBlock_LFClk,
             ff_div_0 => open,
-            ff_div_11 => Net_38_ff11,
-            ff_div_12 => Net_38_ff12,
+            ff_div_11 => Net_214_ff13,
+            ff_div_12 => Net_38_ff11,
+            ff_div_13 => Net_38_ff12,
             ff_div_5 => \UART_1:Net_847_ff0\,
             periclk_App => periclk_App);
 
@@ -1635,6 +1646,34 @@ BEGIN
             int_type => "10")
         PORT MAP(
             interrupt => Net_196,
+            clock => ClockBlock_PeriClk);
+
+    \Debouncer_CLK:TCPWM\:TCPWM
+        GENERIC MAP(
+            cy_registers => "",
+            exact_width => 0,
+            width => 32)
+        PORT MAP(
+            clock => Net_214_ff13,
+            capture => '0',
+            count => '1',
+            reload => '0',
+            stop => '0',
+            start => '0',
+            tr_underflow => Net_211,
+            tr_compare_match => Net_204,
+            tr_overflow => Net_212,
+            line_compl => \Debouncer_CLK:Net_1\,
+            line => \Debouncer_CLK:Net_2\,
+            interrupt => Net_213);
+
+    Debouncer_ovrflw_int:interrupt
+        GENERIC MAP(
+            cy_registers => "",
+            deepsleep_required => 0,
+            int_type => "10")
+        PORT MAP(
+            interrupt => Net_213,
             clock => ClockBlock_PeriClk);
 
 END __DEFAULT__;

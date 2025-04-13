@@ -1,5 +1,5 @@
 -- Project:   Trabajo_v01
--- Generated: 04/12/2025 20:34:36
+-- Generated: 04/13/2025 12:59:27
 -- PSoC Creator  4.4
 
 ENTITY Trabajo_v01 IS
@@ -66,6 +66,12 @@ ARCHITECTURE __DEFAULT__ OF Trabajo_v01 IS
     SIGNAL Net_192 : bit;
     SIGNAL Net_194 : bit;
     SIGNAL Net_196 : bit;
+    SIGNAL Net_204 : bit;
+    SIGNAL Net_211 : bit;
+    SIGNAL Net_212 : bit;
+    SIGNAL Net_213 : bit;
+    SIGNAL Net_214_ff13 : bit;
+    ATTRIBUTE global_signal OF Net_214_ff13 : SIGNAL IS true;
     SIGNAL Net_33 : bit;
     SIGNAL Net_38_ff11 : bit;
     ATTRIBUTE global_signal OF Net_38_ff11 : SIGNAL IS true;
@@ -92,6 +98,8 @@ ARCHITECTURE __DEFAULT__ OF Trabajo_v01 IS
     SIGNAL \Counter_1:Net_2\ : bit;
     SIGNAL \Counter_2:Net_1\ : bit;
     SIGNAL \Counter_2:Net_2\ : bit;
+    SIGNAL \Debouncer_CLK:Net_1\ : bit;
+    SIGNAL \Debouncer_CLK:Net_2\ : bit;
     SIGNAL \UART_1:Net_1172\ : bit;
     SIGNAL \UART_1:Net_161\ : bit;
     SIGNAL \UART_1:Net_847_ff0\ : bit;
@@ -536,6 +544,7 @@ BEGIN
             ff_div_0 => \UART_1:Net_847_ff0\,
             ff_div_11 => Net_38_ff11,
             ff_div_12 => Net_38_ff12,
+            ff_div_13 => Net_214_ff13,
             periclk_App => periclk_App);
 
     CPUSS:CPUSS
@@ -1619,6 +1628,34 @@ BEGIN
             int_type => "10")
         PORT MAP(
             interrupt => Net_196,
+            clock => ClockBlock_PeriClk);
+
+    \Debouncer_CLK:TCPWM\:TCPWM
+        GENERIC MAP(
+            cy_registers => "",
+            exact_width => 0,
+            width => 32)
+        PORT MAP(
+            clock => Net_214_ff13,
+            capture => '0',
+            count => '1',
+            reload => '0',
+            stop => '0',
+            start => '0',
+            tr_underflow => Net_211,
+            tr_compare_match => Net_204,
+            tr_overflow => Net_212,
+            line_compl => \Debouncer_CLK:Net_1\,
+            line => \Debouncer_CLK:Net_2\,
+            interrupt => Net_213);
+
+    Debouncer_ovrflw_int:interrupt
+        GENERIC MAP(
+            cy_registers => "",
+            deepsleep_required => 0,
+            int_type => "10")
+        PORT MAP(
+            interrupt => Net_213,
             clock => ClockBlock_PeriClk);
 
 END __DEFAULT__;

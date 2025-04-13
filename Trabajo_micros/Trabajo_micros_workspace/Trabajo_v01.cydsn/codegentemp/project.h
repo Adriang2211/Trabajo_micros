@@ -110,6 +110,8 @@
 #include "Clock_1.h"
 #include "Counter_1.h"
 #include "Counter_2.h"
+#include "Debouncer_CLK.h"
+#include "Clock_2.h"
 #include "UART_1_SCBCLK.h"
 
 /*[]*/

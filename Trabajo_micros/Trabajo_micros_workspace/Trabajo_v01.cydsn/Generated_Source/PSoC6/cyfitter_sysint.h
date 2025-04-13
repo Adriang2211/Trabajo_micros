@@ -61,10 +61,10 @@
 /* Trig_int */
 #define Trig_int__INTC_CORTEXM4_ASSIGNED 1
 #define Trig_int__INTC_CORTEXM4_PRIORITY 7u
-#define Trig_int__INTC_NUMBER 90u
+#define Trig_int__INTC_NUMBER 91u
 #define Trig_int_INTC_CORTEXM4_ASSIGNED 1
 #define Trig_int_INTC_CORTEXM4_PRIORITY 7u
-#define Trig_int_INTC_NUMBER 90u
+#define Trig_int_INTC_NUMBER 91u
 
 /* Encoder_int */
 #define Encoder_int__INTC_CORTEXM4_ASSIGNED 1
@@ -77,10 +77,10 @@
 /* Trig_end_int */
 #define Trig_end_int__INTC_CORTEXM4_ASSIGNED 1
 #define Trig_end_int__INTC_CORTEXM4_PRIORITY 7u
-#define Trig_end_int__INTC_NUMBER 91u
+#define Trig_end_int__INTC_NUMBER 92u
 #define Trig_end_int_INTC_CORTEXM4_ASSIGNED 1
 #define Trig_end_int_INTC_CORTEXM4_PRIORITY 7u
-#define Trig_end_int_INTC_NUMBER 91u
+#define Trig_end_int_INTC_NUMBER 92u
 
 /* Opto_detec_int */
 #define Opto_detec_int__INTC_CORTEXM4_ASSIGNED 1
@@ -97,5 +97,13 @@
 #define UART_1_SCB_IRQ_INTC_CORTEXM4_ASSIGNED 1
 #define UART_1_SCB_IRQ_INTC_CORTEXM4_PRIORITY 7u
 #define UART_1_SCB_IRQ_INTC_NUMBER 46u
+
+/* Debouncer_ovrflw_int */
+#define Debouncer_ovrflw_int__INTC_CORTEXM4_ASSIGNED 1
+#define Debouncer_ovrflw_int__INTC_CORTEXM4_PRIORITY 7u
+#define Debouncer_ovrflw_int__INTC_NUMBER 90u
+#define Debouncer_ovrflw_int_INTC_CORTEXM4_ASSIGNED 1
+#define Debouncer_ovrflw_int_INTC_CORTEXM4_PRIORITY 7u
+#define Debouncer_ovrflw_int_INTC_NUMBER 90u
 
 #endif /* INCLUDED_CYFITTER_SYSINT_H */

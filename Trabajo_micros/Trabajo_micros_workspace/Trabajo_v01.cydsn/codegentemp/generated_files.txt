@@ -21,6 +21,9 @@
   <file name="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\codegentemp\Counter_1.h" value="HEADER;;;;;Counter_1" />
   <file name="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\codegentemp\Counter_2.c" value="SOURCE_C;CortexM0p,CortexM4;;;;Counter_2" />
   <file name="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\codegentemp\Counter_2.h" value="HEADER;;;;;Counter_2" />
+  <file name="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\codegentemp\Debouncer_CLK.c" value="SOURCE_C;CortexM0p,CortexM4;;;;Debouncer_CLK" />
+  <file name="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\codegentemp\Debouncer_CLK.h" value="HEADER;;;;;Debouncer_CLK" />
+  <file name="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\codegentemp\Clock_2.h" value="HEADER;;;;;Clock_2" />
   <file name="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\codegentemp\UART_1_SCBCLK.h" value="HEADER;;;;;UART_1_SCBCLK" />
   <file name="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\codegentemp\project.h" value="OTHER;;;;;" />
   <file name="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\codegentemp\cycodeshareimport.ld" value="OTHER;;;;;" />
