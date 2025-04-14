@@ -81,6 +81,8 @@ volatile _Bool flag_periodic_main = false;
 
 
 
+/**********TRATAMIENTOS DE INTERRUPCIÓN *************/
+
 void Opto_detec_IRQHandler(void){
     
     Cy_GPIO_ClearInterrupt(OPTO_PC817_PORT, OPTO_PC817_NUM);
@@ -111,7 +113,10 @@ void Timer2_int_IRQHandler(void){
 
 void Encoder_int_IRQHandler(void){
     
+    Cy_GPIO_ClearInterrupt(Encoder_ChA_PORT, Encoder_ChA_NUM);
+    
     cuentas++;
+    //Cy_SCB_UART_PutString(UART_1_HW, "**Debug ENC**\n");
     
     if (!flag_sentido){
         posicion_abs = posicion_abs + 0.094;
@@ -222,6 +227,10 @@ void Periodic_main_IRQHandler(void){
     flag_periodic_main = true;
 }
 
+
+
+
+/******* FUNCIONES DE USUARIO **********/
 void Motor_subir(){
     Cy_GPIO_Write(Rele_1_PORT, Rele_1_NUM, 1);
     Cy_SysLib_Delay(500); //Es bloqueante intencionadamente - sistema parado por seguridad
@@ -237,9 +246,11 @@ void Motor_bajar(){
 }
 
 void Motor_parado(){
-    Cy_GPIO_Write(Rele_1_PORT, Rele_1_NUM, 0);
-    Cy_SysLib_Delay(100); //Es bloqueante intencionadamente - sistema parado por seguridad
-    Cy_GPIO_Write(Rele_2_PORT, Rele_2_NUM, 1);
+    if (Cy_GPIO_ReadOut(Rele_1_PORT, Rele_1_NUM) == Cy_GPIO_ReadOut(Rele_2_PORT, Rele_2_NUM)){
+        Cy_GPIO_Write(Rele_1_PORT, Rele_1_NUM, 0);
+        Cy_SysLib_Delay(200); //Es bloqueante intencionadamente - sistema parado por seguridad
+        Cy_GPIO_Write(Rele_2_PORT, Rele_2_NUM, 1);
+    }
 }
 
 void Motor_setPeriodo(uint periodo){
@@ -262,6 +273,15 @@ void Motor_setVelocidad(uint velocidad){
     Motor_setPeriodo(900 - velocidad);
 }
 
+
+//Borra todas las peticiones que se hayan realizado con los pulsadores
+void clearAllPetitions(void){
+    flag_sw0 = false;
+    flag_sw1 = false;
+    flag_sw2 = false;
+    flag_sw3 = false;
+    flag_sw4 = false;
+}
 
 void ISR_UART(void)
 {
@@ -331,6 +351,10 @@ void ISR_UART(void)
     }
     */
 }
+
+
+/*************** MAIN **************************/
+
 
 int main(void)
 {
@@ -452,7 +476,7 @@ int main(void)
     double destino = 0;
     uint16_t velocidad_consigna = 150;
     uint16_t velocidad_consigna_rampa = 0;
-    uint16_t velocidad_consigna_ajuste = 50;
+    uint16_t velocidad_consigna_ajuste = 75;
     uint16_t contador_rampa = 0;
         
     //Inicialización máquina de estados
@@ -565,18 +589,28 @@ int main(void)
             break;
             case 6: //Subir - rampa de frenado
                 if (destino - posicion_abs < TOLERANCIA_LLEGADA || posicion_abs > destino){
-                    siguiente_estado = 10;
-                    flanco_10 = true;
+                    siguiente_estado = 2; //TEMPORAL HASTA IMPLEMENTACIÓN ESTADOS 10-12
+                    flanco_2 = true;
                 }
             break;
             case 7: //Bajar - rampa de aceleración
-            
+                if (velocidad_consigna_rampa == velocidad_consigna){
+                    siguiente_estado = 8;
+                    flanco_8 = true;
+                }
             break;
             case 8: //Bajar
+                if (posicion_abs - destino < 100){
+                    siguiente_estado = 9;
+                    flanco_9 = true;
+                }
             
             break;
             case 9: //Bajar - rampa de frenado
-                
+                if (posicion_abs - destino < TOLERANCIA_LLEGADA || posicion_abs < destino){
+                    siguiente_estado = 2; //TEMPORAL HASTA IMPLEMENTACIÓN ESTADOS 10-12
+                    flanco_2 = true;
+                }
             break;
             case 10: //Abrir puerta
                 
@@ -607,9 +641,9 @@ int main(void)
                     flanco_1 = false;
                     //Acciones primer ciclo de ejecución
                     Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 1\n");
+                    Motor_setVelocidad(0);
                     Motor_bajar();
                     Motor_setVelocidad(200);
-                    
                 }
             
             break;
@@ -620,18 +654,19 @@ int main(void)
                     Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 2\n");
                     Motor_parado();
                     Motor_setVelocidad(0);
+                    clearAllPetitions();
                     
                 }
             
             break;
-            case 3:
+            case 3: //Solicitado
                 if (flanco_3){
                     flanco_3 = false;
                     //Acciones primer ciclo de ejecución
                     Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 3\n");
                     Motor_parado();
                     Motor_setVelocidad(0);
-                    
+                    clearAllPetitions();
                 }
             
             break;
@@ -640,6 +675,7 @@ int main(void)
                     flanco_4 = false;
                     //Acciones primer ciclo de ejecución
                     Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 4\n");
+                    Motor_setVelocidad(0);
                     Motor_subir();
                     contador_rampa = 0;
                     velocidad_consigna_rampa = 50;
@@ -667,7 +703,9 @@ int main(void)
                     flanco_6 = false;
                     //Acciones primer ciclo de ejecución
                     Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 6\n");
+                    Motor_subir();
                     contador_rampa = 0;
+                    velocidad_consigna_rampa = velocidad_consigna;
                 }
                 contador_rampa++;
                 if (contador_rampa == 1000 && velocidad_consigna_rampa > velocidad_consigna_ajuste){
@@ -677,31 +715,50 @@ int main(void)
                 Motor_setVelocidad(velocidad_consigna_rampa);
             
             break;
-            case 7:
+            case 7: //Rampa aceleración bajada
                 if (flanco_7){
                     flanco_7 = false;
                     //Acciones primer ciclo de ejecución
                     Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 7\n");
-                    
+                    Motor_setVelocidad(0);
+                    Motor_bajar();
+                    contador_rampa = 0;
+                    velocidad_consigna_rampa = 50;
                 }
+                contador_rampa++;
+                if (contador_rampa == 2000){
+                    contador_rampa = 0;
+                    velocidad_consigna_rampa++;
+                }
+                Motor_setVelocidad(velocidad_consigna_rampa);
             
             break;
-            case 8:
+            case 8: //Bajar
                 if (flanco_8){
                     flanco_8 = false;
                     //Acciones primer ciclo de ejecución
                     Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 8\n");
+                    Motor_bajar();
+                    Motor_setVelocidad(velocidad_consigna);
                     
                 }
             
             break;
-            case 9:
+            case 9: //Rampa frenada bajada
                 if (flanco_9){
                     flanco_9 = false;
                     //Acciones primer ciclo de ejecución
                     Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 8\n");
-                    
+                    Motor_bajar();
+                    contador_rampa = 0;
+                    velocidad_consigna_rampa = velocidad_consigna;
                 }
+                contador_rampa++;
+                if (contador_rampa == 1000 && velocidad_consigna_rampa > velocidad_consigna_ajuste){
+                    velocidad_consigna_rampa--;
+                    contador_rampa = 0;
+                }
+                Motor_setVelocidad(velocidad_consigna_rampa);
             
             break;
             case 10:

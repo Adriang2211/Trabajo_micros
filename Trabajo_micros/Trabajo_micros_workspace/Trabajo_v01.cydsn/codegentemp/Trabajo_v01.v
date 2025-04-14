@@ -1,6 +1,6 @@
 // ======================================================================
 // Trabajo_v01.v generated from TopDesign.cysch
-// 04/14/2025 at 00:48
+// 04/14/2025 at 12:16
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -595,8 +595,8 @@ module top ;
           wire  Net_9;
     electrical  Net_4;
     electrical  Net_3;
-          wire  Net_214;
           wire  Net_213;
+          wire  Net_214;
           wire  Net_163;
           wire  Net_78;
           wire  Net_79;
