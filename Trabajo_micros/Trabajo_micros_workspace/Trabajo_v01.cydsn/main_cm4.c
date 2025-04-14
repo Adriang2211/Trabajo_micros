@@ -119,10 +119,10 @@ void Encoder_int_IRQHandler(void){
     //Cy_SCB_UART_PutString(UART_1_HW, "**Debug ENC**\n");
     
     if (!flag_sentido){
-        posicion_abs = posicion_abs + 0.094;
+        posicion_abs = posicion_abs + 0.01623*1.63;
     }
     else{
-        posicion_abs = posicion_abs - 0.094;
+        posicion_abs = posicion_abs - 0.01623*1.63;
     }
  
 }
