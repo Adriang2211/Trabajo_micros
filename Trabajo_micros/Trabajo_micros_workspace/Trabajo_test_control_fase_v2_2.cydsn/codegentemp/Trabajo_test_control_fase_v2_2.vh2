@@ -2,7 +2,7 @@
 --	Conversion of Trabajo_test_control_fase_v2_2.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed Apr 09 12:31:35 2025
+--	Tue Apr 15 10:31:12 2025
 --
 
 USE cypress.cypress.all;

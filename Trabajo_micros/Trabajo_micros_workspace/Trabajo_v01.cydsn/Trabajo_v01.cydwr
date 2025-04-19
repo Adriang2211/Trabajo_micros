@@ -5,6 +5,20 @@
   </Group>
   <Data key="DataVersionKey" value="2" />
   <Group key="DWRInstGuidMapping">
+    <Group key="Interrupt">
+      <Data key="0ac83b30-225e-4d61-bfb9-26ede83d3a24" value="Trig_end_int" />
+      <Data key="5c91b896-eb5c-4220-9181-29cb01a131b3" value="Debouncer_ovrflw_int" />
+      <Data key="7d384015-38cb-484f-85ef-ff1adcb24b4b" value="SW4_int" />
+      <Data key="215b6f7a-71f4-48eb-9770-7eecdf70af17/9260d369-b684-4310-b925-f618d77b89d7" value="UART_1_SCB_IRQ" />
+      <Data key="0811a998-2562-4013-829c-a30732f1da60" value="SW0_int" />
+      <Data key="8483e328-38cc-4eef-abcf-c43aaba5659a" value="SW3_int" />
+      <Data key="736582cb-a8fa-467d-9525-b3430871135f" value="Trig_int" />
+      <Data key="6309714e-1f79-47f8-a5ea-bb408ad279e8" value="Encoder_int" />
+      <Data key="a7f53deb-9891-4546-a420-36e2a76ca4fc" value="SW2_int" />
+      <Data key="aef15696-b97a-4896-9896-7da449a216ac" value="SW1_int" />
+      <Data key="c6a6e887-d69b-42e2-a710-87cad9c2d65b" value="Opto_detec_int" />
+      <Data key="e6ff28e8-f40c-4043-b315-7899eb481f76" value="Periodic_main_int" />
+    </Group>
     <Group key="Pin">
       <Data key="0c43e256-3e81-48a1-af9d-6513e0fe3501" value="OPTO_trig" />
       <Data key="4cca878b-77b5-471d-8aeb-ad6925202455" value="OPTO_PC817" />
@@ -23,6 +37,78 @@
       <Data key="d1f7c2b9-407d-4b35-98c6-7f33c892f552" value="SW1" />
       <Data key="d340790b-63c2-4ea6-a2e5-36bbe948008d" value="SW0" />
       <Data key="e50236d2-2831-44db-a6db-3ecaa4e86800" value="Rele_2" />
+    </Group>
+  </Group>
+  <Group key="Interrupt">
+    <Group key="0ac83b30-225e-4d61-bfb9-26ede83d3a24">
+      <Group key="CortexM4">
+        <Data key="Assigned" value="True" />
+        <Data key="Priority" value="3" />
+        <Data key="Vector" value="-1" />
+      </Group>
+    </Group>
+    <Group key="7d384015-38cb-484f-85ef-ff1adcb24b4b">
+      <Group key="CortexM4">
+        <Data key="Assigned" value="True" />
+        <Data key="Priority" value="6" />
+        <Data key="Vector" value="-1" />
+      </Group>
+    </Group>
+    <Group key="0811a998-2562-4013-829c-a30732f1da60">
+      <Group key="CortexM4">
+        <Data key="Assigned" value="True" />
+        <Data key="Priority" value="6" />
+        <Data key="Vector" value="-1" />
+      </Group>
+    </Group>
+    <Group key="8483e328-38cc-4eef-abcf-c43aaba5659a">
+      <Group key="CortexM4">
+        <Data key="Assigned" value="True" />
+        <Data key="Priority" value="6" />
+        <Data key="Vector" value="-1" />
+      </Group>
+    </Group>
+    <Group key="736582cb-a8fa-467d-9525-b3430871135f">
+      <Group key="CortexM4">
+        <Data key="Assigned" value="True" />
+        <Data key="Priority" value="3" />
+        <Data key="Vector" value="-1" />
+      </Group>
+    </Group>
+    <Group key="6309714e-1f79-47f8-a5ea-bb408ad279e8">
+      <Group key="CortexM4">
+        <Data key="Assigned" value="True" />
+        <Data key="Priority" value="2" />
+        <Data key="Vector" value="-1" />
+      </Group>
+    </Group>
+    <Group key="a7f53deb-9891-4546-a420-36e2a76ca4fc">
+      <Group key="CortexM4">
+        <Data key="Assigned" value="True" />
+        <Data key="Priority" value="6" />
+        <Data key="Vector" value="-1" />
+      </Group>
+    </Group>
+    <Group key="aef15696-b97a-4896-9896-7da449a216ac">
+      <Group key="CortexM4">
+        <Data key="Assigned" value="True" />
+        <Data key="Priority" value="6" />
+        <Data key="Vector" value="-1" />
+      </Group>
+    </Group>
+    <Group key="c6a6e887-d69b-42e2-a710-87cad9c2d65b">
+      <Group key="CortexM4">
+        <Data key="Assigned" value="True" />
+        <Data key="Priority" value="3" />
+        <Data key="Vector" value="-1" />
+      </Group>
+    </Group>
+    <Group key="e6ff28e8-f40c-4043-b315-7899eb481f76">
+      <Group key="CortexM4">
+        <Data key="Assigned" value="True" />
+        <Data key="Priority" value="7" />
+        <Data key="Vector" value="-1" />
+      </Group>
     </Group>
   </Group>
   <Group key="M0S8Clock">
