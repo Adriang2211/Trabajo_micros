@@ -1,5 +1,5 @@
 # Trabajo_v01
-# 2025-04-15 08:52:13Z
+# 2025-04-19 17:46:58Z
 
 dont_use_location SMIF -1 -1 0
 dont_use_location p4usbcell -1 -1 0
@@ -23,3 +23,5 @@ set_io "SW3(0)" iocell 9 4
 set_io "SW4(0)" iocell 9 5
 set_io "Rele_1(0)" iocell 10 0
 set_io "Rele_2(0)" iocell 10 1
+set_io "\I2C_1:scl(0)\" iocell 6 4
+set_io "\I2C_1:sda(0)\" iocell 6 5

@@ -20,6 +20,17 @@
 #include "cyfitter_gpio.h"
 #include "cyfitter_sysint.h"
 
+/* I2C_1 */
+#define I2C_1_SCB__HW SCB6
+#define I2C_1_SCB__IDX 6
+#define I2C_1_SCB__SS0_POSITION 0u
+#define I2C_1_SCB__SS1_POSITION 1u
+#define I2C_1_SCB__SS2_POSITION 2u
+#define I2C_1_SCB__SS3_POSITION 3u
+#define I2C_1_SCBCLK__DIV_IDX 0
+#define I2C_1_SCBCLK__DIV_NUM 0
+#define I2C_1_SCBCLK__DIV_TYPE CY_SYSCLK_DIV_8_BIT
+
 /* UART_1 */
 #define UART_1_SCB__HW SCB5
 #define UART_1_SCB__IDX 5
@@ -27,8 +38,8 @@
 #define UART_1_SCB__SS1_POSITION 1u
 #define UART_1_SCB__SS2_POSITION 2u
 #define UART_1_SCB__SS3_POSITION 3u
-#define UART_1_SCBCLK__DIV_IDX 0
-#define UART_1_SCBCLK__DIV_NUM 0
+#define UART_1_SCBCLK__DIV_IDX 1
+#define UART_1_SCBCLK__DIV_NUM 1
 #define UART_1_SCBCLK__DIV_TYPE CY_SYSCLK_DIV_8_BIT
 
 /* Clock_1 */

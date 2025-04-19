@@ -14,6 +14,7 @@
 #include <string.h>
 #include <stdlib.h>
 
+
 // Pulsos por rotación que proporciona el encoder
 #define PULSES_PER_ROTATION 10
 // Relación de reducción de la reductora del motor
@@ -21,9 +22,18 @@
 #define TOLERANCIA_LLEGADA 5 //en mm
 
 
-#define VELOCIDAD_CONSIGNA 250
-#define VELOCIDAD_CONSIGNA_AJUSTE 150
+#define VELOCIDAD_CONSIGNA 200
+#define VELOCIDAD_CONSIGNA_AJUSTE 100
 #define COMIENZO_FRENADA 50
+
+
+
+// Deficiones pantalla LCD
+#define LCD_I2C_ADDR 0x27  // Dirección I2C del módulo
+#define LCD_BACKLIGHT 0x08
+#define LCD_ENABLE 0x04
+#define LCD_CMD 0
+#define LCD_DATA 1
 
 volatile long signed int cuentas = 0;
 volatile long signed int cuentas1 = 0;
@@ -85,6 +95,20 @@ double piso4 = 560;
 volatile _Bool flag_periodic_main = false;
 
 
+/********** DECLARACIONES DE FUNCIONES DE USUARIO *************/
+
+//Pantalla LCD
+void LCD_SendNibble(uint8 nibble, uint8 mode);
+void LCD_SendByte(uint8 byte, uint8 mode);
+void LCD_SendCommand(uint8 cmd);
+void LCD_SendChar(char data);
+void LCD_Init();
+void LCD_SetCursor(uint8 row, uint8 col);
+void LCD_Print(char *str);
+void LCD_PulseEnable(uint8 data);
+void LCD_WriteI2C(uint8 data);
+//I2C
+void Scan_I2C_Bus(void);
 
 /**********TRATAMIENTOS DE INTERRUPCIÓN *************/
 
@@ -125,10 +149,10 @@ void Encoder_int_IRQHandler(void){
     
     if (!flag_sentido){
     //if (Cy_GPIO_Read(Encoder_ChB_PORT, Encoder_ChB_NUM)){
-        posicion_abs = posicion_abs + 0.01623;
+        posicion_abs = posicion_abs + 0.0942;
     }
     else{
-        posicion_abs = posicion_abs - 0.01623;
+        posicion_abs = posicion_abs - 0.0942;
     }
  
 }
@@ -257,6 +281,7 @@ void Motor_parado(){
         Cy_SysLib_Delay(200); //Es bloqueante intencionadamente - sistema parado por seguridad
         Cy_GPIO_Write(Rele_2_PORT, Rele_2_NUM, 1);
     }
+    // Añadir algo de código para garantizar parada. Forzar el estado que lea en los pines.
 }
 
 void Motor_setPeriodo(uint periodo){
@@ -288,6 +313,11 @@ void clearAllPetitions(void){
     flag_sw3 = false;
     flag_sw4 = false;
 }
+
+
+
+
+/********* DEPURACION PUERTO SERIE ********/
 
 void ISR_UART(void)
 {
@@ -469,6 +499,16 @@ int main(void)
     NVIC_ClearPendingIRQ(SW4_int_cfg.intrSrc);
     NVIC_EnableIRQ(SW4_int_cfg.intrSrc);
     
+    //Arranque de la pantalla y de las comunicaciones I2C
+    I2C_1_Start();
+    Cy_SCB_UART_PutString(UART_1_HW, "Escaneando direcciones I2C...\n");
+    Scan_I2C_Bus();
+    Cy_SCB_UART_PutString(UART_1_HW, "Escaner completado\n");
+    LCD_Init();
+
+    LCD_SetCursor(0, 0);
+    LCD_Print("Hola desde PSoC 6!");
+    
     // Crear un buffer limpio para COM UART
     char buffer [50];
     
@@ -491,7 +531,20 @@ int main(void)
         
         if (flag_periodic_main){
             flag_periodic_main = false;
-            snprintf(buffer, sizeof(buffer), "Posicion: %2.2f\n", posicion_abs);
+            uint8_t planta = 0;
+            if (posicion_abs > piso4 - 20)
+                planta = 4;
+            else if(posicion_abs > piso3 - 20)
+                planta = 3;
+            else if(posicion_abs > piso2 - 20)
+                planta = 2;
+            else if(posicion_abs > piso1 - 20)
+                planta = 1;
+            else
+                planta = 0;
+            LCD_SetCursor(1, 0);
+            snprintf(buffer, sizeof(buffer), "Pos:%i [%i]     \n", (int)posicion_abs, (int)planta);
+            LCD_Print(buffer);
             Cy_SCB_UART_PutString(UART_1_HW, buffer);
         }
         // TRANSICIÓN DE ESTADOS
@@ -634,6 +687,8 @@ int main(void)
                     flanco_0 = false;
                     //Acciones primer ciclo de ejecución   
                     Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 0\n");
+                    LCD_SetCursor(0, 0);
+                    LCD_Print("0-Reposo        ");
                     Motor_parado();
                     Motor_setVelocidad(0); //Por seguridad aunque es redundante
                 }
@@ -643,6 +698,8 @@ int main(void)
                     flanco_1 = false;
                     //Acciones primer ciclo de ejecución
                     Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 1\n");
+                    LCD_SetCursor(0, 0);
+                    LCD_Print("1-Ajuste de 0   ");
                     Motor_setVelocidad(0);
                     Motor_bajar();
                     Motor_setVelocidad(200);
@@ -654,6 +711,8 @@ int main(void)
                     flanco_2 = false;
                     //Acciones primer ciclo de ejecución
                     Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 2\n");
+                    LCD_SetCursor(0, 0);
+                    LCD_Print("2-Reposo op.    ");
                     Motor_parado();
                     Motor_setVelocidad(0);
                     clearAllPetitions();
@@ -666,6 +725,8 @@ int main(void)
                     flanco_3 = false;
                     //Acciones primer ciclo de ejecución
                     Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 3\n");
+                    LCD_SetCursor(0, 0);
+                    LCD_Print("3-Solicitado    ");
                     Motor_parado();
                     Motor_setVelocidad(0);
                     clearAllPetitions();
@@ -677,6 +738,8 @@ int main(void)
                     flanco_4 = false;
                     //Acciones primer ciclo de ejecución
                     Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 4\n");
+                    LCD_SetCursor(0, 0);
+                    LCD_Print("4-Subir ramp up ");
                     Motor_setVelocidad(0);
                     Motor_subir();
                     contador_rampa = 0;
@@ -695,6 +758,8 @@ int main(void)
                     flanco_5 = false;
                     //Acciones primer ciclo de ejecución
                     Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 5\n");
+                    LCD_SetCursor(0, 0);
+                    LCD_Print("5-Subiendo      ");
                     Motor_setVelocidad(VELOCIDAD_CONSIGNA);
                 }
             
@@ -704,6 +769,8 @@ int main(void)
                     flanco_6 = false;
                     //Acciones primer ciclo de ejecución
                     Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 6\n");
+                    LCD_SetCursor(0, 0);
+                    LCD_Print("6-Subir ramp dow");
                     contador_rampa = 0;
                     velocidad_consigna_rampa = VELOCIDAD_CONSIGNA;
                 }
@@ -720,6 +787,8 @@ int main(void)
                     flanco_7 = false;
                     //Acciones primer ciclo de ejecución
                     Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 7\n");
+                    LCD_SetCursor(0, 0);
+                    LCD_Print("7-Bajar ramp up ");
                     Motor_setVelocidad(0);
                     Motor_bajar();
                     contador_rampa = 0;
@@ -738,6 +807,8 @@ int main(void)
                     flanco_8 = false;
                     //Acciones primer ciclo de ejecución
                     Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 8\n");
+                    LCD_SetCursor(0, 0);
+                    LCD_Print("8-Bajando       ");
                     Motor_setVelocidad(VELOCIDAD_CONSIGNA);
                     
                 }
@@ -748,6 +819,8 @@ int main(void)
                     flanco_9 = false;
                     //Acciones primer ciclo de ejecución
                     Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 8\n");
+                    LCD_SetCursor(0, 0);
+                    LCD_Print("9-Bajar ramp dow");
                     contador_rampa = 0;
                     velocidad_consigna_rampa = VELOCIDAD_CONSIGNA;
                 }
@@ -756,8 +829,7 @@ int main(void)
                     Motor_setVelocidad(velocidad_consigna_rampa--);
                     contador_rampa = 0;
                 }
-                else
-                    Motor_setVelocidad(VELOCIDAD_CONSIGNA_AJUSTE);
+                Motor_setVelocidad(velocidad_consigna_rampa);
                 
             
             break;
@@ -792,6 +864,102 @@ int main(void)
             break;
         }
         
+    }
+}
+
+/******* IMPLEMENTAACIÓN FUNCIONES DE USUARIO *************/
+
+
+// Funciones de la pantalla LCD
+void LCD_WriteI2C(uint8 data) {
+    Cy_SCB_I2C_MasterSendStart(I2C_1_HW, LCD_I2C_ADDR, CY_SCB_I2C_WRITE_XFER, 1000, &I2C_1_context);
+    Cy_SCB_I2C_MasterWriteByte(I2C_1_HW, data | LCD_BACKLIGHT, 1000, &I2C_1_context);
+    Cy_SCB_I2C_MasterSendStop(I2C_1_HW, 1000, &I2C_1_context);
+    //CyDelayUs(50);
+}
+
+void LCD_PulseEnable(uint8 data) {
+    LCD_WriteI2C(data | LCD_ENABLE);
+    //CyDelayUs(1);
+    LCD_WriteI2C(data & ~LCD_ENABLE);
+    //CyDelayUs(50);
+}
+
+void LCD_SendNibble(uint8 nibble, uint8 mode) {
+    uint8 data = (nibble & 0xF0) | mode | LCD_BACKLIGHT;
+    LCD_WriteI2C(data);
+    LCD_PulseEnable(data);
+}
+
+void LCD_SendByte(uint8 byte, uint8 mode) {
+    LCD_SendNibble(byte & 0xF0, mode);
+    LCD_SendNibble((byte << 4) & 0xF0, mode);
+}
+
+void LCD_SendCommand(uint8 cmd) {
+    LCD_SendByte(cmd, LCD_CMD);
+}
+
+void LCD_SendChar(char data) {
+    LCD_SendByte(data, LCD_DATA);
+}
+
+void LCD_Init() {
+    //CyDelay(50);
+    LCD_SendNibble(0x30, LCD_CMD);
+    //CyDelay(5);
+    LCD_SendNibble(0x30, LCD_CMD);
+    //CyDelayUs(100);
+    LCD_SendNibble(0x30, LCD_CMD);
+    //CyDelayUs(100);
+
+    LCD_SendNibble(0x20, LCD_CMD);  // 4-bit mode
+    LCD_SendCommand(0x28); // 2 lines, 5x8 dots
+    LCD_SendCommand(0x0C); // Display on, cursor off
+    LCD_SendCommand(0x06); // Entry mode
+    LCD_SendCommand(0x01); // Clear display
+    //CyDelay(2);
+}
+
+void LCD_SetCursor(uint8 row, uint8 col) {
+    uint8 row_offsets[] = {0x00, 0x40, 0x14, 0x54};
+    LCD_SendCommand(0x80 | (col + row_offsets[row]));
+}
+
+void LCD_Print(char *str) {
+    while (*str) {
+        LCD_SendChar(*str++);
+    }
+}
+
+//Escaneo I2C - Debug
+void Scan_I2C_Bus(void)
+{
+    uint8_t address;
+    cy_en_scb_i2c_status_t result;
+
+    for (address = 0x03; address <= 0x77; address++)
+    {
+        // Inicia transmisión I2C con dirección
+        result = Cy_SCB_I2C_MasterSendStart(I2C_1_HW, address, CY_SCB_I2C_WRITE_XFER, 1000, &I2C_1_context);
+        char buffer2 [50];
+        if (result == CY_SCB_I2C_SUCCESS)
+        {
+            
+            // Dirección encontrada
+            snprintf(buffer2, sizeof(buffer2), "Dispositivo encontrado en 0x%02X\n", address);
+            Cy_SCB_UART_PutString(UART_1_HW, buffer2);
+            // Finaliza la transmisión correctamente
+            Cy_SCB_I2C_MasterSendStop(I2C_1_HW, 1000, &I2C_1_context);
+        }
+        else
+        {
+            // Stop por si hubo error
+            Cy_SCB_I2C_MasterSendStop(I2C_1_HW, 1000, &I2C_1_context);
+            snprintf(buffer2, sizeof(buffer2), "Dispositivo NO encontrado en 0x%02X\n", address);
+            Cy_SCB_UART_PutString(UART_1_HW, buffer2);
+        }
+        CyDelay(10); // Pequeño retardo para estabilidad
     }
 }
 

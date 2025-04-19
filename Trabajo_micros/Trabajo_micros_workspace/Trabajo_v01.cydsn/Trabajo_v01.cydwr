@@ -34,6 +34,8 @@
       <Data key="b1955f5c-84c2-417e-8eaf-4a26a94fa78a" value="SW2" />
       <Data key="bdd3b9d6-4d26-41cf-8397-07ee2c4057d3" value="LED_rojo" />
       <Data key="bfa13a31-7fe4-4a32-8673-0f4b849dc92c" value="SW4" />
+      <Data key="cdcffa75-4bba-4b60-866a-468fbdaf335a/2aab8a93-e7dd-4bd4-8210-42652cd079c5" value="I2C_1_sda" />
+      <Data key="cdcffa75-4bba-4b60-866a-468fbdaf335a/69c3b5e8-b094-4d65-b96b-9f4f3a9a8641" value="I2C_1_scl" />
       <Data key="d1f7c2b9-407d-4b35-98c6-7f33c892f552" value="SW1" />
       <Data key="d340790b-63c2-4ea6-a2e5-36bbe948008d" value="SW0" />
       <Data key="e50236d2-2831-44db-a6db-3ecaa4e86800" value="Rele_2" />
@@ -764,6 +766,16 @@
     <Group key="bfa13a31-7fe4-4a32-8673-0f4b849dc92c">
       <Group key="0">
         <Data key="Port Format" value="9,5" />
+      </Group>
+    </Group>
+    <Group key="cdcffa75-4bba-4b60-866a-468fbdaf335a/2aab8a93-e7dd-4bd4-8210-42652cd079c5">
+      <Group key="0">
+        <Data key="Port Format" value="6,5" />
+      </Group>
+    </Group>
+    <Group key="cdcffa75-4bba-4b60-866a-468fbdaf335a/69c3b5e8-b094-4d65-b96b-9f4f3a9a8641">
+      <Group key="0">
+        <Data key="Port Format" value="6,4" />
       </Group>
     </Group>
     <Group key="d1f7c2b9-407d-4b35-98c6-7f33c892f552">

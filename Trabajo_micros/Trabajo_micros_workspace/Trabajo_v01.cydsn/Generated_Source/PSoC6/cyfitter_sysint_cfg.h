@@ -24,6 +24,9 @@
     #define UART_1_SCB_IRQ__INTC_ASSIGNED 1u
     extern const cy_stc_sysint_t UART_1_SCB_IRQ_cfg;
 
+    #define I2C_1_SCB_IRQ__INTC_ASSIGNED 1u
+    extern const cy_stc_sysint_t I2C_1_SCB_IRQ_cfg;
+
     #define Debouncer_ovrflw_int__INTC_ASSIGNED 1u
     extern const cy_stc_sysint_t Debouncer_ovrflw_int_cfg;
 
