@@ -363,7 +363,16 @@ void ISR_UART(void)
             else if (strncmp(buffer_rx, "b", 1) == 0){
                 Motor_bajar();
             }
-            
+            else if (strncmp(buffer_rx, "0", 1) == 0)
+                flag_sw0 = true;
+            else if (strncmp(buffer_rx, "1", 1) == 0)
+                flag_sw1 = true;
+            else if (strncmp(buffer_rx, "2", 1) == 0)
+                flag_sw2 = true;
+            else if (strncmp(buffer_rx, "3", 1) == 0)
+                flag_sw3 = true;
+            else if (strncmp(buffer_rx, "4", 1) == 0)
+                flag_sw4 = true;
             else
             {
                 Cy_SCB_UART_PutString(UART_1_HW, "\r\nComando no valido\r\n");
