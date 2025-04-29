@@ -44,6 +44,7 @@
 volatile long signed int cuentas = 0;
 volatile long signed int cuentas1 = 0;
 volatile double posicion_abs = 0;
+uint8_t planta = 0;
 
 volatile _Bool flag_sentido = false; //Subir
 
@@ -334,7 +335,18 @@ void clearAllPetitions(void){
 }
 
 
-
+int pos2planta(uint posicion){
+    if (posicion > piso4 - 20)
+        return 4;
+    else if(posicion > piso3 - 20)
+        return 3;
+    else if(posicion > piso2 - 20)
+        return 2;
+    else if(posicion > piso1 - 20)
+        return 1;
+    else
+        return 0;
+}
 
 /********* DEPURACION PUERTO SERIE ********/
 
@@ -540,7 +552,7 @@ int main(void)
     LCD_Init();
 
     LCD_SetCursor(0, 0);
-    LCD_Print("Hola desde PSoC 6!");
+    LCD_Print("#TEST#");
     
     // Crear un buffer limpio para COM UART
     char buffer [50];
@@ -564,17 +576,7 @@ int main(void)
         
         if (flag_periodic_main){
             flag_periodic_main = false;
-            uint8_t planta = 0;
-            if (posicion_abs > piso4 - 20)
-                planta = 4;
-            else if(posicion_abs > piso3 - 20)
-                planta = 3;
-            else if(posicion_abs > piso2 - 20)
-                planta = 2;
-            else if(posicion_abs > piso1 - 20)
-                planta = 1;
-            else
-                planta = 0;
+            planta = pos2planta(posicion_abs);
             LCD_SetCursor(1, 0);
             snprintf(buffer, sizeof(buffer), "Pos:%i [%i]     \n", (int)posicion_abs, (int)planta);
             LCD_Print(buffer);
@@ -646,12 +648,12 @@ int main(void)
             break;
             case 3: //Solicitado
                 //Transición a estado 4 (rampa aceleración subir)
-                if (destino > posicion_abs){
+                if (pos2planta(destino) > planta){
                     siguiente_estado = 4;
                     flanco_4 = true;
                 }
                 //Transición a estado 5 (rampa aceleración bajar)
-                else if (destino < posicion_abs){
+                else if (pos2planta(destino) < planta){
                     siguiente_estado = 7;
                     flanco_7 = true;
                 }
