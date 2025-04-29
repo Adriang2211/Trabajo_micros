@@ -21,9 +21,10 @@
 #define REL_REDUCTION 150
 #define TOLERANCIA_LLEGADA 5 //en mm
 
-// Ajustes de velocidades
-#define VELOCIDAD_CONSIGNA 200
-#define VELOCIDAD_CONSIGNA_AJUSTE 100
+// Ajustes de velocidades (en % sobre velocidad max, que son 40rpm)
+#define VELOCIDAD_CONSIGNA 50
+#define VELOCIDAD_CONSIGNA_AJUSTE 25
+// A que distancia del piso comienza a frenar
 #define COMIENZO_FRENADA 50
 
 //Ajustes de temporización de puertas
@@ -43,10 +44,14 @@
 //Variables encoder
 volatile long signed int cuentas = 0;
 volatile long signed int cuentas1 = 0;
+volatile double velocidad = 0;
 volatile double posicion_abs = 0;
 uint8_t planta = 0;
 
 volatile _Bool flag_sentido = false; //Subir
+
+//Aux calculo velocidad
+uint last_tick = 0;
 
 
 //Variables para funcionamiento de RX UART
@@ -103,6 +108,11 @@ volatile _Bool flag_periodic_main = false;
 volatile uint32_t temporizador = 0;
 
 
+//Regulador PI
+double const kp = 1.0;
+double const ki = 0.1;
+
+
 /********** DECLARACIONES DE FUNCIONES DE USUARIO *************/
 
 //Pantalla LCD
@@ -153,6 +163,10 @@ void Encoder_int_IRQHandler(void){
     Cy_GPIO_ClearInterrupt(Encoder_ChA_PORT, Encoder_ChA_NUM);
     
     cuentas++;
+    
+    //Aquí contar el tiempo transcurrido para obtener la velocidad
+    //Convertir el tiempo en velocidad sabiendo que entre dos pulsos se da una décima parte de vuelta
+    //Se sabe que la velocidad definida como 100% aproximadamente son 40rpm
     //Cy_SCB_UART_PutString(UART_1_HW, "**Debug ENC**\n");
     
     if (!flag_sentido){
@@ -317,8 +331,9 @@ void Motor_setPeriodo(uint periodo){
 }
 
 void Motor_setVelocidad(uint velocidad){
-    //Valores de velocidad de 0 a 400
-    Motor_setPeriodo(900 - velocidad);
+    //Valores de velocidad de 0 a 100
+    //Originalmente de 0 a 400 pero se ha convertido a %
+    Motor_setPeriodo(900 - velocidad*4);
 }
 
 
@@ -575,9 +590,10 @@ int main(void)
             flag_periodic_main = false;
             planta = pos2planta(posicion_abs);
             LCD_SetCursor(1, 0);
-            snprintf(buffer, sizeof(buffer), "Pos:%i [%i]     \n", (int)posicion_abs, (int)planta);
-            LCD_Print(buffer);
+            snprintf(buffer, sizeof(buffer), "%i;%i\n", (int)estado, (int)planta);
             Cy_SCB_UART_PutString(UART_1_HW, buffer);
+            snprintf(buffer, sizeof(buffer), "Planta %i", (int)planta);
+            LCD_Print(buffer);
         }
         // TRANSICIÓN DE ESTADOS
         switch (estado){
@@ -744,7 +760,7 @@ int main(void)
                     LCD_Print("1-Ajuste de 0   ");
                     Motor_setVelocidad(0);
                     Motor_bajar();
-                    Motor_setVelocidad(200);
+                    Motor_setVelocidad(VELOCIDAD_CONSIGNA);
                 }
             
             break;
@@ -785,7 +801,7 @@ int main(void)
                     Motor_setVelocidad(0);
                     Motor_subir();
                     contador_rampa = 0;
-                    velocidad_consigna_rampa = 50;
+                    velocidad_consigna_rampa = VELOCIDAD_CONSIGNA_AJUSTE;
                 }
                 contador_rampa++;
                 if (contador_rampa == 2000){
@@ -834,7 +850,7 @@ int main(void)
                     Motor_setVelocidad(0);
                     Motor_bajar();
                     contador_rampa = 0;
-                    velocidad_consigna_rampa = 50;
+                    velocidad_consigna_rampa = VELOCIDAD_CONSIGNA_AJUSTE;
                 }
                 contador_rampa++;
                 if (contador_rampa == 2000){
