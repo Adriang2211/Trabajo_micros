@@ -38,6 +38,12 @@
         .intrPriority = Debouncer_ovrflw_int__INTC_CORTEXM4_PRIORITY
     };
 
+    /* Temporizacion_int */
+    const cy_stc_sysint_t Temporizacion_int_cfg = {
+        .intrSrc = (IRQn_Type)Temporizacion_int__INTC_NUMBER,
+        .intrPriority = Temporizacion_int__INTC_CORTEXM4_PRIORITY
+    };
+
     /* Trig_int */
     const cy_stc_sysint_t Trig_int_cfg = {
         .intrSrc = (IRQn_Type)Trig_int__INTC_NUMBER,

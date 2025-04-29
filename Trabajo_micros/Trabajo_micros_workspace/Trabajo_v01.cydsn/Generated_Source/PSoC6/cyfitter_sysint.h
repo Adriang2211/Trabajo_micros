@@ -20,74 +20,74 @@
 
 /* SW0_int */
 #define SW0_int__INTC_CORTEXM4_ASSIGNED 1
-#define SW0_int__INTC_CORTEXM4_PRIORITY 6u
+#define SW0_int__INTC_CORTEXM4_PRIORITY 5u
 #define SW0_int__INTC_NUMBER 124u
 #define SW0_int_INTC_CORTEXM4_ASSIGNED 1
-#define SW0_int_INTC_CORTEXM4_PRIORITY 6u
+#define SW0_int_INTC_CORTEXM4_PRIORITY 5u
 #define SW0_int_INTC_NUMBER 124u
 
 /* SW1_int */
 #define SW1_int__INTC_CORTEXM4_ASSIGNED 1
-#define SW1_int__INTC_CORTEXM4_PRIORITY 6u
+#define SW1_int__INTC_CORTEXM4_PRIORITY 5u
 #define SW1_int__INTC_NUMBER 125u
 #define SW1_int_INTC_CORTEXM4_ASSIGNED 1
-#define SW1_int_INTC_CORTEXM4_PRIORITY 6u
+#define SW1_int_INTC_CORTEXM4_PRIORITY 5u
 #define SW1_int_INTC_NUMBER 125u
 
 /* SW2_int */
 #define SW2_int__INTC_CORTEXM4_ASSIGNED 1
-#define SW2_int__INTC_CORTEXM4_PRIORITY 6u
+#define SW2_int__INTC_CORTEXM4_PRIORITY 5u
 #define SW2_int__INTC_NUMBER 126u
 #define SW2_int_INTC_CORTEXM4_ASSIGNED 1
-#define SW2_int_INTC_CORTEXM4_PRIORITY 6u
+#define SW2_int_INTC_CORTEXM4_PRIORITY 5u
 #define SW2_int_INTC_NUMBER 126u
 
 /* SW3_int */
 #define SW3_int__INTC_CORTEXM4_ASSIGNED 1
-#define SW3_int__INTC_CORTEXM4_PRIORITY 6u
+#define SW3_int__INTC_CORTEXM4_PRIORITY 5u
 #define SW3_int__INTC_NUMBER 127u
 #define SW3_int_INTC_CORTEXM4_ASSIGNED 1
-#define SW3_int_INTC_CORTEXM4_PRIORITY 6u
+#define SW3_int_INTC_CORTEXM4_PRIORITY 5u
 #define SW3_int_INTC_NUMBER 127u
 
 /* SW4_int */
 #define SW4_int__INTC_CORTEXM4_ASSIGNED 1
-#define SW4_int__INTC_CORTEXM4_PRIORITY 6u
+#define SW4_int__INTC_CORTEXM4_PRIORITY 5u
 #define SW4_int__INTC_NUMBER 128u
 #define SW4_int_INTC_CORTEXM4_ASSIGNED 1
-#define SW4_int_INTC_CORTEXM4_PRIORITY 6u
+#define SW4_int_INTC_CORTEXM4_PRIORITY 5u
 #define SW4_int_INTC_NUMBER 128u
 
 /* Trig_int */
 #define Trig_int__INTC_CORTEXM4_ASSIGNED 1
-#define Trig_int__INTC_CORTEXM4_PRIORITY 3u
-#define Trig_int__INTC_NUMBER 91u
+#define Trig_int__INTC_CORTEXM4_PRIORITY 2u
+#define Trig_int__INTC_NUMBER 92u
 #define Trig_int_INTC_CORTEXM4_ASSIGNED 1
-#define Trig_int_INTC_CORTEXM4_PRIORITY 3u
-#define Trig_int_INTC_NUMBER 91u
+#define Trig_int_INTC_CORTEXM4_PRIORITY 2u
+#define Trig_int_INTC_NUMBER 92u
 
 /* Encoder_int */
 #define Encoder_int__INTC_CORTEXM4_ASSIGNED 1
-#define Encoder_int__INTC_CORTEXM4_PRIORITY 2u
+#define Encoder_int__INTC_CORTEXM4_PRIORITY 1u
 #define Encoder_int__INTC_NUMBER 122u
 #define Encoder_int_INTC_CORTEXM4_ASSIGNED 1
-#define Encoder_int_INTC_CORTEXM4_PRIORITY 2u
+#define Encoder_int_INTC_CORTEXM4_PRIORITY 1u
 #define Encoder_int_INTC_NUMBER 122u
 
 /* Trig_end_int */
 #define Trig_end_int__INTC_CORTEXM4_ASSIGNED 1
-#define Trig_end_int__INTC_CORTEXM4_PRIORITY 3u
-#define Trig_end_int__INTC_NUMBER 93u
+#define Trig_end_int__INTC_CORTEXM4_PRIORITY 2u
+#define Trig_end_int__INTC_NUMBER 94u
 #define Trig_end_int_INTC_CORTEXM4_ASSIGNED 1
-#define Trig_end_int_INTC_CORTEXM4_PRIORITY 3u
-#define Trig_end_int_INTC_NUMBER 93u
+#define Trig_end_int_INTC_CORTEXM4_PRIORITY 2u
+#define Trig_end_int_INTC_NUMBER 94u
 
 /* I2C_1_SCB_IRQ */
 #define I2C_1_SCB_IRQ__INTC_CORTEXM4_ASSIGNED 1
-#define I2C_1_SCB_IRQ__INTC_CORTEXM4_PRIORITY 7u
+#define I2C_1_SCB_IRQ__INTC_CORTEXM4_PRIORITY 6u
 #define I2C_1_SCB_IRQ__INTC_NUMBER 47u
 #define I2C_1_SCB_IRQ_INTC_CORTEXM4_ASSIGNED 1
-#define I2C_1_SCB_IRQ_INTC_CORTEXM4_PRIORITY 7u
+#define I2C_1_SCB_IRQ_INTC_CORTEXM4_PRIORITY 6u
 #define I2C_1_SCB_IRQ_INTC_NUMBER 47u
 
 /* Opto_detec_int */
@@ -100,26 +100,34 @@
 
 /* UART_1_SCB_IRQ */
 #define UART_1_SCB_IRQ__INTC_CORTEXM4_ASSIGNED 1
-#define UART_1_SCB_IRQ__INTC_CORTEXM4_PRIORITY 7u
+#define UART_1_SCB_IRQ__INTC_CORTEXM4_PRIORITY 6u
 #define UART_1_SCB_IRQ__INTC_NUMBER 46u
 #define UART_1_SCB_IRQ_INTC_CORTEXM4_ASSIGNED 1
-#define UART_1_SCB_IRQ_INTC_CORTEXM4_PRIORITY 7u
+#define UART_1_SCB_IRQ_INTC_CORTEXM4_PRIORITY 6u
 #define UART_1_SCB_IRQ_INTC_NUMBER 46u
 
 /* Periodic_main_int */
 #define Periodic_main_int__INTC_CORTEXM4_ASSIGNED 1
 #define Periodic_main_int__INTC_CORTEXM4_PRIORITY 7u
-#define Periodic_main_int__INTC_NUMBER 92u
+#define Periodic_main_int__INTC_NUMBER 93u
 #define Periodic_main_int_INTC_CORTEXM4_ASSIGNED 1
 #define Periodic_main_int_INTC_CORTEXM4_PRIORITY 7u
-#define Periodic_main_int_INTC_NUMBER 92u
+#define Periodic_main_int_INTC_NUMBER 93u
+
+/* Temporizacion_int */
+#define Temporizacion_int__INTC_CORTEXM4_ASSIGNED 1
+#define Temporizacion_int__INTC_CORTEXM4_PRIORITY 7u
+#define Temporizacion_int__INTC_NUMBER 91u
+#define Temporizacion_int_INTC_CORTEXM4_ASSIGNED 1
+#define Temporizacion_int_INTC_CORTEXM4_PRIORITY 7u
+#define Temporizacion_int_INTC_NUMBER 91u
 
 /* Debouncer_ovrflw_int */
 #define Debouncer_ovrflw_int__INTC_CORTEXM4_ASSIGNED 1
-#define Debouncer_ovrflw_int__INTC_CORTEXM4_PRIORITY 7u
+#define Debouncer_ovrflw_int__INTC_CORTEXM4_PRIORITY 6u
 #define Debouncer_ovrflw_int__INTC_NUMBER 90u
 #define Debouncer_ovrflw_int_INTC_CORTEXM4_ASSIGNED 1
-#define Debouncer_ovrflw_int_INTC_CORTEXM4_PRIORITY 7u
+#define Debouncer_ovrflw_int_INTC_CORTEXM4_PRIORITY 6u
 #define Debouncer_ovrflw_int_INTC_NUMBER 90u
 
 #endif /* INCLUDED_CYFITTER_SYSINT_H */

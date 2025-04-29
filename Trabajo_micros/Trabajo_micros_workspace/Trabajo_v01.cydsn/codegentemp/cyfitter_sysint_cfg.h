@@ -30,6 +30,9 @@
     #define Debouncer_ovrflw_int__INTC_ASSIGNED 1u
     extern const cy_stc_sysint_t Debouncer_ovrflw_int_cfg;
 
+    #define Temporizacion_int__INTC_ASSIGNED 1u
+    extern const cy_stc_sysint_t Temporizacion_int_cfg;
+
     #define Trig_int__INTC_ASSIGNED 1u
     extern const cy_stc_sysint_t Trig_int_cfg;
 

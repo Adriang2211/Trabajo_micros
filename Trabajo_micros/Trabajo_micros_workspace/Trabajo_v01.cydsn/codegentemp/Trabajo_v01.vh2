@@ -2,7 +2,7 @@
 --	Conversion of Trabajo_v01.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sat Apr 19 19:46:55 2025
+--	Tue Apr 29 23:12:47 2025
 --
 
 USE cypress.cypress.all;
@@ -179,6 +179,17 @@ SIGNAL \I2C_1:tmpFB_0__scl_net_0\ : bit;
 TERMINAL \I2C_1:tmpSIOVREF__scl_net_0\ : bit;
 SIGNAL \I2C_1:tmpFB_0__sda_net_0\ : bit;
 TERMINAL \I2C_1:tmpSIOVREF__sda_net_0\ : bit;
+SIGNAL \Counter_4:capture\ : bit;
+SIGNAL \Counter_4:count\ : bit;
+SIGNAL \Counter_4:reload\ : bit;
+SIGNAL \Counter_4:stop\ : bit;
+SIGNAL \Counter_4:start\ : bit;
+SIGNAL Net_244 : bit;
+SIGNAL Net_237 : bit;
+SIGNAL Net_240 : bit;
+SIGNAL \Counter_4:Net_1\ : bit;
+SIGNAL \Counter_4:Net_2\ : bit;
+SIGNAL Net_239 : bit;
 BEGIN
 
 one <=  ('1') ;
@@ -983,5 +994,26 @@ Periodic_main_int:cy_mxs40_isr_v1_0
 		io=>Net_233,
 		annotation=>(open),
 		siovref=>(\I2C_1:tmpSIOVREF__sda_net_0\));
+\Counter_4:TCPWM\:cy_mxs40_tcpwm_v1_0
+	GENERIC MAP(cy_registers=>"",
+		width=>16,
+		exact_width=>'0')
+	PORT MAP(clock=>Net_38,
+		capture=>zero,
+		count=>one,
+		reload=>zero,
+		stop=>zero,
+		start=>zero,
+		tr_underflow=>Net_244,
+		tr_compare_match=>Net_237,
+		tr_overflow=>Net_240,
+		line_compl=>\Counter_4:Net_1\,
+		line=>\Counter_4:Net_2\,
+		interrupt=>Net_239);
+Temporizacion_int:cy_mxs40_isr_v1_0
+	GENERIC MAP(cy_registers=>"",
+		deepsleep_required=>'0',
+		int_type=>"10")
+	PORT MAP(int_signal=>Net_239);
 
 END R_T_L;

@@ -21,11 +21,15 @@
 #define REL_REDUCTION 150
 #define TOLERANCIA_LLEGADA 5 //en mm
 
-
+// Ajustes de velocidades
 #define VELOCIDAD_CONSIGNA 200
 #define VELOCIDAD_CONSIGNA_AJUSTE 100
 #define COMIENZO_FRENADA 50
 
+//Ajustes de temporización de puertas
+#define ABRIR_PUERTA 1000
+#define PUERTA_ABIERTA 2000
+#define CERRAR_PUERTA 1000
 
 
 // Deficiones pantalla LCD
@@ -35,6 +39,8 @@
 #define LCD_CMD 0
 #define LCD_DATA 1
 
+
+//Variables encoder
 volatile long signed int cuentas = 0;
 volatile long signed int cuentas1 = 0;
 volatile double posicion_abs = 0;
@@ -93,6 +99,7 @@ double piso4 = 560;
 
 
 volatile _Bool flag_periodic_main = false;
+volatile uint32_t temporizador = 0;
 
 
 /********** DECLARACIONES DE FUNCIONES DE USUARIO *************/
@@ -155,6 +162,18 @@ void Encoder_int_IRQHandler(void){
         posicion_abs = posicion_abs - 0.0942;
     }
  
+}
+
+void Temporizacion_int_IRQHandler(void){
+    
+    Counter_4_ClearInterrupt(Counter_4_config.interruptSources);
+    char buff[5];
+    snprintf(buff, sizeof(buff), "%i\n", (int)temporizador);
+    Cy_SCB_UART_PutString(UART_1_HW, buff);
+    temporizador++;
+    
+    if (temporizador > 10000)
+        temporizador = 0;
 }
 
 
@@ -454,7 +473,12 @@ int main(void)
     NVIC_EnableIRQ(Debouncer_ovrflw_int_cfg.intrSrc);
     
     
-    // Configurar las interrupciones del temporizador 4 (periodic main)
+    // Configurar las interrupciones del temporizador 4 (temporizador)
+    Cy_SysInt_Init(&Temporizacion_int_cfg, Temporizacion_int_IRQHandler);
+    NVIC_ClearPendingIRQ(Temporizacion_int_cfg.intrSrc);
+    NVIC_EnableIRQ(Temporizacion_int_cfg.intrSrc);
+    
+    // Configurar las interrupciones del temporizador 5 (periodic main)
     // (Es para tareas que se ejecutan solo cada x tiempo en main)
     Cy_SysInt_Init(&Periodic_main_int_cfg, Periodic_main_IRQHandler);
     NVIC_ClearPendingIRQ(Periodic_main_int_cfg.intrSrc);
@@ -464,10 +488,12 @@ int main(void)
     //Inicializar contadores
     Counter_1_Start();
     Counter_2_Start();
-    Counter_1_Disable();
-    Counter_2_Disable();
+    Counter_1_Disable(); //Solo necesario en ciertos casos
+    Counter_2_Disable(); //Solo necesario en ciertos casos
     Debouncer_CLK_Start();
     Counter_3_Start();
+    Counter_4_Start();
+    Counter_4_Disable();
     
     
     // Configurar las interrupciones del encoder
@@ -510,9 +536,7 @@ int main(void)
     
     //Arranque de la pantalla y de las comunicaciones I2C
     I2C_1_Start();
-    Cy_SCB_UART_PutString(UART_1_HW, "Escaneando direcciones I2C...\n");
-    Scan_I2C_Bus();
-    Cy_SCB_UART_PutString(UART_1_HW, "Escaner completado\n");
+    //Cy_SCB_UART_PutString(UART_1_HW, "Escaner completado\n");
     LCD_Init();
 
     LCD_SetCursor(0, 0);
@@ -653,8 +677,8 @@ int main(void)
             break;
             case 6: //Subir - rampa de frenado
                 if (destino - posicion_abs < TOLERANCIA_LLEGADA || posicion_abs > destino){
-                    siguiente_estado = 2; //TEMPORAL HASTA IMPLEMENTACIÓN ESTADOS 10-12
-                    flanco_2 = true;
+                    siguiente_estado = 10;
+                    flanco_10 = true;
                 }
             break;
             case 7: //Bajar - rampa de aceleración
@@ -672,18 +696,28 @@ int main(void)
             break;
             case 9: //Bajar - rampa de frenado
                 if (posicion_abs - destino < TOLERANCIA_LLEGADA || posicion_abs < destino){
-                    siguiente_estado = 2; //TEMPORAL HASTA IMPLEMENTACIÓN ESTADOS 10-12
-                    flanco_2 = true;
+                    siguiente_estado = 10;
+                    flanco_10 = true;
                 }
             break;
             case 10: //Abrir puerta
+                if (temporizador >= ABRIR_PUERTA){
+                    siguiente_estado = 11;
+                    flanco_11 = true;
+                }
                 
             break;
             case 11: //Puerta abierta (esperando)
-                
+                if (temporizador >= PUERTA_ABIERTA){
+                    siguiente_estado = 12;
+                    flanco_12 = true;
+                }
             break;
             case 12: //Cerrando puerta
-                
+                if (temporizador >= CERRAR_PUERTA){
+                    siguiente_estado = 2;
+                    flanco_2 = true;
+                }
             break;
         }
         
@@ -725,7 +759,7 @@ int main(void)
                     Motor_parado();
                     Motor_setVelocidad(0);
                     clearAllPetitions();
-                    
+                    Counter_4_Disable();
                 }
             
             break;
@@ -827,7 +861,7 @@ int main(void)
                 if (flanco_9){
                     flanco_9 = false;
                     //Acciones primer ciclo de ejecución
-                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 8\n");
+                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 9\n");
                     LCD_SetCursor(0, 0);
                     LCD_Print("9-Bajar ramp dow");
                     contador_rampa = 0;
@@ -846,9 +880,15 @@ int main(void)
                 if (flanco_10){
                     flanco_10 = false;
                     //Acciones primer ciclo de ejecución
-                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 8\n");
+                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 10\n");
                     Motor_parado();
                     Motor_setVelocidad(0);
+                    Counter_4_Enable();
+                    Counter_4_SetCounter(0);
+                    Counter_4_Start();
+                    temporizador = 0;
+                    LCD_SetCursor(0, 0);
+                    LCD_Print("10-Abriendo...  ");
                     
                 }
             
@@ -857,7 +897,10 @@ int main(void)
                 if (flanco_11){
                     flanco_11 = false;
                     //Acciones primer ciclo de ejecución
-                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 8\n");
+                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 11\n");
+                    temporizador = 0;
+                    LCD_SetCursor(0, 0);
+                    LCD_Print("11-Puerta open  ");
                     
                 }
             
@@ -866,7 +909,10 @@ int main(void)
                 if (flanco_12){
                     flanco_12 = false;
                     //Acciones primer ciclo de ejecución
-                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 8\n");
+                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 12\n");
+                    temporizador = 0;
+                    LCD_SetCursor(0, 0);
+                    LCD_Print("12-Cerrando...  ");
                     
                 }
             
