@@ -168,9 +168,6 @@ void Encoder_int_IRQHandler(void){
 void Temporizacion_int_IRQHandler(void){
     
     Counter_4_ClearInterrupt(Counter_4_config.interruptSources);
-    char buff[5];
-    snprintf(buff, sizeof(buff), "%i\n", (int)temporizador);
-    Cy_SCB_UART_PutString(UART_1_HW, buff);
     temporizador++;
     
     if (temporizador > 10000)
@@ -184,7 +181,7 @@ void SW0_IRQHandler(void){
     if (Debouncer_CLK_GetCounter() - last_sw0 > DEBOUNCER_TIME){
         last_sw0 = Debouncer_CLK_GetCounter();
         //Código a ejecutar cuando se pulsa el boton
-        Cy_SCB_UART_PutString(UART_1_HW, "Debug - P0\n");
+        //Cy_SCB_UART_PutString(UART_1_HW, "Debug - P0\n");
         flag_sw0 = true;
     }
     
@@ -195,7 +192,7 @@ void SW1_IRQHandler(void){
     if (Debouncer_CLK_GetCounter()  - last_sw1 > DEBOUNCER_TIME){
         last_sw1 = Debouncer_CLK_GetCounter();
         //Código a ejecutar cuando se pulsa el boton
-        Cy_SCB_UART_PutString(UART_1_HW, "Debug - P1\n");
+        //Cy_SCB_UART_PutString(UART_1_HW, "Debug - P1\n");
         flag_sw1 = true;
     }
     
@@ -206,7 +203,7 @@ void SW2_IRQHandler(void){
     if (Debouncer_CLK_GetCounter()  - last_sw2 > DEBOUNCER_TIME){
         last_sw2 = Debouncer_CLK_GetCounter();
         //Código a ejecutar cuando se pulsa el boton
-        Cy_SCB_UART_PutString(UART_1_HW, "Debug - P2\n");
+        //Cy_SCB_UART_PutString(UART_1_HW, "Debug - P2\n");
         flag_sw2 = true;
     }
     
@@ -217,7 +214,7 @@ void SW3_IRQHandler(void){
     if (Debouncer_CLK_GetCounter()  - last_sw3 > DEBOUNCER_TIME){
         last_sw3 = Debouncer_CLK_GetCounter();
         //Código a ejecutar cuando se pulsa el boton
-        Cy_SCB_UART_PutString(UART_1_HW, "Debug - P3\n");
+        //Cy_SCB_UART_PutString(UART_1_HW, "Debug - P3\n");
         flag_sw3 = true;
     }
     
@@ -228,7 +225,7 @@ void SW4_IRQHandler(void){
     if (Debouncer_CLK_GetCounter()  - last_sw4 > DEBOUNCER_TIME){
         last_sw4 = Debouncer_CLK_GetCounter();
         //Código a ejecutar cuando se pulsa el boton
-        Cy_SCB_UART_PutString(UART_1_HW, "Debug - P4\n");
+        //Cy_SCB_UART_PutString(UART_1_HW, "Debug - P4\n");
         flag_sw4 = true;
     }
     
@@ -243,7 +240,7 @@ void Debouncer_ovrflw_int_IRQHandler(void){
     es un gran problema que sea un poco lenta.
     */
     Debouncer_CLK_ClearInterrupt(Debouncer_CLK_config.interruptSources);
-    Cy_SCB_UART_PutString(UART_1_HW, "Deboug ovrflw\n");
+    //Cy_SCB_UART_PutString(UART_1_HW, "Deboug ovrflw\n");
     uint32_t dif_sw0 = Debouncer_CLK_GetPeriod() - last_sw0; //Lo que llevaba contado
     uint32_t dif_sw1 = Debouncer_CLK_GetPeriod() - last_sw1;
     uint32_t dif_sw2 = Debouncer_CLK_GetPeriod() - last_sw2;
@@ -374,13 +371,13 @@ void ISR_UART(void)
                 // Counter period ++
                 Cy_TCPWM_Counter_SetPeriod(Counter_1_HW, Counter_1_CNT_NUM, Cy_TCPWM_Counter_GetPeriod(Counter_1_HW, Counter_1_CNT_NUM)+20);
                 Cy_TCPWM_Counter_SetPeriod(Counter_2_HW, Counter_2_CNT_NUM, Cy_TCPWM_Counter_GetPeriod(Counter_1_HW, Counter_1_CNT_NUM)+1);
-                Cy_SCB_UART_PutString(UART_1_HW, "Aumentado periodo\n");
+                //Cy_SCB_UART_PutString(UART_1_HW, "Aumentado periodo\n");
             }
             else if (strncmp(buffer_rx, "-", 1) == 0)
             {
                 Cy_TCPWM_Counter_SetPeriod(Counter_1_HW, Counter_1_CNT_NUM, Cy_TCPWM_Counter_GetPeriod(Counter_1_HW, Counter_1_CNT_NUM)-20);
                 Cy_TCPWM_Counter_SetPeriod(Counter_2_HW, Counter_2_CNT_NUM, Cy_TCPWM_Counter_GetPeriod(Counter_1_HW, Counter_1_CNT_NUM)+1);
-                Cy_SCB_UART_PutString(UART_1_HW, "Recudido periodo\n");
+                //Cy_SCB_UART_PutString(UART_1_HW, "Recudido periodo\n");
             }
             else if (strncmp(buffer_rx, "c", 1) == 0){
                 if (flag_sentido)
@@ -439,7 +436,7 @@ int main(void)
     //Inicialización de las comunicaciones UART
     
     UART_1_Start();
-    Cy_SCB_UART_PutString(UART_1_HW, "Programa iniciado ahora\n");
+    //Cy_SCB_UART_PutString(UART_1_HW, "Programa iniciado ahora\n");
     
     // Configurar las interrupciones del UART (RX)
     Cy_SCB_UART_Init(UART_1_HW, &UART_1_config, &UART_1_context);
@@ -639,8 +636,8 @@ int main(void)
                     flag_sw2 = false;
                     flag_sw3 = false;
                     flag_sw4 = false;
-                    snprintf(buffer, sizeof(buffer), "Destino: %2.2f\n", destino);
-                    Cy_SCB_UART_PutString(UART_1_HW, buffer);
+                    //snprintf(buffer, sizeof(buffer), "Destino: %2.2f\n", destino);
+                    //Cy_SCB_UART_PutString(UART_1_HW, buffer);
                 }
                 else
                     siguiente_estado = 2;
@@ -731,7 +728,7 @@ int main(void)
                 if (flanco_0){
                     flanco_0 = false;
                     //Acciones primer ciclo de ejecución   
-                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 0\n");
+                    //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 0\n");
                     LCD_SetCursor(0, 0);
                     LCD_Print("0-Reposo        ");
                     Motor_parado();
@@ -742,7 +739,7 @@ int main(void)
                 if (flanco_1){
                     flanco_1 = false;
                     //Acciones primer ciclo de ejecución
-                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 1\n");
+                    //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 1\n");
                     LCD_SetCursor(0, 0);
                     LCD_Print("1-Ajuste de 0   ");
                     Motor_setVelocidad(0);
@@ -755,7 +752,7 @@ int main(void)
                 if (flanco_2){
                     flanco_2 = false;
                     //Acciones primer ciclo de ejecución
-                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 2\n");
+                    //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 2\n");
                     LCD_SetCursor(0, 0);
                     LCD_Print("2-Reposo op.    ");
                     Motor_parado();
@@ -769,7 +766,7 @@ int main(void)
                 if (flanco_3){
                     flanco_3 = false;
                     //Acciones primer ciclo de ejecución
-                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 3\n");
+                    //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 3\n");
                     LCD_SetCursor(0, 0);
                     LCD_Print("3-Solicitado    ");
                     Motor_parado();
@@ -782,7 +779,7 @@ int main(void)
                 if (flanco_4){
                     flanco_4 = false;
                     //Acciones primer ciclo de ejecución
-                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 4\n");
+                    //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 4\n");
                     LCD_SetCursor(0, 0);
                     LCD_Print("4-Subir ramp up ");
                     Motor_setVelocidad(0);
@@ -802,7 +799,7 @@ int main(void)
                 if (flanco_5){
                     flanco_5 = false;
                     //Acciones primer ciclo de ejecución
-                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 5\n");
+                    //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 5\n");
                     LCD_SetCursor(0, 0);
                     LCD_Print("5-Subiendo      ");
                     Motor_setVelocidad(VELOCIDAD_CONSIGNA);
@@ -813,7 +810,7 @@ int main(void)
                 if (flanco_6){
                     flanco_6 = false;
                     //Acciones primer ciclo de ejecución
-                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 6\n");
+                    //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 6\n");
                     LCD_SetCursor(0, 0);
                     LCD_Print("6-Subir ramp dow");
                     contador_rampa = 0;
@@ -831,7 +828,7 @@ int main(void)
                 if (flanco_7){
                     flanco_7 = false;
                     //Acciones primer ciclo de ejecución
-                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 7\n");
+                    //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 7\n");
                     LCD_SetCursor(0, 0);
                     LCD_Print("7-Bajar ramp up ");
                     Motor_setVelocidad(0);
@@ -851,7 +848,7 @@ int main(void)
                 if (flanco_8){
                     flanco_8 = false;
                     //Acciones primer ciclo de ejecución
-                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 8\n");
+                    //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 8\n");
                     LCD_SetCursor(0, 0);
                     LCD_Print("8-Bajando       ");
                     Motor_setVelocidad(VELOCIDAD_CONSIGNA);
@@ -863,7 +860,7 @@ int main(void)
                 if (flanco_9){
                     flanco_9 = false;
                     //Acciones primer ciclo de ejecución
-                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 9\n");
+                    //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 9\n");
                     LCD_SetCursor(0, 0);
                     LCD_Print("9-Bajar ramp dow");
                     contador_rampa = 0;
@@ -882,7 +879,7 @@ int main(void)
                 if (flanco_10){
                     flanco_10 = false;
                     //Acciones primer ciclo de ejecución
-                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 10\n");
+                    //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 10\n");
                     Motor_parado();
                     Motor_setVelocidad(0);
                     Counter_4_Enable();
@@ -899,7 +896,7 @@ int main(void)
                 if (flanco_11){
                     flanco_11 = false;
                     //Acciones primer ciclo de ejecución
-                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 11\n");
+                    //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 11\n");
                     temporizador = 0;
                     LCD_SetCursor(0, 0);
                     LCD_Print("11-Puerta open  ");
@@ -911,7 +908,7 @@ int main(void)
                 if (flanco_12){
                     flanco_12 = false;
                     //Acciones primer ciclo de ejecución
-                    Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 12\n");
+                    //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 12\n");
                     temporizador = 0;
                     LCD_SetCursor(0, 0);
                     LCD_Print("12-Cerrando...  ");
