@@ -2,7 +2,7 @@
 --	Conversion of Trabajo_v01.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Tue Apr 29 23:12:47 2025
+--	Wed Apr 30 00:32:48 2025
 --
 
 USE cypress.cypress.all;
@@ -190,6 +190,17 @@ SIGNAL Net_240 : bit;
 SIGNAL \Counter_4:Net_1\ : bit;
 SIGNAL \Counter_4:Net_2\ : bit;
 SIGNAL Net_239 : bit;
+SIGNAL \Counter_5:capture\ : bit;
+SIGNAL \Counter_5:count\ : bit;
+SIGNAL \Counter_5:reload\ : bit;
+SIGNAL \Counter_5:stop\ : bit;
+SIGNAL \Counter_5:start\ : bit;
+SIGNAL Net_256 : bit;
+SIGNAL Net_249 : bit;
+SIGNAL Net_252 : bit;
+SIGNAL \Counter_5:Net_1\ : bit;
+SIGNAL \Counter_5:Net_2\ : bit;
+SIGNAL Net_251 : bit;
 BEGIN
 
 one <=  ('1') ;
@@ -1015,5 +1026,21 @@ Temporizacion_int:cy_mxs40_isr_v1_0
 		deepsleep_required=>'0',
 		int_type=>"10")
 	PORT MAP(int_signal=>Net_239);
+\Counter_5:TCPWM\:cy_mxs40_tcpwm_v1_0
+	GENERIC MAP(cy_registers=>"",
+		width=>32,
+		exact_width=>'0')
+	PORT MAP(clock=>Net_38,
+		capture=>zero,
+		count=>one,
+		reload=>zero,
+		stop=>zero,
+		start=>zero,
+		tr_underflow=>Net_256,
+		tr_compare_match=>Net_249,
+		tr_overflow=>Net_252,
+		line_compl=>\Counter_5:Net_1\,
+		line=>\Counter_5:Net_2\,
+		interrupt=>Net_251);
 
 END R_T_L;

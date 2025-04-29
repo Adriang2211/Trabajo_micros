@@ -30,6 +30,8 @@
   <file name="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\codegentemp\I2C_1.h" value="HEADER;;;;;I2C_1" />
   <file name="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\codegentemp\Counter_4.c" value="SOURCE_C;CortexM0p,CortexM4;;;;Counter_4" />
   <file name="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\codegentemp\Counter_4.h" value="HEADER;;;;;Counter_4" />
+  <file name="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\codegentemp\Counter_5.c" value="SOURCE_C;CortexM0p,CortexM4;;;;Counter_5" />
+  <file name="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\codegentemp\Counter_5.h" value="HEADER;;;;;Counter_5" />
   <file name="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\codegentemp\UART_1_SCBCLK.h" value="HEADER;;;;;UART_1_SCBCLK" />
   <file name="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\codegentemp\I2C_1_SCBCLK.h" value="HEADER;;;;;I2C_1_SCBCLK" />
   <file name="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\codegentemp\project.h" value="OTHER;;;;;" />

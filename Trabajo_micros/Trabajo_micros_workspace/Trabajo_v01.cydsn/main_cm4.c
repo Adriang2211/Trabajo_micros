@@ -51,8 +51,8 @@ uint8_t planta = 0;
 volatile _Bool flag_sentido = false; //Subir
 
 //Aux calculo velocidad
-uint last_tick = 0;
-
+volatile uint last_tick = 0;
+volatile uint32_t temporizador2 = 0;
 
 //Variables para funcionamiento de RX UART
 uint32_t rx_data;
@@ -168,6 +168,14 @@ void Encoder_int_IRQHandler(void){
     //Convertir el tiempo en velocidad sabiendo que entre dos pulsos se da una décima parte de vuelta
     //Se sabe que la velocidad definida como 100% aproximadamente son 40rpm
     //Cy_SCB_UART_PutString(UART_1_HW, "**Debug ENC**\n");
+    double rpm = (60.0 / ((double)Counter_5_GetCounter()/1000.0)) * (10.0 / 150.0);
+    velocidad = 2.5*rpm;
+    char buffer[20];
+    snprintf(buffer, sizeof(buffer), "%2.2f\n", velocidad);
+    Cy_SCB_UART_PutString(UART_1_HW, buffer);
+    Counter_5_SetCounter(0);
+    Counter_5_Start();
+    
     
     if (!flag_sentido){
     //if (Cy_GPIO_Read(Encoder_ChB_PORT, Encoder_ChB_NUM)){
@@ -188,7 +196,14 @@ void Temporizacion_int_IRQHandler(void){
         temporizador = 0;
 }
 
-
+void Temporizacion2_int_IRQHandler(void){
+    
+    Counter_5_ClearInterrupt(Counter_5_config.interruptSources);
+    temporizador2++;
+    
+    if (temporizador2 > 10000)
+        temporizador2 = 0;
+}
 
 void SW0_IRQHandler(void){
     Cy_GPIO_ClearInterrupt(SW0_PORT, SW0_NUM);
@@ -502,7 +517,8 @@ int main(void)
     NVIC_ClearPendingIRQ(Temporizacion_int_cfg.intrSrc);
     NVIC_EnableIRQ(Temporizacion_int_cfg.intrSrc);
     
-    // Configurar las interrupciones del temporizador 5 (periodic main)
+    
+    // Configurar las interrupciones del temporizador 6 (periodic main)
     // (Es para tareas que se ejecutan solo cada x tiempo en main)
     Cy_SysInt_Init(&Periodic_main_int_cfg, Periodic_main_IRQHandler);
     NVIC_ClearPendingIRQ(Periodic_main_int_cfg.intrSrc);
@@ -518,6 +534,7 @@ int main(void)
     Counter_3_Start();
     Counter_4_Start();
     Counter_4_Disable();
+    Counter_5_Start();
     
     
     // Configurar las interrupciones del encoder
@@ -592,7 +609,7 @@ int main(void)
             LCD_SetCursor(1, 0);
             snprintf(buffer, sizeof(buffer), "%i;%i\n", (int)estado, (int)planta);
             Cy_SCB_UART_PutString(UART_1_HW, buffer);
-            snprintf(buffer, sizeof(buffer), "Planta %i", (int)planta);
+            snprintf(buffer, sizeof(buffer), "Planta %i|V=%2.0f", (int)planta, velocidad);
             LCD_Print(buffer);
         }
         // TRANSICIÓN DE ESTADOS

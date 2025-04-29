@@ -115,6 +115,7 @@
 #include "Counter_3.h"
 #include "I2C_1.h"
 #include "Counter_4.h"
+#include "Counter_5.h"
 #include "UART_1_SCBCLK.h"
 #include "I2C_1_SCBCLK.h"
 

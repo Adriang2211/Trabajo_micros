@@ -53,28 +53,34 @@
 #define Clock_2__DIV_TYPE CY_SYSCLK_DIV_16_BIT
 
 /* Counter_1 */
-#define Counter_1_TCPWM__CNT_HW TCPWM0_CNT2
-#define Counter_1_TCPWM__CNT_IDX 2u
+#define Counter_1_TCPWM__CNT_HW TCPWM0_CNT3
+#define Counter_1_TCPWM__CNT_IDX 3u
 #define Counter_1_TCPWM__HW TCPWM0
 #define Counter_1_TCPWM__IDX 0u
 
 /* Counter_2 */
-#define Counter_2_TCPWM__CNT_HW TCPWM0_CNT4
-#define Counter_2_TCPWM__CNT_IDX 4u
+#define Counter_2_TCPWM__CNT_HW TCPWM0_CNT5
+#define Counter_2_TCPWM__CNT_IDX 5u
 #define Counter_2_TCPWM__HW TCPWM0
 #define Counter_2_TCPWM__IDX 0u
 
 /* Counter_3 */
-#define Counter_3_TCPWM__CNT_HW TCPWM0_CNT3
-#define Counter_3_TCPWM__CNT_IDX 3u
+#define Counter_3_TCPWM__CNT_HW TCPWM0_CNT4
+#define Counter_3_TCPWM__CNT_IDX 4u
 #define Counter_3_TCPWM__HW TCPWM0
 #define Counter_3_TCPWM__IDX 0u
 
 /* Counter_4 */
-#define Counter_4_TCPWM__CNT_HW TCPWM0_CNT1
-#define Counter_4_TCPWM__CNT_IDX 1u
+#define Counter_4_TCPWM__CNT_HW TCPWM0_CNT2
+#define Counter_4_TCPWM__CNT_IDX 2u
 #define Counter_4_TCPWM__HW TCPWM0
 #define Counter_4_TCPWM__IDX 0u
+
+/* Counter_5 */
+#define Counter_5_TCPWM__CNT_HW TCPWM0_CNT1
+#define Counter_5_TCPWM__CNT_IDX 1u
+#define Counter_5_TCPWM__HW TCPWM0
+#define Counter_5_TCPWM__IDX 0u
 
 /* Debouncer_CLK */
 #define Debouncer_CLK_TCPWM__CNT_HW TCPWM0_CNT0

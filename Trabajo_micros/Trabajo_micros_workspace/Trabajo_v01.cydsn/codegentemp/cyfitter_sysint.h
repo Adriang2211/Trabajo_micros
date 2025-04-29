@@ -61,10 +61,10 @@
 /* Trig_int */
 #define Trig_int__INTC_CORTEXM4_ASSIGNED 1
 #define Trig_int__INTC_CORTEXM4_PRIORITY 2u
-#define Trig_int__INTC_NUMBER 92u
+#define Trig_int__INTC_NUMBER 93u
 #define Trig_int_INTC_CORTEXM4_ASSIGNED 1
 #define Trig_int_INTC_CORTEXM4_PRIORITY 2u
-#define Trig_int_INTC_NUMBER 92u
+#define Trig_int_INTC_NUMBER 93u
 
 /* Encoder_int */
 #define Encoder_int__INTC_CORTEXM4_ASSIGNED 1
@@ -77,10 +77,10 @@
 /* Trig_end_int */
 #define Trig_end_int__INTC_CORTEXM4_ASSIGNED 1
 #define Trig_end_int__INTC_CORTEXM4_PRIORITY 2u
-#define Trig_end_int__INTC_NUMBER 94u
+#define Trig_end_int__INTC_NUMBER 95u
 #define Trig_end_int_INTC_CORTEXM4_ASSIGNED 1
 #define Trig_end_int_INTC_CORTEXM4_PRIORITY 2u
-#define Trig_end_int_INTC_NUMBER 94u
+#define Trig_end_int_INTC_NUMBER 95u
 
 /* I2C_1_SCB_IRQ */
 #define I2C_1_SCB_IRQ__INTC_CORTEXM4_ASSIGNED 1
@@ -109,18 +109,18 @@
 /* Periodic_main_int */
 #define Periodic_main_int__INTC_CORTEXM4_ASSIGNED 1
 #define Periodic_main_int__INTC_CORTEXM4_PRIORITY 7u
-#define Periodic_main_int__INTC_NUMBER 93u
+#define Periodic_main_int__INTC_NUMBER 94u
 #define Periodic_main_int_INTC_CORTEXM4_ASSIGNED 1
 #define Periodic_main_int_INTC_CORTEXM4_PRIORITY 7u
-#define Periodic_main_int_INTC_NUMBER 93u
+#define Periodic_main_int_INTC_NUMBER 94u
 
 /* Temporizacion_int */
 #define Temporizacion_int__INTC_CORTEXM4_ASSIGNED 1
 #define Temporizacion_int__INTC_CORTEXM4_PRIORITY 7u
-#define Temporizacion_int__INTC_NUMBER 91u
+#define Temporizacion_int__INTC_NUMBER 92u
 #define Temporizacion_int_INTC_CORTEXM4_ASSIGNED 1
 #define Temporizacion_int_INTC_CORTEXM4_PRIORITY 7u
-#define Temporizacion_int_INTC_NUMBER 91u
+#define Temporizacion_int_INTC_NUMBER 92u
 
 /* Debouncer_ovrflw_int */
 #define Debouncer_ovrflw_int__INTC_CORTEXM4_ASSIGNED 1

@@ -1,6 +1,6 @@
 // ======================================================================
 // Trabajo_v01.v generated from TopDesign.cysch
-// 04/29/2025 at 23:12
+// 04/30/2025 at 00:32
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -754,9 +754,65 @@ module TCPWM_Counter_PDL_v1_0_6 (
 
 endmodule
 
+// TCPWM_Counter_PDL_v1_0(CaptureInput=7, CaptureInputMasked=3, ClockPrescaler=0, Compare0=16384, Compare1=16384, CompareOrCapture=2, CountDirection=0, CountInput=7, CountInputMasked=3, EnableCompareSwap=false, InterruptSource=1, Period=100000, ReloadInput=7, ReloadInputMasked=3, Resolution=32, RunMode=0, StartInput=7, StartInputMasked=3, StopInput=7, StopInputMasked=3, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=TCPWM_Counter_PDL_v1_0, CY_CONFIG_TITLE=Counter_5, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Counter_5, CY_INSTANCE_SHORT_NAME=Counter_5, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=0, CY_PDL_DRIVER_NAME=tcpwm, CY_PDL_DRIVER_REQ_VERSION=1.0.0, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.4, INSTANCE_NAME=Counter_5, )
+module TCPWM_Counter_PDL_v1_0_7 (
+    capture,
+    clock,
+    compare,
+    count,
+    interrupt,
+    ovrflw,
+    reload,
+    start,
+    stop,
+    undrflw);
+    input       capture;
+    input       clock;
+    output      compare;
+    input       count;
+    output      interrupt;
+    output      ovrflw;
+    input       reload;
+    input       start;
+    input       stop;
+    output      undrflw;
+
+
+          wire  Net_1;
+          wire  Net_2;
+
+    cy_mxs40_tcpwm_v1_0 TCPWM (
+        .capture(capture),
+        .clock(clock),
+        .count(count),
+        .interrupt(interrupt),
+        .line(Net_2),
+        .line_compl(Net_1),
+        .reload(reload),
+        .start(start),
+        .stop(stop),
+        .tr_compare_match(compare),
+        .tr_overflow(ovrflw),
+        .tr_underflow(undrflw));
+    defparam TCPWM.exact_width = 0;
+    defparam TCPWM.width = 32;
+
+
+
+endmodule
+
 // top
 module top ;
 
+          wire  Net_256;
+          wire  Net_255;
+          wire  Net_254;
+          wire  Net_253;
+          wire  Net_252;
+          wire  Net_251;
+          wire  Net_250;
+          wire  Net_249;
+          wire  Net_247;
           wire  Net_244;
           wire  Net_243;
           wire  Net_242;
@@ -1583,6 +1639,18 @@ module top ;
 		Temporizacion_int
 		 (.int_signal(Net_239));
 
+
+    TCPWM_Counter_PDL_v1_0_7 Counter_5 (
+        .capture(1'b0),
+        .clock(Net_38),
+        .compare(Net_249),
+        .count(1'b1),
+        .interrupt(Net_251),
+        .ovrflw(Net_252),
+        .reload(1'b0),
+        .start(1'b0),
+        .stop(1'b0),
+        .undrflw(Net_256));
 
 
 

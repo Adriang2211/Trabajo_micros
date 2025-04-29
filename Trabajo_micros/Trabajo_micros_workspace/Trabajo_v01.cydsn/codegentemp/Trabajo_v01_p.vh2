@@ -1,5 +1,5 @@
 -- Project:   Trabajo_v01
--- Generated: 04/29/2025 23:12:50
+-- Generated: 04/30/2025 00:32:51
 -- PSoC Creator  4.4
 
 ENTITY Trabajo_v01 IS
@@ -72,8 +72,8 @@ ARCHITECTURE __DEFAULT__ OF Trabajo_v01 IS
     SIGNAL Net_211 : bit;
     SIGNAL Net_212 : bit;
     SIGNAL Net_213 : bit;
-    SIGNAL Net_214_ff15 : bit;
-    ATTRIBUTE global_signal OF Net_214_ff15 : SIGNAL IS true;
+    SIGNAL Net_214_ff16 : bit;
+    ATTRIBUTE global_signal OF Net_214_ff16 : SIGNAL IS true;
     SIGNAL Net_222 : bit;
     SIGNAL Net_224 : bit;
     SIGNAL Net_225 : bit;
@@ -85,6 +85,10 @@ ARCHITECTURE __DEFAULT__ OF Trabajo_v01 IS
     SIGNAL Net_239 : bit;
     SIGNAL Net_240 : bit;
     SIGNAL Net_244 : bit;
+    SIGNAL Net_249 : bit;
+    SIGNAL Net_251 : bit;
+    SIGNAL Net_252 : bit;
+    SIGNAL Net_256 : bit;
     SIGNAL Net_33 : bit;
     SIGNAL Net_38_ff11 : bit;
     ATTRIBUTE global_signal OF Net_38_ff11 : SIGNAL IS true;
@@ -94,6 +98,8 @@ ARCHITECTURE __DEFAULT__ OF Trabajo_v01 IS
     ATTRIBUTE global_signal OF Net_38_ff13 : SIGNAL IS true;
     SIGNAL Net_38_ff14 : bit;
     ATTRIBUTE global_signal OF Net_38_ff14 : SIGNAL IS true;
+    SIGNAL Net_38_ff15 : bit;
+    ATTRIBUTE global_signal OF Net_38_ff15 : SIGNAL IS true;
     SIGNAL Net_45 : bit;
     SIGNAL Net_46 : bit;
     SIGNAL Net_47 : bit;
@@ -119,6 +125,8 @@ ARCHITECTURE __DEFAULT__ OF Trabajo_v01 IS
     SIGNAL \Counter_3:Net_2\ : bit;
     SIGNAL \Counter_4:Net_1\ : bit;
     SIGNAL \Counter_4:Net_2\ : bit;
+    SIGNAL \Counter_5:Net_1\ : bit;
+    SIGNAL \Counter_5:Net_2\ : bit;
     SIGNAL \Debouncer_CLK:Net_1\ : bit;
     SIGNAL \Debouncer_CLK:Net_2\ : bit;
     SIGNAL \I2C_1:Net_1053\ : bit;
@@ -581,7 +589,8 @@ BEGIN
             ff_div_12 => Net_38_ff12,
             ff_div_13 => Net_38_ff13,
             ff_div_14 => Net_38_ff14,
-            ff_div_15 => Net_214_ff15,
+            ff_div_15 => Net_38_ff15,
+            ff_div_16 => Net_214_ff16,
             periclk_App => periclk_App);
 
     CPUSS:CPUSS
@@ -1785,7 +1794,7 @@ BEGIN
             exact_width => 0,
             width => 32)
         PORT MAP(
-            clock => Net_214_ff15,
+            clock => Net_214_ff16,
             capture => '0',
             count => '1',
             reload => '0',
@@ -1897,5 +1906,24 @@ BEGIN
         PORT MAP(
             interrupt => Net_239,
             clock => ClockBlock_PeriClk);
+
+    \Counter_5:TCPWM\:TCPWM
+        GENERIC MAP(
+            cy_registers => "",
+            exact_width => 0,
+            width => 32)
+        PORT MAP(
+            clock => Net_38_ff15,
+            capture => '0',
+            count => '1',
+            reload => '0',
+            stop => '0',
+            start => '0',
+            tr_underflow => Net_256,
+            tr_compare_match => Net_249,
+            tr_overflow => Net_252,
+            line_compl => \Counter_5:Net_1\,
+            line => \Counter_5:Net_2\,
+            interrupt => Net_251);
 
 END __DEFAULT__;
