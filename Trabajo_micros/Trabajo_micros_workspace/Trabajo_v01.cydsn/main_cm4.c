@@ -179,9 +179,9 @@ void Encoder_int_IRQHandler(void){
     else if (velocidad > 150)
         velocidad = 150;
     
-    char buffer[20];
-    snprintf(buffer, sizeof(buffer), "%2.2f\n", velocidad);
-    Cy_SCB_UART_PutString(UART_1_HW, buffer);
+    //char buffer[20];
+    //snprintf(buffer, sizeof(buffer), "%2.2f\n", velocidad);
+    //Cy_SCB_UART_PutString(UART_1_HW, buffer);
     Counter_5_SetCounter(0);
     Counter_5_Start();
     
@@ -404,7 +404,7 @@ uint calcular_controlador_PI(uint velocidad_deseada, uint velocidad_actual) {
     // Salida del controlador PI
     salida_controlador = (kp * error) + (ki * error_acumulado);
     
-    
+    /* DEBUG
     char buffer [50];
     cuenta ++;
     if (cuenta > 100){
@@ -412,6 +412,7 @@ uint calcular_controlador_PI(uint velocidad_deseada, uint velocidad_actual) {
         Cy_SCB_UART_PutString(UART_1_HW, buffer);
         cuenta = 0;
     }
+    */
 
     // Saturar la salida para que esté dentro de los límites
     if (salida_controlador > salida_max) {
@@ -661,7 +662,7 @@ int main(void)
             planta = pos2planta(posicion_abs);
             LCD_SetCursor(1, 0);
             snprintf(buffer, sizeof(buffer), "%i;%i\n", (int)estado, (int)planta);
-            //Cy_SCB_UART_PutString(UART_1_HW, buffer);
+            Cy_SCB_UART_PutString(UART_1_HW, buffer);
             snprintf(buffer, sizeof(buffer), "Planta %i", (int)planta);
             LCD_Print(buffer);
         }
