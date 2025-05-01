@@ -741,10 +741,10 @@ int main(void)
                     siguiente_estado = 7;
                     flanco_7 = true;
                 }
-                //Transición a estado 2 (se ha solicitado desde el mismo piso, volver a reposo)
+                //Transición a estado 10 (se ha solicitado desde el mismo piso, abrir puertas)
                 else{
-                    siguiente_estado = 2;
-                    flanco_2 = true;
+                    siguiente_estado = 10;
+                    flanco_10 = true;
                 }
             
             break;
@@ -896,8 +896,8 @@ int main(void)
                 //CONTROL DE VELOCIDAD CON REGULADOR PI
                 //snprintf(buffer, sizeof(buffer), "%i\n", calcular_controlador_PI(VELOCIDAD_CONSIGNA, (uint)velocidad));
                 //Cy_SCB_UART_PutString(UART_1_HW, buffer);
-                Motor_setVelocidad(calcular_controlador_PI(VELOCIDAD_CONSIGNA, (uint)velocidad));
-                Cy_SysLib_Delay(1);
+                //Motor_setVelocidad(calcular_controlador_PI(VELOCIDAD_CONSIGNA, (uint)velocidad));
+                //Cy_SysLib_Delay(1);
             
             break;
             case 6: //Rampa de frenada en subida y ajuste de llegada
@@ -946,10 +946,10 @@ int main(void)
                     LCD_SetCursor(0, 0);
                     LCD_Print("8-Bajando       ");
                     Motor_setVelocidad(VELOCIDAD_CONSIGNA);
-                    
+                    error_acumulado = 0;
                 }
-                Motor_setVelocidad(calcular_controlador_PI(VELOCIDAD_CONSIGNA, (uint)velocidad));
-                Cy_SysLib_Delay(1);
+                //Motor_setVelocidad(calcular_controlador_PI(VELOCIDAD_CONSIGNA, (uint)velocidad));
+                //Cy_SysLib_Delay(1);
             
             break;
             case 9: //Rampa frenada bajada
