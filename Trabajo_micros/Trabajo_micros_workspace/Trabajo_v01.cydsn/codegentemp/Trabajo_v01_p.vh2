@@ -1,5 +1,5 @@
 -- Project:   Trabajo_v01
--- Generated: 04/30/2025 00:32:51
+-- Generated: 05/01/2025 09:00:54
 -- PSoC Creator  4.4
 
 ENTITY Trabajo_v01 IS
@@ -1925,5 +1925,14 @@ BEGIN
             line_compl => \Counter_5:Net_1\,
             line => \Counter_5:Net_2\,
             interrupt => Net_251);
+
+    Vel_int:interrupt
+        GENERIC MAP(
+            cy_registers => "",
+            deepsleep_required => 0,
+            int_type => "10")
+        PORT MAP(
+            interrupt => Net_251,
+            clock => ClockBlock_PeriClk);
 
 END __DEFAULT__;

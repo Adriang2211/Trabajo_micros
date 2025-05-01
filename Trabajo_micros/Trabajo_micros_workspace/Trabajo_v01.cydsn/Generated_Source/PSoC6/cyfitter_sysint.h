@@ -58,6 +58,14 @@
 #define SW4_int_INTC_CORTEXM4_PRIORITY 5u
 #define SW4_int_INTC_NUMBER 128u
 
+/* Vel_int */
+#define Vel_int__INTC_CORTEXM4_ASSIGNED 1
+#define Vel_int__INTC_CORTEXM4_PRIORITY 7u
+#define Vel_int__INTC_NUMBER 90u
+#define Vel_int_INTC_CORTEXM4_ASSIGNED 1
+#define Vel_int_INTC_CORTEXM4_PRIORITY 7u
+#define Vel_int_INTC_NUMBER 90u
+
 /* Trig_int */
 #define Trig_int__INTC_CORTEXM4_ASSIGNED 1
 #define Trig_int__INTC_CORTEXM4_PRIORITY 2u
@@ -125,9 +133,9 @@
 /* Debouncer_ovrflw_int */
 #define Debouncer_ovrflw_int__INTC_CORTEXM4_ASSIGNED 1
 #define Debouncer_ovrflw_int__INTC_CORTEXM4_PRIORITY 6u
-#define Debouncer_ovrflw_int__INTC_NUMBER 90u
+#define Debouncer_ovrflw_int__INTC_NUMBER 91u
 #define Debouncer_ovrflw_int_INTC_CORTEXM4_ASSIGNED 1
 #define Debouncer_ovrflw_int_INTC_CORTEXM4_PRIORITY 6u
-#define Debouncer_ovrflw_int_INTC_NUMBER 90u
+#define Debouncer_ovrflw_int_INTC_NUMBER 91u
 
 #endif /* INCLUDED_CYFITTER_SYSINT_H */

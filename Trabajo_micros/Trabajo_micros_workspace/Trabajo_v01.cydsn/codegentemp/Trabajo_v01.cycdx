@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blockRegMap version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cypress.com/xsd/cyblockregmap cyblockregmap.xsd" xmlns="http://cypress.com/xsd/cyblockregmap">
-  <block name="SW3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="SW2_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="SW3_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="SW4_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="SW3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="SW4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="SW0_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="SW0" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="SW1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="SW2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="SW1_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Rele_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="SW4_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="SW1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="SW0_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="SW1_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="SW2_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="SW2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Rele_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Counter_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+    <block name="TCPWM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  </block>
   <block name="I2C_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <block name="ZeroTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="ZeroTerminal_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -27,23 +30,21 @@
     <block name="ZeroTerminal_5" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="ZeroTerminal_6" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   </block>
-  <block name="Periodic_main_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Counter_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-    <block name="TCPWM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  </block>
+  <block name="Temporizacion_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Vel_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Counter_5" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <block name="TCPWM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   </block>
-  <block name="Temporizacion_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Debouncer_ovrflw_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Debouncer_CLK" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <block name="TCPWM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   </block>
-  <block name="Rele_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Debouncer_ovrflw_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Clock_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Periodic_main_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Counter_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <block name="TCPWM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   </block>
-  <block name="Clock_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="SW0" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="OPTO_PC817" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Opto_detec_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Trig_int" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />

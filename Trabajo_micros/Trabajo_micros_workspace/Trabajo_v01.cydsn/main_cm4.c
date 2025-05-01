@@ -109,9 +109,12 @@ volatile uint32_t temporizador = 0;
 
 
 //Regulador PI
-double const kp = 1.0;
-double const ki = 0.1;
-
+double const kp = 0.1;
+double const ki = 0.0005;
+//volatile double error = 0;
+volatile double error_acumulado = 0;
+double const salida_max = 100;
+double const salida_min = 0;
 
 /********** DECLARACIONES DE FUNCIONES DE USUARIO *************/
 
@@ -168,8 +171,14 @@ void Encoder_int_IRQHandler(void){
     //Convertir el tiempo en velocidad sabiendo que entre dos pulsos se da una décima parte de vuelta
     //Se sabe que la velocidad definida como 100% aproximadamente son 40rpm
     //Cy_SCB_UART_PutString(UART_1_HW, "**Debug ENC**\n");
+    
     double rpm = (60.0 / ((double)Counter_5_GetCounter()/1000.0)) * (10.0 / 150.0);
-    velocidad = 2.5*rpm;
+    velocidad = 2.5*rpm; //Pasar a porcentaje siendo 100% 40rpm
+    if (velocidad < 0)
+        velocidad = 0;
+    else if (velocidad > 150)
+        velocidad = 150;
+    
     char buffer[20];
     snprintf(buffer, sizeof(buffer), "%2.2f\n", velocidad);
     Cy_SCB_UART_PutString(UART_1_HW, buffer);
@@ -303,6 +312,10 @@ void Periodic_main_IRQHandler(void){
     flag_periodic_main = true;
 }
 
+void Vel_int_IRQHandler(void){
+    Counter_5_ClearInterrupt(Counter_5_config.interruptSources);
+    velocidad = 0;
+}
 
 
 
@@ -373,6 +386,41 @@ int pos2planta(uint posicion){
         return 1;
     else
         return 0;
+}
+
+uint calcular_controlador_PI(uint velocidad_deseada, uint velocidad_actual) {
+    // Calcular el error
+    
+    static int cuenta = 0;
+    
+    int error = 0;
+    double salida_controlador = 0;
+    
+    error = velocidad_deseada - velocidad_actual;
+
+    // Acumular el error para la parte integral
+    error_acumulado += error;
+
+    // Salida del controlador PI
+    salida_controlador = (kp * error) + (ki * error_acumulado);
+    
+    
+    char buffer [50];
+    cuenta ++;
+    if (cuenta > 100){
+        snprintf(buffer, sizeof(buffer), "** %i - %i\n", (int)error, (int)salida_controlador);
+        Cy_SCB_UART_PutString(UART_1_HW, buffer);
+        cuenta = 0;
+    }
+
+    // Saturar la salida para que esté dentro de los límites
+    if (salida_controlador > salida_max) {
+        salida_controlador = salida_max;
+    } else if (salida_controlador < salida_min) {
+        salida_controlador = salida_min;
+    }
+    
+    return (uint)salida_controlador;
 }
 
 /********* DEPURACION PUERTO SERIE ********/
@@ -525,6 +573,11 @@ int main(void)
     NVIC_EnableIRQ(Periodic_main_int_cfg.intrSrc);
     
     
+    // Configurar las interrupciones de overflow del contador para medida de velocidad
+    Cy_SysInt_Init(&Vel_int_cfg, Vel_int_IRQHandler);
+    NVIC_ClearPendingIRQ(Vel_int_cfg.intrSrc);
+    NVIC_EnableIRQ(Vel_int_cfg.intrSrc);
+    
     //Inicializar contadores
     Counter_1_Start();
     Counter_2_Start();
@@ -608,8 +661,8 @@ int main(void)
             planta = pos2planta(posicion_abs);
             LCD_SetCursor(1, 0);
             snprintf(buffer, sizeof(buffer), "%i;%i\n", (int)estado, (int)planta);
-            Cy_SCB_UART_PutString(UART_1_HW, buffer);
-            snprintf(buffer, sizeof(buffer), "Planta %i|V=%2.0f", (int)planta, velocidad);
+            //Cy_SCB_UART_PutString(UART_1_HW, buffer);
+            snprintf(buffer, sizeof(buffer), "Planta %i", (int)planta);
             LCD_Print(buffer);
         }
         // TRANSICIÓN DE ESTADOS
@@ -704,7 +757,7 @@ int main(void)
             case 5: //Subir
                 if (destino - posicion_abs < COMIENZO_FRENADA){
                     siguiente_estado = 6;
-                    flanco_6 = true;
+                    flanco_6 = true;                    
                 }
             break;
             case 6: //Subir - rampa de frenado
@@ -836,7 +889,14 @@ int main(void)
                     LCD_SetCursor(0, 0);
                     LCD_Print("5-Subiendo      ");
                     Motor_setVelocidad(VELOCIDAD_CONSIGNA);
+                    error_acumulado = 0; //Reset del controlador PI
                 }
+                
+                //CONTROL DE VELOCIDAD CON REGULADOR PI
+                //snprintf(buffer, sizeof(buffer), "%i\n", calcular_controlador_PI(VELOCIDAD_CONSIGNA, (uint)velocidad));
+                //Cy_SCB_UART_PutString(UART_1_HW, buffer);
+                Motor_setVelocidad(calcular_controlador_PI(VELOCIDAD_CONSIGNA, (uint)velocidad));
+                Cy_SysLib_Delay(1);
             
             break;
             case 6: //Rampa de frenada en subida y ajuste de llegada
@@ -887,6 +947,8 @@ int main(void)
                     Motor_setVelocidad(VELOCIDAD_CONSIGNA);
                     
                 }
+                Motor_setVelocidad(calcular_controlador_PI(VELOCIDAD_CONSIGNA, (uint)velocidad));
+                Cy_SysLib_Delay(1);
             
             break;
             case 9: //Rampa frenada bajada

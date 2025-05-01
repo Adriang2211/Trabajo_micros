@@ -77,14 +77,14 @@
 #define Counter_4_TCPWM__IDX 0u
 
 /* Counter_5 */
-#define Counter_5_TCPWM__CNT_HW TCPWM0_CNT1
-#define Counter_5_TCPWM__CNT_IDX 1u
+#define Counter_5_TCPWM__CNT_HW TCPWM0_CNT0
+#define Counter_5_TCPWM__CNT_IDX 0u
 #define Counter_5_TCPWM__HW TCPWM0
 #define Counter_5_TCPWM__IDX 0u
 
 /* Debouncer_CLK */
-#define Debouncer_CLK_TCPWM__CNT_HW TCPWM0_CNT0
-#define Debouncer_CLK_TCPWM__CNT_IDX 0u
+#define Debouncer_CLK_TCPWM__CNT_HW TCPWM0_CNT1
+#define Debouncer_CLK_TCPWM__CNT_IDX 1u
 #define Debouncer_CLK_TCPWM__HW TCPWM0
 #define Debouncer_CLK_TCPWM__IDX 0u
 

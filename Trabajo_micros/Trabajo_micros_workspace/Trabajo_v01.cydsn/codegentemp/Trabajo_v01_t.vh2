@@ -1,5 +1,5 @@
 -- Project:   C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\Trabajo_v01.cyprj
--- Generated: 04/30/2025 00:32:56
+-- Generated: 05/01/2025 09:00:58
 -- PSoC Creator  4.4
 
 ENTITY Trabajo_v01 IS
@@ -210,15 +210,16 @@ ARCHITECTURE __DEFAULT__ OF Trabajo_v01 IS
     ATTRIBUTE Location OF SW2_int : LABEL IS "[IntrContainer=(0)][IntrId=(126)]";
     ATTRIBUTE Location OF SW3_int : LABEL IS "[IntrContainer=(0)][IntrId=(127)]";
     ATTRIBUTE Location OF SW4_int : LABEL IS "[IntrContainer=(0)][IntrId=(128)]";
-    ATTRIBUTE Location OF \Debouncer_CLK:TCPWM\ : LABEL IS "F(TCPWM,0)";
-    ATTRIBUTE Location OF Debouncer_ovrflw_int : LABEL IS "[IntrContainer=(0)][IntrId=(90)]";
+    ATTRIBUTE Location OF \Debouncer_CLK:TCPWM\ : LABEL IS "F(TCPWM,1)";
+    ATTRIBUTE Location OF Debouncer_ovrflw_int : LABEL IS "[IntrContainer=(0)][IntrId=(91)]";
     ATTRIBUTE Location OF \Counter_3:TCPWM\ : LABEL IS "F(TCPWM,4)";
     ATTRIBUTE Location OF Periodic_main_int : LABEL IS "[IntrContainer=(0)][IntrId=(94)]";
     ATTRIBUTE Location OF \I2C_1:SCB\ : LABEL IS "F(SCB,6)";
     ATTRIBUTE Location OF \I2C_1:SCB_IRQ\ : LABEL IS "[IntrContainer=(0)][IntrId=(47)]";
     ATTRIBUTE Location OF \Counter_4:TCPWM\ : LABEL IS "F(TCPWM,2)";
     ATTRIBUTE Location OF Temporizacion_int : LABEL IS "[IntrContainer=(0)][IntrId=(92)]";
-    ATTRIBUTE Location OF \Counter_5:TCPWM\ : LABEL IS "F(TCPWM,1)";
+    ATTRIBUTE Location OF \Counter_5:TCPWM\ : LABEL IS "F(TCPWM,0)";
+    ATTRIBUTE Location OF Vel_int : LABEL IS "[IntrContainer=(0)][IntrId=(90)]";
     COMPONENT CLK_GEN
         PORT (
             gen_clk_in_0 : IN std_ulogic;
@@ -609,8 +610,8 @@ BEGIN
             lfclk => ClockBlock_LFClk,
             ff_div_0 => open,
             ff_div_1 => open,
-            ff_div_11 => Net_214_ff16,
-            ff_div_12 => Net_38_ff15,
+            ff_div_11 => Net_38_ff15,
+            ff_div_12 => Net_214_ff16,
             ff_div_13 => Net_38_ff14,
             ff_div_14 => Net_38_ff11,
             ff_div_15 => Net_38_ff13,
@@ -1951,5 +1952,14 @@ BEGIN
             line_compl => \Counter_5:Net_1\,
             line => \Counter_5:Net_2\,
             interrupt => Net_251);
+
+    Vel_int:interrupt
+        GENERIC MAP(
+            cy_registers => "",
+            deepsleep_required => 0,
+            int_type => "10")
+        PORT MAP(
+            interrupt => Net_251,
+            clock => ClockBlock_PeriClk);
 
 END __DEFAULT__;

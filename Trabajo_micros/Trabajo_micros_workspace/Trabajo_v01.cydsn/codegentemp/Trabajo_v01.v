@@ -1,6 +1,6 @@
 // ======================================================================
 // Trabajo_v01.v generated from TopDesign.cysch
-// 04/30/2025 at 00:32
+// 05/01/2025 at 09:00
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -1651,6 +1651,14 @@ module top ;
         .start(1'b0),
         .stop(1'b0),
         .undrflw(Net_256));
+
+
+	cy_mxs40_isr_v1_0
+		#(.deepsleep_required(0),
+		  .int_type(2'b10))
+		Vel_int
+		 (.int_signal(Net_251));
+
 
 
 
