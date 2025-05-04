@@ -549,6 +549,22 @@
 <v>Trabajo_micros_workspace\CE221117_PSoC6MCU_UARTusingHighLevelAPIs.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
+<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\Trabajo_v02_Sist_Meca.cydwr\Directives</v>
+<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\CM0p (Core 0)</v>
+<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\CM0p (Core 0)\ARM GCC Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\CM0p (Core 0)\ARM GCC Generic\cy8c6xx7_cm0plus.ld</v>
+<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\CM0p (Core 0)\ARM IAR Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\CM0p (Core 0)\ARM IAR Generic\cy8c6xx7_cm0plus.icf</v>
+<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\CM0p (Core 0)\ARM MDK Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\CM0p (Core 0)\ARM MDK Generic\cy8c6xx7_cm0plus.scat</v>
+<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\CM0p (Core 0)\Header Files</v>
+<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\CM0p (Core 0)\Source Files</v>
+<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\CM0p (Core 0)\Source Files\ARM GCC Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\CM0p (Core 0)\Source Files\ARM GCC Generic\startup_psoc6_01_cm0plus.S</v>
+<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\CM0p (Core 0)\Source Files\ARM IAR Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\CM0p (Core 0)\Source Files\ARM IAR Generic\startup_psoc6_01_cm0plus.s</v>
+<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\CM0p (Core 0)\Source Files\ARM MDK Generic</v>
+<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\CM0p (Core 0)\Source Files\ARM MDK Generic\startup_psoc6_01_cm0plus.s</v>
 <v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\CM0p (Core 0)\Source Files\main_cm0p.c</v>
 <v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\CM0p (Core 0)\Source Files\system_psoc6_cm0plus.c</v>
 <v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\CM4 (Core 1)</v>
@@ -601,21 +617,6 @@
 <v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\projdefs.h</v>
 <v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\queue.h</v>
 <v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\semphr.h</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\stack_macros.h</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\StackMacros.h</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\stream_buffer.h</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\task.h</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\include\timers.h</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\croutine.c</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\event_groups.c</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\list.c</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\queue.c</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\stream_buffer.c</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\tasks.c</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\timers.c</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\Generated_Source\PSoC6\Clock_1</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\Generated_Source\PSoC6\Clock_2</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\TopDesign\TopDesign.cysch">
@@ -2014,6 +2015,7 @@
 <name v=".\Trabajo_v01.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\Trabajo_v01.cydsn\Trabajo_v01.cydwr" />
 <name v=".\Trabajo_v01.cydsn\main_cm0p.c" />
+<name v=".\Trabajo_v02_Sist_Meca.cydsn\main_cm4.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -2021,7 +2023,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1669, 834" SelectedTabbedMdiWindow="b78db0dd-8f67-4181-aa4a-b9311ec17f32"><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\main_cm4.c" Guid="b78db0dd-8f67-4181-aa4a-b9311ec17f32" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\TopDesign\TopDesign.cysch" Guid="5d9fab63-4da4-42cf-a95d-d74b93ca7fa4" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\Trabajo_v01.cydwr" Guid="1cd6fffb-befc-4ccb-8717-57671ebcea70" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\main_cm0p.c" Guid="41df477c-2763-49f9-be19-95cf7bab63cb" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="0ad4414e-7fa6-4e26-84fa-f8e9cca45eea" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1106, 1031" SelectedTabbedMdiWindow="fe166baf-72a2-4d6d-a0c4-83c585859d45"><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\main_cm4.c" Guid="b78db0dd-8f67-4181-aa4a-b9311ec17f32" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\TopDesign\TopDesign.cysch" Guid="5d9fab63-4da4-42cf-a95d-d74b93ca7fa4" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\Trabajo_v01.cydwr" Guid="1cd6fffb-befc-4ccb-8717-57671ebcea70" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\main_cm0p.c" Guid="41df477c-2763-49f9-be19-95cf7bab63cb" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v02_Sist_Meca.cydsn\main_cm4.c" Guid="fe166baf-72a2-4d6d-a0c4-83c585859d45" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="0ad4414e-7fa6-4e26-84fa-f8e9cca45eea" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

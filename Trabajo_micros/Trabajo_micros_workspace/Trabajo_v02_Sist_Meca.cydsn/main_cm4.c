@@ -507,22 +507,40 @@ void ISR_UART(void)
 }
 
 /*************** DEFINICIONES TAREAS ***************************/
-#define Tarea_LEDRojo_TASK_PRIORITY (tskIDLE_PRIORITY + 2)
+#define Tarea_LEDRojo_TASK_PRIORITY (tskIDLE_PRIORITY + 6)
 #define Tarea_LEDRojo_TASK_STACK_SIZE 64
 #define Tarea_PuertoSerie_TASK_PRIORITY (tskIDLE_PRIORITY + 6) //Poca prioridad
 #define Tarea_PuertoSerie_TASK_STACK_SIZE 256
+#define Tarea_MooreTransiciones_TASK_PRIORITY (tskIDLE_PRIORITY + 4) //Poca prioridad
+#define Tarea_MooreTransiciones_TASK_STACK_SIZE 128
+#define Tarea_MooreAcciones_TASK_PRIORITY (tskIDLE_PRIORITY + 3) //Poca prioridad
+#define Tarea_MooreAcciones_TASK_STACK_SIZE 128
+#define Tarea_LCD1_TASK_PRIORITY (tskIDLE_PRIORITY + 5)
+#define Tarea_LCD1_TASK_STACK_SIZE 64
+#define Tarea_LCD2_TASK_PRIORITY (tskIDLE_PRIORITY + 3)
+#define Tarea_LCD2_TASK_STACK_SIZE 64
 
 /*************** MANEJADORES DE LAS TAREAS *********************/
 TaskHandle_t hLEDRojo;
 TaskHandle_t hPuertoSerie;
+TaskHandle_t hMooreTransiciones;
+TaskHandle_t hMooreAcciones;
+TaskHandle_t hLCD_L1;
+TaskHandle_t hLCD_L2;
 
-QueueHandle_t xcola;
+QueueHandle_t xcola_uart;
+QueueHandle_t xcola_lcd_l1;
+QueueHandle_t xcola_lcd_l2;
 
 
 /*************** ENCABEZADOS DE LAS TAREAS *********************/
 
-void Tarea_LEDRojo (void *pvParameters);
-void Tarea_PuertoSerie (void *pvParameters);
+void Tarea_LEDRojo (void *pvParameters); //Debug
+void Tarea_PuertoSerie (void *pvParameters); //Envio de informacion
+void Tarea_MooreTransiciones (void *pvParameters); //Máquina de estados - transiciones
+void Tarea_MooreAcciones (void *pvParameteres); //Máqunia de estados - acciones
+void Tarea_LCD_L1 (void *pvParameters); //Manejo de la linea 1 del LCD, para el estado
+void Tarea_LCD_L2 (void *pvParameters); //Manejo de la linea 2 del LCD, para el numero de planta
 
 
 /*************** MAIN **************************/
@@ -532,34 +550,11 @@ int main(void)
 {
     __enable_irq(); /* Enable global interrupts. */
     
+    /********* CONFIGURACIONES INICIALES ******************/
     //Inicializacion de las comunicaciones UART
     UART_1_Start();
     
-    // Creación de una cola para las comunicaciones por el puerto serie
-    xcola = xQueueCreate(2, sizeof(char)*SIZE_BUFFER_TX_UART);
-    if (xcola == NULL){
-        Cy_SCB_UART_PutString(UART_1_HW, "Error en la creacion de la cola\n");
-        return -1; //Finalización del programa
-    }
-    else{
-        Cy_SCB_UART_PutString(UART_1_HW, "Cola creada correctamente\n");
-    }   
-    
-    // Creación de las tareas
-    xTaskCreate(Tarea_LEDRojo, "Tarea LED Rojo", Tarea_LEDRojo_TASK_STACK_SIZE, NULL, Tarea_LEDRojo_TASK_PRIORITY, hLEDRojo);
-    xTaskCreate(Tarea_PuertoSerie, "Tarea TX Puerto Serie", Tarea_PuertoSerie_TASK_STACK_SIZE, NULL, Tarea_PuertoSerie_TASK_PRIORITY, hPuertoSerie);
-    
-    vTaskStartScheduler();
-
-    /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-    
-    //Inicialización de las comunicaciones UART
-    
-    /*
-    UART_1_Start();
-    //Cy_SCB_UART_PutString(UART_1_HW, "Programa iniciado ahora\n");
-    
-    // Configurar las interrupciones del UART (RX)
+        // Configurar las interrupciones del UART (RX)
     Cy_SCB_UART_Init(UART_1_HW, &UART_1_config, &UART_1_context);
     Cy_SCB_UART_Enable(UART_1_HW);
     // Unmasking only the RX fifo not empty interrupt bit
@@ -677,25 +672,57 @@ int main(void)
     LCD_Init();
 
     LCD_SetCursor(0, 0);
-    LCD_Print("#TEST#");
+    LCD_Print("Arrancando");
+    LCD_SetCursor(1, 0);
+    LCD_Print("FreeRTOS");
     
-    // Crear un buffer limpio para COM UART
-    char buffer [50];
+    /************************ CONFIGURACION TAREAS ***********************************/
     
-    for (int i = 0; i < 20; i++)
-        buffer[i] = ' ';
+    // Creación de una cola para las comunicaciones por el puerto serie
+    xcola_uart = xQueueCreate(2, sizeof(char)*SIZE_BUFFER_TX_UART);
+    if (xcola_uart == NULL){
+        Cy_SCB_UART_PutString(UART_1_HW, "Error en la creacion de la cola\n");
+        return -1; //Finalización del programa
+    }
+    else{
+        Cy_SCB_UART_PutString(UART_1_HW, "Cola creada correctamente\n");
+    }   
     
-    //Variables locales
-    uint8_t siguiente_estado = 0;
-    double destino = 0;
-    uint16_t velocidad_consigna_rampa = 0;
-    uint16_t contador_rampa = 0;
+    // Creación de una cola para el manejo de la pantalla LCD - linea 1 para el estado
+    xcola_lcd_l1 = xQueueCreate(2, sizeof(char)*SIZE_BUFFER_TX_UART);
+    if (xcola_lcd_l1 == NULL){
+        Cy_SCB_UART_PutString(UART_1_HW, "Error en la creacion de la cola\n");
+        return -1; //Finalización del programa
+    }
+    else{
+        Cy_SCB_UART_PutString(UART_1_HW, "Cola creada correctamente\n");
+    }  
+    
+    // Creación de una cola para el manejo de la pantalla LCD - linea 2 para el piso
+    xcola_lcd_l2 = xQueueCreate(2, sizeof(char)*SIZE_BUFFER_TX_UART);
+    if (xcola_lcd_l2 == NULL){
+        Cy_SCB_UART_PutString(UART_1_HW, "Error en la creacion de la cola\n");
+        return -1; //Finalización del programa
+    }
+    else{
+        Cy_SCB_UART_PutString(UART_1_HW, "Cola creada correctamente\n");
+    }  
+    
+    // Creación de las tareas
+    xTaskCreate(Tarea_LEDRojo, "LED Rojo", Tarea_LEDRojo_TASK_STACK_SIZE, NULL, Tarea_LEDRojo_TASK_PRIORITY, hLEDRojo);
+    xTaskCreate(Tarea_PuertoSerie, "TX Puerto Serie", Tarea_PuertoSerie_TASK_STACK_SIZE, NULL, Tarea_PuertoSerie_TASK_PRIORITY, hPuertoSerie);
+    xTaskCreate(Tarea_MooreTransiciones, "Transiciones maquina estados", Tarea_MooreTransiciones_TASK_STACK_SIZE, NULL, Tarea_MooreTransiciones_TASK_PRIORITY, hMooreTransiciones);
+    //xTaskCreate(Tarea_MooreAcciones, "Acciones maquina estados", Tarea_MooreAcciones_TASK_STACK_SIZE, NULL, Tarea_MooreAcciones_TASK_PRIORITY, hMooreAcciones);
+    xTaskCreate(Tarea_LCD_L1, "LCD info estado", Tarea_LCD1_TASK_STACK_SIZE, NULL, Tarea_LCD1_TASK_PRIORITY, hLCD_L1);
+    xTaskCreate(Tarea_LCD_L2, "LCD info planta", Tarea_LCD2_TASK_STACK_SIZE, NULL, Tarea_LCD2_TASK_PRIORITY, hLCD_L2);
+    
+    
+    vTaskStartScheduler();
+
+    
+
+          
         
-    //Inicialización máquina de estados
-    estado = 0;
-    flanco_0 = true;    
-        
-    */
     
     for(;;)
     {
@@ -712,148 +739,7 @@ int main(void)
             snprintf(buffer, sizeof(buffer), "Planta %i", (int)planta);
             LCD_Print(buffer);
         }
-        // TRANSICIÓN DE ESTADOS
-        switch (estado){
-            case 0: //Reposo total
-                //Transición a estado 1
-                if (flag_sw1){
-                    siguiente_estado = 1;
-                    flanco_1 = true;
-                    flag_sw1 = false;
-                }
-                //Transición a estado 0
-                else if(flag_sw0){
-                    siguiente_estado = 2;
-                    flanco_2 = true;
-                    flag_sw0 = false;
-                    posicion_abs = 0; //Accion excepcional ("maquina de Mealey")
-                }
-                else
-                    siguiente_estado = 0;
-            break;
-            case 1: //Bajar hasta "home"
-                //Transición a estado 0
-                if (flag_sw1){
-                    siguiente_estado = 0;
-                    flanco_0 = true;
-                    flag_sw1 = false;
-                }
-                //Transición a estado 2
-                else if(flag_sw0){
-                    siguiente_estado = 2;
-                    flanco_2 = true;
-                    flag_sw0 = false;
-                    posicion_abs = 0; //Accion excepcional ("maquina de Mealey")
-                }
-                else
-                    siguiente_estado = 1;
-            
-            break;
-            case 2: //Reposo en operación
-                //Transición a estado 3
-                if (flag_sw0 || flag_sw1 || flag_sw2 || flag_sw3 || flag_sw4){
-                    siguiente_estado = 3;
-                    flanco_3 = true;
-                    if(flag_sw0)
-                        destino = piso0;
-                    else if(flag_sw1)
-                        destino = piso1;
-                    else if (flag_sw2)
-                        destino = piso2;
-                    else if (flag_sw3)
-                        destino = piso3;
-                    else
-                        destino = piso4;
-                    flag_sw0 = false;
-                    flag_sw1 = false;
-                    flag_sw2 = false;
-                    flag_sw3 = false;
-                    flag_sw4 = false;
-                    //snprintf(buffer, sizeof(buffer), "Destino: %2.2f\n", destino);
-                    //Cy_SCB_UART_PutString(UART_1_HW, buffer);
-                }
-                else
-                    siguiente_estado = 2;
-            
-            break;
-            case 3: //Solicitado
-                //Transición a estado 4 (rampa aceleración subir)
-                if (pos2planta(destino) > planta){
-                    siguiente_estado = 4;
-                    flanco_4 = true;
-                }
-                //Transición a estado 5 (rampa aceleración bajar)
-                else if (pos2planta(destino) < planta){
-                    siguiente_estado = 7;
-                    flanco_7 = true;
-                }
-                //Transición a estado 10 (se ha solicitado desde el mismo piso, abrir puertas)
-                else{
-                    siguiente_estado = 10;
-                    flanco_10 = true;
-                }
-            
-            break;
-            case 4: //Subir - rampa de aceleración
-                if (velocidad_consigna_rampa == VELOCIDAD_CONSIGNA){
-                    siguiente_estado = 5;
-                    flanco_5 = true;
-                }
-            
-            break;
-            case 5: //Subir
-                if (destino - posicion_abs < COMIENZO_FRENADA){
-                    siguiente_estado = 6;
-                    flanco_6 = true;                    
-                }
-            break;
-            case 6: //Subir - rampa de frenado
-                if (destino - posicion_abs < TOLERANCIA_LLEGADA || posicion_abs > destino){
-                    siguiente_estado = 10;
-                    flanco_10 = true;
-                }
-            break;
-            case 7: //Bajar - rampa de aceleración
-                if (velocidad_consigna_rampa == VELOCIDAD_CONSIGNA){
-                    siguiente_estado = 8;
-                    flanco_8 = true;
-                }
-            break;
-            case 8: //Bajar
-                if (posicion_abs - destino < COMIENZO_FRENADA){
-                    siguiente_estado = 9;
-                    flanco_9 = true;
-                }
-            
-            break;
-            case 9: //Bajar - rampa de frenado
-                if (posicion_abs - destino < TOLERANCIA_LLEGADA || posicion_abs < destino){
-                    siguiente_estado = 10;
-                    flanco_10 = true;
-                }
-            break;
-            case 10: //Abrir puerta
-                if (temporizador >= ABRIR_PUERTA){
-                    siguiente_estado = 11;
-                    flanco_11 = true;
-                }
-                
-            break;
-            case 11: //Puerta abierta (esperando)
-                if (temporizador >= PUERTA_ABIERTA){
-                    siguiente_estado = 12;
-                    flanco_12 = true;
-                }
-            break;
-            case 12: //Cerrando puerta
-                if (temporizador >= CERRAR_PUERTA){
-                    siguiente_estado = 2;
-                    flanco_2 = true;
-                }
-            break;
-        }
         
-        estado = siguiente_estado;
         
         // ACCIONES ASOCIADAS A LOS ESTADOS
         switch (estado){
@@ -1074,7 +960,7 @@ void Tarea_LEDRojo (void *pvParameters){
         
         char buffer [SIZE_BUFFER_TX_UART];
         snprintf(buffer, sizeof(buffer), "TEST\n\r");
-        xQueueSendToBack(xcola, buffer, 0);
+        xQueueSendToBack(xcola_uart, buffer, 0);
         
     }
     Cy_SCB_UART_PutString(UART_1_HW, "Error tarea LED Rojo. Dejo de ejecutarse\n\r");
@@ -1085,7 +971,7 @@ void Tarea_PuertoSerie (void *pvParameters){
     const TickType_t espera = pdMS_TO_TICKS(2000);
     char bufferTX [SIZE_BUFFER_TX_UART];
     for (;;){
-        estado_cola = xQueueReceive(xcola, bufferTX, espera);
+        estado_cola = xQueueReceive(xcola_uart, bufferTX, espera);
         if (estado_cola != pdPASS){
             Cy_SCB_UART_PutString(UART_1_HW, "Demasiado tiempo sin recibir mensajes. Posible error.\n\r");
         }
@@ -1094,6 +980,225 @@ void Tarea_PuertoSerie (void *pvParameters){
         }
     }
     Cy_SCB_UART_PutString(UART_1_HW, "Error tarea Puerto Serie. Dejo de ejecutarse\n\r");
+}
+
+void Tarea_MooreTransiciones (void *pvParameters){
+    int estado = 0;
+    int siguiente_estado = 0;
+    double destino = 0;
+    uint velocidad_consigna_rampa = 0;
+    for (;;){
+    // TRANSICIÓN DE ESTADOS
+        switch (estado){
+            case 0: //Reposo total
+                //Transición a estado 1
+                if (flag_sw1){
+                    siguiente_estado = 1;
+                    flanco_1 = true;
+                    flag_sw1 = false;
+                    xQueueSendToBack(xcola_uart, "A X1\n", 0);
+                }
+                //Transición a estado 0
+                else if(flag_sw0){
+                    siguiente_estado = 2;
+                    flanco_2 = true;
+                    flag_sw0 = false;
+                    posicion_abs = 0; //Accion excepcional ("maquina de Mealey")
+                    xQueueSendToBack(xcola_uart, "A X0\n", 0);
+                }
+                else
+                    siguiente_estado = 0;
+            break;
+            case 1: //Bajar hasta "home"
+                //Transición a estado 0
+                if (flag_sw1){
+                    siguiente_estado = 0;
+                    flanco_0 = true;
+                    flag_sw1 = false;
+                    xQueueSendToBack(xcola_uart, "A X0\n", 0);
+                }
+                //Transición a estado 2
+                else if(flag_sw0){
+                    siguiente_estado = 2;
+                    flanco_2 = true;
+                    flag_sw0 = false;
+                    posicion_abs = 0; //Accion excepcional ("maquina de Mealey")
+                    xQueueSendToBack(xcola_uart, "A X2\n", 0);
+                }
+                else
+                    siguiente_estado = 1;
+            
+            break;
+            case 2: //Reposo en operación
+                //Transición a estado 3
+                if (flag_sw0 || flag_sw1 || flag_sw2 || flag_sw3 || flag_sw4){
+                    siguiente_estado = 3;
+                    flanco_3 = true;
+                    if(flag_sw0)
+                        destino = piso0;
+                    else if(flag_sw1)
+                        destino = piso1;
+                    else if (flag_sw2)
+                        destino = piso2;
+                    else if (flag_sw3)
+                        destino = piso3;
+                    else
+                        destino = piso4;
+                    flag_sw0 = false;
+                    flag_sw1 = false;
+                    flag_sw2 = false;
+                    flag_sw3 = false;
+                    flag_sw4 = false;
+                    //snprintf(buffer, sizeof(buffer), "Destino: %2.2f\n", destino);
+                    //Cy_SCB_UART_PutString(UART_1_HW, buffer);
+                    xQueueSendToBack(xcola_uart, "A X3\n", 0);
+                }
+                else
+                    siguiente_estado = 2;
+            
+            break;
+            case 3: //Solicitado
+                //Transición a estado 4 (rampa aceleración subir)
+                if (pos2planta(destino) > planta){
+                    siguiente_estado = 4;
+                    flanco_4 = true;
+                    xQueueSendToBack(xcola_uart, "A X4\n", 0);
+                }
+                //Transición a estado 5 (rampa aceleración bajar)
+                else if (pos2planta(destino) < planta){
+                    siguiente_estado = 7;
+                    flanco_7 = true;
+                    xQueueSendToBack(xcola_uart, "A X7\n", 0);
+                }
+                //Transición a estado 10 (se ha solicitado desde el mismo piso, abrir puertas)
+                else{
+                    siguiente_estado = 10;
+                    flanco_10 = true;
+                    xQueueSendToBack(xcola_uart, "A X10\n", 0);
+                }
+            
+            break;
+            case 4: //Subir - rampa de aceleración
+                if (velocidad_consigna_rampa == VELOCIDAD_CONSIGNA){
+                    siguiente_estado = 5;
+                    flanco_5 = true;
+                    xQueueSendToBack(xcola_uart, "A X5\n", 0);
+                }
+            
+            break;
+            case 5: //Subir
+                if (destino - posicion_abs < COMIENZO_FRENADA){
+                    siguiente_estado = 6;
+                    flanco_6 = true;   
+                    xQueueSendToBack(xcola_uart, "A X6\n", 0);
+                }
+            break;
+            case 6: //Subir - rampa de frenado
+                if (destino - posicion_abs < TOLERANCIA_LLEGADA || posicion_abs > destino){
+                    siguiente_estado = 10;
+                    flanco_10 = true;
+                    xQueueSendToBack(xcola_uart, "A X10\n", 0);
+                }
+            break;
+            case 7: //Bajar - rampa de aceleración
+                if (velocidad_consigna_rampa == VELOCIDAD_CONSIGNA){
+                    siguiente_estado = 8;
+                    flanco_8 = true;
+                    xQueueSendToBack(xcola_uart, "A X8\n", 0);
+                }
+            break;
+            case 8: //Bajar
+                if (posicion_abs - destino < COMIENZO_FRENADA){
+                    siguiente_estado = 9;
+                    flanco_9 = true;
+                    xQueueSendToBack(xcola_uart, "A X9\n", 0);
+                }
+            
+            break;
+            case 9: //Bajar - rampa de frenado
+                if (posicion_abs - destino < TOLERANCIA_LLEGADA || posicion_abs < destino){
+                    siguiente_estado = 10;
+                    flanco_10 = true;
+                    xQueueSendToBack(xcola_uart, "A X10\n", 0);
+                }
+            break;
+            case 10: //Abrir puerta
+                if (temporizador >= ABRIR_PUERTA){
+                    siguiente_estado = 11;
+                    flanco_11 = true;
+                    xQueueSendToBack(xcola_uart, "A X11\n", 0);
+                }
+                
+            break;
+            case 11: //Puerta abierta (esperando)
+                if (temporizador >= PUERTA_ABIERTA){
+                    siguiente_estado = 12;
+                    flanco_12 = true;
+                    xQueueSendToBack(xcola_uart, "A X12\n", 0);
+                }
+            break;
+            case 12: //Cerrando puerta
+                if (temporizador >= CERRAR_PUERTA){
+                    siguiente_estado = 2;
+                    flanco_2 = true;
+                    xQueueSendToBack(xcola_uart, "A X2\n", 0);
+                }
+            break;
+        }
+        
+        estado = siguiente_estado;   
+        vTaskDelay(100);
+    }
+}
+
+
+void Tarea_MooreAcciones (void *pvParameters){
+    
+    for(;;){
+        if (flag_periodic_main){
+            flag_periodic_main = false;
+            char buffer [SIZE_BUFFER_TX_UART];
+            snprintf(buffer, sizeof(buffer), "TEST\n\r");
+            xQueueSendToBack(xcola_uart, buffer, 0);
+            xQueueSendToBack(xcola_lcd_l1, buffer, 0); //refresca estado por si acaso
+            //Ademas de aqui, se informa de los cambios de estado instantaneamente
+            xQueueSendToBack(xcola_lcd_l2, buffer, 0); //informa de la planta con frecuencia
+        }
+        
+        vTaskDelay(100);   
+    }
+    
+}
+
+void Tarea_LCD_L1 (void *pvParameters){
+    BaseType_t estado_cola;
+    const TickType_t espera = pdMS_TO_TICKS(2000);
+    char bufferTXLCD [SIZE_BUFFER_TX_UART];
+    for (;;){
+        estado_cola = xQueueReceive(xcola_lcd_l1, bufferTXLCD, espera);
+        if (estado_cola == pdPASS){
+            LCD_SetCursor(0,0);
+            LCD_Print(bufferTXLCD);
+        }
+        vTaskDelay(1); //Me aseguro de que se libera CPU
+    }
+    Cy_SCB_UART_PutString(UART_1_HW, "Error tarea LCD L1. Dejo de ejecutarse\n\r");
+    
+}
+
+void Tarea_LCD_L2 (void *pvParameters){
+    BaseType_t estado_cola;
+    const TickType_t espera = pdMS_TO_TICKS(2000);
+    char bufferTXLCD [SIZE_BUFFER_TX_UART];
+    for (;;){
+        estado_cola = xQueueReceive(xcola_lcd_l2, bufferTXLCD, espera);
+        if (estado_cola == pdPASS){
+            LCD_SetCursor(1,0);
+            LCD_Print(bufferTXLCD);
+        }
+        vTaskDelay(1); //Me aseguro de que se libera CPU
+    }
+    Cy_SCB_UART_PutString(UART_1_HW, "Error tarea LCD L2. Dejo de ejecutarse\n\r");
 }
 
 /******* IMPLEMENTACIÓN FUNCIONES DE USUARIO *************/
