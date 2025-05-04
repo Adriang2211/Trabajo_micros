@@ -1,0 +1,27 @@
+# Trabajo_v02_Sist_Meca
+# 2025-05-04 09:02:57Z
+
+dont_use_location SMIF -1 -1 0
+dont_use_location p4usbcell -1 -1 0
+dont_use_location USB -1 -1 0
+dont_use_location usbcell -1 -1 0
+set_location "ClockGenBlock" CLK_GEN -1 -1 0
+set_io "CY_CPUSS_SWJ_SWCLK_TCLK(0)" iocell 6 7
+set_io "CY_CPUSS_SWJ_SWDIO_TMS(0)" iocell 6 6
+set_io "LED_verde(0)" iocell 7 1
+set_io "LED_rojo(0)" iocell 6 3
+set_io "\UART_1:tx(0)\" iocell 5 1
+set_io "\UART_1:rx(0)\" iocell 5 0
+set_io "OPTO_PC817(0)" iocell 5 2
+set_io "OPTO_trig(0)" iocell 5 3
+set_io "Encoder_ChB(0)" iocell 10 5
+set_io "Encoder_ChA(0)" iocell 10 4
+set_io "SW0(0)" iocell 9 0
+set_io "SW1(0)" iocell 9 1
+set_io "SW2(0)" iocell 9 3
+set_io "SW3(0)" iocell 9 4
+set_io "SW4(0)" iocell 9 5
+set_io "Rele_1(0)" iocell 10 0
+set_io "Rele_2(0)" iocell 10 1
+set_io "\I2C_1:scl(0)\" iocell 6 4
+set_io "\I2C_1:sda(0)\" iocell 6 5
