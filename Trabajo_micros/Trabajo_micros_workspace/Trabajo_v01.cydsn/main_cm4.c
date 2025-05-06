@@ -749,7 +749,7 @@ int main(void)
             
             break;
             case 4: //Subir - rampa de aceleración
-                if (velocidad_consigna_rampa == VELOCIDAD_CONSIGNA){
+                if (velocidad_consigna_rampa == VELOCIDAD_CONSIGNA || destino-posicion_abs < COMIENZO_FRENADA){
                     siguiente_estado = 5;
                     flanco_5 = true;
                 }
@@ -768,7 +768,7 @@ int main(void)
                 }
             break;
             case 7: //Bajar - rampa de aceleración
-                if (velocidad_consigna_rampa == VELOCIDAD_CONSIGNA){
+                if (velocidad_consigna_rampa == VELOCIDAD_CONSIGNA || posicion_abs-destino < COMIENZO_FRENADA){
                     siguiente_estado = 8;
                     flanco_8 = true;
                 }
