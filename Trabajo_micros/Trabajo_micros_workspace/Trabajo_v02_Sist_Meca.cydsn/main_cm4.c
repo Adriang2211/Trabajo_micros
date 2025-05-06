@@ -979,7 +979,7 @@ void Tarea_MooreTransiciones (void *pvParameters){
         }
         
         estado = siguiente_estado;   
-        vTaskDelay(1000);
+        vTaskDelay(100);
     }
     
     Cy_SCB_UART_PutString(UART_1_HW, "Error tarea Transiciones maquina Moore. Dejo de ejecutarse\n\r");
@@ -1059,7 +1059,7 @@ void Tarea_MooreAcciones (void *pvParameters){
                     velocidad_consigna_rampa = VELOCIDAD_CONSIGNA_AJUSTE;
                 }
                 contador_rampa++;
-                if (contador_rampa == 2000){
+                if (contador_rampa == 20){
                     contador_rampa = 0;
                     velocidad_consigna_rampa++;
                 }
@@ -1095,7 +1095,7 @@ void Tarea_MooreAcciones (void *pvParameters){
                     velocidad_consigna_rampa = VELOCIDAD_CONSIGNA;
                 }
                 contador_rampa++;
-                if (contador_rampa == 1000 && velocidad_consigna_rampa > VELOCIDAD_CONSIGNA_AJUSTE){
+                if (contador_rampa == 10 && velocidad_consigna_rampa > VELOCIDAD_CONSIGNA_AJUSTE){
                     velocidad_consigna_rampa--;
                     contador_rampa = 0;
                 }
@@ -1115,7 +1115,7 @@ void Tarea_MooreAcciones (void *pvParameters){
                     velocidad_consigna_rampa = VELOCIDAD_CONSIGNA_AJUSTE;
                 }
                 contador_rampa++;
-                if (contador_rampa == 2000){
+                if (contador_rampa == 20){
                     contador_rampa = 0;
                     velocidad_consigna_rampa++;
                 }
@@ -1147,7 +1147,7 @@ void Tarea_MooreAcciones (void *pvParameters){
                     velocidad_consigna_rampa = VELOCIDAD_CONSIGNA;
                 }
                 contador_rampa++;
-                if (contador_rampa == 1000 && velocidad_consigna_rampa > VELOCIDAD_CONSIGNA_AJUSTE){
+                if (contador_rampa == 10 && velocidad_consigna_rampa > VELOCIDAD_CONSIGNA_AJUSTE){
                     Motor_setVelocidad(velocidad_consigna_rampa--);
                     contador_rampa = 0;
                 }
