@@ -25,8 +25,8 @@
 #define TOLERANCIA_LLEGADA 5 //en mm
 
 // Ajustes de velocidades (en % sobre velocidad max, que son 40rpm)
-#define VELOCIDAD_CONSIGNA 50
-#define VELOCIDAD_CONSIGNA_AJUSTE 25
+#define VELOCIDAD_CONSIGNA 40
+#define VELOCIDAD_CONSIGNA_AJUSTE 15
 // A que distancia del piso comienza a frenar
 #define COMIENZO_FRENADA 50
 
@@ -517,9 +517,9 @@ void ISR_UART(void)
 #define Tarea_MooreAcciones_TASK_PRIORITY (tskIDLE_PRIORITY + 5) //Poca prioridad
 #define Tarea_MooreAcciones_TASK_STACK_SIZE 256
 #define Tarea_LCD1_TASK_PRIORITY (tskIDLE_PRIORITY + 5)
-#define Tarea_LCD1_TASK_STACK_SIZE 64
+#define Tarea_LCD1_TASK_STACK_SIZE 128
 #define Tarea_LCD2_TASK_PRIORITY (tskIDLE_PRIORITY + 3)
-#define Tarea_LCD2_TASK_STACK_SIZE 64
+#define Tarea_LCD2_TASK_STACK_SIZE 128
 #define Tarea_info_TASK_PRIORITY (tskIDLE_PRIORITY + 6)
 #define Tarea_info_TASK_STACK_SIZE 256
 
@@ -749,23 +749,6 @@ int main(void)
     for(;;)
     {
         Cy_SCB_UART_PutString(UART_1_HW, "ERROR en el Sistema Operativo. Este mensaje no deberia aparecer.\n");
-        /*
-        // Place your application code here.
-        
-        if (flag_periodic_main){
-            flag_periodic_main = false;
-            planta = pos2planta(posicion_abs);
-            LCD_SetCursor(1, 0);
-            snprintf(buffer, sizeof(buffer), "%i;%i\n", (int)estado, (int)planta);
-            Cy_SCB_UART_PutString(UART_1_HW, buffer);
-            snprintf(buffer, sizeof(buffer), "Planta %i", (int)planta);
-            LCD_Print(buffer);
-        }
-        
-        
-        
-        
-        */
     }
 }
 
@@ -799,22 +782,7 @@ void Tarea_LEDRojo (void *pvParameters){
     Cy_SCB_UART_PutString(UART_1_HW, "Error tarea LED Rojo. Dejo de ejecutarse\n\r");
 }
 
-void Tarea_PuertoSerie (void *pvParameters){
-    BaseType_t estado_cola;
-    char bufferTX [SIZE_BUFFER_TX_UART];
-    for (;;){
-        estado_cola = xQueueReceive(xcola_uart, bufferTX, 0);
-        if (estado_cola == pdPASS){
-            Cy_SCB_UART_PutString(UART_1_HW, bufferTX);
-        }
-        else {
-            // Esto indica que no había datos disponibles en la cola, podemos manejarlo aquí
-            //Cy_SCB_UART_PutString(UART_1_HW, "Error: Cola UART vacia.\n\r");
-        }
-        vTaskDelay(100);
-    }
-    Cy_SCB_UART_PutString(UART_1_HW, "Error tarea Puerto Serie. Dejo de ejecutarse\n\r");
-}
+
 
 void Tarea_MooreTransiciones (void *pvParameters){
     int siguiente_estado = 0;
@@ -1000,8 +968,7 @@ void Tarea_MooreAcciones (void *pvParameters){
                     flanco_0 = false;
                     //Acciones primer ciclo de ejecución   
                     //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 0\n");
-                    LCD_SetCursor(0, 0);
-                    LCD_Print("0-Reposo        ");
+                    xQueueSendToBack(xcola_lcd_l1, "0-Reposo        ", 0);
                     Motor_parado();
                     Motor_setVelocidad(0); //Por seguridad aunque es redundante
                 }
@@ -1011,8 +978,7 @@ void Tarea_MooreAcciones (void *pvParameters){
                     flanco_1 = false;
                     //Acciones primer ciclo de ejecución
                     //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 1\n");
-                    LCD_SetCursor(0, 0);
-                    LCD_Print("1-Ajuste de 0   ");
+                    xQueueSendToBack(xcola_lcd_l1, "1-Ajuste de 0   ", 0);
                     Motor_setVelocidad(0);
                     Motor_bajar();
                     Motor_setVelocidad(VELOCIDAD_CONSIGNA);
@@ -1024,8 +990,7 @@ void Tarea_MooreAcciones (void *pvParameters){
                     flanco_2 = false;
                     //Acciones primer ciclo de ejecución
                     //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 2\n");
-                    LCD_SetCursor(0, 0);
-                    LCD_Print("2-Reposo op.    ");
+                    xQueueSendToBack(xcola_lcd_l1, "2-Reposo op.    ", 0);
                     Motor_parado();
                     Motor_setVelocidad(0);
                     clearAllPetitions();
@@ -1038,8 +1003,7 @@ void Tarea_MooreAcciones (void *pvParameters){
                     flanco_3 = false;
                     //Acciones primer ciclo de ejecución
                     //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 3\n");
-                    LCD_SetCursor(0, 0);
-                    LCD_Print("3-Solicitado    ");
+                    xQueueSendToBack(xcola_lcd_l1, "3-Solicitado    ", 0);
                     Motor_parado();
                     Motor_setVelocidad(0);
                     clearAllPetitions();
@@ -1051,15 +1015,14 @@ void Tarea_MooreAcciones (void *pvParameters){
                     flanco_4 = false;
                     //Acciones primer ciclo de ejecución
                     //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 4\n");
-                    LCD_SetCursor(0, 0);
-                    LCD_Print("4-Subir ramp up ");
+                    xQueueSendToBack(xcola_lcd_l1, "4-Subir ramp up ", 0);
                     Motor_setVelocidad(0);
                     Motor_subir();
                     contador_rampa = 0;
                     velocidad_consigna_rampa = VELOCIDAD_CONSIGNA_AJUSTE;
                 }
                 contador_rampa++;
-                if (contador_rampa == 20){
+                if (contador_rampa == 50){
                     contador_rampa = 0;
                     velocidad_consigna_rampa++;
                 }
@@ -1071,8 +1034,7 @@ void Tarea_MooreAcciones (void *pvParameters){
                     flanco_5 = false;
                     //Acciones primer ciclo de ejecución
                     //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 5\n");
-                    LCD_SetCursor(0, 0);
-                    LCD_Print("5-Subiendo      ");
+                    xQueueSendToBack(xcola_lcd_l1, "5-Subiendo      ", 0);
                     Motor_setVelocidad(VELOCIDAD_CONSIGNA);
                     error_acumulado = 0; //Reset del controlador PI
                 }
@@ -1089,13 +1051,12 @@ void Tarea_MooreAcciones (void *pvParameters){
                     flanco_6 = false;
                     //Acciones primer ciclo de ejecución
                     //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 6\n");
-                    LCD_SetCursor(0, 0);
-                    LCD_Print("6-Subir ramp dow");
+                    xQueueSendToBack(xcola_lcd_l1, "6-Subir ramp dow", 0);
                     contador_rampa = 0;
                     velocidad_consigna_rampa = VELOCIDAD_CONSIGNA;
                 }
                 contador_rampa++;
-                if (contador_rampa == 10 && velocidad_consigna_rampa > VELOCIDAD_CONSIGNA_AJUSTE){
+                if (contador_rampa == 50 && velocidad_consigna_rampa > VELOCIDAD_CONSIGNA_AJUSTE){
                     velocidad_consigna_rampa--;
                     contador_rampa = 0;
                 }
@@ -1107,15 +1068,14 @@ void Tarea_MooreAcciones (void *pvParameters){
                     flanco_7 = false;
                     //Acciones primer ciclo de ejecución
                     //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 7\n");
-                    LCD_SetCursor(0, 0);
-                    LCD_Print("7-Bajar ramp up ");
+                    xQueueSendToBack(xcola_lcd_l1, "7-Bajar ramp up ", 0);
                     Motor_setVelocidad(0);
                     Motor_bajar();
                     contador_rampa = 0;
                     velocidad_consigna_rampa = VELOCIDAD_CONSIGNA_AJUSTE;
                 }
                 contador_rampa++;
-                if (contador_rampa == 20){
+                if (contador_rampa == 50){
                     contador_rampa = 0;
                     velocidad_consigna_rampa++;
                 }
@@ -1127,8 +1087,7 @@ void Tarea_MooreAcciones (void *pvParameters){
                     flanco_8 = false;
                     //Acciones primer ciclo de ejecución
                     //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 8\n");
-                    LCD_SetCursor(0, 0);
-                    LCD_Print("8-Bajando       ");
+                    xQueueSendToBack(xcola_lcd_l1, "8-Bajando       ", 0);
                     Motor_setVelocidad(VELOCIDAD_CONSIGNA);
                     error_acumulado = 0;
                 }
@@ -1141,13 +1100,12 @@ void Tarea_MooreAcciones (void *pvParameters){
                     flanco_9 = false;
                     //Acciones primer ciclo de ejecución
                     //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 9\n");
-                    LCD_SetCursor(0, 0);
-                    LCD_Print("9-Bajar ramp dow");
+                    xQueueSendToBack(xcola_lcd_l1, "9-Bajar ramp dow", 0);
                     contador_rampa = 0;
                     velocidad_consigna_rampa = VELOCIDAD_CONSIGNA;
                 }
                 contador_rampa++;
-                if (contador_rampa == 10 && velocidad_consigna_rampa > VELOCIDAD_CONSIGNA_AJUSTE){
+                if (contador_rampa == 50 && velocidad_consigna_rampa > VELOCIDAD_CONSIGNA_AJUSTE){
                     Motor_setVelocidad(velocidad_consigna_rampa--);
                     contador_rampa = 0;
                 }
@@ -1166,8 +1124,7 @@ void Tarea_MooreAcciones (void *pvParameters){
                     Counter_4_SetCounter(0);
                     Counter_4_Start();
                     temporizador = 0;
-                    LCD_SetCursor(0, 0);
-                    LCD_Print("10-Abriendo...  ");
+                    xQueueSendToBack(xcola_lcd_l1, "10-Abriendo...  ", 0);
                     
                 }
             
@@ -1178,8 +1135,7 @@ void Tarea_MooreAcciones (void *pvParameters){
                     //Acciones primer ciclo de ejecución
                     //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 11\n");
                     temporizador = 0;
-                    LCD_SetCursor(0, 0);
-                    LCD_Print("11-Puerta open  ");
+                    xQueueSendToBack(xcola_lcd_l1, "11-Puerta open  ", 0);
                     
                 }
             
@@ -1190,8 +1146,7 @@ void Tarea_MooreAcciones (void *pvParameters){
                     //Acciones primer ciclo de ejecución
                     //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 12\n");
                     temporizador = 0;
-                    LCD_SetCursor(0, 0);
-                    LCD_Print("12-Cerrando...  ");
+                    xQueueSendToBack(xcola_lcd_l1, "12-Cerrando...  ", 0);
                     
                 }
             
@@ -1203,16 +1158,35 @@ void Tarea_MooreAcciones (void *pvParameters){
     Cy_SCB_UART_PutString(UART_1_HW, "Error tarea Acciones maquina Moore. Dejo de ejecutarse\n\r");
 }
 
+
+void Tarea_PuertoSerie (void *pvParameters){
+    BaseType_t estado_cola;
+    char bufferTX [SIZE_BUFFER_TX_UART];
+    for (;;){
+        estado_cola = xQueueReceive(xcola_uart, bufferTX, 0);
+        if (estado_cola == pdPASS){
+            Cy_SCB_UART_PutString(UART_1_HW, bufferTX);
+        }
+        else {
+            // Esto indica que no había datos disponibles en la cola, podemos manejarlo aquí
+            //Cy_SCB_UART_PutString(UART_1_HW, "Error: Cola UART vacia.\n\r");
+        }
+        vTaskDelay(100);
+    }
+    Cy_SCB_UART_PutString(UART_1_HW, "Error tarea Puerto Serie. Dejo de ejecutarse\n\r");
+}
+
 void Tarea_LCD_L1 (void *pvParameters){
     BaseType_t estado_cola;
     char bufferTXLCD [SIZE_BUFFER_TX_UART];
     for (;;){
         estado_cola = xQueueReceive(xcola_lcd_l1, bufferTXLCD, 0);
         if (estado_cola == pdPASS){
+            LCD_Init();
             LCD_SetCursor(0,0);
             LCD_Print(bufferTXLCD);
         }
-        vTaskDelay(1000); //Me aseguro de que se libera CPU
+        vTaskDelay(100); //Me aseguro de que se libera CPU
     }
     Cy_SCB_UART_PutString(UART_1_HW, "Error tarea LCD L1. Dejo de ejecutarse\n\r");
     
@@ -1227,7 +1201,7 @@ void Tarea_LCD_L2 (void *pvParameters){
             LCD_SetCursor(1,0);
             LCD_Print(bufferTXLCD);
         }
-        vTaskDelay(1000); //Me aseguro de que se libera CPU
+        vTaskDelay(100); //Me aseguro de que se libera CPU
     }
     Cy_SCB_UART_PutString(UART_1_HW, "Error tarea LCD L2. Dejo de ejecutarse\n\r");
 }
@@ -1236,8 +1210,8 @@ void Tarea_Info (void *pvParameters){
     for (;;){
         planta = pos2planta(posicion_abs);
         char buffer_temp[16];
-        snprintf(buffer_temp, sizeof(buffer_temp), "Planta:%u|%2.0f", estado, posicion_abs);
-        //xQueueSendToBack(xcola_lcd_l2, buffer_temp, 0);
+        snprintf(buffer_temp, sizeof(buffer_temp), "Planta:%u|%2.0f", planta, posicion_abs);
+        xQueueSendToBack(xcola_lcd_l2, buffer_temp, 0);
         snprintf(buffer_temp, sizeof(buffer_temp), "%i;%u\n", planta, estado);
         xQueueSendToBack(xcola_uart, buffer_temp, 0);
         vTaskDelay(3000);
