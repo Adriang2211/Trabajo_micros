@@ -651,7 +651,7 @@ int main(void)
         
     //Inicialización máquina de estados
     estado = 0;
-    flanco_0 = true;    
+    flanco_0 = true;
         
     for(;;)
     {
