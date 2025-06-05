@@ -22,7 +22,7 @@
 #define TOLERANCIA_LLEGADA 5 //en mm
 
 // Ajustes de velocidades (en % sobre velocidad max, que son 40rpm)
-#define VELOCIDAD_CONSIGNA 50
+#define VELOCIDAD_CONSIGNA 90
 #define VELOCIDAD_CONSIGNA_AJUSTE 25
 // A que distancia del piso comienza a frenar
 #define COMIENZO_FRENADA 50
@@ -97,11 +97,11 @@ _Bool flanco_12 = false;
 
 
 //Cota de los pisos (en mm)
-double piso0 = 0;
-double piso1 = 115;
-double piso2 = 230;
-double piso3 = 445;
-double piso4 = 560;
+const double piso0 = 0;
+const double piso1 = 115;
+const double piso2 = 230;
+const double piso3 = 345;
+const double piso4 = 460;
 
 
 volatile _Bool flag_periodic_main = false;
@@ -109,8 +109,8 @@ volatile uint32_t temporizador = 0;
 
 
 //Regulador PI
-double const kp = 0.1;
-double const ki = 0.0005;
+double const kp = 0.5;
+double const ki = 0.05;
 //volatile double error = 0;
 volatile double error_acumulado = 0;
 double const salida_max = 100;
@@ -184,14 +184,15 @@ void Encoder_int_IRQHandler(void){
     //Cy_SCB_UART_PutString(UART_1_HW, buffer);
     Counter_5_SetCounter(0);
     Counter_5_Start();
+    //Para detectar que el motor está parado y que la velocidad es cero
     
     
     if (!flag_sentido){
     //if (Cy_GPIO_Read(Encoder_ChB_PORT, Encoder_ChB_NUM)){
-        posicion_abs = posicion_abs + 0.0942;
+        posicion_abs = posicion_abs + 0.055;
     }
     else{
-        posicion_abs = posicion_abs - 0.0942;
+        posicion_abs = posicion_abs - 0.055;
     }
  
 }
@@ -205,14 +206,14 @@ void Temporizacion_int_IRQHandler(void){
         temporizador = 0;
 }
 
-void Temporizacion2_int_IRQHandler(void){
-    
-    Counter_5_ClearInterrupt(Counter_5_config.interruptSources);
-    temporizador2++;
-    
-    if (temporizador2 > 10000)
-        temporizador2 = 0;
-}
+//void Temporizacion2_int_IRQHandler(void){
+//    
+//    Counter_5_ClearInterrupt(Counter_5_config.interruptSources);
+//    temporizador2++;
+//    
+//    if (temporizador2 > 10000)
+//        temporizador2 = 0;
+//}
 
 void SW0_IRQHandler(void){
     Cy_GPIO_ClearInterrupt(SW0_PORT, SW0_NUM);
@@ -312,6 +313,7 @@ void Periodic_main_IRQHandler(void){
     flag_periodic_main = true;
 }
 
+//Detección de que el motor está parado
 void Vel_int_IRQHandler(void){
     Counter_5_ClearInterrupt(Counter_5_config.interruptSources);
     velocidad = 0;
@@ -404,15 +406,15 @@ uint calcular_controlador_PI(uint velocidad_deseada, uint velocidad_actual) {
     // Salida del controlador PI
     salida_controlador = (kp * error) + (ki * error_acumulado);
     
-    /* DEBUG
-    char buffer [50];
-    cuenta ++;
-    if (cuenta > 100){
-        snprintf(buffer, sizeof(buffer), "** %i - %i\n", (int)error, (int)salida_controlador);
-        Cy_SCB_UART_PutString(UART_1_HW, buffer);
-        cuenta = 0;
-    }
-    */
+    //DEBUG
+    //char buffer [50];
+    //cuenta ++;
+    //if (cuenta > 100){
+        //snprintf(buffer, sizeof(buffer), "** %i | %i | %i\n", (int)error, (int)salida_controlador, (int)velocidad_actual);
+        //Cy_SCB_UART_PutString(UART_1_HW, buffer);
+        //cuenta = 0;
+    //}
+    
 
     // Saturar la salida para que esté dentro de los límites
     if (salida_controlador > salida_max) {
@@ -896,8 +898,8 @@ int main(void)
                 //CONTROL DE VELOCIDAD CON REGULADOR PI
                 //snprintf(buffer, sizeof(buffer), "%i\n", calcular_controlador_PI(VELOCIDAD_CONSIGNA, (uint)velocidad));
                 //Cy_SCB_UART_PutString(UART_1_HW, buffer);
-                //Motor_setVelocidad(calcular_controlador_PI(VELOCIDAD_CONSIGNA, (uint)velocidad));
-                //Cy_SysLib_Delay(1);
+                Motor_setVelocidad(calcular_controlador_PI(VELOCIDAD_CONSIGNA, (uint)velocidad));
+                Cy_SysLib_Delay(1);
             
             break;
             case 6: //Rampa de frenada en subida y ajuste de llegada
@@ -948,8 +950,8 @@ int main(void)
                     Motor_setVelocidad(VELOCIDAD_CONSIGNA);
                     error_acumulado = 0;
                 }
-                //Motor_setVelocidad(calcular_controlador_PI(VELOCIDAD_CONSIGNA, (uint)velocidad));
-                //Cy_SysLib_Delay(1);
+                Motor_setVelocidad(calcular_controlador_PI(VELOCIDAD_CONSIGNA, (uint)velocidad));
+                Cy_SysLib_Delay(1);
             
             break;
             case 9: //Rampa frenada bajada
