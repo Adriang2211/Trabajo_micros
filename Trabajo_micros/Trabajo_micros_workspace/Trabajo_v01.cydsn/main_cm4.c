@@ -446,7 +446,6 @@ void ISR_UART(void)
             buffer_rx[buffer_index] = '\0';  // Finaliza el comando
             Cy_SCB_UART_PutString(UART_1_HW, buffer_rx);
             
-            // Comprobar si el comando es "ON" o "OFF"
             if (strncmp(buffer_rx, "+", 1) == 0)
             {
                 // Counter period ++
@@ -881,7 +880,8 @@ int main(void)
                     contador_rampa = 0;
                     velocidad_consigna_rampa++;
                 }
-                Motor_setVelocidad(velocidad_consigna_rampa);
+                //Motor_setVelocidad(velocidad_consigna_rampa);
+                Motor_setVelocidad(calcular_controlador_PI(velocidad_consigna_rampa, (uint)velocidad));
             
             break;
             case 5: //Subir
@@ -937,7 +937,8 @@ int main(void)
                     contador_rampa = 0;
                     velocidad_consigna_rampa++;
                 }
-                Motor_setVelocidad(velocidad_consigna_rampa);
+                //Motor_setVelocidad(velocidad_consigna_rampa);
+                Motor_setVelocidad(calcular_controlador_PI(velocidad_consigna_rampa, (uint)velocidad));
             
             break;
             case 8: //Bajar
