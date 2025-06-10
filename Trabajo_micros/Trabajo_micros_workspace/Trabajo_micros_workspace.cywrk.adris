@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Trabajo_micros_workspace\Trabajo_v02_Sist_Meca">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Trabajo_micros_workspace\Trabajo_v01">
 <ExpandedNodeIds>
 <v>Trabajo_micros_workspace</v>
 <v>Trabajo_micros_workspace\Prueba_01_LEDs\TopDesign</v>
@@ -1665,38 +1665,6 @@
 <v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyfitter_sysint_cfg.lst</v>
 <v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM0p\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
 <v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM0p\ARM_GCC_541\Debug\Listing Files\main_cm0p.lst</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM0p\ARM_GCC_541\Debug\Listing Files\startup_psoc6_01_cm0plus.lst</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM0p\ARM_GCC_541\Debug\Listing Files\system_psoc6_cm0plus.lst</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM0p\ARM_GCC_541\Debug\Prueba_01_LEDs.elf</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM0p\ARM_GCC_541\Debug\Prueba_01_LEDs.hex</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM0p\ARM_GCC_541\Debug\Prueba_01_LEDs.map</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_clk.lst</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_device.lst</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_efuse.lst</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_flash.lst</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_gpio.lst</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ipc_drv.lst</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ipc_pipe.lst</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ipc_sema.lst</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_lvd.lst</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_profile.lst</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_prot.lst</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_common.lst</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_ezi2c.lst</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_i2c.lst</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_spi.lst</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_uart.lst</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_sysanalog.lst</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_sysclk.lst</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_sysint.lst</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_syslib.lst</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_syslib_gcc.lst</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_syspm.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -1712,40 +1680,21 @@
 <v>Trabajo_micros_workspace\Prueba_01_LEDs\PSoC 63 Family Datasheet</v>
 <v>Trabajo_micros_workspace\Prueba_01_LEDs\Peripheral Driver Library</v>
 <v>Trabajo_micros_workspace\Prueba_01_LEDs\System Reference Guides</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\GPIO_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\SCB_UART_PDL_v2_0.pdf</v>
 <v>Trabajo_micros_workspace\Prueba_02_LEDs_No_bloqueante</v>
 <v>Trabajo_micros_workspace\Prueba_02_LEDs_No_bloqueante\PSoC 6 Architecture TRM</v>
 <v>Trabajo_micros_workspace\Prueba_02_LEDs_No_bloqueante\PSoC 63 Family Datasheet</v>
 <v>Trabajo_micros_workspace\Prueba_02_LEDs_No_bloqueante\Peripheral Driver Library</v>
 <v>Trabajo_micros_workspace\Prueba_02_LEDs_No_bloqueante\System Reference Guides</v>
-<v>Trabajo_micros_workspace\Prueba_02_LEDs_No_bloqueante\GPIO_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Prueba_02_LEDs_No_bloqueante\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Prueba_02_LEDs_No_bloqueante\SCB_UART_PDL_v2_0.pdf</v>
 <v>Trabajo_micros_workspace\Prueba_03_Interrupciones</v>
 <v>Trabajo_micros_workspace\Prueba_03_Interrupciones\PSoC 6 Architecture TRM</v>
 <v>Trabajo_micros_workspace\Prueba_03_Interrupciones\PSoC 63 Family Datasheet</v>
 <v>Trabajo_micros_workspace\Prueba_03_Interrupciones\Peripheral Driver Library</v>
 <v>Trabajo_micros_workspace\Prueba_03_Interrupciones\System Reference Guides</v>
-<v>Trabajo_micros_workspace\Prueba_03_Interrupciones\GPIO_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Prueba_03_Interrupciones\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Prueba_03_Interrupciones\SCB_UART_PDL_v2_0.pdf</v>
-<v>Trabajo_micros_workspace\Prueba_03_Interrupciones\SysClk_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Prueba_03_Interrupciones\SysInt_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Prueba_03_Interrupciones\TCPWM_Counter_PDL_v1_0.pdf</v>
 <v>Trabajo_micros_workspace\Test_pulsador</v>
 <v>Trabajo_micros_workspace\Test_pulsador\PSoC 6 Architecture TRM</v>
 <v>Trabajo_micros_workspace\Test_pulsador\PSoC 63 Family Datasheet</v>
 <v>Trabajo_micros_workspace\Test_pulsador\Peripheral Driver Library</v>
 <v>Trabajo_micros_workspace\Test_pulsador\System Reference Guides</v>
-<v>Trabajo_micros_workspace\Test_pulsador\GPIO_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Test_pulsador\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Test_pulsador\SCB_UART_PDL_v2_0.pdf</v>
-<v>Trabajo_micros_workspace\Test_pulsador\SysClk_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Test_pulsador\SysInt_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Test_pulsador\SysInt_PDL_v1_0\SysInt_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Test_pulsador\TCPWM_Counter_PDL_v1_0.pdf</v>
 <v>Trabajo_micros_workspace\Trabajo_microcontroladores</v>
 <v>Trabajo_micros_workspace\Trabajo_microcontroladores\PSoC 6 Architecture TRM</v>
 <v>Trabajo_micros_workspace\Trabajo_microcontroladores\PSoC 63 Family Datasheet</v>
@@ -1756,120 +1705,31 @@
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase\PSoC 63 Family Datasheet</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase\Peripheral Driver Library</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase\System Reference Guides</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase\GPIO_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase\SCB_UART_PDL_v2_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase\SysClk_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase\SysInt_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase\SysInt_PDL_v1_0\SysInt_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase\TCPWM_Counter_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase\TCPWM_Counter_PDL_v1_0\TCPWM_Counter_PDL_v1_0.pdf</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\PSoC 6 Architecture TRM</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\PSoC 63 Family Datasheet</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\Peripheral Driver Library</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\System Reference Guides</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\Gnd_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\Gnd_v1_0\Gnd_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\GPIO_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\LED_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\PhotoTrans_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\Power_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\Resistor_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\Resistor_v1_0\Resistor_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\SCB_UART_PDL_v2_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\SysClk_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\SysClk_PDL_v1_0\SysClk_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\SysInt_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\SysInt_PDL_v1_0\SysInt_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\TCPWM_Counter_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\TCPWM_Counter_PDL_v1_0\TCPWM_Counter_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\TCPWM_QuadDec_PDL_v1_0.pdf</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\PSoC 6 Architecture TRM</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\PSoC 63 Family Datasheet</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Peripheral Driver Library</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\System Reference Guides</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Gnd_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Gnd_v1_0\Gnd_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\GPIO_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\LED_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\PhotoTrans_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Power_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Resistor_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\Resistor_v1_0\Resistor_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\SCB_UART_PDL_v2_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\SysClk_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\SysInt_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\SysInt_PDL_v1_0\SysInt_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\TCPWM_Counter_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_2\TCPWM_Counter_PDL_v1_0\TCPWM_Counter_PDL_v1_0.pdf</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_3</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_3\PSoC 6 Architecture TRM</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_3\PSoC 63 Family Datasheet</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_3\Peripheral Driver Library</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_3\System Reference Guides</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_3\Gnd_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_3\Gnd_v1_0\Gnd_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_3\GPIO_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_3\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_3\LED_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_3\PhotoTrans_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_3\Power_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_3\Resistor_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_3\Resistor_v1_0\Resistor_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_3\SCB_UART_PDL_v2_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_3\SysClk_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_3\SysInt_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_3\SysInt_PDL_v1_0\SysInt_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_3\TCPWM_Counter_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2_3\TCPWM_Counter_PDL_v1_0\TCPWM_Counter_PDL_v1_0.pdf</v>
 <v>Trabajo_micros_workspace\Trabajo_v01</v>
 <v>Trabajo_micros_workspace\Trabajo_v01\PSoC 6 Architecture TRM</v>
 <v>Trabajo_micros_workspace\Trabajo_v01\PSoC 63 Family Datasheet</v>
 <v>Trabajo_micros_workspace\Trabajo_v01\Peripheral Driver Library</v>
 <v>Trabajo_micros_workspace\Trabajo_v01\System Reference Guides</v>
-<v>Trabajo_micros_workspace\Trabajo_v01\Gnd_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_v01\Gnd_v1_0\Gnd_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_v01\GPIO_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_v01\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_v01\LED_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_v01\PhotoTrans_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_v01\Power_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_v01\Resistor_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_v01\Resistor_v1_0\Resistor_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_v01\SCB_I2C_PDL_v2_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_v01\SCB_UART_PDL_v2_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_v01\SysClk_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_v01\SysClk_PDL_v1_0\SysClk_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_v01\SysInt_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_v01\SysInt_PDL_v1_0\SysInt_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_v01\TCPWM_Counter_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_v01\TCPWM_Counter_PDL_v1_0\TCPWM_Counter_PDL_v1_0.pdf</v>
 <v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca</v>
 <v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\PSoC 6 Architecture TRM</v>
 <v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\PSoC 63 Family Datasheet</v>
 <v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\Peripheral Driver Library</v>
 <v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\System Reference Guides</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\Gnd_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\Gnd_v1_0\Gnd_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\GPIO_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\LED_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\PhotoTrans_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\Power_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\Resistor_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\Resistor_v1_0\Resistor_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\SCB_I2C_PDL_v2_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\SCB_UART_PDL_v2_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\SysClk_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\SysClk_PDL_v1_0\SysClk_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\SysInt_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\SysInt_PDL_v1_0\SysInt_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\TCPWM_Counter_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_v02_Sist_Meca\TCPWM_Counter_PDL_v1_0\TCPWM_Counter_PDL_v1_0.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Trabajo_micros_workspace</v>
@@ -1878,40 +1738,21 @@
 <v>Trabajo_micros_workspace\Prueba_01_LEDs\PSoC 63 Family Datasheet</v>
 <v>Trabajo_micros_workspace\Prueba_01_LEDs\Peripheral Driver Library</v>
 <v>Trabajo_micros_workspace\Prueba_01_LEDs\System Reference Guides</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\GPIO_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Prueba_01_LEDs\SCB_UART_PDL_v2_0.pdf</v>
 <v>Trabajo_micros_workspace\Prueba_02_LEDs_No_bloqueante</v>
 <v>Trabajo_micros_workspace\Prueba_02_LEDs_No_bloqueante\PSoC 6 Architecture TRM</v>
 <v>Trabajo_micros_workspace\Prueba_02_LEDs_No_bloqueante\PSoC 63 Family Datasheet</v>
 <v>Trabajo_micros_workspace\Prueba_02_LEDs_No_bloqueante\Peripheral Driver Library</v>
 <v>Trabajo_micros_workspace\Prueba_02_LEDs_No_bloqueante\System Reference Guides</v>
-<v>Trabajo_micros_workspace\Prueba_02_LEDs_No_bloqueante\GPIO_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Prueba_02_LEDs_No_bloqueante\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Prueba_02_LEDs_No_bloqueante\SCB_UART_PDL_v2_0.pdf</v>
 <v>Trabajo_micros_workspace\Prueba_03_Interrupciones</v>
 <v>Trabajo_micros_workspace\Prueba_03_Interrupciones\PSoC 6 Architecture TRM</v>
 <v>Trabajo_micros_workspace\Prueba_03_Interrupciones\PSoC 63 Family Datasheet</v>
 <v>Trabajo_micros_workspace\Prueba_03_Interrupciones\Peripheral Driver Library</v>
 <v>Trabajo_micros_workspace\Prueba_03_Interrupciones\System Reference Guides</v>
-<v>Trabajo_micros_workspace\Prueba_03_Interrupciones\GPIO_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Prueba_03_Interrupciones\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Prueba_03_Interrupciones\SCB_UART_PDL_v2_0.pdf</v>
-<v>Trabajo_micros_workspace\Prueba_03_Interrupciones\SysClk_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Prueba_03_Interrupciones\SysInt_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Prueba_03_Interrupciones\TCPWM_Counter_PDL_v1_0.pdf</v>
 <v>Trabajo_micros_workspace\Test_pulsador</v>
 <v>Trabajo_micros_workspace\Test_pulsador\PSoC 6 Architecture TRM</v>
 <v>Trabajo_micros_workspace\Test_pulsador\PSoC 63 Family Datasheet</v>
 <v>Trabajo_micros_workspace\Test_pulsador\Peripheral Driver Library</v>
 <v>Trabajo_micros_workspace\Test_pulsador\System Reference Guides</v>
-<v>Trabajo_micros_workspace\Test_pulsador\GPIO_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Test_pulsador\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Test_pulsador\SCB_UART_PDL_v2_0.pdf</v>
-<v>Trabajo_micros_workspace\Test_pulsador\SysClk_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Test_pulsador\SysInt_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Test_pulsador\SysInt_PDL_v1_0\SysInt_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Test_pulsador\TCPWM_Counter_PDL_v1_0.pdf</v>
 <v>Trabajo_micros_workspace\Trabajo_microcontroladores</v>
 <v>Trabajo_micros_workspace\Trabajo_microcontroladores\PSoC 6 Architecture TRM</v>
 <v>Trabajo_micros_workspace\Trabajo_microcontroladores\PSoC 63 Family Datasheet</v>
@@ -1922,23 +1763,10 @@
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase\PSoC 63 Family Datasheet</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase\Peripheral Driver Library</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase\System Reference Guides</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase\GPIO_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase\SCB_UART_PDL_v2_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase\SysClk_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase\SysInt_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase\SysInt_PDL_v1_0\SysInt_PDL_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase\TCPWM_Counter_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase\TCPWM_Counter_PDL_v1_0\TCPWM_Counter_PDL_v1_0.pdf</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\PSoC 6 Architecture TRM</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\PSoC 63 Family Datasheet</v>
 <v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\Peripheral Driver Library</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\System Reference Guides</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\Gnd_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\Gnd_v1_0\Gnd_v1_0.pdf</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\GPIO_PDL_v1_0</v>
-<v>Trabajo_micros_workspace\Trabajo_test_control_fase_v2\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -1966,7 +1794,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="2024, 1040" SelectedTabbedMdiWindow="fe166baf-72a2-4d6d-a0c4-83c585859d45"><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\main_cm4.c" Guid="b78db0dd-8f67-4181-aa4a-b9311ec17f32" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\TopDesign\TopDesign.cysch" Guid="5d9fab63-4da4-42cf-a95d-d74b93ca7fa4" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\Trabajo_v01.cydwr" Guid="1cd6fffb-befc-4ccb-8717-57671ebcea70" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\main_cm0p.c" Guid="41df477c-2763-49f9-be19-95cf7bab63cb" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v02_Sist_Meca.cydsn\main_cm4.c" Guid="fe166baf-72a2-4d6d-a0c4-83c585859d45" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v02_Sist_Meca.cydsn\FreeRTOSConfig.h" Guid="12917963-f22f-4332-bc60-67cb448ad3f0" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="0ad4414e-7fa6-4e26-84fa-f8e9cca45eea" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1201, 464" SelectedTabbedMdiWindow="fe166baf-72a2-4d6d-a0c4-83c585859d45"><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\main_cm4.c" Guid="b78db0dd-8f67-4181-aa4a-b9311ec17f32" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\TopDesign\TopDesign.cysch" Guid="5d9fab63-4da4-42cf-a95d-d74b93ca7fa4" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\Trabajo_v01.cydwr" Guid="1cd6fffb-befc-4ccb-8717-57671ebcea70" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v01.cydsn\main_cm0p.c" Guid="41df477c-2763-49f9-be19-95cf7bab63cb" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v02_Sist_Meca.cydsn\main_cm4.c" Guid="fe166baf-72a2-4d6d-a0c4-83c585859d45" /><DocumentWindow Key="C:\Users\adris\OneDrive\Documentos\GitHub\Trabajo_micros\Trabajo_micros\Trabajo_micros_workspace\Trabajo_v02_Sist_Meca.cydsn\FreeRTOSConfig.h" Guid="12917963-f22f-4332-bc60-67cb448ad3f0" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="0ad4414e-7fa6-4e26-84fa-f8e9cca45eea" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

@@ -1127,7 +1127,7 @@ void Tarea_LCD_L1 (void *pvParameters){
     BaseType_t estado_cola;
     char bufferTXLCD [SIZE_BUFFER_TX_UART];
     for (;;){
-        estado_cola = xQueueReceive(xcola_lcd_l1, bufferTXLCD, 0);
+        estado_cola = xQueueReceive(xcola_lcd_l1, bufferTXLCD, portMAX_DELAY);
         if (estado_cola == pdPASS){
             LCD_Init();
             LCD_SetCursor(0,0);
@@ -1143,7 +1143,7 @@ void Tarea_LCD_L2 (void *pvParameters){
     BaseType_t estado_cola;
     char bufferTXLCD [SIZE_BUFFER_TX_UART];
     for (;;){
-        estado_cola = xQueueReceive(xcola_lcd_l2, bufferTXLCD, 0);
+        estado_cola = xQueueReceive(xcola_lcd_l2, bufferTXLCD, portMAX_DELAY);
         if (estado_cola == pdPASS){
             LCD_SetCursor(1,0);
             LCD_Print(bufferTXLCD);
