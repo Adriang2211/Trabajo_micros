@@ -77,19 +77,19 @@ url_aemet_1 = "https://opendata.aemet.es/opendata/api/observacion/convencional/d
 url_aemet_2 = "https://opendata.aemet.es/opendata/api/prediccion/especifica/municipio/diaria/28079"
 
 # Configuraciones varias solicitudes AEMET
-querystring_aemet = {"api_key": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZHJpYW4uZ29tZXpnQGFsdW1ub3MudXBtLmVzIiwianRpIjoiOTQ5OWJlY2UtZjM4Zi00MjZhLWI2YWEtNTExMTc4YzA3NjBiIiwiaXNzIjoiQUVNRVQiLCJpYXQiOjE3NDUwNTg3NDIsInVzZXJJZCI6Ijk0OTliZWNlLWYzOGYtNDI2YS1iNmFhLTUxMTE3OGMwNzYwYiIsInJvbGUiOiIifQ.m1BHSXsMjvS1Uu-n9X19OTexwn56EKmkaheigKEFQus"}
+querystring_aemet = {"api_key": "****************************"}
 headers_aemet = {'cache-control': 'no-cache'}
 
 # Configuracion de las comunicaciones con Thingspeak
-api_key_write_thignspeak = "E336IZU503T2RG6P"
-api_key_read_thigspeak = "VC1GD33KD6KBO3LY"
+api_key_write_thignspeak = "**************"
+api_key_read_thigspeak = "***************"
 channel_thingspeak = "2945298"
 headers_thingspeak = {"Content-type": "application/x-www-form-urlencoded", "Accept": "text/plain"}
 url_thingspeak = "http://api.thingspeak.com:80/channels/" + channel_thingspeak + "/feeds"
-url_write_channel = "GET https://api.thingspeak.com/update?api_key=E336IZU503T2RG6P&field1=0"
-url_read_channel = "GET https://api.thingspeak.com/channels/2945298/feeds.json?api_key=VC1GD33KD6KBO3LY&results=2"
-url_read_channel_field = "GET https://api.thingspeak.com/channels/2945298/fields/1.json?api_key=VC1GD33KD6KBO3LY&results=2"
-url_read_channel_status_updates = "GET https://api.thingspeak.com/channels/2945298/status.json?api_key=VC1GD33KD6KBO3LY"
+url_write_channel = "GET https://api.thingspeak.com/update?api_key=**************"
+url_read_channel = "GET https://api.thingspeak.com/channels/2945298/feeds.json?api_key=**************"
+url_read_channel_field = "GET https://api.thingspeak.com/channels/2945298/fields/1.json?api_key=****************"
+url_read_channel_status_updates = "GET https://api.thingspeak.com/channels/2945298/status.json?api_key=************"
 
 
 #Configuracion MQTT
