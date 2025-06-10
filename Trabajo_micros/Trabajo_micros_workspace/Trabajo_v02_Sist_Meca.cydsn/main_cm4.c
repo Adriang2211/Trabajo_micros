@@ -526,8 +526,6 @@ int main(void)
     
     Cy_GPIO_Write(LED_verde_PORT, LED_verde_NUM, 0);
     Cy_GPIO_Write(OPTO_trig_PORT, OPTO_trig_NUM, 0);
-    Motor_parado();
-    
     
     // Configurar las interrupciones del optoacoplador de detección
     Cy_SysInt_Init(&Opto_detec_int_cfg, Opto_detec_IRQHandler);
@@ -600,8 +598,7 @@ int main(void)
     
     
     //Inicializar el sentido de giro del sistema
-    Cy_GPIO_Write(Rele_1_PORT, Rele_1_NUM, 1);
-    Cy_GPIO_Write(Rele_2_PORT, Rele_2_NUM, 1);
+    Motor_parado();
 
 
     // Configurar las interrupciones del pulsador SW0
