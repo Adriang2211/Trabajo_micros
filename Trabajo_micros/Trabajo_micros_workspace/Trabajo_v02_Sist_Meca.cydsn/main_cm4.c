@@ -25,8 +25,8 @@
 #define TOLERANCIA_LLEGADA 5 //en mm
 
 // Ajustes de velocidades (en % sobre velocidad max, que son 40rpm)
-#define VELOCIDAD_CONSIGNA 40
-#define VELOCIDAD_CONSIGNA_AJUSTE 15
+#define VELOCIDAD_CONSIGNA 75
+#define VELOCIDAD_CONSIGNA_AJUSTE 25
 // A que distancia del piso comienza a frenar
 #define COMIENZO_FRENADA 50
 
@@ -105,21 +105,13 @@ _Bool flanco_12 = false;
 double piso0 = 0;
 double piso1 = 115;
 double piso2 = 230;
-double piso3 = 445;
-double piso4 = 560;
+double piso3 = 345;
+double piso4 = 460;
 
 
 volatile _Bool flag_periodic_main = false;
 volatile uint32_t temporizador = 0;
 
-
-//Regulador PI
-double const kp = 0.1;
-double const ki = 0.0005;
-//volatile double error = 0;
-volatile double error_acumulado = 0;
-double const salida_max = 100;
-double const salida_min = 0;
 
 /********** DECLARACIONES DE FUNCIONES DE USUARIO *************/
 
@@ -193,10 +185,10 @@ void Encoder_int_IRQHandler(void){
     
     if (!flag_sentido){
     //if (Cy_GPIO_Read(Encoder_ChB_PORT, Encoder_ChB_NUM)){
-        posicion_abs = posicion_abs + 0.0942;
+        posicion_abs = posicion_abs + 0.06;
     }
     else{
-        posicion_abs = posicion_abs - 0.0942;
+        posicion_abs = posicion_abs - 0.06;
     }
  
 }
@@ -393,41 +385,6 @@ int pos2planta(uint posicion){
         return 0;
 }
 
-uint calcular_controlador_PI(uint velocidad_deseada, uint velocidad_actual) {
-    // Calcular el error
-    
-    static int cuenta = 0;
-    
-    int error = 0;
-    double salida_controlador = 0;
-    
-    error = velocidad_deseada - velocidad_actual;
-
-    // Acumular el error para la parte integral
-    error_acumulado += error;
-
-    // Salida del controlador PI
-    salida_controlador = (kp * error) + (ki * error_acumulado);
-    
-    /* DEBUG
-    char buffer [50];
-    cuenta ++;
-    if (cuenta > 100){
-        snprintf(buffer, sizeof(buffer), "** %i - %i\n", (int)error, (int)salida_controlador);
-        Cy_SCB_UART_PutString(UART_1_HW, buffer);
-        cuenta = 0;
-    }
-    */
-
-    // Saturar la salida para que esté dentro de los límites
-    if (salida_controlador > salida_max) {
-        salida_controlador = salida_max;
-    } else if (salida_controlador < salida_min) {
-        salida_controlador = salida_min;
-    }
-    
-    return (uint)salida_controlador;
-}
 
 /********* DEPURACION PUERTO SERIE ********/
 
@@ -569,6 +526,7 @@ int main(void)
     
     Cy_GPIO_Write(LED_verde_PORT, LED_verde_NUM, 0);
     Cy_GPIO_Write(OPTO_trig_PORT, OPTO_trig_NUM, 0);
+    Motor_parado();
     
     
     // Configurar las interrupciones del optoacoplador de detección
@@ -1036,14 +994,8 @@ void Tarea_MooreAcciones (void *pvParameters){
                     //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 5\n");
                     xQueueSendToBack(xcola_lcd_l1, "5-Subiendo      ", 0);
                     Motor_setVelocidad(VELOCIDAD_CONSIGNA);
-                    error_acumulado = 0; //Reset del controlador PI
                 }
                 
-                //CONTROL DE VELOCIDAD CON REGULADOR PI
-                //snprintf(buffer, sizeof(buffer), "%i\n", calcular_controlador_PI(VELOCIDAD_CONSIGNA, (uint)velocidad));
-                //Cy_SCB_UART_PutString(UART_1_HW, buffer);
-                //Motor_setVelocidad(calcular_controlador_PI(VELOCIDAD_CONSIGNA, (uint)velocidad));
-                //Cy_SysLib_Delay(1);
             
             break;
             case 6: //Rampa de frenada en subida y ajuste de llegada
@@ -1056,11 +1008,11 @@ void Tarea_MooreAcciones (void *pvParameters){
                     velocidad_consigna_rampa = VELOCIDAD_CONSIGNA;
                 }
                 contador_rampa++;
-                if (contador_rampa == 50 && velocidad_consigna_rampa > VELOCIDAD_CONSIGNA_AJUSTE){
+                if (contador_rampa == 10 && velocidad_consigna_rampa > VELOCIDAD_CONSIGNA_AJUSTE){
                     velocidad_consigna_rampa--;
                     contador_rampa = 0;
                 }
-                Motor_setVelocidad(velocidad_consigna_rampa);
+                Motor_setVelocidad(VELOCIDAD_CONSIGNA_AJUSTE);
             
             break;
             case 7: //Rampa aceleración bajada
@@ -1089,10 +1041,8 @@ void Tarea_MooreAcciones (void *pvParameters){
                     //Cy_SCB_UART_PutString(UART_1_HW, "Debug - Estado 8\n");
                     xQueueSendToBack(xcola_lcd_l1, "8-Bajando       ", 0);
                     Motor_setVelocidad(VELOCIDAD_CONSIGNA);
-                    error_acumulado = 0;
                 }
-                //Motor_setVelocidad(calcular_controlador_PI(VELOCIDAD_CONSIGNA, (uint)velocidad));
-                //Cy_SysLib_Delay(1);
+
             
             break;
             case 9: //Rampa frenada bajada
@@ -1105,11 +1055,11 @@ void Tarea_MooreAcciones (void *pvParameters){
                     velocidad_consigna_rampa = VELOCIDAD_CONSIGNA;
                 }
                 contador_rampa++;
-                if (contador_rampa == 50 && velocidad_consigna_rampa > VELOCIDAD_CONSIGNA_AJUSTE){
+                if (contador_rampa == 10 && velocidad_consigna_rampa > VELOCIDAD_CONSIGNA_AJUSTE){
                     Motor_setVelocidad(velocidad_consigna_rampa--);
                     contador_rampa = 0;
                 }
-                Motor_setVelocidad(velocidad_consigna_rampa);
+                Motor_setVelocidad(VELOCIDAD_CONSIGNA_AJUSTE);
                 
             
             break;
@@ -1163,7 +1113,7 @@ void Tarea_PuertoSerie (void *pvParameters){
     BaseType_t estado_cola;
     char bufferTX [SIZE_BUFFER_TX_UART];
     for (;;){
-        estado_cola = xQueueReceive(xcola_uart, bufferTX, 0);
+        estado_cola = xQueueReceive(xcola_uart, bufferTX, portMAX_DELAY);
         if (estado_cola == pdPASS){
             Cy_SCB_UART_PutString(UART_1_HW, bufferTX);
         }
